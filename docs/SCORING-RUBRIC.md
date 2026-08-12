@@ -1,5 +1,7 @@
 # Scoring Rubric
 
+> **Specification role:** Interpretive scoring sub-specification for `PR-010` and `FS-009` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md). It does not define a detector, authorship probability, or validated measurement instrument.
+
 ## Purpose and limits
 
 The v0.1 scales make judgment explicit and comparable. They are interpretive rubrics, not validated psychometric instruments, detector probabilities, or misconduct verdicts.
@@ -108,3 +110,7 @@ Severity ranks the consequence and urgency of a specific finding. It is separate
 | Critical | Large unattributed verbatim copying, fabricated sources, invented evidence, or substantial appropriation presented as original |
 
 Escalate severity only when the available evidence supports it. If source access is incomplete, state what must be checked rather than assigning a definitive integrity label.
+
+## Change control
+
+Changing an anchor, direction, range, formula, or label requires corresponding updates to the runtime [`scoring.md`](../.agents/skills/unsloop/references/scoring.md), output examples, validation fixtures, and PRD/FSD acceptance expectations. Calibration evidence belongs in the roadmap before any claim of measurement validity.

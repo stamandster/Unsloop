@@ -2,6 +2,8 @@
 
 Read this file when the user asks to verify citations, quotations, claims, page numbers, or source relationships.
 
+Maintain a compact verification record: claim or quotation, cited source and version, material inspected, access level, result, and unresolved limitation.
+
 ## Verify in order
 
 1. Identify the exact edition, version, publication, or page the draft cites.
@@ -32,3 +34,4 @@ If sources disagree, state the disagreement and the basis of each claim. Do not 
 
 Use short excerpts needed for comparison. Do not reproduce long protected passages. Preserve exact links or bibliographic details for sources actually checked.
 
+Do not imply that checking one passage validates the whole source, every claim attached to it, or the completeness of the writer's source corpus.

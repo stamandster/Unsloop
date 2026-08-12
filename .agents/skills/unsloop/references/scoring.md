@@ -2,6 +2,8 @@
 
 Read this file when the user requests scores, comparison across versions, or a deep review that benefits from a compact profile.
 
+Use scores to compress an explained judgment, never to replace the evidence or determine acceptance automatically.
+
 ## General rules
 
 - Treat every score as an interpretive summary, not a detector probability or validated measurement.
@@ -73,3 +75,5 @@ Never describe slop density as the likelihood that text is AI-generated.
 - **Critical:** large unattributed copying, fabricated sources, invented evidence, or substantial appropriation presented as original
 
 Assign severity to individual findings, not to the writer.
+
+Two drafts with the same score may require different corrections. Preserve the passage-level explanation and do not use an average, threshold, or readiness label as an automatic pass/fail rule.

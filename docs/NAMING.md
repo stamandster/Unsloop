@@ -1,5 +1,7 @@
 # Naming System
 
+> **Specification role:** Normative naming sub-specification for the mode model in [`../PRD.md`](../PRD.md) and mode selection in [`../FSD.md`](../FSD.md). Naming changes that alter scope also require a business review in [`../BRD.md`](../BRD.md).
+
 ## Umbrella name
 
 **Unsloop** is the main project and shared method.
@@ -32,3 +34,4 @@ Keep the modes in the core `unsloop` skill until at least one of these is true:
 - users need to install or invoke it independently;
 - forward-testing shows that separation improves reliability.
 
+A split changes packaging and discovery, not the underlying integrity, voice, evidence, or ethics contracts. Any proposed split must update the PRD, FSD, architecture, portability instructions, validator, and mode-specific acceptance tests together.

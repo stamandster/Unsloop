@@ -13,11 +13,15 @@ SKILL = ROOT / ".agents" / "skills" / "unsloop"
 
 REQUIRED_FILES = (
     ROOT / "README.md",
+    ROOT / "BRD.md",
+    ROOT / "PRD.md",
+    ROOT / "FSD.md",
     ROOT / "PROJECT.md",
     ROOT / "ARCHITECTURE.md",
     ROOT / "ROADMAP.md",
     ROOT / "DECISIONS.md",
     ROOT / "PORTABILITY.md",
+    ROOT / "scripts" / "link_global_skill.py",
     ROOT / "docs" / "NAMING.md",
     ROOT / "docs" / "REVIEW-MODEL.md",
     ROOT / "docs" / "SCORING-RUBRIC.md",
@@ -26,6 +30,7 @@ REQUIRED_FILES = (
     ROOT / "docs" / "SOURCES.md",
     SKILL / "SKILL.md",
     SKILL / "agents" / "openai.yaml",
+    SKILL / "references" / "harness-compatibility.md",
     SKILL / "references" / "integrity-review.md",
     SKILL / "references" / "human-voice-review.md",
     SKILL / "references" / "voice-fidelity.md",
@@ -40,6 +45,8 @@ LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
 SKILL_NAME_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 WINDOWS_ABSOLUTE_RE = re.compile(r"(?<![A-Za-z0-9])(?:[A-Za-z]:[\\/])")
 POSIX_USER_ABSOLUTE_RE = re.compile(r"(?<![A-Za-z0-9])/(?:Users|home)/[^/\s]+/")
+BR_ID_RE = re.compile(r"\bBR-\d{3}\b")
+PRODUCT_ID_RE = re.compile(r"\b(?:PR|NFR)-\d{3}\b")
 
 VOICE_CONTRACT = {
     SKILL / "SKILL.md": (
@@ -65,8 +72,8 @@ BRIEF_CONTRACT = {
         "progressive writing brief",
         "Determine topic status at the beginning",
         "wants to brainstorm topics",
-        "structured user-input tool is available",
-        "Do not change collaboration mode solely",
+        "host exposes a structured user-input tool",
+        "Do not change the host's collaboration or execution mode solely",
         "known, inferred, or unknown",
         "factual reference material separate from voice samples",
     ),
@@ -84,17 +91,186 @@ BRIEF_CONTRACT = {
         "**Topic:**",
         "**Goal:**",
         "**Prior knowledge:**",
-        "**Required content:**",
+        "**Governing directions:**",
+        "**Content roles:**",
         "**Reference material:**",
+        "**Format and delivery constraints:**",
         "**Known:**",
         "**Inferred:**",
         "**Unknown:**",
-        "Do not ask all ten fields",
+        "## Establish the direction hierarchy",
+        "Do not ask every brief field",
     ),
     ROOT / "docs" / "ETHICS-AND-LIMITS.md": (
         "assumed prior knowledge",
         "factual references and voice samples",
         "missing brief details",
+    ),
+}
+
+PRODUCTION_CONTRACT = {
+    SKILL / "SKILL.md": (
+        "audit requirement coverage separately from source support",
+        "emotional force is earned rather than manufactured",
+        "report an honest readiness state",
+    ),
+    SKILL / "references" / "writing-brief.md": (
+        "**Optional supporting:**",
+        "**Background only:**",
+        "**Hard constraint:**",
+        "**Working target:**",
+        "compact decision brief",
+        "does not verify a factual claim",
+    ),
+    SKILL / "references" / "integrity-review.md": (
+        "## Audit requirement coverage",
+        "separately from source support",
+        "**Satisfied**, **Partial**, **Missing**, **Conflict**, or **Not applicable**",
+        "background-only material",
+    ),
+    SKILL / "references" / "human-voice-review.md": (
+        "## Test examples for function",
+        "## Test emotional integrity",
+        "manufactured urgency",
+        "Creative writing may use invented material",
+    ),
+    SKILL / "references" / "output-contracts.md": (
+        "## Readiness labels",
+        "**Ready with noted limitations:**",
+        "**Provisional—decision required:**",
+        "**Not ready—evidence or authorization missing:**",
+        "Never use **Ready**",
+    ),
+    ROOT / "docs" / "ETHICS-AND-LIMITS.md": (
+        "## Emotional integrity",
+        "manufacture or exaggerate urgency",
+        "present an invented anecdote",
+        "as proof that a factual claim is true",
+    ),
+    ROOT / "docs" / "REVIEW-MODEL.md": (
+        "governing directions",
+        "A requirement may be present but unsupported",
+        "### 6. Test examples and emotional integrity",
+    ),
+    ROOT / "docs" / "REVIEW-OUTPUT.md": (
+        "### Requirement coverage",
+        "## Readiness labels",
+        "Do not use **Ready**",
+    ),
+}
+
+GLOBAL_LINK_CONTRACT = {
+    ROOT / "scripts" / "link_global_skill.py": (
+        'ROOT / ".agents" / "skills" / "unsloop"',
+        'os.environ.get("CODEX_HOME")',
+        "os.path.samefile",
+        '"mklink", "/J"',
+        "Refusing to replace an existing global skill or directory",
+        '"--check"',
+        '"--harness"',
+        'Path.home() / ".agents" / "skills" / "unsloop"',
+        'Path.home() / ".claude" / "skills" / "unsloop"',
+        'Path.home() / ".pi" / "agent" / "skills" / "unsloop"',
+        'requested = values or ["codex"]',
+    ),
+    ROOT / "PORTABILITY.md": (
+        "## Optional user-level links",
+        "The project utility preserves its original Codex default",
+        "--harness claude",
+        "--harness pi",
+        "refuses to replace an unrelated existing destination",
+    ),
+}
+
+HARNESS_CONTRACT = {
+    SKILL / "SKILL.md": (
+        "any compatible agent harness or text-capable model",
+        "host-native tools by capability",
+        "references/harness-compatibility.md",
+    ),
+    SKILL / "references" / "harness-compatibility.md": (
+        "## Preserve the portable contract",
+        "## Negotiate capabilities",
+        "## Adapt to model capability",
+        "**Codex:**",
+        "**Claude Code:**",
+        "**Pi:**",
+        "Harnesses without Agent Skills discovery",
+        "compatibility does not guarantee equivalent output quality",
+    ),
+    ROOT / "PORTABILITY.md": (
+        "## Portable core and adapters",
+        "## Harness matrix",
+        "## Codex discovery remains supported",
+        "## Claude discovery",
+        "## Pi discovery",
+        "## Model and capability adaptation",
+    ),
+    ROOT / "PRD.md": (
+        "PR-015",
+        "NFR-007 Interoperability",
+        "### Harness and model independence",
+    ),
+    ROOT / "FSD.md": (
+        "FS-013",
+        "`HostCapabilityMap`",
+        "### FS-013 — Adapt to harness and model",
+    ),
+}
+
+SPECIFICATION_CONTRACT = {
+    ROOT / "BRD.md": (
+        "## Business requirements",
+        "BR-001",
+        "BR-013",
+        "[`PRD.md`](PRD.md)",
+        "[`FSD.md`](FSD.md)",
+    ),
+    ROOT / "PRD.md": (
+        "## Functional requirements",
+        "PR-001",
+        "PR-015",
+        "NFR-001 Portability",
+        "[`BRD.md`](BRD.md)",
+        "[`FSD.md`](FSD.md)",
+    ),
+    ROOT / "FSD.md": (
+        "## Functional components",
+        "FS-001",
+        "FS-013",
+        "`WritingBrief`",
+        "`EvidenceBoundary`",
+        "`VoiceBrief`",
+        "`RequirementCoverage`",
+        "`ReadinessState`",
+        "## Verification matrix",
+    ),
+    ROOT / "README.md": (
+        "[`BRD.md`](BRD.md)",
+        "[`PRD.md`](PRD.md)",
+        "[`FSD.md`](FSD.md)",
+        "## Install Unsloop",
+        "### Option 1 — Clone and use the repository directly",
+        "### Option 2 — Copy or link Unsloop into another repository",
+        "### Option 3 — Link the project into user-level harness directories",
+        "### Option 4 — Link into the shared Agent Skills user location",
+        "### Option 5 — Install a standalone Codex user copy from GitHub",
+        "### Option 6 — Install for an administrator-managed Codex host",
+        "### Option 7 — Adapt a harness without Agent Skills discovery",
+        "### Plugin installation",
+        "$skill-installer Install the skill from",
+        "## Harness and model compatibility",
+        "/skill:unsloop",
+        "## Verify, activate, and update",
+    ),
+    ROOT / "ARCHITECTURE.md": (
+        "## Specification stack",
+        "BRD — why, for whom, scope, business outcomes",
+        "SKILL.md + references — portable operational instructions loaded by an agent",
+    ),
+    ROOT / "DECISIONS.md": (
+        "## D-015 — Use a three-level specification stack",
+        "## D-016 — Separate the portable core from harness adapters",
     ),
 }
 
@@ -172,6 +348,64 @@ def validate() -> list[str]:
                 errors.append(
                     f"writing-brief requirement missing from {path.relative_to(ROOT)}: {requirement}"
                 )
+
+    for path, requirements in PRODUCTION_CONTRACT.items():
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for requirement in requirements:
+            if requirement not in text:
+                errors.append(
+                    f"production safeguard missing from {path.relative_to(ROOT)}: {requirement}"
+                )
+
+    for path, requirements in GLOBAL_LINK_CONTRACT.items():
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for requirement in requirements:
+            if requirement not in text:
+                errors.append(
+                    f"global-link safeguard missing from {path.relative_to(ROOT)}: {requirement}"
+                )
+
+    for path, requirements in HARNESS_CONTRACT.items():
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for requirement in requirements:
+            if requirement not in text:
+                errors.append(
+                    f"harness-compatibility safeguard missing from "
+                    f"{path.relative_to(ROOT)}: {requirement}"
+                )
+
+    for path, requirements in SPECIFICATION_CONTRACT.items():
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for requirement in requirements:
+            if requirement not in text:
+                errors.append(
+                    f"specification contract missing from {path.relative_to(ROOT)}: {requirement}"
+                )
+
+    brd = ROOT / "BRD.md"
+    prd = ROOT / "PRD.md"
+    fsd = ROOT / "FSD.md"
+    if brd.is_file() and prd.is_file():
+        business_ids = set(BR_ID_RE.findall(brd.read_text(encoding="utf-8")))
+        product_text = prd.read_text(encoding="utf-8")
+        for requirement_id in sorted(business_ids):
+            if requirement_id not in product_text:
+                errors.append(f"business requirement is not traced in PRD.md: {requirement_id}")
+
+    if prd.is_file() and fsd.is_file():
+        product_ids = set(PRODUCT_ID_RE.findall(prd.read_text(encoding="utf-8")))
+        functional_text = fsd.read_text(encoding="utf-8")
+        for requirement_id in sorted(product_ids):
+            if requirement_id not in functional_text:
+                errors.append(f"product requirement is not traced in FSD.md: {requirement_id}")
 
     for path in ROOT.rglob("*.md"):
         text = path.read_text(encoding="utf-8")

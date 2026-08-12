@@ -1,5 +1,7 @@
 # Review Output Contracts
 
+> **Specification role:** Normative output and readiness sub-specification for `PR-009`–`PR-010` and `FS-008`–`FS-009` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md).
+
 ## Default: Unsloop Review
 
 ### Overall assessment
@@ -55,6 +57,10 @@ Separate:
 - secondary-source problems;
 - claims that could not be checked.
 
+### Requirement coverage
+
+When the artifact is governed by an outline, rubric, policy, template, or multi-part brief, map requirement or direction, content role, artifact location, support or decision, and status. Keep requirement satisfaction separate from factual support.
+
 ### Integrity conclusion
 
 Summarize supported findings and unresolved questions. Do not infer intent.
@@ -77,6 +83,17 @@ When matching the user's voice is material, also state:
 - **Target traits:** the few observable traits that materially shaped the result;
 - **Confidence:** Low, Moderate, or High, plus any conflict or limitation.
 
+## Readiness labels
+
+Use only when unresolved matters affect intended use:
+
+- **Ready:** required content, evidence, decisions, and hard constraints are satisfied within the available boundary.
+- **Ready with noted limitations:** usable as intended, with disclosed limits that do not require a decision before use.
+- **Provisional—decision required:** a material choice remains unresolved.
+- **Not ready—evidence or authorization missing:** responsible completion requires missing support, permission, or a non-waivable requirement.
+
+Do not use **Ready** to imply exhaustive verification from an incomplete evidence corpus.
+
 ## Score display
 
 Use this compact form:
@@ -90,3 +107,7 @@ Voice fidelity: 4/5 · Confidence: Moderate · Basis: one same-genre sample plus
 ```
 
 Never present the scores without enough commentary for the writer to understand what drove them.
+
+## Contract priority
+
+The user's requested artifact and format come first unless they conflict with evidence, authorization, safety, or a non-waivable governing direction. Add only the contract sections that materially improve usability or honesty; do not turn a brief task into a ceremonial report.

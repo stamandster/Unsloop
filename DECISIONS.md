@@ -1,5 +1,7 @@
 # Design Decisions
 
+> **Document role:** Accepted architectural and product tradeoffs. Requirement authority remains in [`BRD.md`](BRD.md), [`PRD.md`](PRD.md), and [`FSD.md`](FSD.md).
+
 ## D-001 — Use Unsloop as the umbrella name
 
 **Status:** Accepted for v0.1
@@ -52,7 +54,7 @@ Every standard or deep review identifies what should remain unchanged. Revision 
 
 **Status:** Accepted
 
-Store the canonical skill at `.agents/skills/unsloop`, the repository discovery location supported by Codex. Do not require installation into a user's home directory. Keep every operational reference relative and keep validation tooling inside the project.
+Store the canonical skill at `.agents/skills/unsloop`, a repository discovery location supported by Codex, Pi, and the Agent Skills ecosystem. Do not require installation into a user's home directory. Keep every operational reference relative and keep validation tooling inside the project.
 
 ## D-009 — Make voice matching evidence-based and bounded
 
@@ -76,4 +78,28 @@ At the beginning of new writing, determine whether the user has an existing topi
 
 **Status:** Accepted
 
-Use Codex's structured user-input control when it is available and a consequential question has two or three mutually exclusive choices. Keep recommendations contextual, ask no more than three questions at once, and use ordinary conversation for open-ended material. When the control is unavailable, preserve the same choices in a concise plain-text fallback. Never change collaboration mode solely to obtain the preferred interface.
+Use the active harness's structured user-input control—including Codex's control—when it is available and a consequential question has two or three mutually exclusive choices. Keep recommendations contextual, ask no more than three questions at once, and use ordinary conversation for open-ended material. When the control is unavailable, preserve the same choices in a concise plain-text fallback. Never change the host's collaboration or execution mode solely to obtain the preferred interface.
+
+## D-013 — Generalize production discipline without domain coupling
+
+**Status:** Accepted
+
+Strengthen Unsloop with reusable controls observed in mature writing workflows: governing-direction hierarchy, audience concerns and desired response, required/optional/background/excluded content roles, hard versus working constraints, compact decision briefs, requirement coverage, functional-example review, emotional-integrity review, and readiness labels. Keep domain-specific doctrine, terminology, timing formulas, and artifact rules in their owning skills.
+
+## D-014 — Expose the project skill globally through one filesystem link
+
+**Status:** Accepted
+
+Keep `.agents/skills/unsloop` authoritative. When user-wide availability is wanted, link the selected Codex, shared Agent Skills, Claude, or Pi entry to that directory instead of copying it. Preserve Codex as the utility's default behavior. Provide a project-owned, idempotent utility that validates every target and refuses to overwrite unrelated content.
+
+## D-015 — Use a three-level specification stack
+
+**Status:** Accepted
+
+Use a BRD for business intent and boundaries, a PRD for user-visible requirements and acceptance criteria, and an FSD for operational behavior, data concepts, validation, and test traceability. Keep these maintainer documents at the repository root, outside the runtime skill, so the skill remains concise. Treat the project directory as authoritative and use requirement IDs to connect the levels without duplicating full procedures.
+
+## D-016 — Separate the portable core from harness adapters
+
+**Status:** Accepted
+
+Keep `SKILL.md`, standard frontmatter, and relative references model- and harness-agnostic. Treat discovery paths, invocation syntax, UI metadata, and tool names as adapters. Preserve the existing Codex adapter and global link; add Claude, Pi, and shared Agent Skills paths without copying or forking the method. When a capability is absent, use an explicit fallback and narrow the evidence boundary rather than changing the governing rules.

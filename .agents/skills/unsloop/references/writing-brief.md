@@ -2,6 +2,19 @@
 
 Read this file before substantial drafting, revision, review, or audit. Use it progressively: extract what is already known, infer only low-risk details, and ask about material gaps rather than administering a fixed questionnaire.
 
+The brief is an operational decision record, not a form the user must complete. Include only fields that affect the current artifact and keep unresolved material choices visible through delivery.
+
+## Contents
+
+- [Start with topic status](#start-with-topic-status)
+- [Build the brief](#build-the-brief)
+- [Establish the direction hierarchy](#establish-the-direction-hierarchy)
+- [Classify certainty](#classify-certainty)
+- [Ask proportionately](#ask-proportionately)
+- [Ask concisely](#ask-concisely)
+- [Apply by mode](#apply-by-mode)
+- [Run the success test](#run-the-success-test)
+
 ## Start with topic status
 
 At the beginning of a new writing request, determine whether the user:
@@ -14,7 +27,7 @@ If the request, draft, title, outline, or supplied material already makes the to
 
 > Do you already have a topic, have a rough direction you want to refine, or would you like to brainstorm topics together?
 
-When `request_user_input` or an equivalent structured user-input tool is available in the current mode, use it instead of rendering that choice as ordinary prose. Use this structure:
+When the host exposes a structured user-input tool—such as `request_user_input` in Codex—or an equivalent choice control in the current mode, use it instead of rendering that choice as ordinary prose. Use this structure:
 
 - **Header:** `Topic path`
 - **Question:** `How would you like to establish the topic for this writing?`
@@ -22,7 +35,7 @@ When `request_user_input` or an equivalent structured user-input tool is availab
 - **Option 2:** `Refine a direction` — Turn a rough subject or early idea into a focused topic.
 - **Option 3:** `Brainstorm topics` — Generate distinct possibilities from the user's interests, purpose, and constraints.
 
-Wait for the selection before following that branch. If the structured tool is unavailable, ask the same three-way choice conversationally. Do not change collaboration mode solely to obtain a structured prompt, and do not imply that a selector was shown when it was not.
+Wait for the selection before following that branch. If the structured tool is unavailable, ask the same three-way choice conversationally. Do not change the host's collaboration or execution mode solely to obtain a structured prompt, and do not imply that a selector was shown when it was not.
 
 Follow the selected path:
 
@@ -40,16 +53,47 @@ Capture these fields when they matter:
 
 1. **Topic:** the subject and its relevant boundaries.
 2. **Goal:** what the reader should know, understand, believe, feel, decide, or do afterward.
-3. **Audience:** the actual reader or decision-maker.
+3. **Audience:** the actual reader or decision-maker, including relevant needs, concerns, resistance, emotional situation, relationship to the writer, and desired response.
 4. **Prior knowledge:** what the audience already knows, assumes, misunderstands, or needs explained.
 5. **Context:** the occasion, channel, surrounding conversation, stakes, relationship, and reason the writing is needed now.
-6. **Required content:** facts, claims, examples, evidence, quotations, arguments, conclusions, or calls to action that must appear.
-7. **Exclusions:** information, claims, framing, disclosures, or implications to avoid.
-8. **Reference material:** notes, documents, links, data, policies, sources, and earlier discussions that may support the content; identify which are mandatory or authoritative.
-9. **Voice target:** tone, formality, language style, and any authorized writing samples.
-10. **Format constraints:** length, structure, citation style, template, platform, deadline, and accessibility needs.
+6. **Governing directions:** assignment notes, client or editor instructions, policies, templates, rubrics, cautions, required emphasis, and other directions that control the artifact.
+7. **Content roles:** facts, claims, examples, evidence, quotations, arguments, conclusions, or calls to action classified as required, optional supporting, background only, or excluded.
+8. **Exclusions:** information, claims, framing, disclosures, implications, or source uses to avoid.
+9. **Reference material:** notes, documents, links, data, sources, and earlier discussions that may support the content; identify which are authoritative for facts and which merely provide leads.
+10. **Voice target:** tone, formality, language style, emotional restraint, and any authorized writing samples.
+11. **Format and delivery constraints:** length, structure, citation style, template, platform, deadline, accessibility needs, and any component allocations.
 
-Do not collapse these fields. Topic is not goal. Audience is not prior knowledge. Factual references are not voice samples. Context is not permission to invent facts.
+Do not collapse these fields. Topic is not goal. Audience is not prior knowledge. Governing directions are not factual evidence. Factual references are not voice samples. Context is not permission to invent facts.
+
+### Classify content roles
+
+- **Required:** must appear or be satisfied for the artifact to meet the brief.
+- **Optional supporting:** may improve the artifact when it earns its space and serves the goal.
+- **Background only:** informs understanding but should not be forced into the artifact.
+- **Excluded:** must not appear or be used in the prohibited way.
+
+Do not treat all supplied material as required. Do not criticize the omission of optional or background material merely because it was available.
+
+### Classify constraints
+
+- **Hard constraint:** a mandatory ceiling, floor, format, policy, deadline, or structural requirement.
+- **Working target:** a preferred aim that may be adjusted transparently.
+- **Allocation:** a section or component budget within the whole.
+- **Safety buffer:** reserved capacity for quotations, citations, captions, delivery variation, or other real use.
+
+When allocations exist, compare their total with the overall constraint. Do not silently redistribute them or solve an overrun by assuming hidden capacity.
+
+## Establish the direction hierarchy
+
+Use this order while respecting any higher-level safety or legal obligation:
+
+1. non-waivable institutional, contractual, publication, or policy requirements;
+2. the user's current explicit instructions;
+3. applicable assignment, client, editor, template, rubric, or source-level directions;
+4. user-confirmed brief decisions;
+5. genre conventions and defaults.
+
+When two directions conflict, identify the conflict instead of silently choosing. Ask the user when they have authority to resolve it; otherwise explain the controlling constraint. A direction can govern selection, tone, emphasis, or structure, but it does not verify a factual claim.
 
 ## Classify certainty
 
@@ -76,11 +120,13 @@ For a short, low-stakes edit, infer the obvious brief and proceed. For substanti
 
 Pause when a missing fact, authorization, required source, or high-stakes choice cannot be safely inferred. Do not use a plausible guess to fill a factual or policy gap.
 
+For substantial, high-stakes, or tightly constrained work, confirm the intended direction in one short paragraph before drafting. Include the reader outcome, audience conditions, governing baseline, hard constraints, and any unresolved decision. Skip this confirmation for quick edits or when it would merely repeat settled information.
+
 ## Ask concisely
 
 ### Prefer structured choices when available
 
-Use `request_user_input` or an equivalent structured control when all of these are true:
+Use a native structured control, including `request_user_input` when Codex provides it, when all of these are true:
 
 - the answer is needed before the next meaningful step;
 - the question has two or three genuinely mutually exclusive choices;
@@ -89,19 +135,21 @@ Use `request_user_input` or an equivalent structured control when all of these a
 
 Ask no more than three short questions in one structured prompt. Put the recommended option first and mark it `(Recommended)`. Make the recommendation contextual rather than arbitrary. Do not use a selector for an open-ended response such as the user's actual topic, source material, draft text, factual background, or writing samples; request that material conversationally after the relevant choice.
 
+For a consequential choice, give a compact decision brief before asking: state the recommendation, one reasonable alternative when one exists, the material tradeoff, and any effect on the goal, evidence, length, tone, or readiness. Do not invent balance when only one option is responsible or authorized.
+
 If no structured input tool is available, present the same choices in concise plain text and wait for the user's answer. Preserve the same wording and decision structure across both interfaces. Never switch modes merely to gain a preferred question UI.
 
-Use a compact prompt such as:
+Treat the structure—not the tool name—as normative. Use a compact fallback prompt such as:
 
 > I can use what you already supplied. The remaining points that would materially change the draft are: (1) what should the reader do or understand afterward, (2) what they already know, and (3) which facts or sources must be included. If you prefer, I can proceed with clearly stated assumptions.
 
-Do not ask all ten fields unless the request genuinely leaves all ten unresolved.
+Do not ask every brief field unless the request genuinely leaves all of them unresolved.
 
 ## Apply by mode
 
 ### Unsloop Write
 
-Resolve topic status first. Establish the goal, content boundary, audience knowledge, and authoritative references before substantial drafting. Make each section serve the goal. Explain only what the audience needs, and do not omit necessary context merely to sound concise.
+Resolve topic status first. Establish the goal, governing baseline, content roles, audience knowledge and concerns, authoritative references, and hard constraints before substantial drafting. Make each section serve the goal. Explain only what the audience needs, and do not omit necessary context merely to sound concise.
 
 ### Unsloop Review
 
@@ -109,12 +157,14 @@ Infer the draft's apparent topic, goal, audience, and context. State a material 
 
 ### Unsloop Audit
 
-Record the intended function of the writing and the source or policy boundary. A persuasive, pastoral, commercial, academic, or personal goal never lowers the evidence standard. Distinguish required content supplied by the user from claims actually supported by sources.
+Record the intended function of the writing, governing directions, content roles, and source or policy boundary. A persuasive, pastoral, commercial, academic, or personal goal never lowers the evidence standard. Distinguish required content supplied by the user from claims actually supported by sources.
 
 ## Run the success test
 
 Before delivery, ask:
 
-> Does this writing accomplish its stated goal for this audience, given their prior knowledge and the actual context, while including the required content and respecting the evidence, exclusions, voice, and format constraints?
+> Does this writing accomplish its stated goal for this audience, given their prior knowledge, concerns, and actual context, while following governing directions, including required content, using optional material selectively, and respecting the evidence, exclusions, voice, and hard constraints?
 
 If not, revise or explain the unresolved limitation.
+
+Also confirm that every required item and hard constraint has an observable place in the artifact or an explicit unresolved status. Do not treat fluent prose as evidence that the brief was satisfied.

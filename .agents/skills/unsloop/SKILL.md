@@ -7,6 +7,10 @@ description: Review, audit, draft, or revise writing for plagiarism and patchwri
 
 Evaluate observable writing and source evidence. Make the work original, defensible, specific, readable, and faithful to the writer's intent without treating detector outputs or stylistic hunches as verdicts.
 
+Treat the user's requested artifact as the primary deliverable. Add intake, audit, scoring, or process detail only when it materially improves accuracy, integrity, voice fidelity, transparency, or readiness.
+
+Run the same method in any compatible agent harness or text-capable model. Use host-native tools by capability rather than assuming vendor-specific names, and preserve a plain-text fallback for optional UI features. Read [references/harness-compatibility.md](references/harness-compatibility.md) when adapting to a host, a capability is unavailable, or model limits affect the task.
+
 ## Choose the mode
 
 - Use **Unsloop Review** for constructive diagnosis of an existing draft. Default to this mode when the request is broad.
@@ -17,18 +21,19 @@ Apply brief, standard, or deep depth based on the request and available evidence
 
 ## Run the workflow
 
-1. Determine topic status at the beginning. If the topic is already explicit in the request or supplied draft, use it without asking the user to repeat it. For new writing without a clear topic, ask whether the user has a topic, wants help refining a rough direction, or wants to brainstorm topics. When a structured user-input tool is available, use it for this choice and other short, consequential decisions; otherwise use an equivalent concise conversational prompt. Do not change collaboration mode solely to obtain the tool. Read [references/writing-brief.md](references/writing-brief.md).
-2. Establish a progressive writing brief. Extract the topic, goal, audience, prior knowledge, context, required content, exclusions, reference material, voice target, and format constraints already present.
-3. Mark material brief elements as known, inferred, or unknown. Ask only about unknowns whose answers could materially change accuracy, integrity, structure, tone, or usefulness. State consequential assumptions when proceeding.
+1. Determine topic status at the beginning. If the topic is already explicit in the request or supplied draft, use it without asking the user to repeat it. For new writing without a clear topic, ask whether the user has a topic, wants help refining a rough direction, or wants to brainstorm topics. When the host exposes a structured user-input tool, use it for this choice and other short, consequential decisions; otherwise use an equivalent concise conversational prompt. Do not change the host's collaboration or execution mode solely to obtain the tool. Read [references/writing-brief.md](references/writing-brief.md).
+2. Establish a progressive writing brief. Extract the topic, goal, audience, prior knowledge, likely concerns or resistance, context, governing directions, content roles, exclusions, reference material, voice target, and hard or working constraints already present.
+3. Mark material brief elements as known, inferred, or unknown. Resolve the direction hierarchy and distinguish required, optional, background-only, and excluded material. Ask only about unknowns or conflicts whose answers could materially change accuracy, integrity, structure, tone, or usefulness. State consequential assumptions when proceeding.
 4. When the user wants writing in their voice and the available evidence is thin, request representative examples of their previous writing. Do not block if they decline; use the available draft or conversation and label voice confidence.
 5. Build a bounded voice target from authorized evidence. Separate style traits from the samples' facts, claims, experiences, and distinctive wording. Read [references/voice-fidelity.md](references/voice-fidelity.md).
 6. State the evidence boundary when it limits a conclusion: draft only, writing brief, voice brief, writing samples, excerpts, full sources, verified sources, or similarity report.
-7. Apply the source-integrity lens when the text uses or may depend on sources. Read [references/integrity-review.md](references/integrity-review.md).
-8. Apply the human-voice lens to existing prose and before finalizing new prose. Read [references/human-voice-review.md](references/human-voice-review.md).
+7. Apply the source-integrity lens when the text uses or may depend on sources. For substantial work with multiple requirements, audit requirement coverage separately from source support. Read [references/integrity-review.md](references/integrity-review.md).
+8. Apply the human-voice lens to existing prose and before finalizing new prose. Test whether examples perform a clear function and whether emotional force is earned rather than manufactured. Read [references/human-voice-review.md](references/human-voice-review.md).
 9. Score only when requested or when a score materially improves comparison. Read [references/scoring.md](references/scoring.md).
 10. Rank findings by consequence and confidence. Separate observation, supported inference, unverified concern, and out-of-scope judgment.
 11. Diagnose before rewriting. Rewrite only when requested, and identify strong material that should remain unchanged.
-12. Format the result for the selected mode. Read [references/output-contracts.md](references/output-contracts.md).
+12. Format the result for the selected mode. When unresolved choices, evidence, authorization, or hard constraints affect usability, report an honest readiness state rather than presenting provisional work as final. Read [references/output-contracts.md](references/output-contracts.md).
+13. Before delivery, confirm that required content and hard constraints are satisfied, factual and voice evidence remain separate, material findings do not exceed the evidence boundary, and strong writing was not changed without a reason.
 
 ## Enforce the evidence rules
 

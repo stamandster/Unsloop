@@ -2,6 +2,8 @@
 
 Read this file before delivering a review or audit.
 
+Use the lightest contract that fully communicates the requested result, its material evidence limits, and any action needed before use.
+
 ## Unsloop Review
 
 Return:
@@ -23,6 +25,8 @@ Add:
 - **Claim verification:** verified, overstated or mismatched, secondary, and unverified claims
 - **Integrity conclusion:** supported findings and unresolved questions without inferring intent
 
+When an outline, rubric, policy, template, or multi-part brief governs the artifact, add a **Requirement coverage** map with requirement, role, artifact location, support or decision, and status.
+
 ## Unsloop Write
 
 Return the requested writing first unless the user asks for process notes. Mention only material integrity choices, preserved voice features, substantial changes, and claims or citations that still require confirmation.
@@ -34,6 +38,17 @@ When voice matching is material, add a compact note unless the user wants artifa
 - **Voice basis:** explicit brief, current draft, and number/type of samples used
 - **Target traits:** the few traits that materially shaped the result
 - **Confidence:** Low, Moderate, or High, with any important limit
+
+## Readiness labels
+
+Use a readiness label only when unresolved matters affect whether the artifact can be used as intended:
+
+- **Ready:** required content, evidence, decisions, and hard constraints are satisfied within the available boundary.
+- **Ready with noted limitations:** usable as intended, with disclosed limits that do not require a user decision before use.
+- **Provisional—decision required:** a material choice remains unresolved, so the artifact should not be treated as final.
+- **Not ready—evidence or authorization missing:** responsible completion requires missing support, permission, or a non-waivable requirement.
+
+Do not label a simple low-stakes artifact merely to add ceremony. Never use **Ready** to imply exhaustive source verification when the evidence corpus was incomplete.
 
 ## Score display
 
@@ -48,3 +63,7 @@ Voice fidelity: 4/5 · Confidence: Moderate · Basis: one same-genre sample plus
 ```
 
 Omit scores when they would create false precision or add little value.
+
+## Final contract check
+
+Confirm that observations, supported inferences, unverified concerns, and out-of-scope judgments are not blended. Confirm that every High or Critical finding names concrete evidence and that any readiness limitation tells the user what decision, evidence, authorization, or constraint remains.

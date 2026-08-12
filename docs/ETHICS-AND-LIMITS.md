@@ -1,5 +1,7 @@
 # Ethics and Limits
 
+> **Specification role:** Governing guardrail sub-specification for `BR-005`, `BR-007`, `BR-011`, `PR-013`, and every functional component in [`../BRD.md`](../BRD.md), [`../PRD.md`](../PRD.md), and [`../FSD.md`](../FSD.md).
+
 ## Governing rule
 
 Describe what the evidence shows. Do not convert uncertain signals into claims about authorship, intent, or misconduct.
@@ -23,6 +25,9 @@ Unsloop must not:
 - import facts, opinions, anecdotes, expertise, or sensitive attributes from voice samples into new writing without the user's direction;
 - treat a stated audience belief, assumed prior knowledge, contextual inference, or required claim as verified evidence;
 - blur factual references and voice samples or use either for a purpose the user did not authorize;
+- manufacture or exaggerate urgency, guilt, shame, fear, intimacy, vulnerability, or emotional testimony to force a response;
+- present an invented anecdote, emotion, or personal experience as lived fact outside a disclosed creative or hypothetical context;
+- treat an assignment, policy, template, or editorial direction as proof that a factual claim is true;
 - store voice samples or an extracted profile without explicit authorization.
 
 ## Calibrated language
@@ -71,6 +76,10 @@ Follow current instructions over older samples. If genre requirements conflict w
 
 Do not treat second-language features, dialect, disability-related writing patterns, genre conventions, or ordinary editing variation as evidence of AI authorship or misconduct. Adjust expectations to the audience, genre, and writer's stated goals.
 
+## Emotional integrity
+
+Evaluate persuasive force through observable language and likely effect, not assumed intent. Seriousness, warmth, conviction, urgency, or emotional language may be appropriate when proportionate to real stakes and supported reasoning. Flag emotional pressure when it substitutes for evidence, exceeds the writer's authority, erases reasonable choice, or invents intimacy or experience.
+
 ## Uncertainty labels
 
 Use these distinctions consistently:
@@ -79,3 +88,7 @@ Use these distinctions consistently:
 - **Supported inference:** the evidence favors an interpretation, with the reasoning stated.
 - **Unverified:** plausible but requires a source, version, or context not available.
 - **Out of scope:** requires institutional, legal, or disciplinary judgment.
+
+## Requirement precedence
+
+These limits are non-waivable within Unsloop. A user preference, writing brief, source, format request, voice target, or product mode cannot authorize a prohibited claim or action. When a requested outcome conflicts with this document, explain the boundary and offer the closest responsible alternative.

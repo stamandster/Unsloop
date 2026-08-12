@@ -1,29 +1,34 @@
 # Review Model
 
+> **Specification role:** Normative method for `PR-003`–`PR-008` and `FS-003`–`FS-007` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md). Ethical limits in [`ETHICS-AND-LIMITS.md`](ETHICS-AND-LIMITS.md) control whenever a method rule appears to conflict.
+
 ## Overview
 
 Unsloop uses two review lenses. Apply them together for a standard review, or emphasize one when the user's request is narrower.
 
 ## Progressive writing brief
 
-For new writing, begin by determining topic status: the user has a topic, has a rough direction to refine, or wants to brainstorm topics. Do not ask when the request or supplied material already establishes the topic. Use a structured user-input control for this and other short, consequential choices when the current Codex mode exposes one; otherwise use the same options in concise plain text. Do not switch modes solely to obtain the control. When brainstorming is requested, gather only enough seed context to generate genuinely distinct, feasible options; briefly distinguish their angle, reader value, scope, and evidence needs before helping the user choose. For Review or Audit, normally infer the topic from the supplied writing.
+For new writing, begin by determining topic status: the user has a topic, has a rough direction to refine, or wants to brainstorm topics. Do not ask when the request or supplied material already establishes the topic. Use a structured user-input control for this and other short, consequential choices when the active harness exposes one—including Codex's native control when available; otherwise use the same options in concise plain text. Do not switch collaboration or execution modes solely to obtain the control. When brainstorming is requested, gather only enough seed context to generate genuinely distinct, feasible options; briefly distinguish their angle, reader value, scope, and evidence needs before helping the user choose. For Review or Audit, normally infer the topic from the supplied writing.
 
 Before applying either lens, extract the brief already present in the request and supplied materials:
 
 1. topic;
 2. goal—the intended reader outcome;
-3. audience;
+3. audience needs, concerns, resistance, emotional situation, and desired response;
 4. audience prior knowledge;
 5. context and occasion;
-6. required content;
-7. exclusions;
-8. factual reference material;
-9. voice target and authorized voice samples;
-10. format constraints.
+6. governing directions from assignments, clients, editors, policies, templates, or rubrics;
+7. required, optional supporting, background-only, and excluded content;
+8. exclusions and prohibited uses;
+9. factual reference material;
+10. voice target and authorized voice samples;
+11. hard constraints, working targets, component allocations, and safety buffers.
 
-Mark material fields as **Known**, **Inferred**, or **Unknown**. Do not ask all ten fields as a questionnaire. Ask only about an unknown that could materially affect factual accuracy, evidence, claim selection, explanation level, tone, relationship risk, privacy, policy exposure, format, or usefulness. State a consequential inference rather than hiding it.
+Mark material fields as **Known**, **Inferred**, or **Unknown**. Do not ask every field as a questionnaire. Ask only about an unknown that could materially affect factual accuracy, evidence, claim selection, explanation level, tone, relationship risk, privacy, policy exposure, format, or usefulness. State a consequential inference rather than hiding it.
 
 Keep factual references separate from voice samples. References support what the writing says; voice samples provide evidence about how it should sound. Neither the audience's beliefs nor a required claim becomes verified merely because it appears in the brief.
+
+Keep governing directions separate from evidence. Resolve conflicts among non-waivable requirements, current user instructions, assignment or editorial directions, confirmed brief decisions, and genre defaults. Do not silently redistribute component allocations or treat all supplied material as required.
 
 For a short, low-stakes request, infer safe defaults and proceed. For substantial drafting, ask the smallest useful batch of questions. Pause when a missing fact, source, authorization, or high-stakes choice cannot be safely inferred. Review uses the brief as evaluative context; Write uses it as the drafting specification; Audit records it separately from the evidence corpus.
 
@@ -42,6 +47,8 @@ Record what is available:
 The evidence boundary controls the claim. A draft-only review can flag passages that warrant inspection, but it cannot establish source dependence. A similarity report identifies matches, not plagiarism.
 
 ### 2. Review source relationships
+
+Before source comparison, map requirement coverage when an outline, rubric, policy, template, or multi-part brief governs the artifact. Record the requirement, role, artifact location, support or decision, and status. A requirement may be present but unsupported; a supported claim may still fail the brief.
 
 Compare wording, syntax, concept sequence, detail selection, and rhetorical architecture.
 
@@ -136,6 +143,12 @@ For each suspect sentence, ask:
 - Is a transition doing logical work?
 - Does a polished phrase obscure who did what?
 
+### 6. Test examples and emotional integrity
+
+For each material example, identify what it clarifies, why it appears there, whether it is supported or clearly hypothetical, and whether removing it would reduce understanding or impact. Trim decorative details and never present invented personal experience as lived fact.
+
+Assess whether emotional force is earned through concrete stakes, proportionate language, reasoning, and respect. Flag manufactured urgency, guilt, shame, fear, forced intimacy, invented vulnerability, exaggerated certainty, and calls to action that exceed the evidence or the writer's authority. Do not treat warmth, seriousness, conviction, or emotion as defects by themselves.
+
 ## Review depths
 
 ### Brief
@@ -153,3 +166,5 @@ Map claims and sources, compare source relationships passage by passage, apply t
 ## Revision rule
 
 Diagnose by default. Rewrite only when requested. When rewriting, preserve meaning, position, natural vocabulary, intended audience, and legitimate irregularity. If voice fidelity is material, report the evidence basis and Low, Moderate, or High confidence. Do not rewrite good prose merely because it is imperfect.
+
+Apply the mode-specific delivery and readiness rules in [`REVIEW-OUTPUT.md`](REVIEW-OUTPUT.md). Apply numeric anchors only under the conditions in [`SCORING-RUBRIC.md`](SCORING-RUBRIC.md).

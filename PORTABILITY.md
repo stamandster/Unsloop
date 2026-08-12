@@ -1,32 +1,108 @@
 # Portability
 
+> **Document role:** Deployment, harness, and transfer sub-specification for `PR-014`–`PR-015`, `NFR-001`, `NFR-002`, `NFR-007`, and `FS-011`–`FS-013` in [`PRD.md`](PRD.md) and [`FSD.md`](FSD.md).
+
 ## Guarantee
 
-Unsloop's canonical skill lives at `.agents/skills/unsloop`. Copying or cloning the project preserves the skill, its UI metadata, all operational references, the product documentation, and the validation tool as one unit.
+Unsloop's canonical operational core lives at `.agents/skills/unsloop`. Copying or cloning the project preserves the skill, its relative references, optional harness metadata, product documentation, link utility, and validator as one unit.
 
-No file must be copied into a user profile or global Codex directory.
+The core is both harness-agnostic and model-agnostic:
 
-## Codex discovery
+- `SKILL.md` uses standard `name` and `description` frontmatter;
+- every operational reference is relative to the skill directory;
+- no provider, model ID, proprietary tool name, hidden reasoning format, or UI control is required;
+- missing host capabilities have explicit fallbacks; and
+- evidence, voice, privacy, readiness, and ethics rules do not change across hosts.
+
+Compatibility means the same method can load and run. It does not promise identical reasoning quality, context capacity, tool access, latency, cost, or output across models.
+
+## Portable core and adapters
+
+```text
+.agents/skills/unsloop/       authoritative portable core
+├── SKILL.md                  standard metadata + workflow
+├── references/               on-demand portable procedures
+└── agents/openai.yaml        optional Codex UI adapter
+
+Harness discovery link/copy   optional adapter to the same core
+Model and tool selection      supplied by the active harness
+```
+
+Discovery paths, invocation syntax, UI metadata, and tool mappings are adapters. They may expose the core but must not fork or rewrite its method.
+
+## Harness matrix
+
+| Harness or client | Repository scope | User scope | Explicit invocation | Notes |
+|---|---|---|---|---|
+| Codex | `.agents/skills/unsloop` | `$HOME/.agents/skills/unsloop`; existing project helper also supports `$CODEX_HOME/skills/unsloop` | `$unsloop`; `/skills` lists skills in CLI/IDE | Existing Codex behavior and `agents/openai.yaml` are retained. |
+| Claude Code | `.claude/skills/unsloop` | `$HOME/.claude/skills/unsloop` | `/unsloop` | Link or copy the same core; do not add Claude-only frontmatter to canonical `SKILL.md`. |
+| Pi | `.agents/skills/unsloop` or `.pi/skills/unsloop` | `$HOME/.agents/skills/unsloop` or `$HOME/.pi/agent/skills/unsloop` | `/skill:unsloop` | Pi can use the canonical repository path directly. |
+| Other Agent Skills clients | Client-defined Agent Skills path | Client-defined | Client-defined | Point the client at the directory containing `SKILL.md`. |
+| Harness without skill discovery | Project/system instruction adapter | Harness-defined | Prompt or command defined by host | Load `SKILL.md` and permit on-demand access to adjacent references. |
+
+Verified discovery sources are recorded in [`docs/SOURCES.md`](docs/SOURCES.md). Harness paths can change; keep adapter documentation versioned and do not make them part of the writing method.
+
+## Codex discovery remains supported
 
 Codex scans `.agents/skills` from the current working directory upward to the repository root. Launch Codex anywhere inside this repository to make the root Unsloop skill available. If a host does not refresh after a file change, restart Codex.
 
-This follows the [official OpenAI documentation for repository-scoped skills](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills).
+This follows the [official OpenAI documentation for repository-scoped skills](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills). The existing Codex-home link remains available and is still the default behavior of `scripts/link_global_skill.py`.
+
+## Claude discovery
+
+Claude Code follows the Agent Skills format but discovers project skills under `.claude/skills` and user skills under `$HOME/.claude/skills`. Create a junction, symlink, or copy named `unsloop` that points to the canonical `.agents/skills/unsloop` directory. Invoke it with `/unsloop` or allow description-based activation.
+
+## Pi discovery
+
+Pi discovers `.agents/skills/unsloop` from the working directory or its ancestors, so this repository needs no adapter. Pi also supports `.pi/skills/unsloop`, `$HOME/.agents/skills/unsloop`, and `$HOME/.pi/agent/skills/unsloop`. Invoke it explicitly with `/skill:unsloop` when automatic selection is insufficient.
 
 ## Runtime dependencies
 
-The skill runtime consists only of:
+The portable skill runtime consists only of:
 
 - `SKILL.md`;
-- relative Markdown references;
-- `agents/openai.yaml` metadata.
+- relative Markdown references; and
+- optional host metadata ignored safely by clients that do not use it.
 
-It requires no package manager, build step, MCP server, memory service, API key, environment variable, absolute filesystem path, or user-level configuration. Durable project decisions live in the checked-in Markdown documents, so using Unsloop does not depend on MuninnDB or any other external memory system.
+It requires no package manager, build step, MCP server, memory service, API key, environment variable, absolute filesystem path, or user-level configuration. Durable project decisions live in checked-in Markdown, so using Unsloop does not depend on a memory service.
 
-External access is optional and task-driven. A normal writing review works offline. An Audit that verifies online sources naturally requires access to those sources.
+External access is optional and task-driven. A normal writing review works offline. An Audit that verifies online sources requires a host with source access or user-supplied source text. If neither exists, Unsloop marks the claim unverified instead of changing standards.
 
-Interactive presentation adapts to the host. When Codex exposes a structured user-input control, Unsloop can use it for short choices. On hosts or modes without that capability, the same decision is presented as plain text; no UI-specific feature is required for the skill to function.
+Interactive presentation adapts to the host. A native structured-input control may present short choices; plain text preserves the same decision when no such control exists. A native file editor may apply changes; otherwise Unsloop returns a delimited revision. Voice samples remain task inputs and are not persisted unless the user explicitly authorizes storage through an available mechanism.
 
-Voice samples are task inputs, not project dependencies. Unsloop does not place supplied samples or extracted voice profiles in the repository unless the user explicitly asks for that persistence.
+## Optional user-level links
+
+The project utility preserves its original Codex default:
+
+```text
+python scripts/link_global_skill.py
+python scripts/link_global_skill.py --check
+```
+
+Select another harness without changing the canonical source:
+
+```text
+python scripts/link_global_skill.py --harness standard
+python scripts/link_global_skill.py --harness claude
+python scripts/link_global_skill.py --harness pi
+```
+
+Repeat `--harness` to manage multiple explicit targets, or use `--harness all` for Codex, Claude, and Pi user locations. The `standard` target is `$HOME/.agents/skills/unsloop`; select it instead of a harness-specific location when the clients you use all discover the shared path. Avoid installing the same skill in both a shared and harness-specific path if that host would show duplicates.
+
+On Windows the utility creates directory junctions; on other supported systems it creates directory symlinks. It is idempotent and refuses to replace an unrelated existing destination. Links contain no independent copy, so project edits are immediately visible through every selected path.
+
+## Model and capability adaptation
+
+Unsloop supports text-capable models that can follow the skill and inspect the required material. At runtime:
+
+1. identify only the host capabilities material to the request;
+2. map semantic needs to native tools rather than assuming tool names;
+3. use the fallback in `references/harness-compatibility.md` when a capability is absent;
+4. partition large corpora explicitly when model context is insufficient;
+5. retain a precise evidence boundary for every inspected section; and
+6. report concise conclusions and rationale without requesting private chain-of-thought.
+
+A weaker model or smaller context may justify a narrower task, more explicit checkpoints, or lower confidence. It never justifies fabricated support, weaker attribution, unauthorized voice imitation, or an unqualified readiness claim.
 
 ## Validation
 
@@ -36,26 +112,28 @@ Run from the project root:
 python scripts/validate.py
 ```
 
-The validator uses only the Python standard library and checks:
+The dependency-free validator checks:
 
-- repository-local skill placement;
-- frontmatter and skill naming;
-- expected UI metadata;
-- required project documents and skill references;
-- required writing-brief and voice-fidelity safeguards;
-- unresolved placeholders;
-- broken relative Markdown links;
+- repository-local canonical placement;
+- Agent Skills frontmatter and skill naming;
+- optional Codex UI metadata;
+- required project documents and operational references;
+- harness-compatibility, writing-brief, voice-fidelity, evidence, and ethics safeguards;
+- the project-owned multi-harness link utility;
+- BRD, PRD, and FSD traceability;
+- unresolved placeholders and broken relative Markdown links; and
 - accidental machine-specific absolute paths.
 
-Python is not required to use Unsloop; it is required only to run this optional maintenance check.
+Python is not required to use Unsloop; it is required only for these optional maintenance checks and link operations.
 
 ## Transfer checklist
 
 After copying or cloning the project:
 
-1. Open a terminal anywhere under the project root.
+1. Keep `.agents/skills/unsloop` intact as the canonical core.
 2. Run `python scripts/validate.py` if Python is available.
-3. Start or restart Codex in the project.
-4. Invoke `$unsloop`, or make a request that matches its description.
+3. Use the canonical location directly when the harness supports it; otherwise create one adapter link or copy in the harness's documented discovery path.
+4. Start or refresh the harness and use its explicit invocation once to confirm discovery.
+5. Test any material optional capability—structured input, browsing, file editing, storage, or length validation—before relying on it.
 
-Do not create a second global copy with the same skill name. Codex does not merge same-named skills, so duplicate installations can make skill selection ambiguous.
+Do not maintain divergent independent copies under the same skill name. The root specifications and method documents need not load during every invocation, but they must travel with the authoritative repository so maintainers can reproduce the product's rationale, requirements, and validation contract.

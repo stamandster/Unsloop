@@ -2,6 +2,8 @@
 
 Read this file when the user asks to preserve, recover, match, or write in their voice, or when a review evaluates fidelity to a known voice target.
 
+Make every voice conclusion auditable from authorized evidence: name the sample basis, describe observable traits, distinguish adaptation from mismatch, and state confidence without claiming identity.
+
 ## Establish authority and scope
 
 Treat the user's request to match their own writing as sufficient authorization unless the materials create a concrete reason for doubt. If samples appear to belong to someone else, ask whether the user is authorized to use that voice and describe the task as style adaptation rather than identity impersonation.
@@ -47,6 +49,8 @@ Separate stable traits from genre effects. A formal report and a personal messag
 
 Summarize the brief internally before writing. Show it to the user when the task is long, high-stakes, the samples conflict, or the user asks to approve the profile.
 
+For each material target trait, retain a simple basis: an explicit instruction or a recurring pattern across the authorized evidence. Drop a trait that rests on one incidental phrase unless the user confirms it.
+
 ## Keep style separate from content
 
 Use samples to learn how the user writes, not what to claim in a new piece.
@@ -77,4 +81,3 @@ Never turn confidence into a claim that the result is indistinguishable from the
 ## Protect samples
 
 Use the minimum sample text needed. Do not reproduce unnecessary passages in the output. Do not place samples or extracted profiles in project files, memory, or external services unless the user explicitly authorizes that storage or transfer.
-

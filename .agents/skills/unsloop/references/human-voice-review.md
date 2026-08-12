@@ -2,6 +2,8 @@
 
 Read this file for anti-slop review, style consistency, voice preservation, or the final pass on drafted or revised prose.
 
+Evaluate whether the prose serves this writer's goal for this audience. Do not replace a concrete, effective choice merely because another construction is smoother or more conventional.
+
 ## Set the voice target
 
 Identify audience, purpose, genre, appropriate formality, and whether to preserve the writer's own voice or follow a publication style. When the review concerns fidelity to the user's voice, establish the evidence basis and bounded voice brief before judging alignment. Do not make prose more formal unless the purpose requires it.
@@ -41,6 +43,31 @@ Ask whether a reader can identify what the writer thinks and why. Look for:
 - natural emphasis;
 - sentence variation that follows thought.
 
+## Test examples for function
+
+For each material anecdote, illustration, scenario, comparison, or case, ask:
+
+- What single claim, distinction, consequence, or judgment does it clarify?
+- Why is it placed here?
+- Is it supported, clearly hypothetical, or supplied by the user?
+- Does it lead to a useful inference, feeling, decision, or action appropriate to the genre?
+- Would removing it reduce understanding or impact?
+
+Trim details that do not serve the example's function. Do not manufacture a personal experience, emotional disclosure, or dramatic specificity. Creative writing may use invented material when invention is part of the disclosed genre; do not present it as lived fact.
+
+## Test emotional integrity
+
+Assess whether the writing earns its emotional effect through concrete stakes, proportionate language, sound reasoning, and respect for the audience. Flag patterns such as:
+
+- manufactured urgency or catastrophe;
+- guilt, shame, fear, or social pressure used in place of reasons;
+- forced intimacy or claims about what every reader must feel;
+- exaggerated certainty, sentiment, or moral judgment;
+- vulnerability or personal testimony invented for persuasion; and
+- a call to action that exceeds the evidence or the writer's authority.
+
+Do not treat seriousness, warmth, conviction, or emotional language as defects by themselves. Identify the concrete mechanism and its likely effect rather than assigning motives.
+
 ## Run the final pass
 
 For each sentence, ask:
@@ -56,3 +83,5 @@ For each sentence, ask:
 Delete, specify, combine, simplify, or reconnect as needed. Preserve strong, natural passages.
 
 When samples exist, evaluate patterns across the samples rather than penalizing every local difference. Distinguish a genuine mismatch from a necessary change in genre, audience, or purpose.
+
+Before changing a flagged passage, identify the intended reader effect and the smallest edit that restores substance or fit. If the effect is already clear and appropriate, leave the passage alone.

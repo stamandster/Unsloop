@@ -1,5 +1,7 @@
 # Roadmap
 
+> **Document role:** Delivery sequence for the baselines in [`BRD.md`](BRD.md), [`PRD.md`](PRD.md), and [`FSD.md`](FSD.md). Checked items indicate implemented documentation or controls, not empirical validation unless stated.
+
 ## v0.1 — Foundation
 
 **Goal:** Turn the project vision into a coherent method and usable core skill.
@@ -13,10 +15,20 @@
 - [x] Define the progressive writing brief and proportional intake rules
 - [x] Add existing-topic, topic-refinement, and topic-brainstorming entry paths
 - [x] Add capability-aware structured questions with a conversational fallback
+- [x] Add governing-direction hierarchy and explicit content roles
+- [x] Add hard-constraint, allocation, and safety-buffer handling
+- [x] Add requirement-coverage and readiness contracts
+- [x] Add functional-example and emotional-integrity review
 - [x] Establish output, evidence, and ethics contracts
 - [x] Create and validate the repo-local core skill under `.agents/skills`
 - [x] Add dependency-free project-local validation
 - [x] Initialize portable Git metadata and line-ending rules
+- [x] Add optional global discovery through a link to the authoritative project skill
+- [x] Establish BRD, PRD, and FSD baselines with requirement traceability
+- [x] Align all project and operational Markdown with the specification hierarchy
+- [x] Define a model- and harness-agnostic Agent Skills core
+- [x] Preserve Codex support while documenting Claude, Pi, and generic harness adapters
+- [x] Add capability negotiation and fallbacks for harness and model differences
 
 ## v0.2 — Examples and calibration
 
@@ -28,10 +40,19 @@
 - [ ] Test sparse, conflicting, over-specified, and high-stakes writing briefs
 - [ ] Test topic discovery with no seed, a rough direction, and an already explicit topic
 - [ ] Test equivalent decisions through structured and plain-text question interfaces
+- [ ] Test conflicting governing directions and hard-versus-working constraints
+- [ ] Test requirement coverage independently from factual support
+- [ ] Test readiness labels against unresolved choices, evidence, and authorization
+- [ ] Test emotional-integrity findings across persuasive, pastoral, commercial, and personal genres
 - [ ] Add expected evidence notes without prescribing a single perfect rewrite
 - [ ] Forward-test brief, standard, and deep reviews in clean contexts
 - [ ] Revise ambiguous scale anchors
 - [ ] Record common false positives, especially for second-language and highly conventional writing
+- [ ] Convert the FSD verification matrix into reusable fixtures with expected boundaries and outputs
+- [ ] Trace fixture results back to `PR-*`, `NFR-*`, and `FS-*` requirements
+- [ ] Forward-test the same Review, Write, and Audit fixtures in Codex, Claude, Pi, and at least one manual Agent Skills adapter
+- [ ] Compare model families and context sizes without treating one model's output as the reference truth
+- [ ] Test missing-tool fallbacks for structured input, browsing, file editing, memory, and length measurement
 
 ## v0.3 — Assisted audit tooling
 
@@ -42,6 +63,7 @@
 - [ ] Export a source map without assigning misconduct
 - [ ] Add citation and locator verification hooks
 - [ ] Define privacy expectations for local and external processing
+- [ ] Add adapter fixtures that verify identical evidence and ethics boundaries across harnesses
 
 ## v0.4 — Mode specialization
 
@@ -61,6 +83,7 @@
 - [ ] Stabilize score anchors and output contracts
 - [ ] Complete privacy, accessibility, and bias review
 - [ ] Document installation and release packaging outside the skill bundle
+- [ ] Publish a cross-harness compatibility matrix with tested versions and known limitations
 
 ## Open questions
 
@@ -69,3 +92,4 @@
 - What minimum sample diversity supports High voice-fidelity confidence across genres?
 - What minimum evidence should be required before assigning High or Critical severity?
 - When does a separate mode skill improve reliability enough to justify maintenance cost?
+- What evidence threshold should move the BRD/PRD/FSD baseline from documented to empirically validated?

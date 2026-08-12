@@ -2,6 +2,8 @@
 
 Version 0.1 uses these sources to set guardrails, not to claim that its rubric has been empirically validated.
 
+> **Specification role:** Evidence record supporting the guardrails and research posture in [`../BRD.md`](../BRD.md), [`../PRD.md`](../PRD.md), and [`ETHICS-AND-LIMITS.md`](ETHICS-AND-LIMITS.md). It is not part of the evidence corpus for an individual Unsloop review unless the task makes a listed source relevant.
+
 ## Academic integrity and similarity
 
 ### APA Style — Avoiding Plagiarism Guide
@@ -37,6 +39,32 @@ Use: shows that experienced annotators in one controlled dataset used both lexic
 
 Use: supports the cautious premise that linguistic differences depend on the compared texts, tasks, and measures. Unsloop therefore treats features as review signals, not universal authorship markers.
 
+## Skill portability and harness discovery
+
+### Agent Skills open specification
+
+[Agent Skills Specification](https://agentskills.io/specification)
+
+Use: defines the portable `SKILL.md` directory, standard frontmatter, progressive disclosure, relative references, and optional resource conventions used by Unsloop's core.
+
+### OpenAI — Build skills
+
+[Build skills](https://learn.chatgpt.com/docs/build-skills)
+
+Use: documents Codex repository, user, admin, and system skill scopes; `.agents/skills` discovery; symlink support; and explicit or implicit invocation. Unsloop retains its existing Codex metadata and Codex-home compatibility link in addition to the shared location.
+
+### Anthropic — Extend Claude with skills
+
+[Extend Claude with skills](https://code.claude.com/docs/en/slash-commands)
+
+Use: confirms that Claude Code follows the Agent Skills standard, discovers project and user skills through `.claude/skills`, and supports direct `/skill-name` invocation. Claude-specific frontmatter extensions are not used by Unsloop's portable core.
+
+### Pi — Skills
+
+[Pi skills documentation](https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/docs/skills.md)
+
+Use: confirms Pi's Agent Skills support, direct discovery from project or user `.agents/skills`, optional `.pi/skills` and `~/.pi/agent/skills` locations, and `/skill:name` invocation.
+
 ## Research posture
 
 Before changing Unsloop's claims or scoring model:
@@ -48,3 +76,5 @@ Before changing Unsloop's claims or scoring model:
 5. Update the “last reviewed” date below.
 
 **Last reviewed:** 2026-08-12
+
+Specification changes based on new research must identify the affected `BR-*`, `PR-*`, `NFR-*`, or `FS-*` requirement and preserve the distinction between a source-supported guardrail and an empirically validated scoring claim.

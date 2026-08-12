@@ -2,6 +2,8 @@
 
 Read this file for source comparison, patchwriting analysis, plagiarism-risk review, evidence assessment, or a deep audit.
 
+Tie every material integrity finding to an inspected draft location, an available comparison or evidence gap, and a conclusion no stronger than that boundary permits.
+
 ## Establish the evidence boundary
 
 Record which materials are available. Limit claims accordingly.
@@ -12,6 +14,26 @@ Keep the writing brief distinct from the evidence corpus. A required claim in th
 - With source excerpts, make findings only about the compared passages.
 - With full sources, inspect context as well as local wording.
 - With a similarity report, inspect the actual matches and exclusions; do not use the percentage as a verdict.
+
+## Audit requirement coverage
+
+For substantial work governed by an outline, assignment, rubric, policy, template, or multi-part brief, audit requirement coverage separately from source support.
+
+| Requirement or direction | Role | Artifact location | Support or decision | Status |
+|---|---|---|---|---|
+
+Use **Satisfied**, **Partial**, **Missing**, **Conflict**, or **Not applicable**. A required item can be present but factually unsupported; a supported claim can still fail an assignment requirement. Keep those findings separate.
+
+Check that:
+
+- every required item is present and handled at the appropriate depth;
+- optional supporting material is included only when useful;
+- background-only material has not been forced into the artifact;
+- exclusions and non-waivable governing directions are respected;
+- component allocations and hard limits reconcile with the whole; and
+- unresolved conflicts or decisions remain visible.
+
+Do not create a coverage table for a simple request with no meaningful requirement set.
 
 ## Compare source relationships
 
@@ -51,6 +73,8 @@ For each material claim, determine:
 - whether quotation wording and locators are accurate.
 
 Flag strong terms such as “proves,” “causes,” “confirms,” “clearly,” and “undoubtedly” when the evidence does not warrant them.
+
+Assign confidence from the completeness and directness of the comparison evidence, not from how suspicious a passage sounds. When another plausible source or conventional genre pattern could explain the relationship, state that alternative or lower confidence.
 
 ## Correct source dependence
 
