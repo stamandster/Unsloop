@@ -1,6 +1,6 @@
 # Portability
 
-> **Document role:** Deployment, harness, and transfer sub-specification for `PR-014`–`PR-017`, `NFR-001`, `NFR-002`, `NFR-007`, `NFR-008`, and `FS-011`–`FS-015` in [`PRD.md`](PRD.md) and [`FSD.md`](FSD.md).
+> **Document role:** Deployment, harness, and transfer sub-specification for `PR-014`–`PR-023`, `NFR-001`, `NFR-002`, `NFR-007`–`NFR-010`, and `FS-011`–`FS-022` in [`PRD.md`](PRD.md) and [`FSD.md`](FSD.md).
 
 ## Guarantee
 
@@ -70,6 +70,8 @@ External access is optional and task-driven. A normal writing review works offli
 
 Persistent fiction projects use visible, relative Markdown beneath an author-approved `story/` and `manuscript/` layout. These are outputs in the user's writing project, not runtime dependencies or hidden Unsloop state. `story/STATUS.md` provides a compact resume packet so another compatible model can continue from the accepted checkpoint without a memory service or the complete conversation. Existing coherent project layouts remain authoritative and need not be migrated to this default.
 
+Unsloop bundles reusable fiction templates as optional assets and `scripts/fiction_project.py` as an optional standard-library utility. The utility is not required to write or review fiction. It defaults mutation-capable operations to dry-run, confines paths to the selected project, refuses existing destinations, and has a manual Markdown fallback. Projects created from the templates remain ordinary author-owned files with no Unsloop runtime dependency.
+
 Interactive presentation adapts to the host. A native structured-input control may present short choices; plain text preserves the same decision when no such control exists. A native file editor may apply changes; otherwise Unsloop returns a delimited revision. Voice samples remain task inputs and are not persisted unless the user explicitly authorizes storage through an available mechanism.
 
 ## Optional user-level links
@@ -121,6 +123,7 @@ The dependency-free validator checks:
 - optional Codex UI metadata;
 - required project documents and operational references;
 - harness-compatibility, writing-brief, voice-fidelity, evidence, and ethics safeguards;
+- fiction routing, onboarding, state-transition, retcon, recovery, review, publication, template, and tooling contracts;
 - the project-owned multi-harness link utility;
 - BRD, PRD, and FSD traceability;
 - unresolved placeholders and broken relative Markdown links; and

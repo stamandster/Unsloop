@@ -1,6 +1,6 @@
 # Review Model
 
-> **Specification role:** Normative method for `PR-003`–`PR-008`, `PR-016`–`PR-017`, `FS-003`–`FS-007`, and `FS-014`–`FS-015` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md). Ethical limits in [`ETHICS-AND-LIMITS.md`](ETHICS-AND-LIMITS.md) control whenever a method rule appears to conflict.
+> **Specification role:** Normative method for `PR-003`–`PR-008`, `PR-016`–`PR-023`, `FS-003`–`FS-007`, and `FS-014`–`FS-022` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md). Ethical limits in [`ETHICS-AND-LIMITS.md`](ETHICS-AND-LIMITS.md) control whenever a method rule appears to conflict.
 
 ## Overview
 
@@ -41,6 +41,12 @@ Scale ceremony to the project. A clear isolated unit needs only a minimal brief.
 Track story facts as Proposed, Confirmed, or Superseded. Preserve locked author decisions in every cadence, require an explicit retcon before changing Confirmed canon, and keep real-world research separate from invented story facts. When context is limited, resume from `story/STATUS.md` and only the relevant ledgers and manuscript range; bound continuity claims to what was inspected.
 
 In voice review, distinguish the user's evidenced author voice, the designed narrative voice, viewpoint-character filters, and character dialogue. Preserve purposeful motif and character-specific diction rather than treating every recurrence or discontinuity as slop.
+
+Route fiction across the existing modes. Use Write for creation, requested revision, assembly, and publication-support artifacts; Review for broad and craft-focused diagnosis; and Audit for evidence-heavy continuity, canon, chronology, research, historical, adaptation, and source comparison. A broad existing-manuscript request defaults to a standard developmental Review.
+
+When onboarding an existing manuscript, inventory versions and inspected ranges, preserve its layout, assign stable internal scene IDs without renaming files, and present extracted state as Proposed with manuscript locations and confidence before creating or promoting records.
+
+For consequential changes, map downstream effects and create a recoverable checkpoint before mutation. For focused review, select only the relevant developmental, structural, character, continuity, POV, dialogue, theme, line, copy, reader-response, research, adaptation, or authenticity contract. Simulated reader responses are hypotheses, and authenticity findings are textual questions or risks rather than community representation.
 
 ## Lens A — Writing integrity
 

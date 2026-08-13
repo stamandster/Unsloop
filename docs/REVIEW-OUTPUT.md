@@ -1,6 +1,6 @@
 # Review Output Contracts
 
-> **Specification role:** Normative output and readiness sub-specification for `PR-009`–`PR-010`, `PR-016`–`PR-017`, `FS-008`–`FS-009`, and `FS-014`–`FS-015` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md).
+> **Specification role:** Normative output and readiness sub-specification for `PR-009`–`PR-010`, `PR-016`–`PR-023`, `FS-008`–`FS-009`, and `FS-014`–`FS-022` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md).
 
 ## Default: Unsloop Review
 
@@ -91,6 +91,12 @@ For a small fiction request, return the scene or story first and add only materi
 - the current checkpoint and next approved action.
 
 Do not imply that complete project records prove manuscript consistency. Disclose uninspected manuscript ranges, unresolved contradictions, and provisional canon when material.
+
+For fiction Review or Audit, name the selected contract and project stage. Each priority finding identifies the manuscript location, observable feature, consequence for the intended experience, evidence and confidence, downstream scenes or records, material to preserve, and smallest useful intervention. Add a dependency-ordered revision sequence only when changes interact.
+
+Label simulated reader response as audience hypotheses rather than beta-reader evidence. Present authenticity and representation findings as textual risks, questions, research needs, and candidates for qualified human review.
+
+For manuscript assembly or publication-support Write, return the requested artifact first, then state the manuscript version and boundary, included and excluded units, readiness stages established or user-reported, unresolved facts or requirements, and next action.
 
 ## Readiness labels
 

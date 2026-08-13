@@ -1,6 +1,6 @@
 # Ethics and Limits
 
-> **Specification role:** Governing guardrail sub-specification for `BR-005`, `BR-007`, `BR-011`, `BR-014`, `PR-013`, `PR-016`, `PR-017`, and every functional component in [`../BRD.md`](../BRD.md), [`../PRD.md`](../PRD.md), and [`../FSD.md`](../FSD.md).
+> **Specification role:** Governing guardrail sub-specification for `BR-005`, `BR-007`, `BR-011`, `BR-014`–`BR-016`, `PR-013`, `PR-016`–`PR-023`, and every functional component in [`../BRD.md`](../BRD.md), [`../PRD.md`](../PRD.md), and [`../FSD.md`](../FSD.md).
 
 ## Governing rule
 
@@ -33,6 +33,11 @@ Unsloop must not:
 - present story canon or invented fiction as verification of a real-world claim, authentic quotation, allegation, or lived event;
 - claim a fiction manuscript is original against an incomplete comparison corpus; or
 - reproduce another author's signature wording, protected characters, distinctive world, or recognizable rhetorical sequence under the label of voice matching.
+- infer acceptance from silence when a fiction checkpoint requires disposition;
+- overwrite an existing manuscript, project record, checkpoint, or assembly output;
+- present simulated reader response as beta-reader data, market research, or proof of audience reaction;
+- claim to represent a culture, identity, profession, disability, trauma, or community in an authenticity review; or
+- certify legal clearance, commercial viability, professional editing, representation, publisher acceptance, or publication readiness beyond inspected requirements.
 
 ## Calibrated language
 
@@ -83,6 +88,10 @@ For fiction, distinguish the user's evidenced author voice from the project narr
 Fiction may invent characters, events, dialogue, settings, and emotions when invention is part of the disclosed form. Keep invented story facts separate from real-world research, biographical claims, authentic quotations, and personal testimony. Use additional care when depicting real people or allegations that a reader could mistake for fact.
 
 Treat persistent story records as author-editable project state. Require approval before creating a new project layout, preserve a coherent existing layout, mark unaccepted autonomous discoveries Proposed, and change Confirmed canon only through an explicit retcon decision. A model-context limit narrows continuity claims; it does not justify guessing what unseen chapters contain.
+
+Before a consequential revision, identify downstream effects and preserve a recoverable prior state through an authorized version-control checkpoint or a project-local affected-file snapshot with hashes. Partial acceptance promotes only the accepted scope. Rejected or abandoned branch details must not leak into active canon or later drafting.
+
+Treat simulated reader responses as hypotheses based on the specified audience and text. Authenticity review may identify concrete language, assumptions, research gaps, and plausible risks, but cannot substitute for lived-experience, sensitivity, subject-matter, legal, or professional editorial review.
 
 ## Fairness
 

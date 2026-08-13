@@ -49,6 +49,8 @@ Unsloop should make writing more defensible without laundering its origins, more
 | BR-012 | Separate requirement coverage from factual support and label work honestly when decisions, evidence, authorization, or hard constraints remain unresolved. | Provisional work is not mistaken for complete or verified work. |
 | BR-013 | Keep the writing method independent of AI provider, model family, and agent harness while supporting thin adapters for Codex, Claude, Pi, and other Agent Skills clients. | Users can retain one governed method across tools without vendor lock-in or divergent forks. |
 | BR-014 | Support fiction from scene through series with proportionate intake, selectable collaboration cadence, portable story state, continuity control, and staged revision inside Unsloop Write. | Authors can develop long or short fiction across sessions and models without losing ownership, canon, or project coherence. |
+| BR-015 | Adopt and revise existing fiction projects without destructive migration, silent state promotion, or unrecoverable changes. | Authors can bring established manuscripts into Unsloop and explore substantial changes while preserving authority and recovery. |
+| BR-016 | Provide fiction-aware critique, audit, completion, assembly, and publication-support workflows with explicit evidence and readiness boundaries. | Authors receive stage-appropriate help without mistaking model output for reader research, professional certification, legal clearance, or publication acceptance. |
 
 ## Scope
 
@@ -64,6 +66,8 @@ Unsloop should make writing more defensible without laundering its origins, more
 - Standards-based use across compatible harnesses, with capability fallbacks for hosts that lack a preferred tool or UI.
 - Topic-neutral fiction discovery, planning, drafting, continuity, revision, and handoff for scenes, short stories, novellas, novels, serials, and series.
 - Optional author-approved Markdown project records that preserve creative decisions and resumable story state without a required service.
+- Existing-manuscript onboarding, partial acceptance, alternate branches, retcon impact analysis, and recoverable consequential revision.
+- Fiction-aware developmental, continuity, POV, dialogue, line, copy, research, adaptation, authenticity, completion, assembly, and publication-support workflows.
 
 ### Out of scope
 
@@ -74,6 +78,7 @@ Unsloop should make writing more defensible without laundering its origins, more
 - Detector evasion, fabricated citations, experiences, emotions, or verification.
 - Mandatory cloud services, persistent user profiles, or collection of writing samples by default.
 - Silent retcons, autonomous changes to locked creative decisions, or mandatory project-file ceremony for a small fiction request.
+- Destructive manuscript migration, inferred acceptance from silence, mandatory Git use, real-reader or community representation claims, legal clearance, or publication guarantees.
 
 ## Success measures
 

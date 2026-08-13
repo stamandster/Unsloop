@@ -8,10 +8,13 @@ Unsloop is an umbrella project with one shared method and three modes.
 
 ```text
 Unsloop
-├── Review — constructive diagnosis
-├── Write  — author-led drafting and revision
-│   └── Fiction workflow — scene-to-series development and continuity
-└── Audit  — evidence-heavy source examination
+├── Review — constructive diagnosis, including fiction craft review
+├── Write  — author-led drafting, revision, assembly, and publication support
+├── Audit  — evidence-heavy source, continuity, canon, and research examination
+└── Shared fiction specialization — scene-to-series operations across all three modes
+    ├── Project operations — onboarding, state, branches, retcons, recovery
+    ├── Fiction review — developmental, craft, continuity, and integrity
+    └── Publication handoff — assembly and support artifacts
 ```
 
 Version 0.1 implements the modes in one core skill so principles, scoring, and safety limits remain consistent. A later split should happen only if mode-specific workflows become large enough to justify separate trigger descriptions or resources.
@@ -44,7 +47,7 @@ Unsloop/
         └── unsloop/
             ├── SKILL.md
             ├── agents/openai.yaml
-            └── references/
+            ├── references/
                 ├── integrity-review.md
                 ├── harness-compatibility.md
                 ├── human-voice-review.md
@@ -54,7 +57,12 @@ Unsloop/
                 ├── output-contracts.md
                 ├── source-verification.md
                 ├── write-mode.md
-                └── fiction-workflow.md
+                ├── fiction-workflow.md
+                ├── fiction-project-operations.md
+                ├── fiction-review.md
+                └── fiction-publication.md
+            ├── assets/fiction-project/  portable author-readable templates
+            └── scripts/fiction_project.py  optional standard-library operations
 ```
 
 ## Specification stack
@@ -104,6 +112,8 @@ Resolve governing directions, content roles, and constraints
         ↓
 For fiction: scale the lifecycle, cadence, and approved project state
         ↓
+When applicable: onboard, review, impact-map, recover, assemble, or package
+        ↓
 Set evidence boundary, voice basis, and review depth
         ↓
 Run integrity lens + human-voice lens
@@ -124,6 +134,6 @@ The current structure leaves room for:
 - benchmark fixtures for scorer calibration and regression testing;
 - integrations with document, citation, and repository tools.
 - thin adapters for additional Agent Skills clients without vendor-specific forks.
-- optional tooling that validates fiction ledgers against accepted manuscript facts without making creative decisions for the author.
+- richer behavioral fixtures and cross-harness evaluation without treating one model as reference truth.
 
 Automation must surface evidence, not replace judgment. Any future similarity or linguistic analysis should produce inspectable signals and preserve the distinction between observation, inference, and verdict.

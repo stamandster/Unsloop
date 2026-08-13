@@ -22,6 +22,8 @@ REQUIRED_FILES = (
     ROOT / "DECISIONS.md",
     ROOT / "PORTABILITY.md",
     ROOT / "scripts" / "link_global_skill.py",
+    ROOT / "tests" / "test_fiction_project.py",
+    ROOT / "tests" / "fixtures" / "fiction-scenarios.md",
     ROOT / "docs" / "NAMING.md",
     ROOT / "docs" / "REVIEW-MODEL.md",
     ROOT / "docs" / "SCORING-RUBRIC.md",
@@ -40,6 +42,26 @@ REQUIRED_FILES = (
     SKILL / "references" / "source-verification.md",
     SKILL / "references" / "write-mode.md",
     SKILL / "references" / "fiction-workflow.md",
+    SKILL / "references" / "fiction-project-operations.md",
+    SKILL / "references" / "fiction-review.md",
+    SKILL / "references" / "fiction-publication.md",
+    SKILL / "scripts" / "fiction_project.py",
+    SKILL / "assets" / "fiction-project" / "BRIEF.md",
+    SKILL / "assets" / "fiction-project" / "STATUS.md",
+    SKILL / "assets" / "fiction-project" / "SCENES.md",
+    SKILL / "assets" / "fiction-project" / "CANON.md",
+    SKILL / "assets" / "fiction-project" / "CHARACTERS.md",
+    SKILL / "assets" / "fiction-project" / "TIMELINE.md",
+    SKILL / "assets" / "fiction-project" / "ARCS.md",
+    SKILL / "assets" / "fiction-project" / "RESEARCH.md",
+    SKILL / "assets" / "fiction-project" / "DECISIONS.md",
+    SKILL / "assets" / "fiction-project" / "SERIES.md",
+    SKILL / "assets" / "fiction-project" / "VOICE.md",
+    SKILL / "assets" / "fiction-project" / "WORLD.md",
+    SKILL / "assets" / "fiction-project" / "GLOSSARY.md",
+    SKILL / "assets" / "fiction-project" / "KNOWLEDGE.md",
+    SKILL / "assets" / "fiction-project" / "BRANCHES.md",
+    SKILL / "assets" / "fiction-project" / "MANUSCRIPT.md",
 )
 
 LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
@@ -221,43 +243,65 @@ HARNESS_CONTRACT = {
 
 FICTION_CONTRACT = {
     SKILL / "SKILL.md": (
-        "fiction development and drafting",
+        "For **every fiction request in any mode**",
         "references/fiction-workflow.md",
-        "scene, short story, novella, novel, serial, or series",
+        "references/fiction-project-operations.md",
+        "references/fiction-review.md",
+        "references/fiction-publication.md",
     ),
     SKILL / "references" / "fiction-workflow.md": (
+        "## Select the fiction job",
         "## Scale the workflow",
-        "## Choose the collaboration cadence",
+        "## Choose collaboration cadence",
         "**Guided:**",
         "**Adaptive (Recommended):**",
         "**Autonomous:**",
-        "story/",
-        "manuscript/",
-        "story/STATUS.md",
-        "story/VOICE.md",
-        "**Proposed:**",
-        "**Confirmed:**",
-        "**Superseded:**",
-        "explicit retcon decision",
-        "author's evidenced personal voice",
-        "designed narrative voice",
-        "character-specific dialogue",
-        "real-world research evidence",
+        "Choose **Review**",
+        "Choose **Audit**",
+    ),
+    SKILL / "references" / "fiction-project-operations.md": (
+        "## Onboard an existing manuscript",
+        "## Apply state lifecycles",
+        "**Partially accepted**",
+        "## Manage alternate branches",
+        "## Analyze and apply retcons",
+        "## Protect revision recovery",
+        "assets/fiction-project/",
+        "scripts/fiction_project.py",
+    ),
+    SKILL / "references" / "fiction-review.md": (
+        "**Developmental:**",
+        "**Continuity and chronology:**",
+        "**Simulated reader response:**",
+        "**Authenticity and representation questions:**",
+        "not real beta-reader evidence",
+    ),
+    SKILL / "references" / "fiction-publication.md": (
+        "## Distinguish readiness stages",
+        "## Assemble the manuscript",
+        "**Synopsis:**",
+        "**Query letter:**",
+        "does not certify legal clearance",
     ),
     ROOT / "PRD.md": (
-        "PR-016",
-        "PR-017",
-        "NFR-008 Long-form resilience",
-        "### Fiction",
+        "PR-018",
+        "PR-023",
+        "NFR-009 Recoverability",
+        "NFR-010 Behavioral consistency",
+        "### Existing-manuscript onboarding and recovery",
+        "### Fiction review and audit",
+        "### Completion and publication handoff",
     ),
     ROOT / "FSD.md": (
-        "FS-014",
-        "FS-015",
-        "`FictionBrief`",
-        "`StoryProjectState`",
-        "`CanonEntry`",
-        "`SceneRecord`",
-        "`CollaborationCadence`",
+        "FS-016",
+        "FS-022",
+        "`ManuscriptUnitState`",
+        "`BatchDisposition`",
+        "`StoryBranch`",
+        "`ImpactMap`",
+        "`ProjectCheckpoint`",
+        "`FictionReviewContract`",
+        "`PublicationHandoff`",
     ),
     ROOT / "docs" / "ETHICS-AND-LIMITS.md": (
         "## Fiction and story state",
@@ -267,11 +311,57 @@ FICTION_CONTRACT = {
     ),
     ROOT / "README.md": (
         "## Fiction writing",
-        "Guided, Adaptive, or Autonomous",
-        "story/STATUS.md",
+        "### Optional fiction project command",
+        "fiction_project.py init",
+        "fiction_project.py assemble",
     ),
     ROOT / "DECISIONS.md": (
         "## D-017 — Keep fiction inside Write and make its state author-owned",
+        "## D-018 — Route fiction across the existing modes",
+        "## D-021 — Bound fiction feedback and publication claims",
+    ),
+    ROOT / "tests" / "fixtures" / "fiction-scenarios.md": (
+        "## 1. Clear isolated scene",
+        "## 5. Existing monolithic manuscript",
+        "## 10. Partial batch acceptance",
+        "## 13. Retcon impact analysis",
+        "## 16. Developmental review",
+        "## 22. Manuscript assembly",
+        "## 26. Copyedit before structural stability",
+    ),
+}
+
+FICTION_TOOL_CONTRACT = {
+    SKILL / "scripts" / "fiction_project.py": (
+        'subparsers.add_parser("init"',
+        'subparsers.add_parser("check"',
+        'subparsers.add_parser("checkpoint"',
+        'subparsers.add_parser("assemble"',
+        '"--apply"',
+        '"--voice-authorized"',
+        "refusing to overwrite",
+        "safe_relative",
+        "Accepted",
+        "manifest.json",
+    ),
+    SKILL / "assets" / "fiction-project" / "STATUS.md": (
+        "Project phase:",
+        "Last accepted unit:",
+        "Last completed checkpoint:",
+        "Next approved action:",
+        "## Resume context",
+    ),
+    SKILL / "assets" / "fiction-project" / "VOICE.md": (
+        "Storage authorization:",
+        "Do not store source samples",
+    ),
+    ROOT / "tests" / "test_fiction_project.py": (
+        "test_compact_dry_run_writes_nothing",
+        "test_collision_refuses_overwrite",
+        "test_voice_requires_authorization",
+        "test_checkpoint_dry_run_and_apply_with_manifest",
+        "test_assemble_includes_only_accepted_units_and_refuses_overwrite",
+        "test_paths_cannot_escape_project_root",
     ),
 }
 
@@ -279,23 +369,24 @@ SPECIFICATION_CONTRACT = {
     ROOT / "BRD.md": (
         "## Business requirements",
         "BR-001",
-        "BR-014",
+        "BR-016",
         "[`PRD.md`](PRD.md)",
         "[`FSD.md`](FSD.md)",
     ),
     ROOT / "PRD.md": (
         "## Functional requirements",
         "PR-001",
-        "PR-017",
+        "PR-023",
         "NFR-001 Portability",
         "NFR-008 Long-form resilience",
+        "NFR-010 Behavioral consistency",
         "[`BRD.md`](BRD.md)",
         "[`FSD.md`](FSD.md)",
     ),
     ROOT / "FSD.md": (
         "## Functional components",
         "FS-001",
-        "FS-015",
+        "FS-022",
         "`WritingBrief`",
         "`EvidenceBoundary`",
         "`VoiceBrief`",
@@ -303,6 +394,8 @@ SPECIFICATION_CONTRACT = {
         "`ReadinessState`",
         "`FictionBrief`",
         "`StoryProjectState`",
+        "`ImpactMap`",
+        "`PublicationHandoff`",
         "## Verification matrix",
     ),
     ROOT / "README.md": (
@@ -332,6 +425,7 @@ SPECIFICATION_CONTRACT = {
         "## D-015 — Use a three-level specification stack",
         "## D-016 — Separate the portable core from harness adapters",
         "## D-017 — Keep fiction inside Write and make its state author-owned",
+        "## D-021 — Bound fiction feedback and publication claims",
     ),
 }
 
@@ -449,6 +543,17 @@ def validate() -> list[str]:
             if requirement not in text:
                 errors.append(
                     f"fiction-workflow safeguard missing from "
+                    f"{path.relative_to(ROOT)}: {requirement}"
+                )
+
+    for path, requirements in FICTION_TOOL_CONTRACT.items():
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for requirement in requirements:
+            if requirement not in text:
+                errors.append(
+                    f"fiction-tool safeguard missing from "
                     f"{path.relative_to(ROOT)}: {requirement}"
                 )
 

@@ -111,3 +111,27 @@ Keep `SKILL.md`, standard frontmatter, and relative references model- and harnes
 Support every fiction form—from an isolated scene through a series—as a progressively loaded specialization of **Unsloop Write**, not a fourth mode. Scale intake and files to the work; use Guided, Adaptive, or Autonomous collaboration with Adaptive as the default; and preserve locked author decisions in every cadence.
 
 For persistent fiction, use visible author-approved Markdown under `story/` and `manuscript/`, adopt coherent existing layouts, distinguish Proposed, Confirmed, and Superseded canon, and require explicit retcons. Use `story/STATUS.md` as a model-agnostic resume packet. Treat story canon as fictional state rather than real-world evidence, and keep author, narrative, viewpoint, and dialogue voice targets distinct.
+
+## D-018 — Route fiction across the existing modes
+
+**Status:** Accepted
+
+Load the fiction workflow for every fiction request, then use Write for creation and packaging, Review for constructive manuscript diagnosis, and Audit for evidence-heavy project, continuity, research, or source comparison. Do not create a fourth fiction mode.
+
+## D-019 — Make consequential fiction changes recoverable
+
+**Status:** Accepted
+
+Define explicit project, manuscript-unit, canon, batch, and branch states. Partial acceptance updates only the accepted scope. Require an impact map, explicit approval, and a recoverable checkpoint before retcons or large revisions. Preserve Superseded canon and keep rejected or abandoned details out of active state.
+
+## D-020 — Bundle optional templates and fail-closed tooling
+
+**Status:** Accepted
+
+Provide author-readable Markdown templates and a standard-library project command for initialization, structural checking, checkpoints, and accepted-unit assembly. Keep the command optional, default mutation-capable actions to dry-run, require explicit application, confine paths to the chosen project, and refuse overwrites. Manual Markdown operation remains the portable baseline.
+
+## D-021 — Bound fiction feedback and publication claims
+
+**Status:** Accepted
+
+Offer focused fiction review and publication-support workflows while distinguishing simulated reader hypotheses from real feedback, authenticity questions from community authority, and manuscript preparation from professional, legal, market, representation, publisher, or publication certification.

@@ -59,7 +59,12 @@ Unsloop can:
 - develop topic-neutral fiction inside Unsloop Write through discovery, creative contract, foundation, architecture, scene design, drafting, revision, and handoff;
 - scale fiction controls from a minimal in-context scene brief to an author-approved portable `story/` and `manuscript/` project;
 - offer Guided, Adaptive, or Autonomous collaboration while preserving locked author decisions and requiring explicit retcons for Confirmed canon;
-- resume sustained fiction from compact Markdown state without treating conversational memory as authoritative; and
+- resume sustained fiction from compact Markdown state without treating conversational memory as authoritative;
+- onboard existing manuscripts without destructive migration, assign stable internal units, and confirm extracted state before promotion;
+- accept, partially accept, reject, revise, branch, merge, or retcon fiction while protecting active canon and recoverability;
+- provide focused fiction Review and Audit contracts rather than an unfocused all-purpose critique;
+- initialize, check, checkpoint, and assemble approved fiction projects through optional portable tooling;
+- prepare bounded manuscript, synopsis, query, blurb, pitch, series-summary, and submission-checklist handoffs; and
 - run from the same portable Agent Skills core across Codex, Claude, Pi, other compatible harnesses, and manually adapted text-capable models without changing its integrity or voice method.
 
 Unsloop cannot:
@@ -71,7 +76,8 @@ Unsloop cannot:
 - decide institutional discipline, publication sanctions, or legal liability;
 - disguise AI involvement or help evade detection systems;
 - silently change confirmed story canon, locked creative decisions, or an existing fiction-project layout;
-- guarantee manuscript originality or continuity beyond the sources and manuscript ranges actually inspected; or
+- guarantee manuscript originality or continuity beyond the sources and manuscript ranges actually inspected;
+- infer batch acceptance from silence, overwrite an existing project or checkpoint, or claim simulated feedback represents real readers or a community; or
 - promise exact replication of a person, infer identity from style, or use voice samples as authority for new facts or personal experiences.
 
 ## Definition of success
@@ -91,6 +97,8 @@ A successful Unsloop result is:
 - **Readiness-honest:** provisional work is not presented as final or fully verified.
 - **Harness-neutral:** provider, model, and tool differences affect available capabilities and confidence, not the governing method.
 - **Fiction-resumable:** sustained story work preserves accepted canon, proposed discoveries, current state, and the next action in portable author-readable Markdown.
+- **Recoverable:** consequential story changes identify downstream impact and preserve a usable path back to the prior accepted state.
+- **Stage-honest:** critique, assembly, and publication-support artifacts state what was actually inspected and do not imply professional, legal, market, or acceptance certification.
 
 ## Non-goals for v0.1
 

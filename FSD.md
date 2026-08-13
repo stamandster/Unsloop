@@ -43,6 +43,13 @@ No database, background service, model endpoint, provider account, or persistent
 | FS-013 | Harness and model adaptation | Host capabilities, model limits, discovery and invocation conventions | Capability map, adapter selection, and explicit fallbacks | PR-012, PR-015; NFR-006, NFR-007 |
 | FS-014 | Fiction lifecycle orchestration | Fiction request, `FictionBrief`, existing materials, collaboration cadence | Proportionate discovery, architecture, drafting, revision, checkpoint, or handoff action | PR-016, PR-017; NFR-008 |
 | FS-015 | Fiction project state and continuity | Approved layout, manuscript, story records, accepted decisions | Resumable `StoryProjectState`, classified canon, updated scene state, and bounded continuity result | PR-017; NFR-001, NFR-004, NFR-008 |
+| FS-016 | Cross-mode fiction routing | Fiction request, existing artifacts, requested outcome | Write, Review, or Audit plus applicable fiction references | PR-018 |
+| FS-017 | Existing-manuscript onboarding | Manuscript versions, notes, outlines, records, authority evidence | Inspection boundary, unit map, Proposed extracted state, approved project records | PR-019; NFR-008 |
+| FS-018 | Fiction-state transition and branch handling | Current state, batch disposition, branch or merge decision | Valid project, unit, canon, batch, and branch transitions | PR-020; NFR-008 |
+| FS-019 | Retcon impact and revision recovery | Proposed consequential change, accepted manuscript, records, available recovery capability | Impact map, approval boundary, checkpoint, dependency-ordered change, reconciliation | PR-020; NFR-009 |
+| FS-020 | Fiction project tooling | Approved profile or project, operation, paths, flags | Dry-run plan, structural diagnostics, checkpoint, or deterministic assembly | PR-021; NFR-001, NFR-002, NFR-009 |
+| FS-021 | Fiction review selection and output | Manuscript boundary, project stage, intended experience, requested focus, evidence | Focused Review or Audit contract with prioritized findings and limits | PR-022; NFR-003, NFR-010 |
+| FS-022 | Fiction completion and publication handoff | Accepted manuscript units, project state, supplied submission requirements | Assembly and manifest or bounded publication-support artifact | PR-023; NFR-003, NFR-010 |
 
 ## Requirements traceability
 
@@ -65,6 +72,12 @@ No database, background service, model endpoint, provider account, or persistent
 | PR-015 | FS-011, FS-013 |
 | PR-016 | FS-002, FS-003, FS-006, FS-008, FS-014 |
 | PR-017 | FS-004, FS-007, FS-008, FS-013–FS-015 |
+| PR-018 | FS-001, FS-016 |
+| PR-019 | FS-003, FS-004, FS-015, FS-017 |
+| PR-020 | FS-007, FS-008, FS-015, FS-018, FS-019 |
+| PR-021 | FS-012, FS-015, FS-020 |
+| PR-022 | FS-004–FS-010, FS-016, FS-021 |
+| PR-023 | FS-007, FS-008, FS-020, FS-022 |
 | NFR-001 | FS-011, FS-012 |
 | NFR-002 | FS-012 |
 | NFR-003 | FS-004–FS-008 |
@@ -73,6 +86,8 @@ No database, background service, model endpoint, provider account, or persistent
 | NFR-006 | FS-002, FS-008, FS-009 |
 | NFR-007 | FS-011, FS-012, FS-013 |
 | NFR-008 | FS-013, FS-014, FS-015 |
+| NFR-009 | FS-018, FS-019, FS-020 |
+| NFR-010 | FS-012, FS-016–FS-022 |
 
 ## Logical data model
 
@@ -180,6 +195,34 @@ Represent the author-approved portable project through relative Markdown paths u
 
 `story/STATUS.md` must state the current phase and cadence, last accepted unit, last completed checkpoint, immediate story state, Proposed details awaiting acceptance, open decisions and risks, next approved action, batch limit, and files needed to resume. It is a resume packet, not a replacement for the accepted manuscript or other authoritative records.
 
+### `ManuscriptUnitState`
+
+Use `Planned`, `Drafted`, `Revised`, `Accepted`, `Cut`, or `Archived`. Assembly includes only `Accepted` units by default. State changes must identify the affected manuscript version and checkpoint.
+
+### `BatchDisposition`
+
+Use `Accepted`, `Partially accepted`, `Rejected`, or `Revision requested`. A partial disposition identifies accepted prose, units, decisions, and canon items separately. Silence does not imply acceptance when a checkpoint is required.
+
+### `StoryBranch`
+
+Record branch slug, parent checkpoint, purpose, affected scope, status, Proposed decisions, and merge or abandonment disposition. Branch state cannot modify main Confirmed canon without an accepted merge and reconciliation.
+
+### `ImpactMap`
+
+Record the proposed consequential change, current basis, affected scenes, characters, knowledge, relationships, chronology, world rules, arcs, setups, reveals, payoffs, research, dialogue, description, required revisions, optional revisions, unresolved effects, approval scope, and recovery checkpoint.
+
+### `ProjectCheckpoint`
+
+Record checkpoint name, reason, affected relative paths, content hashes, creation mechanism, parent project checkpoint, and restoration instructions. A checkpoint destination must not pre-exist.
+
+### `FictionReviewContract`
+
+Record selected Review or Audit contract, project stage, intended reader experience, manuscript and evidence boundary, findings, downstream impact, preservation targets, smallest interventions, and unresolved limits. Simulated reader and authenticity outputs must include their non-representative boundary.
+
+### `PublicationHandoff`
+
+Record authoritative manuscript version, Accepted units, supplied requirements, requested artifact, readiness stages established or user-reported, included and excluded material, assembly manifest when applicable, unresolved facts, and next action.
+
 ## Processing flow
 
 ```text
@@ -188,8 +231,15 @@ Request and materials
   -> FS-001 select mode and depth
   -> FS-002 resolve topic path when new writing lacks a topic
   -> FS-003 build the smallest sufficient WritingBrief
+  -> FS-016 when fiction, route the job across Write, Review, or Audit
   -> FS-014 when fiction, build the FictionBrief and select the proportionate lifecycle action
   -> FS-015 when persistent fiction is approved, load or maintain portable story state
+  -> FS-017 onboard existing manuscripts before persistent state mutation
+  -> FS-018 apply valid batch, unit, canon, and branch transitions
+  -> FS-019 map impact and checkpoint consequential changes
+  -> FS-020 use optional deterministic project operations when useful
+  -> FS-021 apply the selected fiction Review or Audit contract
+  -> FS-022 assemble or prepare bounded completion and publication artifacts
   -> FS-004 establish evidence boundary and optional VoiceBrief
   -> FS-005 and/or FS-006 apply relevant analysis lenses
   -> FS-007 check requirements and hard constraints when material
@@ -272,6 +322,39 @@ Inspect the active host's exposed capabilities rather than inferring them from a
 7. When context is limited, load `story/STATUS.md`, the relevant records, and the necessary manuscript range; disclose that boundary and avoid global continuity claims.
 8. Persist a distilled `story/VOICE.md` only with explicit authorization and never persist the source samples by default.
 
+### FS-016 — Route fiction across modes
+
+1. Load the fiction workflow for every fiction task, regardless of mode.
+2. Select Write for discovery, planning, drafting, requested revision, assembly, and publication-support writing.
+3. Select Review for broad manuscript critique and craft-focused diagnosis.
+4. Select Audit for evidence-heavy continuity, canon, chronology, research, historical, adaptation, source, or requirement comparison.
+5. For combined requests, identify the primary deliverable and apply secondary lenses proportionately.
+6. Default a broad existing-manuscript request to Review and a broad idea or premise request to Write.
+
+### FS-017 — Onboard an existing manuscript
+
+Inventory supplied versions and records, record the inspection boundary, resolve authority without timestamps alone, map manuscript units with stable internal IDs, extract tentative state with locations and confidence, mark inferences Proposed, surface conflicts, propose the smallest project profile, and create or promote state only after approval. Preserve monolithic manuscripts and custom layouts unless migration is explicitly authorized.
+
+### FS-018 — Apply fiction-state transitions
+
+Enforce the defined project, unit, canon, batch, and branch values. For partial acceptance, update only accepted prose, units, decisions, and facts. Prevent rejected and unaccepted details from entering active canon, future plans, resume state, or assembly. Keep alternate branches outside main state until an explicit impact-aware merge is accepted.
+
+### FS-019 — Protect consequential changes
+
+Before a retcon or large revision, locate the accepted basis, create an `ImpactMap`, obtain approval of the affected scope, and establish a recoverable `ProjectCheckpoint`. Prefer an authorized version-control checkpoint when available; otherwise snapshot only affected files with hashes and a manifest. Apply changes in dependency order, retain Superseded state, reconcile records, and verify restoration remains possible.
+
+### FS-020 — Operate project tooling
+
+Provide optional standard-library `init`, `check`, `checkpoint`, and `assemble` commands. Mutation-capable commands default to dry-run and require `--apply`; all paths remain within the selected project root; existing destinations fail closed; initialization copies only approved templates; `VOICE.md` requires an authorization flag; checks distinguish errors and warnings; checkpoints hash affected files; and assembly includes Accepted units only by default with a manifest. Manual Markdown operation remains available when execution is absent.
+
+### FS-021 — Review or audit fiction
+
+Select the smallest applicable developmental, structure, character, continuity, POV, dialogue, theme, line, copy, reader-response, research, adaptation, or authenticity contract. Record the manuscript and evidence boundary, rank causes before symptoms, name downstream impact, preserve effective material, recommend the smallest intervention, and rewrite only when requested. Label simulated audience reactions as hypotheses and authenticity findings as questions or risks rather than representative authority.
+
+### FS-022 — Complete and package fiction
+
+Confirm the authoritative manuscript and accepted units, supplied requirements, requested artifact, and unresolved matters. Distinguish creative, structural, line, copy, assembly, and submission stages. Assemble deterministically without overwrite, or prepare a synopsis, query, blurb, pitch, series summary, or checklist using manuscript-supported and user-verified facts. Do not certify legal clearance, commercial viability, market response, professional editing, representation, acceptance, or publication.
+
 ## Failure and boundary handling
 
 | Condition | Required behavior |
@@ -291,6 +374,13 @@ Inspect the active host's exposed capabilities rather than inferring them from a
 | Confirmed canon conflicts with a requested direction | Surface options and require an explicit retcon or scope decision. |
 | Autonomous work reaches its batch limit | Stop at the checkpoint, report Proposed decisions, and wait for acceptance or a new batch. |
 | Manuscript exceeds model context | Resume from `story/STATUS.md` plus relevant records and prose; bound every continuity claim to inspected material. |
+| Existing manuscript has multiple plausible authorities | Inventory versions and ask which governs before creating or changing persistent state. |
+| Batch is partially accepted | Promote only explicitly accepted prose, units, decisions, and facts; isolate the remainder. |
+| Batch or branch is rejected | Exclude its details from active state and later drafting; retain only a useful decision record. |
+| Retcon lacks impact approval or recovery | Do not mutate Confirmed canon or accepted prose. |
+| Project tool destination already exists | Refuse overwrite and report the exact collision. |
+| Simulated reader or authenticity review requested | State the non-representative boundary and recommend qualified human input when material. |
+| Submission artifact lacks governing requirements | Use disclosed genre defaults only when low risk; otherwise request the requirements or mark the result provisional. |
 
 ## Verification matrix
 
@@ -320,6 +410,18 @@ Inspect the active host's exposed capabilities rather than inferring them from a
 | Historical or research-based fiction | PR-005, PR-016 / FS-004, FS-010, FS-014 | Verified facts, unresolved research, story canon, and invention remain separate. |
 | Named-author style request | PR-008, PR-013, PR-016 / FS-004, FS-006, FS-014 | Request becomes broad non-exclusive traits; no exact imitation or signature copying. |
 | Fiction project exceeds context | PR-017, NFR-008 / FS-013, FS-015 | Resume packet and relevant records support bounded continuation without full conversational history. |
+| Broad existing-novel critique | PR-018, PR-022 / FS-016, FS-021 | Review plus fiction workflow; standard developmental focus rather than every contract at maximum depth. |
+| Continuity comparison against canon | PR-018, PR-022 / FS-016, FS-021 | Audit with exact manuscript and record boundary, conflicts, downstream impact, and confidence. |
+| Existing monolithic manuscript | PR-019 / FS-017 | File remains intact; stable internal units and Proposed state are presented before creation. |
+| Partial acceptance | PR-020 / FS-018 | Only accepted scope becomes active or Confirmed; rejected details cannot leak forward. |
+| Alternate branch merge | PR-020 / FS-018, FS-019 | Parent checkpoint and conflicts are inspected; accepted merge is checkpointed and reconciled. |
+| Retcon request | PR-020, NFR-009 / FS-019 | Impact map, explicit approval, recoverable checkpoint, Superseded record, and dependency-ordered revision. |
+| Initialize compact fiction project | PR-021 / FS-020 | Dry-run by default, approved template plan, explicit apply, no overwrite, no default voice profile. |
+| Invalid scene or canon state | PR-021 / FS-020 | Read-only check fails with exact file and state diagnostic. |
+| Assemble accepted units | PR-021, PR-023 / FS-020, FS-022 | Deterministic order, non-Accepted exclusion, no overwrite, output and hash manifest. |
+| Simulated reader response | PR-022 / FS-021 | Audience hypotheses are labeled and not represented as beta-reader evidence. |
+| Authenticity question | PR-022 / FS-021 | Concrete textual risks and questions, no community representation claim, qualified review recommended when material. |
+| Query or blurb request | PR-023 / FS-022 | Artifact follows supplied constraints and manuscript facts without invented credentials, reception, or market evidence. |
 
 ## Change control
 

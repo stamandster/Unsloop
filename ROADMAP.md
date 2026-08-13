@@ -34,6 +34,14 @@
 - [x] Add author-approved portable fiction state with resumable status and classified canon
 - [x] Separate author, narrative, viewpoint, and dialogue voice targets
 - [x] Add manuscript-scale context, continuity, research, retcon, and handoff controls
+- [x] Route fiction through Write, Review, and Audit without adding a fourth mode
+- [x] Add existing-manuscript onboarding with Proposed extraction and authority confirmation
+- [x] Add manuscript-unit, batch, branch, partial-acceptance, and rejection lifecycles
+- [x] Add retcon impact maps and recoverable consequential revision
+- [x] Add portable fiction templates and optional fail-closed project tooling
+- [x] Add focused fiction-review and bounded publication-handoff workflows
+- [x] Add deterministic tests for project initialization, validation, checkpointing, assembly, overwrite refusal, authorization, and path safety
+- [x] Add 26 clean-context behavioral fixture contracts covering critical fiction operations and boundaries
 
 ## v0.2 — Examples and calibration
 
@@ -64,6 +72,10 @@
 - [ ] Test cross-session fiction resumption from `story/STATUS.md` with partial manuscript context
 - [ ] Test author, narrative, viewpoint, and dialogue voice separation across fiction genres
 - [ ] Test historical fiction, named-author adaptation, real-person depiction, and incomplete research boundaries
+- [ ] Forward-test existing-manuscript onboarding across monolithic and multi-file projects
+- [ ] Forward-test partial acceptance, rejection, branch merge, retcon, and recovery behavior
+- [ ] Forward-test developmental, continuity, simulated-reader, and authenticity review boundaries
+- [ ] Forward-test assembly and publication-support artifacts against supplied requirements
 
 ## v0.3 — Assisted audit tooling
 

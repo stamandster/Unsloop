@@ -40,6 +40,10 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | Brainstorm a topic | Interests or subject area, purpose, audience, and constraints | Distinct feasible options with angles, reader value, scope, and evidence needs. |
 | Develop fiction | Story seed, premise, notes, outline, or manuscript plus author decisions | A proportionate path from discovery through planning, drafting, continuity, revision, and handoff. |
 | Continue a fiction project | Existing manuscript and project records | Work resumed from accepted canon and current state without silently overwriting the author's layout or decisions. |
+| Onboard an existing manuscript | Existing manuscript, notes, outlines, versions, and optional records | Proposed portable state extracted with locations and confidence, confirmed before creation or promotion. |
+| Review or audit fiction | Manuscript boundary, intended experience, project stage, optional records and research | A focused developmental, craft, continuity, integrity, or authenticity assessment with preserved strengths and bounded claims. |
+| Revise consequential story state | Accepted manuscript and proposed structural or canon change | Impact map, explicit decision, recoverable checkpoint, dependency-ordered revision, and reconciled state. |
+| Assemble and package fiction | Accepted manuscript units and supplied submission requirements | Deterministic assembly or support artifact with explicit readiness and evidence limits. |
 
 ## Functional requirements
 
@@ -60,8 +64,14 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | PR-013 | Enforce privacy, minimization, authorization, evidence, identity, emotional-integrity, and high-stakes human-review limits. | BR-005, BR-007, BR-011 |
 | PR-014 | Operate from repository-local Markdown/YAML with relative links and no required service or package; support optional repository, user, or admin discovery through links or copies of the authoritative project skill. | BR-008, BR-010, BR-013 |
 | PR-015 | Keep the operational core compliant with the portable Agent Skills shape and independent of vendor tool names, model IDs, invocation syntax, or proprietary frontmatter. Provide capability-based fallbacks and optional adapters for Codex, Claude, Pi, and other hosts. | BR-008, BR-010, BR-013 |
-| PR-016 | Route every fiction request through a scalable Unsloop Write workflow that covers discovery, creative contract, foundation, architecture, scene design, drafting, revision, and handoff without forcing a single story framework or subject domain. | BR-003, BR-004, BR-006, BR-014 |
+| PR-016 | For fiction creation and requested revision, use a scalable Unsloop Write workflow that covers discovery, creative contract, foundation, architecture, scene design, drafting, revision, and handoff without forcing a single story framework or subject domain. | BR-003, BR-004, BR-006, BR-014 |
 | PR-017 | For sustained fiction, offer Guided, Adaptive, and Autonomous collaboration; preserve author-owned locked decisions; maintain only an approved, proportionate, portable Markdown project; and distinguish Proposed, Confirmed, and Superseded canon. | BR-003, BR-008, BR-011, BR-012, BR-014 |
+| PR-018 | Route fiction through Write, Review, or Audit according to the requested job, and load the applicable fiction workflow without creating a fourth mode. | BR-006, BR-009, BR-014, BR-016 |
+| PR-019 | Onboard an existing manuscript by inventorying versions and boundaries, preserving its layout, assigning stable internal IDs, extracting state as Proposed with manuscript basis, and obtaining approval before creation or promotion. | BR-003, BR-005, BR-008, BR-015 |
+| PR-020 | Support explicit project, manuscript-unit, canon, batch, and branch states; partial acceptance and rejection; retcon impact analysis; recoverable consequential revision; and state reconciliation. | BR-003, BR-009, BR-012, BR-014, BR-015 |
+| PR-021 | Provide author-readable fiction templates and optional standard-library initialization, checking, checkpointing, and accepted-unit assembly with dry-run previews, relative paths, and overwrite refusal. | BR-008, BR-010, BR-011, BR-015 |
+| PR-022 | Provide selectable fiction Review and Audit contracts for developmental, structural, character, continuity, POV, dialogue, theme, prose, line, copy, reader-response, research, adaptation, and authenticity work. | BR-002, BR-005, BR-009, BR-013, BR-016 |
+| PR-023 | Support manuscript completion, deterministic assembly, synopsis, query, blurb, pitch, series summary, and submission-checklist handoff while distinguishing creative, editorial, assembly, and submission stages. | BR-003, BR-005, BR-009, BR-016 |
 
 ## Nonfunctional requirements
 
@@ -75,6 +85,8 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | NFR-006 Accessibility | The workflow remains usable without a special UI control, external service, or scoring model. | Plain-text fallback and score-free review both remain defined. |
 | NFR-007 Interoperability | The same `SKILL.md` and relative references run across standards-compatible text-capable models and harnesses; host metadata and discovery links remain optional. | Core validation passes independently of Codex metadata, and documented Codex, Claude, Pi, and generic adapter paths all resolve to the same core. |
 | NFR-008 Long-form resilience | A sustained fiction project can resume without loading the full conversation or manuscript, while conclusions remain bounded to the records and prose actually inspected. | `story/STATUS.md` identifies the current phase, accepted checkpoint, immediate state, open decisions, next action, and required context. |
+| NFR-009 Recoverability | Every consequential manuscript or canon revision has a resolved affected scope and a usable path back to the prior accepted state. | A version-control checkpoint or project-local file-and-hash manifest exists before mutation, and overwrite collisions fail closed. |
+| NFR-010 Behavioral consistency | Critical fiction decisions are tested as behavior rather than inferred from documentation presence. | Deterministic tests and clean-context scenarios cover routing, onboarding, state transitions, retcons, recovery, review, and assembly. |
 
 ## Interaction requirements
 
@@ -87,6 +99,8 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 - Map semantic needs to the active harness's native capabilities and use the documented fallback when a tool is absent.
 - For sustained fiction, ask for Guided, Adaptive, or Autonomous collaboration only when the cadence is not already clear; use Adaptive by default and let the user change it later.
 - Propose persistent fiction files once when they become useful and require approval before creating a new layout.
+- For an existing manuscript, inventory and propose state before creating files or promoting inferred facts.
+- For a broad fiction critique, default to a standard developmental review rather than applying every review contract at maximum depth.
 
 ### Voice-sample request
 
@@ -124,6 +138,20 @@ Given a clear isolated scene request, Unsloop uses a minimal fiction brief, writ
 
 Given Autonomous cadence, Unsloop works only through the approved batch and pauses before changing the premise, ending direction, POV system, content boundaries, real-person treatment, Confirmed canon, or another locked author decision. Given limited model context, it resumes from `story/STATUS.md`, relevant ledgers, and the necessary manuscript range and does not claim global consistency from partial inspection.
 
+### Existing-manuscript onboarding and recovery
+
+Given an established manuscript, Unsloop inventories supplied versions and project materials, records the inspection boundary, resolves the working authority, preserves the existing layout, assigns stable internal unit IDs without renaming files, and presents extracted state as Proposed with manuscript locations and confidence. It creates only approved missing records and promotes only accepted or clearly established state.
+
+Given partial acceptance, rejection, a branch, a retcon, or a consequential revision, Unsloop updates only the accepted scope, prevents rejected details from entering active state, maps downstream effects before changing Confirmed canon, creates a recoverable checkpoint before mutation, and reconciles the manuscript and ledgers afterward.
+
+### Fiction review and audit
+
+Given a focused fiction-review request, Unsloop selects Review or Audit and the smallest applicable contract. It identifies the manuscript boundary and project stage, ranks manuscript-level causes before symptoms, preserves strong material, names downstream impact, and distinguishes simulated reader hypotheses and authenticity questions from actual reader research or lived-experience authority.
+
+### Completion and publication handoff
+
+Given Accepted Markdown manuscript units, Unsloop previews deterministic assembly, excludes non-Accepted or branch material by default, refuses overwrite, and returns an output manifest. Supporting artifacts follow supplied requirements and manuscript evidence. Unsloop distinguishes creative completion, structural revision, line editing, copyediting, assembly, and submission-package preparation without certifying legal, market, professional-editor, agent, publisher, or platform acceptance.
+
 ### Portability
 
 Given a clean copy of the repository, the project validator passes without network access or third-party packages. Codex and Pi can use the canonical `.agents/skills` core directly; Claude and other hosts can link or load the same directory through their discovery adapters. Every linked entry resolves to the project skill rather than a divergent copy.
@@ -143,6 +171,7 @@ The v0.1 product baseline requires:
 - project-authoritative Codex, shared Agent Skills, Claude, and Pi linking with collision protection;
 - explicit disclosure that scoring is interpretive and not empirically validated.
 - validated fiction routing, cadence, portable-state, canon, voice-separation, and manuscript-resumption contracts.
+- passing deterministic fiction-project operations and behavioral fixtures for cross-mode routing, onboarding, state lifecycles, retcons, recovery, review, and assembly.
 
 Calibration, benchmark fixtures, inter-reviewer agreement, privacy review, and mode-split evidence remain later release work in [`ROADMAP.md`](ROADMAP.md).
 

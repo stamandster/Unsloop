@@ -24,7 +24,9 @@ The name covers the whole cycle: inspect source use, remove formulaic loops, rec
 - Do not add new mode names for mere differences in depth. Use **brief**, **standard**, or **deep** as review-depth settings.
 - Do not call a stylistic review an “AI detection” mode.
 - Treat fiction as a workflow specialization within **Unsloop Write**, not as **Unsloop Fiction** or a fourth mode.
+- Route fiction through **Unsloop Write**, **Unsloop Review**, or **Unsloop Audit** according to the requested job; “fiction” describes the specialization, not the mode.
 - Use **story canon** for facts established inside fiction. Do not use “story bible” as the project-record name; `CANON.md` is topic-neutral and avoids a religious implication.
+- Use **simulated reader response**, not “beta reader,” unless real beta-reader feedback is actually being analyzed.
 
 ## Split criteria
 

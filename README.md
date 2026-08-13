@@ -32,6 +32,28 @@ The workflow supports scenes, flash fiction, short stories, novellas, novels, se
 
 The default project state is visible and model-agnostic. `story/STATUS.md` records the current checkpoint and context needed to resume; `story/CANON.md` distinguishes Proposed, Confirmed, and Superseded story facts; manuscript units use stable ordered filenames. Existing coherent layouts are preserved. Voice samples remain unpersisted unless the author explicitly approves a distilled `story/VOICE.md`. See the operational [fiction workflow](.agents/skills/unsloop/references/fiction-workflow.md) for the full contract.
 
+Fiction also uses the existing modes rather than a fourth one:
+
+- **Write:** discover, plan, draft, revise on request, assemble, or prepare a synopsis, query, blurb, pitch, or checklist.
+- **Review:** developmental, structure, pacing, character, relationship, POV, narration, dialogue, theme, line, copy, simulated-reader, or authenticity review.
+- **Audit:** evidence-heavy continuity, chronology, canon, research, historical, adaptation, attribution, or source comparison.
+
+For an established manuscript, Unsloop inventories versions and inspected ranges, preserves the existing layout, assigns stable internal IDs, and proposes extracted state before creating or confirming it. For partial acceptance, branches, retcons, or large revisions, it updates only the accepted scope, maps downstream effects, and preserves a recoverable checkpoint.
+
+### Optional fiction project command
+
+The skill includes a dependency-free utility for approved Markdown projects. Python is optional; the same workflow can be performed manually from the bundled templates.
+
+```text
+python .agents/skills/unsloop/scripts/fiction_project.py init --root PATH --profile compact
+python .agents/skills/unsloop/scripts/fiction_project.py init --root PATH --profile full --apply
+python .agents/skills/unsloop/scripts/fiction_project.py check --root PATH
+python .agents/skills/unsloop/scripts/fiction_project.py checkpoint --root PATH --name NAME --reason REASON --include FILE
+python .agents/skills/unsloop/scripts/fiction_project.py assemble --root PATH --output assembled/manuscript.md
+```
+
+`init`, `checkpoint`, and `assemble` preview by default and require `--apply` to write. All operations refuse overwrite. `VOICE.md` is excluded unless `--voice --voice-authorized` is supplied. Assembly includes only manuscript units marked Accepted and writes a hash manifest.
+
 ## Harness and model compatibility
 
 Unsloop uses standard `SKILL.md` metadata, portable Markdown instructions, and relative references. It does not require a particular AI provider, model name, proprietary tool, context size, or UI. It supports:
@@ -61,6 +83,9 @@ Host capabilities are negotiated by function. Structured questions fall back to 
 - [`DECISIONS.md`](DECISIONS.md) — durable design decisions
 - [`PORTABILITY.md`](PORTABILITY.md) — discovery, dependencies, and transfer guarantees
 - [`.agents/skills/unsloop/references/fiction-workflow.md`](.agents/skills/unsloop/references/fiction-workflow.md) — scalable fiction lifecycle, project state, and continuity controls
+- [`.agents/skills/unsloop/references/fiction-project-operations.md`](.agents/skills/unsloop/references/fiction-project-operations.md) — onboarding, acceptance, branches, retcons, and recovery
+- [`.agents/skills/unsloop/references/fiction-review.md`](.agents/skills/unsloop/references/fiction-review.md) — focused developmental, craft, continuity, and integrity review
+- [`.agents/skills/unsloop/references/fiction-publication.md`](.agents/skills/unsloop/references/fiction-publication.md) — assembly, completion stages, and publication-support handoff
 
 ## Install Unsloop
 
