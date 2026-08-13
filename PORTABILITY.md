@@ -1,6 +1,6 @@
 # Portability
 
-> **Document role:** Deployment, harness, and transfer sub-specification for `PR-014`–`PR-015`, `NFR-001`, `NFR-002`, `NFR-007`, and `FS-011`–`FS-013` in [`PRD.md`](PRD.md) and [`FSD.md`](FSD.md).
+> **Document role:** Deployment, harness, and transfer sub-specification for `PR-014`–`PR-017`, `NFR-001`, `NFR-002`, `NFR-007`, `NFR-008`, and `FS-011`–`FS-015` in [`PRD.md`](PRD.md) and [`FSD.md`](FSD.md).
 
 ## Guarantee
 
@@ -67,6 +67,8 @@ The portable skill runtime consists only of:
 It requires no package manager, build step, MCP server, memory service, API key, environment variable, absolute filesystem path, or user-level configuration. Durable project decisions live in checked-in Markdown, so using Unsloop does not depend on a memory service.
 
 External access is optional and task-driven. A normal writing review works offline. An Audit that verifies online sources requires a host with source access or user-supplied source text. If neither exists, Unsloop marks the claim unverified instead of changing standards.
+
+Persistent fiction projects use visible, relative Markdown beneath an author-approved `story/` and `manuscript/` layout. These are outputs in the user's writing project, not runtime dependencies or hidden Unsloop state. `story/STATUS.md` provides a compact resume packet so another compatible model can continue from the accepted checkpoint without a memory service or the complete conversation. Existing coherent project layouts remain authoritative and need not be migrated to this default.
 
 Interactive presentation adapts to the host. A native structured-input control may present short choices; plain text preserves the same decision when no such control exists. A native file editor may apply changes; otherwise Unsloop returns a delimited revision. Voice samples remain task inputs and are not persisted unless the user explicitly authorizes storage through an available mechanism.
 
@@ -135,5 +137,6 @@ After copying or cloning the project:
 3. Use the canonical location directly when the harness supports it; otherwise create one adapter link or copy in the harness's documented discovery path.
 4. Start or refresh the harness and use its explicit invocation once to confirm discovery.
 5. Test any material optional capability—structured input, browsing, file editing, storage, or length validation—before relying on it.
+6. For a transferred fiction project, open `story/STATUS.md`, verify its referenced files exist, and bound continuation to the manuscript and ledgers actually inspected.
 
 Do not maintain divergent independent copies under the same skill name. The root specifications and method documents need not load during every invocation, but they must travel with the authoritative repository so maintainers can reproduce the product's rationale, requirements, and validation contract.

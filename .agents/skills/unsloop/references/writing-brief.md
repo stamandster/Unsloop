@@ -7,6 +7,7 @@ The brief is an operational decision record, not a form the user must complete. 
 ## Contents
 
 - [Start with topic status](#start-with-topic-status)
+- [Adapt the brief for fiction](#adapt-the-brief-for-fiction)
 - [Build the brief](#build-the-brief)
 - [Establish the direction hierarchy](#establish-the-direction-hierarchy)
 - [Classify certainty](#classify-certainty)
@@ -47,6 +48,14 @@ For brainstormed options, briefly identify each topic's angle, likely reader val
 
 For Review or Audit of supplied writing, normally infer the topic from the material. Ask for confirmation only when ambiguity would materially affect the assessment.
 
+## Adapt the brief for fiction
+
+For fiction, treat a topic as any usable story seed: a premise, subject, image, conflict, character, setting, genre idea, or story question. Treat the goal as both the artifact outcome and the intended reader experience; do not force a moral, lesson, or market category.
+
+For an isolated scene or short exploratory piece, ask only what is needed to write that unit. For sustained fiction, also resolve the form and scale, premise, genre and tonal range, narration, ending direction when material, content boundaries, research boundary, starting state, and collaboration cadence. Read [fiction-workflow.md](fiction-workflow.md) for the complete project workflow and portable state contract.
+
+When brainstorming fiction, make the options differ in narrative engine, central pressure, likely form or genre, intended experience, scope, or research burden. Do not disguise one plot as several choices.
+
 ## Build the brief
 
 Capture these fields when they matter:
@@ -62,6 +71,8 @@ Capture these fields when they matter:
 9. **Reference material:** notes, documents, links, data, sources, and earlier discussions that may support the content; identify which are authoritative for facts and which merely provide leads.
 10. **Voice target:** tone, formality, language style, emotional restraint, and any authorized writing samples.
 11. **Format and delivery constraints:** length, structure, citation style, template, platform, deadline, accessibility needs, and any component allocations.
+
+For fiction, map these general fields to the fiction-specific brief without duplicating them. In particular, keep real-world research references separate from story canon, and keep author voice evidence separate from narrative and character voice design.
 
 Do not collapse these fields. Topic is not goal. Audience is not prior knowledge. Governing directions are not factual evidence. Factual references are not voice samples. Context is not permission to invent facts.
 

@@ -19,6 +19,7 @@ At the start of a task, use the capabilities already exposed by the host. Map th
 | Verify an external source | Browser, search, retrieval, or connector | Mark the claim unverified and request the source or permission to continue elsewhere. |
 | Edit an artifact | Native patch, file-edit, or document tool | Return a clearly delimited revision for the user to apply. |
 | Persist a voice profile | Authorized memory or storage mechanism | Keep the profile task-local; do not persist it. |
+| Maintain a fiction project | Repository or document editing | Return the proposed or updated Markdown records for the user to save; keep all paths relative. |
 | Count or constrain output | Reliable tokenizer, document statistics, or validation tool | Use a disclosed estimate and retain a safety buffer. |
 
 Do not switch harnesses, models, execution modes, or accounts merely to obtain a preferred interface. Ask before a switch that changes cost, privacy, permissions, or external data handling.
@@ -28,6 +29,7 @@ Do not switch harnesses, models, execution modes, or accounts merely to obtain a
 - Use any text-capable model that can follow the skill and access the necessary materials. Multimodal input is optional unless the task depends on an image or scanned page.
 - Scale task size, evidence volume, and review depth to the available context and tool limits. Process sections explicitly when the full corpus cannot fit safely.
 - Prefer direct evidence and compact intermediate records over reliance on long conversational recall.
+- For manuscript-scale fiction, resume from `story/STATUS.md` and only the relevant story records and manuscript range. State the inspected boundary and do not make global continuity claims from partial context.
 - Do not weaken integrity, attribution, privacy, authorization, or uncertainty rules for a smaller or less capable model.
 - Treat model-generated judgments as decision support. Different models may vary in precision and consistency; compatibility does not guarantee equivalent output quality.
 - Never request or expose private chain-of-thought. Report conclusions, evidence, assumptions, and concise rationale instead.

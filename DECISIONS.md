@@ -103,3 +103,11 @@ Use a BRD for business intent and boundaries, a PRD for user-visible requirement
 **Status:** Accepted
 
 Keep `SKILL.md`, standard frontmatter, and relative references model- and harness-agnostic. Treat discovery paths, invocation syntax, UI metadata, and tool names as adapters. Preserve the existing Codex adapter and global link; add Claude, Pi, and shared Agent Skills paths without copying or forking the method. When a capability is absent, use an explicit fallback and narrow the evidence boundary rather than changing the governing rules.
+
+## D-017 — Keep fiction inside Write and make its state author-owned
+
+**Status:** Accepted
+
+Support every fiction form—from an isolated scene through a series—as a progressively loaded specialization of **Unsloop Write**, not a fourth mode. Scale intake and files to the work; use Guided, Adaptive, or Autonomous collaboration with Adaptive as the default; and preserve locked author decisions in every cadence.
+
+For persistent fiction, use visible author-approved Markdown under `story/` and `manuscript/`, adopt coherent existing layouts, distinguish Proposed, Confirmed, and Superseded canon, and require explicit retcons. Use `story/STATUS.md` as a model-agnostic resume packet. Treat story canon as fictional state rather than real-world evidence, and keep author, narrative, viewpoint, and dialogue voice targets distinct.

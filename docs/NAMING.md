@@ -23,6 +23,8 @@ The name covers the whole cycle: inspect source use, remove formulaic loops, rec
 - Use lowercase hyphenated names for future skill folders: `unsloop-review`, `unsloop-write`, and `unsloop-audit`.
 - Do not add new mode names for mere differences in depth. Use **brief**, **standard**, or **deep** as review-depth settings.
 - Do not call a stylistic review an “AI detection” mode.
+- Treat fiction as a workflow specialization within **Unsloop Write**, not as **Unsloop Fiction** or a fourth mode.
+- Use **story canon** for facts established inside fiction. Do not use “story bible” as the project-record name; `CANON.md` is topic-neutral and avoids a religious implication.
 
 ## Split criteria
 

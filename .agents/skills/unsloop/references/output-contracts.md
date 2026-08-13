@@ -31,6 +31,8 @@ When an outline, rubric, policy, template, or multi-part brief governs the artif
 
 Return the requested writing first unless the user asks for process notes. Mention only material integrity choices, preserved voice features, substantial changes, and claims or citations that still require confirmation.
 
+For a small fiction request, return the scene or story first and add only material assumptions or limitations. For a persistent fiction checkpoint, return the requested manuscript or plan first, followed by only material decisions or deviations, continuity or research concerns, Proposed details awaiting acceptance, the current checkpoint, and the next approved action. Do not bury the fiction under a project-management report.
+
 When inferred or missing brief elements materially shaped the artifact, add a compact **Brief assumptions** note. Omit obvious or inconsequential assumptions.
 
 When voice matching is material, add a compact note unless the user wants artifact-only output:
@@ -38,6 +40,8 @@ When voice matching is material, add a compact note unless the user wants artifa
 - **Voice basis:** explicit brief, current draft, and number/type of samples used
 - **Target traits:** the few traits that materially shaped the result
 - **Confidence:** Low, Moderate, or High, with any important limit
+
+When a persistent fiction project uses stored state, do not imply that a complete-looking ledger proves manuscript consistency. State unresolved contradictions, uninspected manuscript ranges, and provisional canon when they affect the next work.
 
 ## Readiness labels
 

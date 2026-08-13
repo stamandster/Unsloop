@@ -1,6 +1,6 @@
 # Review Output Contracts
 
-> **Specification role:** Normative output and readiness sub-specification for `PR-009`–`PR-010` and `FS-008`–`FS-009` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md).
+> **Specification role:** Normative output and readiness sub-specification for `PR-009`–`PR-010`, `PR-016`–`PR-017`, `FS-008`–`FS-009`, and `FS-014`–`FS-015` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md).
 
 ## Default: Unsloop Review
 
@@ -82,6 +82,15 @@ When matching the user's voice is material, also state:
 - **Voice basis:** explicit instructions, current draft, and number/type of authorized samples used;
 - **Target traits:** the few observable traits that materially shaped the result;
 - **Confidence:** Low, Moderate, or High, plus any conflict or limitation.
+
+For a small fiction request, return the scene or story first and add only material assumptions or limitations. For a persistent fiction checkpoint, return the requested creative artifact first, then only:
+
+- material decisions or deviations introduced;
+- continuity or research concerns affecting the next work;
+- Proposed details awaiting acceptance;
+- the current checkpoint and next approved action.
+
+Do not imply that complete project records prove manuscript consistency. Disclose uninspected manuscript ranges, unresolved contradictions, and provisional canon when material.
 
 ## Readiness labels
 

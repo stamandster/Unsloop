@@ -29,6 +29,11 @@
 - [x] Define a model- and harness-agnostic Agent Skills core
 - [x] Preserve Codex support while documenting Claude, Pi, and generic harness adapters
 - [x] Add capability negotiation and fallbacks for harness and model differences
+- [x] Add a topic-neutral fiction workflow within Unsloop Write for scenes through series
+- [x] Add Guided, Adaptive, and Autonomous fiction collaboration cadences
+- [x] Add author-approved portable fiction state with resumable status and classified canon
+- [x] Separate author, narrative, viewpoint, and dialogue voice targets
+- [x] Add manuscript-scale context, continuity, research, retcon, and handoff controls
 
 ## v0.2 — Examples and calibration
 
@@ -53,6 +58,12 @@
 - [ ] Forward-test the same Review, Write, and Audit fixtures in Codex, Claude, Pi, and at least one manual Agent Skills adapter
 - [ ] Compare model families and context sizes without treating one model's output as the reference truth
 - [ ] Test missing-tool fallbacks for structured input, browsing, file editing, memory, and length measurement
+- [ ] Test minimal scene, short-story, novel, serial, and series workflow scaling
+- [ ] Test Guided, Adaptive, and Autonomous checkpoint behavior with consequential deviations
+- [ ] Test Proposed-to-Confirmed canon promotion, explicit retcons, and manuscript-ledger conflicts
+- [ ] Test cross-session fiction resumption from `story/STATUS.md` with partial manuscript context
+- [ ] Test author, narrative, viewpoint, and dialogue voice separation across fiction genres
+- [ ] Test historical fiction, named-author adaptation, real-person depiction, and incomplete research boundaries
 
 ## v0.3 — Assisted audit tooling
 

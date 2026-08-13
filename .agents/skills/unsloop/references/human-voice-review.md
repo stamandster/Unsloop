@@ -31,6 +31,8 @@ Flag abrupt discontinuities for closer inspection. Do not treat them as proof of
 
 Do not ban individual words. A familiar transition, technical term, abstract noun, or balanced structure may be exactly right in context.
 
+In fiction, distinguish weak repetition from deliberate motif, voice-specific recurrence, incantation, comic pattern, or thematic echo. Distinguish generic emotional labeling from controlled restraint or viewpoint-limited understanding. Do not flatten narrators and characters into a single polished voice merely to create surface consistency.
+
 ## Test authorial presence
 
 Ask whether a reader can identify what the writer thinks and why. Look for:
@@ -85,3 +87,5 @@ Delete, specify, combine, simplify, or reconnect as needed. Preserve strong, nat
 When samples exist, evaluate patterns across the samples rather than penalizing every local difference. Distinguish a genuine mismatch from a necessary change in genre, audience, or purpose.
 
 Before changing a flagged passage, identify the intended reader effect and the smallest edit that restores substance or fit. If the effect is already clear and appropriate, leave the passage alone.
+
+For sustained fiction, run local prose checks within the larger story boundary. A sentence may earn its place through character revelation, atmosphere, pacing, setup, payoff, motif, or a deliberate change in narrative distance even when it does not advance an argument.

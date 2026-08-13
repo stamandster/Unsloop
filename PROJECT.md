@@ -28,7 +28,7 @@ Every material finding should answer four questions:
 
 ## Intended users
 
-- Writers revising academic, professional, technical, religious, personal, persuasive, or creative work
+- Writers revising academic, professional, technical, religious, personal, persuasive, or creative work, including fiction from a single scene through a multi-book series
 - Editors who need a repeatable integrity-and-voice review
 - Researchers or educators comparing a draft with supplied sources
 - Collaborators who want AI-assisted writing to remain accountable and author-led
@@ -55,7 +55,11 @@ Unsloop can:
 - test examples for function and persuasive language for emotional integrity;
 - distinguish ready work from provisional work that still requires a decision, evidence, or authorization;
 - request authorized examples of the user's previous writing when closer voice fidelity would materially improve the result;
-- derive a bounded voice brief from observable traits and report the evidence basis and confidence of the match.
+- derive a bounded voice brief from observable traits and report the evidence basis and confidence of the match;
+- develop topic-neutral fiction inside Unsloop Write through discovery, creative contract, foundation, architecture, scene design, drafting, revision, and handoff;
+- scale fiction controls from a minimal in-context scene brief to an author-approved portable `story/` and `manuscript/` project;
+- offer Guided, Adaptive, or Autonomous collaboration while preserving locked author decisions and requiring explicit retcons for Confirmed canon;
+- resume sustained fiction from compact Markdown state without treating conversational memory as authoritative; and
 - run from the same portable Agent Skills core across Codex, Claude, Pi, other compatible harnesses, and manually adapted text-capable models without changing its integrity or voice method.
 
 Unsloop cannot:
@@ -65,12 +69,14 @@ Unsloop cannot:
 - establish that no borrowing occurred when the comparison corpus is incomplete;
 - verify a source it cannot access;
 - decide institutional discipline, publication sanctions, or legal liability;
-- disguise AI involvement or help evade detection systems.
+- disguise AI involvement or help evade detection systems;
+- silently change confirmed story canon, locked creative decisions, or an existing fiction-project layout;
+- guarantee manuscript originality or continuity beyond the sources and manuscript ranges actually inspected; or
 - promise exact replication of a person, infer identity from style, or use voice samples as authority for new facts or personal experiences.
 
 ## Definition of success
 
-A successful Unsloop review is:
+A successful Unsloop result is:
 
 - **Text-grounded:** findings point to actual language, structure, claims, or sources.
 - **Calibrated:** conclusions do not exceed the available evidence.
@@ -84,6 +90,7 @@ A successful Unsloop review is:
 - **Emotionally responsible:** warmth and conviction are proportionate; manipulation does not substitute for reasons or evidence.
 - **Readiness-honest:** provisional work is not presented as final or fully verified.
 - **Harness-neutral:** provider, model, and tool differences affect available capabilities and confidence, not the governing method.
+- **Fiction-resumable:** sustained story work preserves accepted canon, proposed discoveries, current state, and the next action in portable author-readable Markdown.
 
 ## Non-goals for v0.1
 
@@ -94,6 +101,7 @@ A successful Unsloop review is:
 - Random “humanizing” through errors, slang, fragments, or fabricated anecdotes
 - Mechanical synonym substitution to reduce similarity
 - A rigid intake questionnaire that repeats questions the user has already answered
+- A mandatory plotting framework, moral, story formula, or novel-scale project setup for every fiction request
 
 ## Specification relationship
 

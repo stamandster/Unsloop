@@ -1,6 +1,6 @@
 # Ethics and Limits
 
-> **Specification role:** Governing guardrail sub-specification for `BR-005`, `BR-007`, `BR-011`, `PR-013`, and every functional component in [`../BRD.md`](../BRD.md), [`../PRD.md`](../PRD.md), and [`../FSD.md`](../FSD.md).
+> **Specification role:** Governing guardrail sub-specification for `BR-005`, `BR-007`, `BR-011`, `BR-014`, `PR-013`, `PR-016`, `PR-017`, and every functional component in [`../BRD.md`](../BRD.md), [`../PRD.md`](../PRD.md), and [`../FSD.md`](../FSD.md).
 
 ## Governing rule
 
@@ -29,6 +29,10 @@ Unsloop must not:
 - present an invented anecdote, emotion, or personal experience as lived fact outside a disclosed creative or hypothetical context;
 - treat an assignment, policy, template, or editorial direction as proof that a factual claim is true;
 - store voice samples or an extracted profile without explicit authorization.
+- silently retcon Confirmed story canon, change locked creative decisions, or treat autonomous drafting authority as ownership of the story;
+- present story canon or invented fiction as verification of a real-world claim, authentic quotation, allegation, or lived event;
+- claim a fiction manuscript is original against an incomplete comparison corpus; or
+- reproduce another author's signature wording, protected characters, distinctive world, or recognizable rhetorical sequence under the label of voice matching.
 
 ## Calibrated language
 
@@ -71,6 +75,14 @@ Separate style from identity and content. Do not infer sensitive traits from pro
 Treat factual reference material as evidence about what to say and authorized voice samples as evidence about how to say it. A voice sample does not authorize importing its facts, opinions, anecdotes, or personal history into new writing.
 
 Follow current instructions over older samples. If genre requirements conflict with habitual style, adapt transparently and state the limitation. Report voice basis and confidence whenever close fidelity is a material part of the requested outcome.
+
+For fiction, distinguish the user's evidenced author voice from the project narrative voice, viewpoint-character filters, and character dialogue. A request to resemble another identifiable author permits only broad, non-exclusive style adaptation; it does not authorize exact imitation or copying of distinctive expression.
+
+## Fiction and story state
+
+Fiction may invent characters, events, dialogue, settings, and emotions when invention is part of the disclosed form. Keep invented story facts separate from real-world research, biographical claims, authentic quotations, and personal testimony. Use additional care when depicting real people or allegations that a reader could mistake for fact.
+
+Treat persistent story records as author-editable project state. Require approval before creating a new project layout, preserve a coherent existing layout, mark unaccepted autonomous discoveries Proposed, and change Confirmed canon only through an explicit retcon decision. A model-context limit narrows continuity claims; it does not justify guessing what unseen chapters contain.
 
 ## Fairness
 

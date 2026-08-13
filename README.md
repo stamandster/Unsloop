@@ -13,10 +13,24 @@ For substantial or tightly constrained work, the brief also separates governing 
 It supports three related jobs:
 
 - **Unsloop Review** — diagnose clarity, integrity, specificity, and voice.
-- **Unsloop Write** — draft or revise while preserving the writer's intent and matching their evidenced tone and language style.
+- **Unsloop Write** — draft or revise while preserving the writer's intent and matching their evidenced tone and language style; its fiction workflow scales from a single scene to a novel, serial, or series.
 - **Unsloop Audit** — examine source use, attribution, evidence, and source dependence in depth.
 
 The implementation is one extensible, repository-scoped [Agent Skill](https://agentskills.io/specification) at [`.agents/skills/unsloop/SKILL.md`](.agents/skills/unsloop/SKILL.md). The operational core is model- and harness-agnostic. Codex and Pi discover the canonical repository path directly; Claude Code and other clients use thin discovery adapters pointing to the same directory. Codex support, UI metadata, invocation, and global-link behavior remain fully supported.
+
+## Fiction writing
+
+Fiction remains part of **Unsloop Write**, not a separate mode. Invoke Unsloop with a premise, a draft, or a request to brainstorm:
+
+```text
+$unsloop Help me brainstorm a short story about memory and inheritance.
+$unsloop Develop this premise into a novel, using Adaptive collaboration.
+$unsloop Continue chapter 7 from this fiction project's story state.
+```
+
+The workflow supports scenes, flash fiction, short stories, novellas, novels, serials, and series on any user-chosen topic. A clear one-off scene uses a minimal brief and no project files by default. Sustained work can use Guided, Adaptive, or Autonomous collaboration and an author-approved portable Markdown project beneath `story/` and `manuscript/`. Adaptive is the default. Even in Autonomous collaboration, Unsloop stops before changing Confirmed canon, premise, ending direction, POV rules, content boundaries, real-person treatment, or another locked author decision.
+
+The default project state is visible and model-agnostic. `story/STATUS.md` records the current checkpoint and context needed to resume; `story/CANON.md` distinguishes Proposed, Confirmed, and Superseded story facts; manuscript units use stable ordered filenames. Existing coherent layouts are preserved. Voice samples remain unpersisted unless the author explicitly approves a distilled `story/VOICE.md`. See the operational [fiction workflow](.agents/skills/unsloop/references/fiction-workflow.md) for the full contract.
 
 ## Harness and model compatibility
 
@@ -46,6 +60,7 @@ Host capabilities are negotiated by function. Structured questions fall back to 
 - [`ROADMAP.md`](ROADMAP.md) — path from v0.1 to a validated release
 - [`DECISIONS.md`](DECISIONS.md) — durable design decisions
 - [`PORTABILITY.md`](PORTABILITY.md) — discovery, dependencies, and transfer guarantees
+- [`.agents/skills/unsloop/references/fiction-workflow.md`](.agents/skills/unsloop/references/fiction-workflow.md) — scalable fiction lifecycle, project state, and continuity controls
 
 ## Install Unsloop
 
@@ -233,4 +248,4 @@ Factual references and voice samples have different jobs: references support wha
 
 ## Status
 
-Version 0.1 is a documented, portable, specification-backed foundation. It is ready for controlled use and forward-testing, but its scoring model is an interpretive rubric—not a validated measurement instrument. See [`ROADMAP.md`](ROADMAP.md) for calibration and release work still required.
+Version 0.1 is a documented, portable, specification-backed foundation with a scalable fiction workflow inside Unsloop Write. It is ready for controlled use and forward-testing; its scoring model remains interpretive, and the fiction behavior matrix is structurally specified rather than empirically validated. See [`ROADMAP.md`](ROADMAP.md) for calibration and release work still required.

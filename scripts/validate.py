@@ -39,6 +39,7 @@ REQUIRED_FILES = (
     SKILL / "references" / "output-contracts.md",
     SKILL / "references" / "source-verification.md",
     SKILL / "references" / "write-mode.md",
+    SKILL / "references" / "fiction-workflow.md",
 )
 
 LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
@@ -218,31 +219,90 @@ HARNESS_CONTRACT = {
     ),
 }
 
+FICTION_CONTRACT = {
+    SKILL / "SKILL.md": (
+        "fiction development and drafting",
+        "references/fiction-workflow.md",
+        "scene, short story, novella, novel, serial, or series",
+    ),
+    SKILL / "references" / "fiction-workflow.md": (
+        "## Scale the workflow",
+        "## Choose the collaboration cadence",
+        "**Guided:**",
+        "**Adaptive (Recommended):**",
+        "**Autonomous:**",
+        "story/",
+        "manuscript/",
+        "story/STATUS.md",
+        "story/VOICE.md",
+        "**Proposed:**",
+        "**Confirmed:**",
+        "**Superseded:**",
+        "explicit retcon decision",
+        "author's evidenced personal voice",
+        "designed narrative voice",
+        "character-specific dialogue",
+        "real-world research evidence",
+    ),
+    ROOT / "PRD.md": (
+        "PR-016",
+        "PR-017",
+        "NFR-008 Long-form resilience",
+        "### Fiction",
+    ),
+    ROOT / "FSD.md": (
+        "FS-014",
+        "FS-015",
+        "`FictionBrief`",
+        "`StoryProjectState`",
+        "`CanonEntry`",
+        "`SceneRecord`",
+        "`CollaborationCadence`",
+    ),
+    ROOT / "docs" / "ETHICS-AND-LIMITS.md": (
+        "## Fiction and story state",
+        "Confirmed story canon",
+        "author voice",
+        "narrative voice",
+    ),
+    ROOT / "README.md": (
+        "## Fiction writing",
+        "Guided, Adaptive, or Autonomous",
+        "story/STATUS.md",
+    ),
+    ROOT / "DECISIONS.md": (
+        "## D-017 — Keep fiction inside Write and make its state author-owned",
+    ),
+}
+
 SPECIFICATION_CONTRACT = {
     ROOT / "BRD.md": (
         "## Business requirements",
         "BR-001",
-        "BR-013",
+        "BR-014",
         "[`PRD.md`](PRD.md)",
         "[`FSD.md`](FSD.md)",
     ),
     ROOT / "PRD.md": (
         "## Functional requirements",
         "PR-001",
-        "PR-015",
+        "PR-017",
         "NFR-001 Portability",
+        "NFR-008 Long-form resilience",
         "[`BRD.md`](BRD.md)",
         "[`FSD.md`](FSD.md)",
     ),
     ROOT / "FSD.md": (
         "## Functional components",
         "FS-001",
-        "FS-013",
+        "FS-015",
         "`WritingBrief`",
         "`EvidenceBoundary`",
         "`VoiceBrief`",
         "`RequirementCoverage`",
         "`ReadinessState`",
+        "`FictionBrief`",
+        "`StoryProjectState`",
         "## Verification matrix",
     ),
     ROOT / "README.md": (
@@ -271,6 +331,7 @@ SPECIFICATION_CONTRACT = {
     ROOT / "DECISIONS.md": (
         "## D-015 — Use a three-level specification stack",
         "## D-016 — Separate the portable core from harness adapters",
+        "## D-017 — Keep fiction inside Write and make its state author-owned",
     ),
 }
 
@@ -377,6 +438,17 @@ def validate() -> list[str]:
             if requirement not in text:
                 errors.append(
                     f"harness-compatibility safeguard missing from "
+                    f"{path.relative_to(ROOT)}: {requirement}"
+                )
+
+    for path, requirements in FICTION_CONTRACT.items():
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for requirement in requirements:
+            if requirement not in text:
+                errors.append(
+                    f"fiction-workflow safeguard missing from "
                     f"{path.relative_to(ROOT)}: {requirement}"
                 )
 

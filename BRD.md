@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Unsloop is a portable writing-integrity and human-voice system. It helps a writer, editor, researcher, or collaborator produce writing that is original, supportable, specific, readable, and recognizably theirs without turning stylistic signals or similarity scores into unsupported verdicts.
+Unsloop is a portable writing-integrity and human-voice system. It helps a writer, editor, researcher, or collaborator produce writing that is original, supportable, specific, readable, and recognizably theirs without turning stylistic signals or similarity scores into unsupported verdicts. For fiction, it also provides an author-controlled path from a story seed through planning, drafting, continuity, revision, and handoff without assuming a subject domain or surrendering canon decisions to the model.
 
 ## Business problem
 
@@ -25,7 +25,7 @@ Unsloop should make writing more defensible without laundering its origins, more
 
 | Stakeholder | Need |
 |---|---|
-| Writer | Improve a draft or create new writing while retaining intent, position, and natural language. |
+| Writer | Improve a draft or create new writing—including sustained fiction—while retaining intent, position, natural language, and control of consequential creative decisions. |
 | Editor or collaborator | Diagnose high-value problems consistently without rewriting sound prose unnecessarily. |
 | Researcher or educator | Compare drafts with sources and separate textual evidence from misconduct judgments. |
 | Project maintainer | Evolve one portable, testable source of truth without divergent skill copies. |
@@ -48,6 +48,7 @@ Unsloop should make writing more defensible without laundering its origins, more
 | BR-011 | Minimize collection, reproduction, persistence, and external transfer of drafts, sources, and voice samples. | Sensitive writing and identity-linked material receive proportionate protection. |
 | BR-012 | Separate requirement coverage from factual support and label work honestly when decisions, evidence, authorization, or hard constraints remain unresolved. | Provisional work is not mistaken for complete or verified work. |
 | BR-013 | Keep the writing method independent of AI provider, model family, and agent harness while supporting thin adapters for Codex, Claude, Pi, and other Agent Skills clients. | Users can retain one governed method across tools without vendor lock-in or divergent forks. |
+| BR-014 | Support fiction from scene through series with proportionate intake, selectable collaboration cadence, portable story state, continuity control, and staged revision inside Unsloop Write. | Authors can develop long or short fiction across sessions and models without losing ownership, canon, or project coherence. |
 
 ## Scope
 
@@ -61,6 +62,8 @@ Unsloop should make writing more defensible without laundering its origins, more
 - Requirement coverage, constraint checking, calibrated scoring, and readiness reporting.
 - Repository-local discovery, optional global linking, and dependency-free validation.
 - Standards-based use across compatible harnesses, with capability fallbacks for hosts that lack a preferred tool or UI.
+- Topic-neutral fiction discovery, planning, drafting, continuity, revision, and handoff for scenes, short stories, novellas, novels, serials, and series.
+- Optional author-approved Markdown project records that preserve creative decisions and resumable story state without a required service.
 
 ### Out of scope
 
@@ -70,10 +73,11 @@ Unsloop should make writing more defensible without laundering its origins, more
 - Exact voice replication or unauthorized impersonation.
 - Detector evasion, fabricated citations, experiences, emotions, or verification.
 - Mandatory cloud services, persistent user profiles, or collection of writing samples by default.
+- Silent retcons, autonomous changes to locked creative decisions, or mandatory project-file ceremony for a small fiction request.
 
 ## Success measures
 
-For v0.1, success is demonstrated through traceable documentation, passing structural validation, and controlled use in which outputs are text-grounded, calibrated, actionable, voice-preserving, goal-directed, requirement-complete, emotionally responsible, and readiness-honest.
+For v0.1, success is demonstrated through traceable documentation, passing structural validation, and controlled use in which outputs are text-grounded, calibrated, actionable, voice-preserving, goal-directed, requirement-complete, emotionally responsible, and readiness-honest. Fiction workflows additionally preserve confirmed canon, distinguish proposed discoveries from accepted decisions, scale project state to the work, and remain resumable from portable Markdown.
 
 Before v1.0, the project should add anonymized fixtures and forward-tests showing that independent reviewers can apply core classifications and score anchors with acceptable consistency. No current score is represented as a validated measurement instrument.
 

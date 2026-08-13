@@ -10,6 +10,7 @@ Unsloop is an umbrella project with one shared method and three modes.
 Unsloop
 ├── Review — constructive diagnosis
 ├── Write  — author-led drafting and revision
+│   └── Fiction workflow — scene-to-series development and continuity
 └── Audit  — evidence-heavy source examination
 ```
 
@@ -52,7 +53,8 @@ Unsloop/
                 ├── scoring.md
                 ├── output-contracts.md
                 ├── source-verification.md
-                └── write-mode.md
+                ├── write-mode.md
+                └── fiction-workflow.md
 ```
 
 ## Specification stack
@@ -100,6 +102,8 @@ Build the progressive writing brief
         ↓
 Resolve governing directions, content roles, and constraints
         ↓
+For fiction: scale the lifecycle, cadence, and approved project state
+        ↓
 Set evidence boundary, voice basis, and review depth
         ↓
 Run integrity lens + human-voice lens
@@ -120,5 +124,6 @@ The current structure leaves room for:
 - benchmark fixtures for scorer calibration and regression testing;
 - integrations with document, citation, and repository tools.
 - thin adapters for additional Agent Skills clients without vendor-specific forks.
+- optional tooling that validates fiction ledgers against accepted manuscript facts without making creative decisions for the author.
 
 Automation must surface evidence, not replace judgment. Any future similarity or linguistic analysis should produce inspectable signals and preserve the distinction between observation, inference, and verdict.

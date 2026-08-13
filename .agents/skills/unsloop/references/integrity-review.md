@@ -15,6 +15,8 @@ Keep the writing brief distinct from the evidence corpus. A required claim in th
 - With full sources, inspect context as well as local wording.
 - With a similarity report, inspect the actual matches and exclusions; do not use the percentage as a verdict.
 
+For fiction, keep real-world research evidence, source inspiration, and story canon separate. An accepted story fact establishes what is true inside the fiction; it does not verify a claim about the real world. Do not claim a manuscript is original against all existing fiction when the comparison corpus is incomplete.
+
 ## Audit requirement coverage
 
 For substantial work governed by an outline, assignment, rubric, policy, template, or multi-part brief, audit requirement coverage separately from source support.
@@ -59,6 +61,8 @@ Give necessary terminology and conventional organization less weight than distin
 - **Unsupported or fabricated support:** cite a missing source, misstate it, invent evidence, or attach it to a claim it does not support.
 
 Do not use “plagiarism” as a catch-all. Describe the supported relationship and leave institutional intent or misconduct judgments to the responsible human process.
+
+For adaptation, homage, fan work, retelling, or close inspiration, distinguish conventional genre elements and high-level influence from retained expression, distinctive detail selection, character or world appropriation, and non-obvious structural dependence. Treat publication, licensing, platform, or disclosure requirements as policy questions outside a textual plagiarism verdict.
 
 ## Test the evidence
 

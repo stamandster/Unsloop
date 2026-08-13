@@ -16,6 +16,8 @@ Unsloop is one writing-integrity and human-voice skill with three modes:
 
 Review is the default for a broad request about existing writing. Depth—brief, standard, or deep—is independent of mode.
 
+Fiction is a specialization within Unsloop Write, not a fourth mode. It supports isolated scenes, flash fiction, short stories, novellas, novels, serials, and series across any user-chosen subject or genre.
+
 ## Product principles
 
 1. Judge observable writing and evidence, not presumed authorship or intent.
@@ -36,6 +38,8 @@ Review is the default for a broad request about existing writing. Depth—brief,
 | Revise in the user's voice | Draft, requested changes, and sufficient voice evidence | Meaning-preserving revision plus basis and confidence when fidelity is material. |
 | Audit source use | Draft, sources or similarity report, and governing requirements | Evidence boundary, source map, claim checks, requirement coverage, and calibrated conclusion. |
 | Brainstorm a topic | Interests or subject area, purpose, audience, and constraints | Distinct feasible options with angles, reader value, scope, and evidence needs. |
+| Develop fiction | Story seed, premise, notes, outline, or manuscript plus author decisions | A proportionate path from discovery through planning, drafting, continuity, revision, and handoff. |
+| Continue a fiction project | Existing manuscript and project records | Work resumed from accepted canon and current state without silently overwriting the author's layout or decisions. |
 
 ## Functional requirements
 
@@ -56,6 +60,8 @@ Review is the default for a broad request about existing writing. Depth—brief,
 | PR-013 | Enforce privacy, minimization, authorization, evidence, identity, emotional-integrity, and high-stakes human-review limits. | BR-005, BR-007, BR-011 |
 | PR-014 | Operate from repository-local Markdown/YAML with relative links and no required service or package; support optional repository, user, or admin discovery through links or copies of the authoritative project skill. | BR-008, BR-010, BR-013 |
 | PR-015 | Keep the operational core compliant with the portable Agent Skills shape and independent of vendor tool names, model IDs, invocation syntax, or proprietary frontmatter. Provide capability-based fallbacks and optional adapters for Codex, Claude, Pi, and other hosts. | BR-008, BR-010, BR-013 |
+| PR-016 | Route every fiction request through a scalable Unsloop Write workflow that covers discovery, creative contract, foundation, architecture, scene design, drafting, revision, and handoff without forcing a single story framework or subject domain. | BR-003, BR-004, BR-006, BR-014 |
+| PR-017 | For sustained fiction, offer Guided, Adaptive, and Autonomous collaboration; preserve author-owned locked decisions; maintain only an approved, proportionate, portable Markdown project; and distinguish Proposed, Confirmed, and Superseded canon. | BR-003, BR-008, BR-011, BR-012, BR-014 |
 
 ## Nonfunctional requirements
 
@@ -68,6 +74,7 @@ Review is the default for a broad request about existing writing. Depth—brief,
 | NFR-005 Maintainability | The core skill remains concise; detailed procedures use one-level-deep references; project specifications stay outside the runtime bundle. | Skill validation passes and no auxiliary project docs are added inside the skill. |
 | NFR-006 Accessibility | The workflow remains usable without a special UI control, external service, or scoring model. | Plain-text fallback and score-free review both remain defined. |
 | NFR-007 Interoperability | The same `SKILL.md` and relative references run across standards-compatible text-capable models and harnesses; host metadata and discovery links remain optional. | Core validation passes independently of Codex metadata, and documented Codex, Claude, Pi, and generic adapter paths all resolve to the same core. |
+| NFR-008 Long-form resilience | A sustained fiction project can resume without loading the full conversation or manuscript, while conclusions remain bounded to the records and prose actually inspected. | `story/STATUS.md` identifies the current phase, accepted checkpoint, immediate state, open decisions, next action, and required context. |
 
 ## Interaction requirements
 
@@ -78,6 +85,8 @@ Review is the default for a broad request about existing writing. Depth—brief,
 - Use open conversation for topics, drafts, sources, context, and samples that cannot be reduced safely to fixed options.
 - Pause only when a missing fact, authorization, source, or high-stakes choice cannot be inferred responsibly.
 - Map semantic needs to the active harness's native capabilities and use the documented fallback when a tool is absent.
+- For sustained fiction, ask for Guided, Adaptive, or Autonomous collaboration only when the cadence is not already clear; use Adaptive by default and let the user change it later.
+- Propose persistent fiction files once when they become useful and require approval before creating a new layout.
 
 ### Voice-sample request
 
@@ -109,6 +118,12 @@ Given a draft and comparison sources, Unsloop records exactly what was inspected
 
 Given authorized representative samples, Unsloop derives only observable task-relevant traits, does not import sample facts or memorable wording, adapts for the new genre and audience, and reports the basis and Low, Moderate, or High confidence when fidelity is material.
 
+### Fiction
+
+Given a clear isolated scene request, Unsloop uses a minimal fiction brief, writes the requested unit, and does not require novel-scale planning or files. Given sustained fiction, it confirms a creative contract and cadence, proposes the smallest useful `story/` and `manuscript/` layout once, and creates it only after approval. It preserves accepted manuscript and Confirmed canon, marks unaccepted discoveries Proposed, requires an explicit retcon to supersede canon, keeps research separate from invented story facts, and returns the requested creative artifact before checkpoint notes.
+
+Given Autonomous cadence, Unsloop works only through the approved batch and pauses before changing the premise, ending direction, POV system, content boundaries, real-person treatment, Confirmed canon, or another locked author decision. Given limited model context, it resumes from `story/STATUS.md`, relevant ledgers, and the necessary manuscript range and does not claim global consistency from partial inspection.
+
 ### Portability
 
 Given a clean copy of the repository, the project validator passes without network access or third-party packages. Codex and Pi can use the canonical `.agents/skills` core directly; Claude and other hosts can link or load the same directory through their discovery adapters. Every linked entry resolves to the project skill rather than a divergent copy.
@@ -127,6 +142,7 @@ The v0.1 product baseline requires:
 - project-local validation with no unresolved placeholders;
 - project-authoritative Codex, shared Agent Skills, Claude, and Pi linking with collision protection;
 - explicit disclosure that scoring is interpretive and not empirically validated.
+- validated fiction routing, cadence, portable-state, canon, voice-separation, and manuscript-resumption contracts.
 
 Calibration, benchmark fixtures, inter-reviewer agreement, privacy review, and mode-split evidence remain later release work in [`ROADMAP.md`](ROADMAP.md).
 

@@ -1,4 +1,4 @@
 interface:
   display_name: "Unsloop"
-  short_description: "Writing integrity and human-voice review"
-  default_prompt: "Use $unsloop to establish or brainstorm the topic and writing brief, then review for source integrity, specificity, and human voice."
+  short_description: "Integrity, voice, and fiction workflow"
+  default_prompt: "Use $unsloop to establish the writing brief, then draft or review with source integrity, human voice, and scalable fiction support when relevant."

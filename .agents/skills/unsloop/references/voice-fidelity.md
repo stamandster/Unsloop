@@ -61,6 +61,19 @@ Use samples to learn how the user writes, not what to claim in a new piece.
 - Do not infer sensitive or protected personal attributes from stylistic features.
 - Do not invent errors, slang, personal memories, or emotional disclosures as identity signals.
 
+## Separate fiction voices
+
+For fiction, keep these targets distinct:
+
+- **Author voice evidence:** observable tendencies supported by the user's authorized writing samples.
+- **Narrative voice:** the designed register, distance, texture, rhythm, and reliability of this story.
+- **Viewpoint voice:** the perceptions, vocabulary, assumptions, and attention available to the current viewpoint character.
+- **Dialogue voice:** character-specific speech shaped by background, relationship, immediate objective, and emotional state.
+
+The narrative voice may intentionally differ from the user's ordinary nonfiction or conversational voice. Prefer fiction samples in a similar form when close author fidelity matters, but follow the approved project design over irrelevant habits from another genre.
+
+When asked to write in the style of another identifiable author, convert the request into broad, non-exclusive traits such as pacing, formality, sentence movement, narrative distance, imagery density, or humor. Do not reproduce signature phrases, protected characters, distinctive worlds, or recognizable rhetorical sequences, and do not describe the result as an exact imitation.
+
 ## Resolve conflicts
 
 Follow the current request over older samples. Follow purpose and audience over habits that would make the new artifact ineffective or inappropriate. When a conflict would materially change the result, name it and ask the user which direction to prefer.
@@ -81,3 +94,5 @@ Never turn confidence into a claim that the result is indistinguishable from the
 ## Protect samples
 
 Use the minimum sample text needed. Do not reproduce unnecessary passages in the output. Do not place samples or extracted profiles in project files, memory, or external services unless the user explicitly authorizes that storage or transfer.
+
+For a persistent fiction project, do not create `story/VOICE.md` without explicit authorization. If authorized, store only the approved distilled traits, evidence basis, confidence, and limits—not the source samples or their private content.

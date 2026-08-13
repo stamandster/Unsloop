@@ -1,6 +1,6 @@
 # Review Model
 
-> **Specification role:** Normative method for `PR-003`–`PR-008` and `FS-003`–`FS-007` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md). Ethical limits in [`ETHICS-AND-LIMITS.md`](ETHICS-AND-LIMITS.md) control whenever a method rule appears to conflict.
+> **Specification role:** Normative method for `PR-003`–`PR-008`, `PR-016`–`PR-017`, `FS-003`–`FS-007`, and `FS-014`–`FS-015` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md). Ethical limits in [`ETHICS-AND-LIMITS.md`](ETHICS-AND-LIMITS.md) control whenever a method rule appears to conflict.
 
 ## Overview
 
@@ -31,6 +31,16 @@ Keep factual references separate from voice samples. References support what the
 Keep governing directions separate from evidence. Resolve conflicts among non-waivable requirements, current user instructions, assignment or editorial directions, confirmed brief decisions, and genre defaults. Do not silently redistribute component allocations or treat all supplied material as required.
 
 For a short, low-stakes request, infer safe defaults and proceed. For substantial drafting, ask the smallest useful batch of questions. Pause when a missing fact, source, authorization, or high-stakes choice cannot be safely inferred. Review uses the brief as evaluative context; Write uses it as the drafting specification; Audit records it separately from the evidence corpus.
+
+## Fiction workflow within Write
+
+Route scenes, flash fiction, short stories, novellas, novels, serials, and series through the fiction specialization of Unsloop Write. Treat a fiction topic as a premise, subject, image, conflict, character, setting, genre idea, or story question, and treat intended reader experience as part of the goal. Do not assume a religious or other domain, require a moral, or force a plotting framework.
+
+Scale ceremony to the project. A clear isolated unit needs only a minimal brief. Sustained fiction establishes a creative contract, selects Guided, Adaptive, or Autonomous collaboration, and may create a portable `story/` and `manuscript/` project after approval. Adaptive is the default. Existing coherent layouts take precedence over the default.
+
+Track story facts as Proposed, Confirmed, or Superseded. Preserve locked author decisions in every cadence, require an explicit retcon before changing Confirmed canon, and keep real-world research separate from invented story facts. When context is limited, resume from `story/STATUS.md` and only the relevant ledgers and manuscript range; bound continuity claims to what was inspected.
+
+In voice review, distinguish the user's evidenced author voice, the designed narrative voice, viewpoint-character filters, and character dialogue. Preserve purposeful motif and character-specific diction rather than treating every recurrence or discontinuity as slop.
 
 ## Lens A — Writing integrity
 
