@@ -2,6 +2,8 @@
 
 Read this file for every fiction request in Write, Review, or Audit: an isolated scene, flash fiction, short story, novella, novel, serial, shared world, or multi-book series. Fiction is a specialization of the existing modes, not a fourth mode.
 
+When more than one speaking character appears, a recurring character crosses units, or the user asks to establish or change a character's personality or speech, also read [character-voice-continuity.md](character-voice-continuity.md).
+
 Treat every subject and genre as available unless a governing rule or the user's boundary excludes it. Do not assume a religious, biblical, literary, commercial, or other subject context. Use **story canon** for facts established inside the fiction; do not call the project record a “story bible.”
 
 ## Contents
@@ -55,7 +57,8 @@ Extract before asking. Capture only fields that affect the current stage:
 8. real-world research boundary and invented rules;
 9. content, format, length, deadline, continuity, and series constraints;
 10. locked author decisions and decision authority when collaborators are involved; and
-11. collaboration cadence and maximum batch for sustained creation.
+11. collaboration cadence and maximum batch for sustained creation; and
+12. recurring-character personality and speech decisions: user-defined, model-proposed for approval, or a deliberate mixture.
 
 Do not require a moral, lesson, market category, or predetermined structure. For sustained work, summarize a compact creative contract and mark consequential elements Known, Inferred, or Unknown before architecture or drafting.
 
@@ -86,7 +89,7 @@ Move through only the phases the work needs:
 
 Support both discovery writing and outline-driven writing. Do not force three-act structure, the hero's journey, identical scene beats, artificial conflict, or exhaustive outlining.
 
-For persistent work, use [fiction-project-operations.md](fiction-project-operations.md) to maintain state, acceptance, branches, impact maps, and recovery.
+For persistent work, use [fiction-project-operations.md](fiction-project-operations.md) to maintain state, acceptance, branches, impact maps, and recovery. Establish a versioned voice profile for every recurring speaking character. User-defined traits take precedence; model suggestions remain Proposed until accepted.
 
 ## Review or audit
 
@@ -109,6 +112,8 @@ Keep these channels separate:
 Do not import facts, autobiography, characters, settings, opinions, or memorable wording from voice samples. Convert named-author imitation requests into broad, non-exclusive traits without copying signature language, protected characters, distinctive worlds, or recognizable rhetorical sequences.
 
 Story canon establishes what is true inside the fiction, not what is verified in the real world. Fiction may invent people, events, dialogue, worlds, and emotions when clearly presented as fiction. Do not present invention as authentic quotation, personal testimony, allegation, or factual verification. Never claim originality against an incomplete comparison corpus.
+
+Confirmed character voice profiles are locked author decisions. Draft emotional, relational, and situational variation within them, but do not silently drift, flatten the cast into one voice, or change a profile. Apply an author-approved evolution or retroactive override through the versioned change process in [character-voice-continuity.md](character-voice-continuity.md).
 
 ## Handle limits
 

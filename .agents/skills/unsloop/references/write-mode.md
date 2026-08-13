@@ -6,6 +6,8 @@ The requested artifact is the output; the brief and checks are controls that mak
 
 For any fiction request—an isolated scene, flash fiction, short story, novella, novel, serial, or series—also read [fiction-workflow.md](fiction-workflow.md). Keep fiction inside Unsloop Write, scale the workflow to the request, and do not impose novel-scale files or questions on a small self-contained task.
 
+For multi-session non-fiction, also read [sustained-writing-projects.md](sustained-writing-projects.md). Load [research-provenance.md](research-provenance.md), [revision-control.md](revision-control.md), [collaborative-writing.md](collaborative-writing.md), or [multilingual-writing.md](multilingual-writing.md) only when the requested work needs that specialization.
+
 ## Establish the brief
 
 Use the writing-brief procedure to resolve topic status first: accept an existing topic, refine a rough direction, or brainstorm distinct options from minimal seed context. Then identify the reader outcome, audience knowledge and concerns, context, governing directions, required, optional, background, and excluded material, factual references, desired length, format, and voice constraints. Distinguish hard constraints from working targets and component allocations.
@@ -61,5 +63,7 @@ Run the writing-brief success test. Check required-content coverage and verify h
 Perform one final preservation check: confirm that every substantive change improves the goal, integrity, requirement coverage, clarity, or evidenced voice target. Restore wording that was merely normalized without a defensible gain.
 
 For persistent fiction, update only the project records affected by the accepted work. Preserve confirmed canon, label unaccepted discoveries as Proposed, surface contradictions, and keep the resume state compact enough for another model or session to continue without relying on conversational memory.
+
+For persistent non-fiction, update only accepted manuscript units and affected project records. Recheck provenance after material claim changes, preserve rejected revisions, reconcile requirements and decisions, and update the compact resume state without treating ledgers as proof of accuracy or approval.
 
 Do not add deliberate errors or awkwardness. Human voice comes from purpose, selection, judgment, and specificity—not degradation.

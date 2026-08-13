@@ -29,6 +29,7 @@
 ## Resume context
 
 - Required project files: `story/BRIEF.md`, `story/SCENES.md`
+- Required character voice profiles: [applicable Confirmed CVP IDs or none]
 - Required manuscript range: [accepted range needed to continue]
 - Evidence boundary: [files and ranges last inspected]
 

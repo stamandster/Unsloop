@@ -72,6 +72,8 @@ For fiction, keep these targets distinct:
 
 The narrative voice may intentionally differ from the user's ordinary nonfiction or conversational voice. Prefer fiction samples in a similar form when close author fidelity matters, but follow the approved project design over irrelevant habits from another genre.
 
+For multiple recurring speakers, separate viewpoint-character interior voice from spoken dialogue and maintain a versioned profile for each character. A Confirmed profile is immutable for drafting until the author approves a named evolution or retroactive override. Stress, intimacy, deception, formality, or character growth can change surface expression only within the profile's accepted range. Read [character-voice-continuity.md](character-voice-continuity.md).
+
 When asked to write in the style of another identifiable author, convert the request into broad, non-exclusive traits such as pacing, formality, sentence movement, narrative distance, imagery density, or humor. Do not reproduce signature phrases, protected characters, distinctive worlds, or recognizable rhetorical sequences, and do not describe the result as an exact imitation.
 
 ## Resolve conflicts

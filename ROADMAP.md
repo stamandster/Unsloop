@@ -41,7 +41,26 @@
 - [x] Add portable fiction templates and optional fail-closed project tooling
 - [x] Add focused fiction-review and bounded publication-handoff workflows
 - [x] Add deterministic tests for project initialization, validation, checkpointing, assembly, overwrite refusal, authorization, and path safety
-- [x] Add 26 clean-context behavioral fixture contracts covering critical fiction operations and boundaries
+- [x] Add 30 clean-context behavioral fixture contracts covering critical fiction operations and boundaries
+- [x] Add proportionate sustained non-fiction project state, onboarding, resumption, assembly, and handoff
+- [x] Add claim, source, quotation, conflict, manuscript-location, and verification-freshness provenance
+- [x] Add general revision classification, partial disposition, impact analysis, checkpoints, and reconciliation
+- [x] Add stakeholder authority, feedback consolidation, and version-specific approval boundaries
+- [x] Add multilingual, localization, translated-quotation, and cross-language voice workflows
+- [x] Add an optional machine-readable Unsloop report schema and portable JSON project-state export
+- [x] Add sustained-writing templates and fail-closed standard-library project tooling
+- [x] Add Guided, Adaptive, and Autonomous sustained non-fiction collaboration cadences
+- [x] Add deterministic sustained-project tests and 27 clean-context behavioral scenario contracts
+- [x] Add author-controlled, versioned character personality and dialogue profiles with drift and override controls
+- [x] Add documentary, biography, procedure, policy, plan, direction, instruction, and technical-documentation form contracts
+- [x] Add user-only, scoped-web, broad-web, and hybrid source acquisition with claim-specific suitability and non-upgrading overrides
+- [x] Add documentary chronology and validation ledgers plus 24 clean-context behavioral scenario contracts
+- [x] Add cross-skill responsibility, authority, conflict, and unified-handoff composition
+- [x] Add untrusted-source instruction isolation, active-content boundaries, and sensitive-data safeguards
+- [x] Add quantitative, interview/oral-history, and multimodal evidence workflows and portable ledgers
+- [x] Add documentation-system architecture, dependency, maintenance, correction, deprecation, withdrawal, and archival controls
+- [x] Add reader, task, accessibility, plain-language, and localization validation evidence states
+- [x] Add 24 clean-context operational extension scenarios and deterministic ledger checks
 
 ## v0.2 — Examples and calibration
 
@@ -76,6 +95,18 @@
 - [ ] Forward-test partial acceptance, rejection, branch merge, retcon, and recovery behavior
 - [ ] Forward-test developmental, continuity, simulated-reader, and authenticity review boundaries
 - [ ] Forward-test assembly and publication-support artifacts against supplied requirements
+- [ ] Forward-test compact, research, collaborative, and full sustained-writing profiles
+- [ ] Forward-test claim freshness, conflicting sources, quotation versions, and bibliography boundaries
+- [ ] Forward-test partial non-fiction revision acceptance and multi-reviewer authority conflicts
+- [ ] Forward-test translation, localization, cross-language voice, and structured-output equivalence
+- [ ] Forward-test multi-character voice distinction, contextual variation, drift detection, prospective evolution, and retroactive override
+- [ ] Forward-test biography reconstruction and living-person allegation boundaries
+- [ ] Forward-test scoped-site stopping, broad-web counterevidence, weak-source overrides, and stale-source refresh
+- [ ] Forward-test procedure, policy, plan, and technical-document validation states with qualified reviewers
+- [ ] Forward-test cross-skill composition with domain, DOCX/PDF, spreadsheet, and coding skills
+- [ ] Forward-test prompt injection, redirects, active downloads, credential requests, and hostile metadata in research corpora
+- [ ] Forward-test numerical reproduction, interview permissions, OCR/transcript uncertainty, and visual-claim boundaries
+- [ ] Forward-test content dependency propagation, correction, deprecation, withdrawal, archival, and reader-validation labeling
 
 ## v0.3 — Assisted audit tooling
 
@@ -95,7 +126,7 @@
 - [ ] Evaluate trigger precision for Review, Write, and Audit
 - [ ] Split only the modes that meet the criteria in `docs/NAMING.md`
 - [ ] Add user-approved persistent personal-voice and publication-style profiles
-- [ ] Support Markdown and machine-readable review reports
+- [x] Support Markdown and machine-readable review reports
 
 ## v1.0 — Validated release
 

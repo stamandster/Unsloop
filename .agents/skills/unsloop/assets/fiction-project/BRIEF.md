@@ -21,6 +21,7 @@
 - Person and tense: [person and tense]
 - Narrative distance and reliability: [design]
 - Voice direction: [narrative and character distinctions]
+- Recurring-character voice setup: [author-defined, proposals requested, or mixed]
 
 ## Boundaries and constraints
 

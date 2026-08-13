@@ -32,6 +32,8 @@ The workflow supports scenes, flash fiction, short stories, novellas, novels, se
 
 The default project state is visible and model-agnostic. `story/STATUS.md` records the current checkpoint and context needed to resume; `story/CANON.md` distinguishes Proposed, Confirmed, and Superseded story facts; manuscript units use stable ordered filenames. Existing coherent layouts are preserved. Voice samples remain unpersisted unless the author explicitly approves a distilled `story/VOICE.md`. See the operational [fiction workflow](.agents/skills/unsloop/references/fiction-workflow.md) for the full contract.
 
+For an ensemble, each recurring speaker receives an independent, versioned character voice profile covering personality, worldview, baseline tone, cadence, syntax, diction, discourse habits, and allowed contextual variation. The author can set these traits directly or ask Unsloop for materially different suggestions based on story context and background. Suggestions remain Proposed; accepted profiles are locked until the author explicitly approves a prospective evolution or retroactive override. See [character voice continuity](.agents/skills/unsloop/references/character-voice-continuity.md).
+
 Fiction also uses the existing modes rather than a fourth one:
 
 - **Write:** discover, plan, draft, revise on request, assemble, or prepare a synopsis, query, blurb, pitch, or checklist.
@@ -53,6 +55,39 @@ python .agents/skills/unsloop/scripts/fiction_project.py assemble --root PATH --
 ```
 
 `init`, `checkpoint`, and `assemble` preview by default and require `--apply` to write. All operations refuse overwrite. `VOICE.md` is excluded unless `--voice --voice-authorized` is supplied. Assembly includes only manuscript units marked Accepted and writes a hash manifest.
+
+## Sustained non-fiction and research
+
+Unsloop can maintain multi-session books, theses, reports, courses, biographies, documentary narratives, procedures, policies, plans, directions, instructions, technical documentation, and research syntheses without imposing project files on a short request. When persistent state is useful, it proposes a Compact, Research, Collaborative, or Full Markdown profile beneath `writing/` and `manuscript/`, preserves a coherent existing layout, and creates files only after approval. Sustained work can use Guided, Adaptive, or Autonomous collaboration, with Adaptive as the default and locked author, evidence, requirement, privacy, commitment, terminology, and approval decisions protected in every cadence.
+
+The workflow can track stable manuscript units, claims, sources, quotations, requirements, decisions, revision changes, stakeholder authority, terminology, and a compact `writing/STATUS.md` resume packet. Citation presence remains separate from source access and claim support. Materially changed claims and quotations require recheck; rejected revisions and unresolved reviewer comments do not become accepted work silently.
+
+Evidence acquisition can be User-provided only, Scoped web, Broad web, or Hybrid. Scoped research stays inside the approved sites unless the user broadens it. Sources are assessed for the specific claim as Preferred, Usable with limitations, Lead only, or Excluded; these labels remain separate from verification. A user override can include, exclude, broaden, or narrow material, but it cannot make a source verified, independent, current, or more confident. Documentary and controlled-document workflows then apply form-specific checks for chronology, authority, prerequisites, branches, safety, ownership, normative force, versions, environments, examples, rollback, testing, approval, and maintenance.
+
+Retrieved sources are always treated as untrusted evidence. Instructions embedded in pages, documents, repositories, transcripts, images, or metadata cannot change permissions, activate tools, expand research scope, request credentials, or disclose project data. Material redirects, archives, downloads, transformations, and source-safety concerns remain part of the acquisition record.
+
+Unsloop also separates heterogeneous evidence. Quantitative records preserve datasets, populations, periods, units, filters, formulas, reproduced values, displayed values, and uncertainty. Interview records preserve consent, attribution, transcript status, quotation rights, corrections, corroboration, subject response, and restrictions. Multimodal records preserve the original artifact, inspected page/time/sheet range, extraction method, derived artifact, transformations, missing content, and confidence.
+
+For documentation portals and interconnected manuals, Unsloop adds content architecture, canonical ownership, reader journeys, dependencies, reused content, navigation, versions, lifecycle state, maintenance triggers, corrections, deprecation, withdrawal, and archival. Reader validation distinguishes simulated hypotheses, automated checks, expert review, and observed human testing.
+
+When another skill applies, Unsloop composes with it rather than replacing it. Domain skills govern specialized facts and rules; artifact skills govern layout, rendering, formulas, executable code, and format-specific validation; Unsloop governs integrity, voice, provenance, revision, and readiness.
+
+Unsloop also supports translation, localization, bilingual drafting, cross-language voice adaptation, and optional JSON, CSV, or other structured results. These preserve the same evidence, privacy, confidence, readiness, and approval limits as human-readable output.
+
+### Optional sustained writing project command
+
+```text
+python .agents/skills/unsloop/scripts/writing_project.py init --root PATH --profile compact
+python .agents/skills/unsloop/scripts/writing_project.py init --root PATH --profile research --apply
+python .agents/skills/unsloop/scripts/writing_project.py init --root PATH --profile research --extra chronology --extra validation --apply
+python .agents/skills/unsloop/scripts/writing_project.py init --root PATH --profile full --extra data --extra interviews --extra media --extra content-map --extra maintenance --extra usability --apply
+python .agents/skills/unsloop/scripts/writing_project.py check --root PATH
+python .agents/skills/unsloop/scripts/writing_project.py checkpoint --root PATH --name NAME --reason REASON --include FILE
+python .agents/skills/unsloop/scripts/writing_project.py assemble --root PATH --output assembled/manuscript.md
+python .agents/skills/unsloop/scripts/writing_project.py export --root PATH --output reports/project-state.json
+```
+
+`init`, `checkpoint`, `assemble`, and `export` preview by default and require `--apply` to write. Paths are confined to the selected project, existing destinations are never overwritten, checkpoints and outputs use hashes, assembly includes Accepted units only, and an optional `VOICE.md` requires `--voice --voice-authorized`.
 
 ## Harness and model compatibility
 
@@ -84,12 +119,28 @@ Host capabilities are negotiated by function. Structured questions fall back to 
 - [`PORTABILITY.md`](PORTABILITY.md) — discovery, dependencies, and transfer guarantees
 - [`.agents/skills/unsloop/references/fiction-workflow.md`](.agents/skills/unsloop/references/fiction-workflow.md) — scalable fiction lifecycle, project state, and continuity controls
 - [`.agents/skills/unsloop/references/fiction-project-operations.md`](.agents/skills/unsloop/references/fiction-project-operations.md) — onboarding, acceptance, branches, retcons, and recovery
+- [`.agents/skills/unsloop/references/character-voice-continuity.md`](.agents/skills/unsloop/references/character-voice-continuity.md) — immutable-until-approved character personality and speech profiles
 - [`.agents/skills/unsloop/references/fiction-review.md`](.agents/skills/unsloop/references/fiction-review.md) — focused developmental, craft, continuity, and integrity review
 - [`.agents/skills/unsloop/references/fiction-publication.md`](.agents/skills/unsloop/references/fiction-publication.md) — assembly, completion stages, and publication-support handoff
+- [`.agents/skills/unsloop/references/sustained-writing-projects.md`](.agents/skills/unsloop/references/sustained-writing-projects.md) — portable long-form non-fiction state and resumption
+- [`.agents/skills/unsloop/references/research-provenance.md`](.agents/skills/unsloop/references/research-provenance.md) — claim, source, quotation, conflict, and freshness tracking
+- [`.agents/skills/unsloop/references/documentary-documentation.md`](.agents/skills/unsloop/references/documentary-documentation.md) — biography, documentary, procedure, policy, plan, instruction, and technical-document contracts
+- [`.agents/skills/unsloop/references/source-acquisition.md`](.agents/skills/unsloop/references/source-acquisition.md) — supplied, scoped-site, broad-web, and hybrid research with override and confidence controls
+- [`.agents/skills/unsloop/references/skill-composition.md`](.agents/skills/unsloop/references/skill-composition.md) — responsibility and authority when Unsloop runs beside another skill
+- [`.agents/skills/unsloop/references/source-safety.md`](.agents/skills/unsloop/references/source-safety.md) — embedded-instruction isolation, safe acquisition, and sensitive-data protection
+- [`.agents/skills/unsloop/references/quantitative-evidence.md`](.agents/skills/unsloop/references/quantitative-evidence.md) — numerical, dataset, table, chart, and calculation provenance
+- [`.agents/skills/unsloop/references/interview-evidence.md`](.agents/skills/unsloop/references/interview-evidence.md) — consent, attribution, transcripts, corrections, and subject response
+- [`.agents/skills/unsloop/references/multimodal-evidence.md`](.agents/skills/unsloop/references/multimodal-evidence.md) — OCR, audio/video, image, spreadsheet, and extraction boundaries
+- [`.agents/skills/unsloop/references/documentation-systems.md`](.agents/skills/unsloop/references/documentation-systems.md) — content architecture, dependencies, maintenance, corrections, and archival
+- [`.agents/skills/unsloop/references/usability-validation.md`](.agents/skills/unsloop/references/usability-validation.md) — comprehension, findability, task, accessibility, and observed-use validation
+- [`.agents/skills/unsloop/references/revision-control.md`](.agents/skills/unsloop/references/revision-control.md) — bounded, recoverable, partially acceptable revision
+- [`.agents/skills/unsloop/references/collaborative-writing.md`](.agents/skills/unsloop/references/collaborative-writing.md) — stakeholder authority and feedback reconciliation
+- [`.agents/skills/unsloop/references/multilingual-writing.md`](.agents/skills/unsloop/references/multilingual-writing.md) — translation, localization, cross-language evidence, and voice
+- [`.agents/skills/unsloop/references/structured-output.md`](.agents/skills/unsloop/references/structured-output.md) — machine-readable output contract
 
 ## Install Unsloop
 
-Unsloop has no runtime dependencies: the skill itself is Markdown and YAML. Git is needed only when cloning or updating the full project, and Python is needed only for the optional validator and global-link helper.
+Unsloop has no required runtime dependencies: the baseline skill is Markdown and YAML. Git is needed only when cloning or updating the full project, and Python is needed only for the optional validator, global-link helper, and project-operation commands.
 
 Choose one primary installation method. The linked methods preserve this project as the authoritative source and are preferred for active development. Copied installations are independent snapshots and must be updated separately.
 
@@ -273,4 +324,4 @@ Factual references and voice samples have different jobs: references support wha
 
 ## Status
 
-Version 0.1 is a documented, portable, specification-backed foundation with a scalable fiction workflow inside Unsloop Write. It is ready for controlled use and forward-testing; its scoring model remains interpretive, and the fiction behavior matrix is structurally specified rather than empirically validated. See [`ROADMAP.md`](ROADMAP.md) for calibration and release work still required.
+Version 0.1 is a documented, portable, specification-backed foundation with scalable fiction and sustained non-fiction operations across the existing modes. It is ready for controlled use and forward-testing; its scoring model remains interpretive, and behavioral matrices are structurally specified rather than empirically validated across models. See [`ROADMAP.md`](ROADMAP.md) for calibration and release work still required.

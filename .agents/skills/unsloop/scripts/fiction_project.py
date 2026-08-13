@@ -21,11 +21,12 @@ PROJECT_PHASES = {
 }
 UNIT_STATES = {"Planned", "Drafted", "Revised", "Accepted", "Cut", "Archived"}
 CANON_STATES = {"Proposed", "Confirmed", "Superseded"}
+VOICE_PROFILE_STATES = {"Proposed", "Confirmed", "Superseded"}
 EXTRAS = {"world": "WORLD.md", "glossary": "GLOSSARY.md", "knowledge": "KNOWLEDGE.md", "branches": "BRANCHES.md"}
 BASE_PROFILES = {
     "compact": ("BRIEF.md", "STATUS.md", "SCENES.md"),
     "full": (
-        "BRIEF.md", "STATUS.md", "SCENES.md", "CANON.md", "CHARACTERS.md",
+        "BRIEF.md", "STATUS.md", "SCENES.md", "CANON.md", "CHARACTERS.md", "CHARACTER-VOICES.md",
         "TIMELINE.md", "ARCS.md", "RESEARCH.md", "DECISIONS.md",
     ),
 }
@@ -85,7 +86,7 @@ def init_command(args: argparse.Namespace) -> int:
             raise ValueError("--book-slug is required for the series profile")
         if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug):
             raise ValueError("book slug must use lowercase hyphen-case")
-        for name in ("SERIES.md", "STATUS.md", "CANON.md", "CHARACTERS.md", "TIMELINE.md"):
+        for name in ("SERIES.md", "STATUS.md", "CANON.md", "CHARACTERS.md", "CHARACTER-VOICES.md", "TIMELINE.md"):
             plan.append((name, root / "story" / name))
         for name in ("BRIEF.md", "STATUS.md", "ARCS.md", "SCENES.md"):
             plan.append((name, root / "story" / "books" / slug / name))
@@ -201,6 +202,37 @@ def check_command(args: argparse.Namespace) -> int:
             errors.append(f"invalid canon state for {cells[0]}: {state}")
         if state == "Superseded" and cells[5] in {"", "—", "-", "[decision ID]"}:
             errors.append(f"Superseded canon lacks decision reference: {cells[0]}")
+
+    character_ids = {
+        cells[0] for cells in table_rows(story / "CHARACTERS.md")[1:]
+        if cells and cells[0].startswith("CHR-")
+    }
+    voice_profiles = table_rows(story / "CHARACTER-VOICES.md")[1:]
+    seen_profiles: set[str] = set()
+    confirmed_scopes: set[tuple[str, str]] = set()
+    for cells in voice_profiles:
+        if len(cells) < 16 or not cells[0].startswith("CVP-"):
+            continue
+        profile_id, character_id, state, scope = cells[0], cells[1], cells[3], cells[4]
+        if profile_id in seen_profiles:
+            errors.append(f"duplicate character voice profile ID: {profile_id}")
+        seen_profiles.add(profile_id)
+        if character_id not in character_ids:
+            errors.append(f"unknown character {character_id} referenced by {profile_id}")
+        if state not in VOICE_PROFILE_STATES:
+            errors.append(f"invalid character voice profile state for {profile_id}: {state}")
+        decision = cells[14]
+        if state == "Confirmed":
+            if decision in {"", "—", "-", "[decision ID or pending]"} or decision.startswith("["):
+                errors.append(f"Confirmed character voice profile lacks author approval: {profile_id}")
+            key = (character_id, scope)
+            if key in confirmed_scopes:
+                errors.append(f"multiple Confirmed voice profiles for {character_id} in scope {scope}")
+            confirmed_scopes.add(key)
+        if state == "Superseded" and (
+            decision in {"", "—", "-", "[decision ID or pending]"} or cells[15] in {"", "—", "-"}
+        ):
+            errors.append(f"Superseded character voice profile lacks change linkage: {profile_id}")
 
     voice = story / "VOICE.md"
     if voice.is_file():

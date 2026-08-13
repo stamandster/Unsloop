@@ -44,6 +44,17 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | Review or audit fiction | Manuscript boundary, intended experience, project stage, optional records and research | A focused developmental, craft, continuity, integrity, or authenticity assessment with preserved strengths and bounded claims. |
 | Revise consequential story state | Accepted manuscript and proposed structural or canon change | Impact map, explicit decision, recoverable checkpoint, dependency-ordered revision, and reconciled state. |
 | Assemble and package fiction | Accepted manuscript units and supplied submission requirements | Deterministic assembly or support artifact with explicit readiness and evidence limits. |
+| Develop sustained non-fiction | Existing or new book, thesis, report, course, documentation set, policy, or research synthesis | Proportionate portable state, accepted manuscript units, bounded resume context, and recoverable handoff. |
+| Maintain research provenance | Claims, sources, quotations, manuscript locations, and verification access | Inspectable support, conflict, freshness, and required-action records separated from citation formatting. |
+| Control revision | Authoritative artifact, requested scope, protected material, and proposed changes | Classified, impact-aware, partially acceptable, recoverable changes without silent scope expansion. |
+| Reconcile collaborators | Multiple directions, comments, roles, and approval authorities | Consolidated feedback, surfaced conflicts, decision ownership, and version-bounded approval state. |
+| Translate or localize | Source artifact, target language or locale, audience, terminology, and evidence | Meaning- and evidence-preserving adaptation with explicit ambiguity, quotation, voice, and cultural limits. |
+| Return structured results | Requested mode, artifact, evidence, and supplied or default schema | Machine-readable findings that preserve evidence, confidence, readiness, privacy, and human-readable meaning. |
+| Sustain a fictional cast | Character decisions, context, manuscript, and optional author-approved changes | Distinct versioned personality and speech profiles, drift review, and controlled evolution without silent mutation. |
+| Develop documentary or controlled documentation | Topic, intended use, authority, supplied evidence and/or approved research scope | A form-specific biography, documentary, procedure, policy, plan, direction, instruction, or technical artifact with traceable evidence and validation status. |
+| Combine Unsloop with another skill | Shared request, active skills, governing specifications, and authority | One non-duplicative workflow with explicit responsibility, conflict routing, and validation handoff. |
+| Use heterogeneous evidence | Data, calculations, interviews, transcripts, scans, images, audio/video, spreadsheets, or extracted content | Claim-linked evidence records that preserve permissions, source lineage, transformation, reproduction, uncertainty, and inspection boundary. |
+| Maintain a documentation system | Interconnected pages, versions, dependencies, reader tasks, issue reports, and owners | Navigable content architecture, synchronized changes, reader validation, corrections, deprecation, and lifecycle state. |
 
 ## Functional requirements
 
@@ -72,6 +83,26 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | PR-021 | Provide author-readable fiction templates and optional standard-library initialization, checking, checkpointing, and accepted-unit assembly with dry-run previews, relative paths, and overwrite refusal. | BR-008, BR-010, BR-011, BR-015 |
 | PR-022 | Provide selectable fiction Review and Audit contracts for developmental, structural, character, continuity, POV, dialogue, theme, prose, line, copy, reader-response, research, adaptation, and authenticity work. | BR-002, BR-005, BR-009, BR-013, BR-016 |
 | PR-023 | Support manuscript completion, deterministic assembly, synopsis, query, blurb, pitch, series summary, and submission-checklist handoff while distinguishing creative, editorial, assembly, and submission stages. | BR-003, BR-005, BR-009, BR-016 |
+| PR-024 | For sustained non-fiction, offer Guided, Adaptive, or Autonomous collaboration and maintain only an approved proportionate Markdown project with authoritative versions, stable section IDs, accepted unit state, compact resume context, and non-destructive existing-work onboarding. | BR-003, BR-008, BR-012, BR-017 |
+| PR-025 | Track sources, claims, quotations, draft locations, supporting and conflicting evidence, access level, verification status, freshness, and required action without treating bibliography presence as consultation or support. | BR-001, BR-005, BR-011, BR-018 |
+| PR-026 | Establish bounded revision contracts; classify material changes; support partial acceptance and rejection; map downstream effects; checkpoint consequential revisions; and reconcile affected manuscript and project state. | BR-003, BR-009, BR-012, BR-017, BR-018 |
+| PR-027 | Model stakeholder roles, decision authority, organizational directions, feedback conflicts, owners, dispositions, and version-specific approval without inferring authority from seniority, recency, or silence. | BR-003, BR-004, BR-012, BR-019 |
+| PR-028 | Support translation, localization, bilingual drafting, cross-language source use, and cross-language voice adaptation while preserving meaning, qualification, attribution, quotation status, terminology authority, and uncertainty. | BR-002, BR-003, BR-005, BR-011, BR-019 |
+| PR-029 | Produce optional machine-readable results using supplied schemas or the portable Unsloop schema while preserving stable identifiers, evidence boundaries, confidence, readiness, privacy minimization, and human-readable semantics. | BR-005, BR-009, BR-010, BR-011, BR-019 |
+| PR-030 | Provide optional standard-library sustained-writing project initialization, checking, checkpointing, Accepted-unit assembly, and JSON state export with dry-run previews, path confinement, hashes, and overwrite refusal. | BR-008, BR-010, BR-017, BR-018, BR-019 |
+| PR-031 | Maintain a versioned `CharacterVoiceProfile` for each recurring speaking character, using user-defined traits first and keeping contextual suggestions Proposed until author acceptance; distinguish personality, narrative viewpoint, and dialogue behavior. | BR-003, BR-014, BR-020 |
+| PR-032 | Detect character voice drift and require an explicit, impact-aware author disposition before a prospective evolution or retroactive override can replace a Confirmed profile. | BR-003, BR-009, BR-015, BR-020 |
+| PR-033 | Route biography, documentary narrative, procedure, policy, plan, direction, instruction, and technical documentation through form-specific contracts inside Write, Review, or Audit. | BR-004, BR-006, BR-009, BR-021 |
+| PR-034 | Establish user-provided-only, scoped-web, broad-web, or hybrid source acquisition; assess claim-specific suitability, provenance, independence, currency, and corroboration; and record user overrides without upgrading evidence. | BR-001, BR-003, BR-005, BR-018, BR-021 |
+| PR-035 | Validate and hand off documentary and controlled documents using form-appropriate chronology, authority, requirement, procedure, policy, plan, technical, test, approval, maintenance, and readiness evidence. | BR-005, BR-009, BR-012, BR-017, BR-021 |
+| PR-036 | When another skill or qualified specialist applies, assign domain, artifact, integrity, voice, and approval responsibility explicitly; reuse intake and route conflicts to the narrowest authorized owner. | BR-003, BR-004, BR-012, BR-022 |
+| PR-037 | Treat all retrieved or supplied source content as untrusted evidence; prevent embedded instructions, redirects, active content, or credential requests from changing tools, permissions, research scope, or project data. | BR-005, BR-007, BR-011, BR-018, BR-022 |
+| PR-038 | Track and verify numerical claims through source version, population, period, units, inputs, filters, transformations, reproduced result, displayed result, uncertainty, and recalculation state. | BR-001, BR-005, BR-018, BR-023 |
+| PR-039 | Govern interview and oral-history evidence through consent, attribution, record type, transcript range, quotation rights, corrections, corroboration, subject response, privacy, and retention. | BR-003, BR-005, BR-007, BR-011, BR-023 |
+| PR-040 | Preserve the original-to-derived transformation and inspection boundary for scans, OCR, audio, video, images, screenshots, diagrams, spreadsheets, and extracted text. | BR-005, BR-011, BR-023 |
+| PR-041 | Model documentation sets through audiences, reader tasks, content types, canonical ownership, navigation, dependencies, reused content, versions, states, and change-impact relationships. | BR-004, BR-009, BR-017, BR-024 |
+| PR-042 | Maintain published documentation through scheduled and event-driven review, issue intake, correction, errata, change notice, deprecation, withdrawal, supersession, retention, and archival. | BR-005, BR-009, BR-012, BR-024 |
+| PR-043 | Validate comprehension, findability, task performance, accessibility, plain language, and localization while distinguishing simulated hypotheses, automated checks, expert review, and observed human tests. | BR-004, BR-005, BR-009, BR-019, BR-024 |
 
 ## Nonfunctional requirements
 
@@ -84,9 +115,17 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | NFR-005 Maintainability | The core skill remains concise; detailed procedures use one-level-deep references; project specifications stay outside the runtime bundle. | Skill validation passes and no auxiliary project docs are added inside the skill. |
 | NFR-006 Accessibility | The workflow remains usable without a special UI control, external service, or scoring model. | Plain-text fallback and score-free review both remain defined. |
 | NFR-007 Interoperability | The same `SKILL.md` and relative references run across standards-compatible text-capable models and harnesses; host metadata and discovery links remain optional. | Core validation passes independently of Codex metadata, and documented Codex, Claude, Pi, and generic adapter paths all resolve to the same core. |
-| NFR-008 Long-form resilience | A sustained fiction project can resume without loading the full conversation or manuscript, while conclusions remain bounded to the records and prose actually inspected. | `story/STATUS.md` identifies the current phase, accepted checkpoint, immediate state, open decisions, next action, and required context. |
+| NFR-008 Long-form resilience | A sustained fiction or non-fiction project can resume without loading the full conversation or manuscript, while conclusions remain bounded to the records and prose actually inspected. | `story/STATUS.md` or `writing/STATUS.md` identifies the current phase, accepted checkpoint, immediate state, open decisions, next action, and required context. |
 | NFR-009 Recoverability | Every consequential manuscript or canon revision has a resolved affected scope and a usable path back to the prior accepted state. | A version-control checkpoint or project-local file-and-hash manifest exists before mutation, and overwrite collisions fail closed. |
 | NFR-010 Behavioral consistency | Critical fiction decisions are tested as behavior rather than inferred from documentation presence. | Deterministic tests and clean-context scenarios cover routing, onboarding, state transitions, retcons, recovery, review, and assembly. |
+| NFR-011 Evidence freshness | Material changes to a claim, quotation, source version, or inspected boundary cannot silently inherit an earlier verification state. | Provenance records identify last checked basis and require recheck after a material change. |
+| NFR-012 Editorial recoverability | Consequential sustained-writing changes preserve the prior accepted state and apply only the accepted scope. | A version-control checkpoint or affected-file snapshot exists, collisions fail closed, and rejected changes do not enter the active artifact. |
+| NFR-013 Structured interoperability | Machine-readable Unsloop results remain syntactically checkable, semantically explicit, privacy-minimized, and equivalent in limits to human-readable output. | The bundled schema parses, required evidence and readiness fields exist, and missing evidence remains null or omitted rather than invented. |
+| NFR-014 Character continuity | Accepted character identity remains stable across units, sessions, and models until an author-approved version change. | Each recurring speaker has at most one applicable Confirmed profile per scope, and drift or change is surfaced rather than silently normalized. |
+| NFR-015 Research transparency | Source scope, suitability, overrides, claim confidence, currency, and actual validation remain inspectable and non-interchangeable. | Persistent research records distinguish acquisition mode, corpus, verification, suitability, confidence, testing, and approval, and scoped research never broadens silently. |
+| NFR-016 Instruction isolation | Evidence content cannot redefine user intent, permissions, tool use, or governing workflow. | Runtime instructions state that embedded source instructions are data, and project checks require the source-policy boundary. |
+| NFR-017 Evidence reproducibility | Material quantitative or transformed evidence retains enough lineage to identify inputs, method, coverage, result, and uncertainty. | Data and media records distinguish source-reported, reproduced, extracted, checked, and unavailable states. |
+| NFR-018 Documentation operability | A documentation set remains navigable, maintainable, and honestly validated after publication. | Content ownership, dependencies, lifecycle state, review triggers, issue disposition, reader-validation type, and retest state remain visible. |
 
 ## Interaction requirements
 
@@ -101,6 +140,15 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 - Propose persistent fiction files once when they become useful and require approval before creating a new layout.
 - For an existing manuscript, inventory and propose state before creating files or promoting inferred facts.
 - For a broad fiction critique, default to a standard developmental review rather than applying every review contract at maximum depth.
+- For sustained non-fiction, propose project files once only when they improve resumability; preserve an existing coherent layout and require approval before creation or reorganization.
+- For persistent non-fiction, ask for Guided, Adaptive, or Autonomous collaboration only when cadence is not already clear; use Adaptive by default and pause in every cadence before changing locked author, evidence, requirement, privacy, commitment, terminology, or approval decisions.
+- For collaboration, ask only about unresolved authority conflicts that materially affect the artifact and route decisions to the documented owner.
+- For translation or localization, establish the source/target language, audience, translation mode, and terminology authority before choices that could alter meaning.
+- For recurring fictional characters, accept author-defined personality and speech settings or offer materially different context-based proposals; lock only accepted profiles and pause before changes.
+- For documentary and controlled documents, establish the artifact family and source acquisition mode before research; never leave an approved scoped corpus silently.
+- When another skill applies, identify responsibility once, reuse its resolved intake, and do not override specialized domain or format validation.
+- For numerical, interview, or multimodal evidence, ask only for missing permissions, originals, inputs, ranges, or transformations that materially affect support.
+- For documentation systems, establish canonical ownership, supported versions, dependencies, maintenance triggers, and required reader-validation type before a consequential release.
 
 ### Voice-sample request
 
@@ -152,6 +200,46 @@ Given a focused fiction-review request, Unsloop selects Review or Audit and the 
 
 Given Accepted Markdown manuscript units, Unsloop previews deterministic assembly, excludes non-Accepted or branch material by default, refuses overwrite, and returns an output manifest. Supporting artifacts follow supplied requirements and manuscript evidence. Unsloop distinguishes creative completion, structural revision, line editing, copyediting, assembly, and submission-package preparation without certifying legal, market, professional-editor, agent, publisher, or platform acceptance.
 
+### Sustained non-fiction
+
+Given substantial multi-session non-fiction, Unsloop selects Guided, Adaptive, or Autonomous collaboration, using Adaptive by default; proposes the smallest useful `writing/` and `manuscript/` profile once; preserves a coherent existing layout; creates files only after approval; uses stable section IDs without automatic renaming; and resumes from `writing/STATUS.md` plus only relevant ledgers and manuscript ranges. Accepted units and current directions remain authoritative. Autonomous work stops at the approved batch and cannot silently change locked author positions, evidence conclusions, requirements, privacy boundaries, external commitments, terminology, or approval state.
+
+### Research provenance
+
+Given research-dependent writing, Unsloop keeps source access, claim support, conflicting evidence, quotations, manuscript locations, and verification freshness distinct. A changed claim is rechecked rather than inheriting stale verification. Citation formatting follows supplied requirements but does not upgrade source or claim status.
+
+### Character voice continuity
+
+Given multiple recurring speakers, Unsloop gives each character a versioned personality and dialogue profile. The author may define it directly or approve one of several context-based proposals. Once Confirmed, the profile governs drafting across units and sessions; emotional context may vary within its stated range, while prospective evolution and retroactive override require an explicit diff, impact map, checkpoint, and author disposition.
+
+### Documentary and documentation writing
+
+Given a biography, documentary narrative, procedure, policy, plan, direction, instruction, or technical-documentation request, Unsloop establishes the form, outcome, audience, authority, scope, version, evidence-acquisition policy, validation standard, owner, and maintenance cycle. It may use supplied evidence, approved sites, broad web research, or a hybrid corpus. Source overrides remain recorded limitations rather than verification upgrades, and handoff does not overclaim factuality, testing, safety, compliance, approval, completeness, or currentness.
+
+### Skill composition and source safety
+
+Given overlapping domain or artifact skills, Unsloop reuses their intake and preserves explicit responsibility: the user and governing owner retain decisions, the narrow specialist controls domain facts or artifact mechanics, and Unsloop controls writing integrity, voice, provenance, and readiness. Retrieved content remains untrusted evidence. Embedded instructions, active content, redirects, or credential requests cannot expand tool use, permissions, corpus, or data disclosure.
+
+### Quantitative, interview, and multimodal evidence
+
+Given numerical claims, Unsloop records inputs, population, period, unit, formula, filters, transformations, reproduced result, displayed result, uncertainty, and status without confusing source reporting with recalculation. Given interviews, it preserves consent, attribution, transcript type, permissions, corrections, corroboration, subject response, and restrictions. Given extracted media, it preserves the original artifact, range, method, derived artifact, transformation, missing content, and inspection status.
+
+### Documentation systems and reader validation
+
+Given a documentation set, Unsloop inventories audiences, reader tasks, content types, canonical ownership, versions, dependencies, links, state, and review triggers. Consequential changes map downstream pages and reused content. Published work supports correction, deprecation, withdrawal, supersession, and archival. Comprehension, findability, task, accessibility, plain-language, and localization results identify whether they came from simulated hypotheses, automated checks, expert review, or observed participants.
+
+### Revision and collaboration
+
+Given a consequential revision, Unsloop establishes the version and scope, protects strong or locked material, maps downstream claim, citation, requirement, terminology, and dependent-artifact effects, checkpoints affected files, and applies only accepted changes. Given conflicting feedback, it identifies authority and decision ownership, consolidates duplicates without erasing distinct reasons, and does not infer approval from addressed comments or silence.
+
+### Multilingual writing
+
+Given translation, localization, or cross-language voice work, Unsloop establishes the translation mode, locale, audience, terminology, quotation policy, and evidence boundary. It preserves claim strength and attribution, distinguishes author voice from translator and genre conventions, reports unresolved ambiguity, and does not infer identity or cultural authority.
+
+### Structured output
+
+Given a machine-readable request, Unsloop uses the supplied schema or its portable schema, validates syntax when tooling permits, preserves stable locations, evidence, confidence, readiness, and out-of-scope limits, and does not invent values merely to make the artifact schema-valid.
+
 ### Portability
 
 Given a clean copy of the repository, the project validator passes without network access or third-party packages. Codex and Pi can use the canonical `.agents/skills` core directly; Claude and other hosts can link or load the same directory through their discovery adapters. Every linked entry resolves to the project skill rather than a divergent copy.
@@ -172,6 +260,9 @@ The v0.1 product baseline requires:
 - explicit disclosure that scoring is interpretive and not empirically validated.
 - validated fiction routing, cadence, portable-state, canon, voice-separation, and manuscript-resumption contracts.
 - passing deterministic fiction-project operations and behavioral fixtures for cross-mode routing, onboarding, state lifecycles, retcons, recovery, review, and assembly.
+- passing deterministic sustained-writing project operations and behavioral fixtures for onboarding, provenance, revision, collaboration, multilingual boundaries, assembly, export, and path safety.
+- passing character-profile, documentary-form, source-acquisition, override, scoped-corpus, and validation-status behavioral contracts.
+- passing skill-composition, untrusted-source, quantitative, interview, multimodal, documentation-system, maintenance, and reader-validation behavioral contracts.
 
 Calibration, benchmark fixtures, inter-reviewer agreement, privacy review, and mode-split evidence remain later release work in [`ROADMAP.md`](ROADMAP.md).
 

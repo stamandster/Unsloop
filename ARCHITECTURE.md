@@ -11,10 +11,20 @@ Unsloop
 ├── Review — constructive diagnosis, including fiction craft review
 ├── Write  — author-led drafting, revision, assembly, and publication support
 ├── Audit  — evidence-heavy source, continuity, canon, and research examination
-└── Shared fiction specialization — scene-to-series operations across all three modes
-    ├── Project operations — onboarding, state, branches, retcons, recovery
-    ├── Fiction review — developmental, craft, continuity, and integrity
-    └── Publication handoff — assembly and support artifacts
+├── Shared sustained-writing specialization — long-form operations across all three modes
+│   ├── Project state — onboarding, units, resume packets, assembly, recovery
+│   ├── Provenance and revision — claims, sources, quotations, changes, freshness
+│   ├── Documentary/documentation — biography, procedure, policy, plan, and technical form contracts
+│   ├── Source acquisition — supplied, scoped-site, broad-web, and hybrid evidence governance
+│   ├── Evidence types — quantitative, interview, oral-history, and multimodal lineage
+│   ├── Documentation systems — content architecture, dependencies, maintenance, and reader validation
+│   └── Collaboration and adaptation — authority, feedback, multilingual, structured output
+├── Shared fiction specialization — scene-to-series operations across all three modes
+│   ├── Project operations — onboarding, state, branches, retcons, recovery
+│   ├── Character voice continuity — author-owned profiles, drift review, versioned change
+│   ├── Fiction review — developmental, craft, continuity, and integrity
+│   └── Publication handoff — assembly and support artifacts
+└── Cross-skill composition — specialist authority, shared intake, validation handoff, and source isolation
 ```
 
 Version 0.1 implements the modes in one core skill so principles, scoring, and safety limits remain consistent. A later split should happen only if mode-specific workflows become large enough to justify separate trigger descriptions or resources.
@@ -59,10 +69,29 @@ Unsloop/
                 ├── write-mode.md
                 ├── fiction-workflow.md
                 ├── fiction-project-operations.md
+                ├── character-voice-continuity.md
                 ├── fiction-review.md
-                └── fiction-publication.md
+                ├── fiction-publication.md
+                ├── sustained-writing-projects.md
+                ├── documentary-documentation.md
+                ├── source-acquisition.md
+                ├── source-safety.md
+                ├── skill-composition.md
+                ├── quantitative-evidence.md
+                ├── interview-evidence.md
+                ├── multimodal-evidence.md
+                ├── documentation-systems.md
+                ├── usability-validation.md
+                ├── research-provenance.md
+                ├── revision-control.md
+                ├── collaborative-writing.md
+                ├── multilingual-writing.md
+                └── structured-output.md
             ├── assets/fiction-project/  portable author-readable templates
-            └── scripts/fiction_project.py  optional standard-library operations
+            ├── assets/writing-project/  sustained non-fiction templates
+            ├── assets/schemas/  optional interchange contracts
+            ├── scripts/fiction_project.py  optional fiction operations
+            └── scripts/writing_project.py  optional sustained-writing operations
 ```
 
 ## Specification stack
@@ -102,6 +131,8 @@ User purpose and materials
         ↓
 Map harness capabilities and model limits
         ↓
+Compose domain and artifact skills; isolate untrusted source instructions
+        ↓
 Choose Review, Write, or Audit
         ↓
 Use, refine, or brainstorm the topic
@@ -112,13 +143,21 @@ Resolve governing directions, content roles, and constraints
         ↓
 For fiction: scale the lifecycle, cadence, and approved project state
         ↓
+For recurring speakers: load Confirmed character profiles or keep suggestions Proposed
+        ↓
 When applicable: onboard, review, impact-map, recover, assemble, or package
+        ↓
+For sustained non-fiction: scale project state, provenance, revision, collaboration, and language adaptation
+        ↓
+For documentary/documentation: select form contract, acquisition scope, and validation boundary
+        ↓
+When applicable: preserve data, interview, and multimodal lineage; map documentation dependencies and reader evidence
         ↓
 Set evidence boundary, voice basis, and review depth
         ↓
 Run integrity lens + human-voice lens
         ↓
-Audit coverage, calibrate findings, and test readiness
+Audit coverage, calibrate findings, test readiness, and serialize only when requested
         ↓
 Report diagnosis; revise only if requested
 ```
@@ -129,11 +168,11 @@ The current structure leaves room for:
 
 - separate `unsloop-review`, `unsloop-write`, and `unsloop-audit` skills;
 - scripts that align source and draft passages for human inspection;
-- machine-readable review output alongside Markdown;
 - user-approved persistent house-style or personal-voice profiles;
 - benchmark fixtures for scorer calibration and regression testing;
 - integrations with document, citation, and repository tools.
 - thin adapters for additional Agent Skills clients without vendor-specific forks.
 - richer behavioral fixtures and cross-harness evaluation without treating one model as reference truth.
+- media-specific and reader-facing interactive fiction adapters only when observed demand justifies them.
 
 Automation must surface evidence, not replace judgment. Any future similarity or linguistic analysis should produce inspectable signals and preserve the distinction between observation, inference, and verdict.

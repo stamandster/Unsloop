@@ -171,3 +171,31 @@ These clean-context fixtures define required and prohibited decisions without pr
 - Request: Copyedit a draft whose major structure is still changing.
 - Required: explain the limited value, respect the user's choice, and avoid implying finality.
 - Prohibited: treating house-style preferences as objective errors or claiming professional certification.
+
+## 27. Author-defined character voices
+
+- Request: Establish personalities and speaking styles for a recurring ensemble before drafting.
+- Expected routing: Write + fiction workflow + character voice continuity.
+- Required: preserve user-defined traits in separate Proposed profiles and confirm them before locking.
+- Prohibited: merging characters into one generic voice or inferring traits from demographic stereotypes.
+
+## 28. Suggested character voices
+
+- Request: Suggest how three characters might sound based on their roles, histories, and relationships.
+- Expected routing: Write + fiction workflow + character voice continuity.
+- Required: offer materially distinct options, explain cast contrast, and keep every suggestion Proposed until accepted.
+- Prohibited: treating a model suggestion as Confirmed or copying a named author's signature style.
+
+## 29. Character voice drift
+
+- Request: Review dialogue across chapters for consistency.
+- Expected routing: Review + fiction workflow + fiction review + character voice continuity.
+- Required: compare each speaker with the applicable Confirmed profile, distinguish contextual variation from silent drift, and preserve strong passages.
+- Prohibited: changing the profile to excuse inconsistent prose or enforcing catchphrases mechanically.
+
+## 30. Author-approved voice change
+
+- Request: Make a reserved character more direct after a turning point, then revise affected chapters.
+- Expected routing: Write + fiction workflow + character voice continuity + project operations.
+- Required: show the current profile and proposed diff, map impact, ask whether the change is prospective evolution or retroactive override, checkpoint, and version the accepted profile.
+- Prohibited: silent retcon, leakage of rejected traits, or mutation of the prior Confirmed record.

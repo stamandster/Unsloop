@@ -55,10 +55,12 @@ class FictionProjectTests(unittest.TestCase):
             series = Path(series_dir)
             self.assertEqual(fiction_project.init_command(self.init_args(full, "full", extra=["world", "knowledge"])), 0)
             self.assertTrue((full / "story" / "CANON.md").is_file())
+            self.assertTrue((full / "story" / "CHARACTER-VOICES.md").is_file())
             self.assertTrue((full / "story" / "WORLD.md").is_file())
             self.assertTrue((full / "story" / "KNOWLEDGE.md").is_file())
             self.assertEqual(fiction_project.init_command(self.init_args(series, "series", book_slug="book-one")), 0)
             self.assertTrue((series / "story" / "SERIES.md").is_file())
+            self.assertTrue((series / "story" / "CHARACTER-VOICES.md").is_file())
             self.assertTrue((series / "story" / "books" / "book-one" / "SCENES.md").is_file())
 
     def test_collision_refuses_overwrite(self) -> None:
@@ -92,6 +94,24 @@ class FictionProjectTests(unittest.TestCase):
                 encoding="utf-8",
             )
             self.assertEqual(fiction_project.check_command(Args(root=str(root))), 1)
+
+    def test_confirmed_character_voice_requires_author_approval(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.assertEqual(fiction_project.init_command(self.init_args(root, "full")), 0)
+            profiles = root / "story" / "CHARACTER-VOICES.md"
+            profiles.write_text(
+                profiles.read_text(encoding="utf-8").replace("| Proposed |", "| Confirmed |"),
+                encoding="utf-8",
+            )
+            self.assertEqual(fiction_project.check_command(Args(root=str(root))), 1)
+            profiles.write_text(
+                profiles.read_text(encoding="utf-8").replace(
+                    "[decision ID or pending]", "DEC-voice-approved"
+                ),
+                encoding="utf-8",
+            )
+            self.assertEqual(fiction_project.check_command(Args(root=str(root))), 0)
 
     def test_checkpoint_dry_run_and_apply_with_manifest(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

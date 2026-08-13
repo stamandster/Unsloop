@@ -135,3 +135,69 @@ Provide author-readable Markdown templates and a standard-library project comman
 **Status:** Accepted
 
 Offer focused fiction review and publication-support workflows while distinguishing simulated reader hypotheses from real feedback, authenticity questions from community authority, and manuscript preparation from professional, legal, market, representation, publisher, or publication certification.
+
+## D-022 — Extend portable project state to sustained non-fiction
+
+**Status:** Accepted
+
+Give multi-session factual and professional writing Guided, Adaptive, or Autonomous collaboration plus an approved, proportionate `writing/` and `manuscript/` contract with stable section IDs, authoritative versions, accepted-unit state, compact resumption, onboarding, assembly, and recovery. Use Adaptive by default, preserve locked author and evidence decisions in every cadence, preserve coherent existing layouts, and impose no project ceremony on a self-contained request.
+
+## D-023 — Make provenance claim-centered and freshness-aware
+
+**Status:** Accepted
+
+Track bibliographic identity, source access, claims, quotations, manuscript locations, support, conflicts, verification status, and last checked basis as distinct records. Treat citation formatting as an output rule rather than evidence. Invalidate inherited verification when a material claim, quotation, source version, or inspection boundary changes.
+
+## D-024 — Generalize recoverable revision and explicit authority
+
+**Status:** Accepted
+
+Apply fiction's strongest author-control principles to non-fiction revision and collaboration. Bound revision scope, classify material changes, support partial disposition, checkpoint consequential work, reconcile dependent state, and model stakeholder decision authority without inferring approval from seniority, recency, addressed comments, or silence.
+
+## D-025 — Keep multilingual and structured output evidence-equivalent
+
+**Status:** Accepted
+
+Treat translation, localization, cross-language voice, and machine-readable output as workflow specializations inside the existing modes. Preserve meaning, attribution, uncertainty, evidence, privacy, confidence, and readiness across language or serialization changes. Schema validity and fluent translation remain formatting and communication properties, not proof of correctness or authority.
+
+## D-026 — Lock character voices through author-owned versions
+
+**Status:** Accepted
+
+Give every recurring fictional speaker a separate, versioned profile for stable personality and observable language behavior. Let the author define it or approve contextual proposals. Treat Confirmed profiles as immutable for drafting until an explicit, impact-aware author decision creates a prospective evolution or retroactive override. Permit emotional and relational variation only inside the accepted range; never use demographic stereotypes as a voice generator.
+
+## D-027 — Treat documentary and controlled documentation as form contracts
+
+**Status:** Accepted
+
+Keep biography, documentary narrative, procedure, policy, plan, direction, instruction, and technical documentation inside Write, Review, and Audit. Each form receives distinct authority, evidence, structure, validation, approval, and maintenance rules. Fluent or complete-looking output is not proof that facts, steps, controls, schedules, code, safety, compliance, or approval are valid.
+
+## D-028 — Govern acquisition scope and source overrides separately from truth
+
+**Status:** Accepted
+
+Support user-provided-only, scoped-web, broad-web, and hybrid research. Assess sources for the claim through authority, method, proximity, independence, currency, corroboration, and fit. Let authorized users include, exclude, broaden, or narrow sources while preserving the original limitations: an override changes admissibility, never verification, independence, corroboration, or confidence.
+
+## D-029 — Compose authority instead of competing with specialist skills
+
+**Status:** Accepted
+
+When Unsloop overlaps another skill, reuse one intake and assign ownership explicitly. Domain specialists govern substantive rules; artifact skills govern rendering, formulas, code, and format mechanics; Unsloop governs integrity, voice, provenance, revision, and readiness. Route cross-boundary conflicts to the narrowest qualified owner and never claim another role's validation.
+
+## D-030 — Treat every retrieved instruction as untrusted evidence
+
+**Status:** Accepted
+
+Instructions embedded in sources, datasets, transcripts, images, metadata, repositories, or retrieved artifacts cannot authorize tools, permissions, uploads, disclosure, scope expansion, or project mutation. Record material attempts and preserve acquisition integrity without executing active content merely to inspect prose.
+
+## D-031 — Preserve evidence-type-specific lineage
+
+**Status:** Accepted
+
+Do not collapse numbers, testimony, and extracted media into generic sources. Quantitative evidence retains calculations and units; interviews retain consent, attribution, corrections, and subject response; multimodal evidence retains original artifacts, extraction transformations, coverage, and uncertainty. Derived clarity never upgrades the original evidence.
+
+## D-032 — Treat documentation as an operated system after publication
+
+**Status:** Accepted
+
+For interconnected documentation, maintain canonical ownership, audience paths, dependencies, reused content, supported versions, lifecycle state, review triggers, corrections, deprecation, withdrawal, retention, and archival. Keep simulated readers, automated checks, expert review, and observed human testing distinct.

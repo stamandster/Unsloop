@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:unsloop:schema:report:1.0",
+  "title": "Unsloop Report",
+  "type": "object",
+  "required": ["schema_version", "mode", "artifact", "evidence_boundary", "findings", "readiness"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "mode": {"enum": ["Review", "Write", "Audit"]},
+    "depth": {"enum": ["brief", "standard", "deep"]},
+    "artifact": {
+      "type": "object",
+      "required": ["identifier", "inspected_boundary"],
+      "properties": {
+        "identifier": {"type": "string"},
+        "version": {"type": ["string", "null"]},
+        "inspected_boundary": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "evidence_boundary": {
+      "type": "object",
+      "required": ["available", "unavailable", "limitations"],
+      "properties": {
+        "available": {"type": "array", "items": {"type": "string"}},
+        "unavailable": {"type": "array", "items": {"type": "string"}},
+        "limitations": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "location", "observation", "classification", "confidence", "severity", "action"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^FND-[A-Za-z0-9_-]+$"},
+          "location": {"type": "string"},
+          "observation": {"type": "string"},
+          "classification": {"type": "string"},
+          "consequence": {"type": ["string", "null"]},
+          "evidence": {"type": "array", "items": {"type": "string"}},
+          "confidence": {"enum": ["Low", "Moderate", "High"]},
+          "severity": {"enum": ["Low", "Moderate", "High", "Critical"]},
+          "preserve": {"type": ["string", "null"]},
+          "action": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "records": {
+      "type": "object",
+      "additionalProperties": {"type": "array", "items": {"type": "object"}}
+    },
+    "readiness": {
+      "type": "object",
+      "required": ["state", "unresolved_actions"],
+      "properties": {
+        "state": {"enum": ["Ready", "Ready with noted limitations", "Provisional—decision required", "Not ready—evidence or authorization missing"]},
+        "unresolved_actions": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "out_of_scope": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

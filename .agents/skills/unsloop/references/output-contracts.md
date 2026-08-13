@@ -2,6 +2,8 @@
 
 Read this file before delivering a review or audit.
 
+When a user or downstream system requests JSON, CSV, issue records, or another machine-readable contract, also read [structured-output.md](structured-output.md).
+
 Use the lightest contract that fully communicates the requested result, its material evidence limits, and any action needed before use.
 
 ## Unsloop Review
@@ -33,6 +35,14 @@ Return the requested writing first unless the user asks for process notes. Menti
 
 For a small fiction request, return the scene or story first and add only material assumptions or limitations. For a persistent fiction checkpoint, return the requested manuscript or plan first, followed by only material decisions or deviations, continuity or research concerns, Proposed details awaiting acceptance, the current checkpoint, and the next approved action. Do not bury the fiction under a project-management report.
 
+For multi-character work, report only material voice-profile proposals, drift, or author-approved changes. Identify the `CVP-*` profile and effective scope; do not expose full character ledgers when a short diff is sufficient.
+
+For documentary narrative or controlled documentation, return the artifact first. Add the form and version, audience and authority, acquisition mode and corpus, material source overrides, claim or chronology boundary, validation actually performed, tested and approval state, unresolved gaps, owner, and maintenance action only when they affect use.
+
+When other skills apply, return one artifact and identify only consequential responsibility or validation boundaries. For numerical, interview, or multimodal support, state the relevant record, transformation, permission, reproduction, or inspection limit rather than calling every item a generic source.
+
+For a documentation system, identify release scope, supported versions, affected dependencies, stale or withdrawn units, corrections or redirects, maintenance owner, and reader-validation method. Simulated, automated, expert, and observed results must remain distinguishable.
+
 When inferred or missing brief elements materially shaped the artifact, add a compact **Brief assumptions** note. Omit obvious or inconsequential assumptions.
 
 When voice matching is material, add a compact note unless the user wants artifact-only output:
@@ -53,6 +63,8 @@ Use a readiness label only when unresolved matters affect whether the artifact c
 - **Not ready—evidence or authorization missing:** responsible completion requires missing support, permission, or a non-waivable requirement.
 
 Do not label a simple low-stakes artifact merely to add ceremony. Never use **Ready** to imply exhaustive source verification when the evidence corpus was incomplete.
+
+For sustained projects, readiness applies to the stated artifact version and evidence boundary. A valid project ledger, JSON document, or assembly manifest does not by itself establish factual support, stakeholder approval, policy compliance, or publication readiness.
 
 ## Score display
 

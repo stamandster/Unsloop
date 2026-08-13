@@ -27,6 +27,15 @@ The name covers the whole cycle: inspect source use, remove formulaic loops, rec
 - Route fiction through **Unsloop Write**, **Unsloop Review**, or **Unsloop Audit** according to the requested job; “fiction” describes the specialization, not the mode.
 - Use **story canon** for facts established inside fiction. Do not use “story bible” as the project-record name; `CANON.md` is topic-neutral and avoids a religious implication.
 - Use **simulated reader response**, not “beta reader,” unless real beta-reader feedback is actually being analyzed.
+- Treat sustained writing, provenance, revision control, collaboration, multilingual writing, and structured output as workflow specializations—not new Unsloop modes.
+- Treat character voice continuity, documentary/documentation writing, and source acquisition as workflow specializations—not **Unsloop Character**, **Unsloop Documentary**, or **Unsloop Research** modes.
+- Use **writing project** for persistent non-fiction state and **story project** for fiction state.
+- Use **character voice profile** for a fictional speaker's author-approved personality and language contract; reserve **voice brief** or `VOICE.md` for the user's authorized author voice.
+- Use **documentary narrative** for an evidence-led account and **documentation** or the specific form name for procedures, policies, plans, instructions, and technical artifacts.
+- Use **source suitability** rather than permanently calling a website trusted or untrusted; use **source override** for an authorized inclusion, exclusion, or scope change.
+- Use **skill composition** for shared authority across specialist skills; do not create a new public Unsloop mode for a domain or file format.
+- Use **source safety** for untrusted-content isolation, **quantitative evidence** for reproducible numerical lineage, **interview evidence** for consent-controlled testimony, and **multimodal evidence** for original-to-derived transformations.
+- Use **documentation system** for interconnected content with canonical ownership and dependencies; use **reader validation** only for the method actually performed, such as simulated hypothesis, automated check, expert review, or observed test.
 
 ## Split criteria
 

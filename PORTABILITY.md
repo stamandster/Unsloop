@@ -1,6 +1,6 @@
 # Portability
 
-> **Document role:** Deployment, harness, and transfer sub-specification for `PR-014`–`PR-023`, `NFR-001`, `NFR-002`, `NFR-007`–`NFR-010`, and `FS-011`–`FS-022` in [`PRD.md`](PRD.md) and [`FSD.md`](FSD.md).
+> **Document role:** Deployment, harness, and transfer sub-specification for `PR-014`–`PR-030`, `NFR-001`, `NFR-002`, `NFR-007`–`NFR-013`, and `FS-011`–`FS-029` in [`PRD.md`](PRD.md) and [`FSD.md`](FSD.md).
 
 ## Guarantee
 
@@ -22,6 +22,8 @@ Compatibility means the same method can load and run. It does not promise identi
 .agents/skills/unsloop/       authoritative portable core
 ├── SKILL.md                  standard metadata + workflow
 ├── references/               on-demand portable procedures
+├── assets/                   optional templates and schema
+├── scripts/                  optional standard-library project operations
 └── agents/openai.yaml        optional Codex UI adapter
 
 Harness discovery link/copy   optional adapter to the same core
@@ -58,15 +60,23 @@ Pi discovers `.agents/skills/unsloop` from the working directory or its ancestor
 
 ## Runtime dependencies
 
-The portable skill runtime consists only of:
+The baseline portable skill runtime consists only of:
 
 - `SKILL.md`;
 - relative Markdown references; and
 - optional host metadata ignored safely by clients that do not use it.
 
+Bundled project templates, the JSON schema, and standard-library project scripts are optional capabilities. A model can follow the same workflows manually when Python or file execution is unavailable.
+
+Quantitative, interview, media, content-map, maintenance, and usability ledgers are ordinary Markdown. Format-specific tools may calculate, transcribe, OCR, render, or inspect an artifact, but the portable records retain the original-to-derived boundary and do not depend on that tool afterward.
+
 It requires no package manager, build step, MCP server, memory service, API key, environment variable, absolute filesystem path, or user-level configuration. Durable project decisions live in checked-in Markdown, so using Unsloop does not depend on a memory service.
 
 External access is optional and task-driven. A normal writing review works offline. An Audit that verifies online sources requires a host with source access or user-supplied source text. If neither exists, Unsloop marks the claim unverified instead of changing standards.
+
+When external access exists, the portable contract governs it by capability rather than vendor: User-provided only, Scoped web, Broad web, or Hybrid. A host that cannot enforce a domain filter must navigate only approved locators or ask the user to supply pages; it may not silently approximate a scoped corpus with general search. Source suitability, verification, confidence, override, and actual test status remain separate in every harness.
+
+Retrieved content is never a harness instruction. Every adapter must isolate source text, metadata, repositories, transcripts, images, and datasets from tool authority, permissions, credentials, private context, and project mutation. Hosts with different security models may narrow acquisition further but cannot relax this boundary.
 
 Persistent fiction projects use visible, relative Markdown beneath an author-approved `story/` and `manuscript/` layout. These are outputs in the user's writing project, not runtime dependencies or hidden Unsloop state. `story/STATUS.md` provides a compact resume packet so another compatible model can continue from the accepted checkpoint without a memory service or the complete conversation. Existing coherent project layouts remain authoritative and need not be migrated to this default.
 
@@ -124,6 +134,10 @@ The dependency-free validator checks:
 - required project documents and operational references;
 - harness-compatibility, writing-brief, voice-fidelity, evidence, and ethics safeguards;
 - fiction routing, onboarding, state-transition, retcon, recovery, review, publication, template, and tooling contracts;
+- character voice profile, contextual-variation, drift, author-override, and profile-version contracts;
+- sustained non-fiction, provenance, revision, collaboration, multilingual, structured-output, template, and tooling contracts;
+- documentary/documentation form, source-acquisition scope, source-override, chronology, and validation-state contracts;
+- skill-composition, untrusted-source isolation, quantitative, interview, multimodal, documentation-system, maintenance, and reader-validation contracts;
 - the project-owned multi-harness link utility;
 - BRD, PRD, and FSD traceability;
 - unresolved placeholders and broken relative Markdown links; and
@@ -141,5 +155,9 @@ After copying or cloning the project:
 4. Start or refresh the harness and use its explicit invocation once to confirm discovery.
 5. Test any material optional capability—structured input, browsing, file editing, storage, or length validation—before relying on it.
 6. For a transferred fiction project, open `story/STATUS.md`, verify its referenced files exist, and bound continuation to the manuscript and ledgers actually inspected.
+7. For a transferred sustained non-fiction project, open `writing/STATUS.md`, verify its relative references, and recheck any claim whose source version, wording, or inspected boundary changed.
+8. For transferred research, confirm `SOURCE-POLICY.md` still reflects the intended corpus and that scoped domains, overrides, last-checked dates, and validation evidence remain current.
+9. Confirm that active specialist skills still own the same domain and artifact properties and that no transferred source content has been promoted to instructions.
+10. For transferred documentation systems, inspect `CONTENT-MAP.md`, `MAINTENANCE.md`, and relevant evidence ledgers before claiming currentness or usability.
 
 Do not maintain divergent independent copies under the same skill name. The root specifications and method documents need not load during every invocation, but they must travel with the authoritative repository so maintainers can reproduce the product's rationale, requirements, and validation contract.

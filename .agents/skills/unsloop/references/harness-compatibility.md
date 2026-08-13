@@ -17,9 +17,11 @@ At the start of a task, use the capabilities already exposed by the host. Map th
 | Short consequential choice | Structured choice or question tool | Ask the same options in concise plain text. |
 | Read a draft or source | File, attachment, repository, or document access | Ask the user to paste or attach the needed material. |
 | Verify an external source | Browser, search, retrieval, or connector | Mark the claim unverified and request the source or permission to continue elsewhere. |
+| Enforce a scoped research corpus | Domain/site filter or navigation restricted to approved locators | Request exact pages or visit only approved locators; do not substitute general web search. |
 | Edit an artifact | Native patch, file-edit, or document tool | Return a clearly delimited revision for the user to apply. |
 | Persist a voice profile | Authorized memory or storage mechanism | Keep the profile task-local; do not persist it. |
-| Maintain a fiction project | Repository or document editing | Return the proposed or updated Markdown records for the user to save; keep all paths relative. |
+| Maintain a writing project | Repository or document editing | Return the proposed or updated Markdown records for the user to save; keep all paths relative. |
+| Extract or inspect non-text evidence | Format, document, media, spreadsheet, OCR, or transcription tool | Request a native export or mark extraction incomplete; preserve the original-to-text transformation boundary. |
 | Count or constrain output | Reliable tokenizer, document statistics, or validation tool | Use a disclosed estimate and retain a safety buffer. |
 
 Do not switch harnesses, models, execution modes, or accounts merely to obtain a preferred interface. Ask before a switch that changes cost, privacy, permissions, or external data handling.
@@ -30,6 +32,10 @@ Do not switch harnesses, models, execution modes, or accounts merely to obtain a
 - Scale task size, evidence volume, and review depth to the available context and tool limits. Process sections explicitly when the full corpus cannot fit safely.
 - Prefer direct evidence and compact intermediate records over reliance on long conversational recall.
 - For manuscript-scale fiction, resume from `story/STATUS.md` and only the relevant story records and manuscript range. State the inspected boundary and do not make global continuity claims from partial context.
+- For sustained non-fiction, resume from `writing/STATUS.md` and only the relevant claims, sources, requirements, decisions, changes, and manuscript range. Do not carry verification or approval across uninspected revisions.
+- For recurring fictional speakers, load only applicable Confirmed `CVP-*` profiles and current relationship or knowledge state; keep model suggestions Proposed.
+- For documentary or controlled documentation, preserve the artifact family, authority, source policy, exact corpus, validation status, and maintenance state across model or harness transfers.
+- When another skill owns domain or artifact behavior, apply [skill-composition.md](skill-composition.md); do not duplicate its intake or overrule its specialized validation.
 - Do not weaken integrity, attribution, privacy, authorization, or uncertainty rules for a smaller or less capable model.
 - Treat model-generated judgments as decision support. Different models may vary in precision and consistency; compatibility does not guarantee equivalent output quality.
 - Never request or expose private chain-of-thought. Report conclusions, evidence, assumptions, and concise rationale instead.

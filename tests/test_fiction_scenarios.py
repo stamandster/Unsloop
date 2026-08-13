@@ -13,12 +13,12 @@ class FictionScenarioFixtureTests(unittest.TestCase):
     def test_all_numbered_scenarios_are_present_and_ordered(self) -> None:
         text = FIXTURES.read_text(encoding="utf-8")
         numbers = [int(value) for value in re.findall(r"^## (\d+)\.", text, re.MULTILINE)]
-        self.assertEqual(numbers, list(range(1, 27)))
+        self.assertEqual(numbers, list(range(1, 31)))
 
     def test_each_scenario_defines_required_and_prohibited_behavior(self) -> None:
         text = FIXTURES.read_text(encoding="utf-8")
         sections = re.split(r"^## \d+\. ", text, flags=re.MULTILINE)[1:]
-        self.assertEqual(len(sections), 26)
+        self.assertEqual(len(sections), 30)
         for section in sections:
             self.assertIn("- Required:", section)
             self.assertIn("- Prohibited:", section)

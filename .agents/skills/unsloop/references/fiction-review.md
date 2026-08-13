@@ -75,6 +75,8 @@ Identify the active narrative contract, then flag access or distance changes onl
 
 Evaluate whether speech reflects character, relationship, objective, knowledge, setting, and immediate pressure. Do not create distinction through arbitrary accents, errors, catchphrases, or phonetic caricature.
 
+For multiple recurring speakers, compare each passage to the applicable Confirmed `CVP-*` profile. Test attribution without tags, stable personality, baseline tone, cadence, syntax, diction, discourse habits, knowledge, relationship posture, contextual variation, cast contrast, and restraint. Report silent drift separately from purposeful evolution. Do not revise a profile to excuse inconsistent prose; only an explicit author disposition can approve a new version.
+
 ### Theme, motif, setup, and payoff
 
 Track recurrence and function. Distinguish deliberate motif from accidental repetition, implication from lecture, and fair setup from conspicuous signaling.

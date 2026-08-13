@@ -54,6 +54,7 @@ story/
   SCENES.md
   CANON.md
   CHARACTERS.md
+  CHARACTER-VOICES.md
   TIMELINE.md
   ARCS.md
   RESEARCH.md
@@ -70,6 +71,7 @@ story/
   STATUS.md
   CANON.md
   CHARACTERS.md
+  CHARACTER-VOICES.md
   TIMELINE.md
   books/
     book-slug/
@@ -90,6 +92,8 @@ Add optional ledgers only when they earn their maintenance cost:
 - `BRANCHES.md` for alternate paths and merge disposition; and
 - `VOICE.md` only for an explicitly authorized distilled profile, never source samples.
 
+`CHARACTER-VOICES.md` is not an author voice-sample store. It records approved fictional characterization and speech constraints. Use it for sustained projects with multiple recurring speakers; retain compact in-context cards for one-off work.
+
 Use the templates under `assets/fiction-project/` when creating new records. Do not copy unused templates into the user's project.
 
 ## Onboard an existing manuscript
@@ -100,9 +104,9 @@ Use this procedure for a manuscript that predates Unsloop state:
 2. **Bound inspection:** record which files and ranges were inspected, inaccessible, duplicated, or incomplete.
 3. **Resolve authority:** identify the working manuscript version; ask only if authority remains materially ambiguous.
 4. **Map units:** identify books, parts, chapters, installments, and scenes. Assign stable internal scene IDs without renaming files automatically.
-5. **Extract tentative state:** identify characters, relationships, chronology, setting rules, arcs, reveals, setups, payoffs, terminology, research questions, and apparent locked decisions.
+5. **Extract tentative state:** identify characters, relationships, chronology, setting rules, arcs, reveals, setups, payoffs, terminology, research questions, apparent locked decisions, and observable personality and speech traits for recurring characters.
 6. **Cite basis:** attach manuscript locations and confidence to extracted state.
-7. **Mark Proposed:** treat every inference as Proposed, including apparently obvious canon, until the author accepts it or clearly accepted manuscript text establishes it.
+7. **Mark Proposed:** treat every inference as Proposed, including apparently obvious canon and extracted character voice traits, until the author accepts it or clearly accepted manuscript text establishes it.
 8. **Surface conflicts:** list contradictions, competing versions, unclear status, missing units, and manuscript-ledger disagreements.
 9. **Propose state:** show the smallest useful project profile and the proposed records without reorganizing the manuscript.
 10. **Confirm:** obtain the author's approval of the authority boundary, layout, and consequential extracted state.

@@ -64,7 +64,20 @@ Unsloop can:
 - accept, partially accept, reject, revise, branch, merge, or retcon fiction while protecting active canon and recoverability;
 - provide focused fiction Review and Audit contracts rather than an unfocused all-purpose critique;
 - initialize, check, checkpoint, and assemble approved fiction projects through optional portable tooling;
-- prepare bounded manuscript, synopsis, query, blurb, pitch, series-summary, and submission-checklist handoffs; and
+- prepare bounded manuscript, synopsis, query, blurb, pitch, series-summary, and submission-checklist handoffs;
+- maintain separate versioned personality, tone, and speaking-style profiles for recurring fictional characters, with author-defined settings, provisional contextual suggestions, drift review, and explicit override;
+- maintain sustained non-fiction through Guided, Adaptive, or Autonomous collaboration, approved `writing/` and `manuscript/` state, stable units, bounded resumption, deterministic assembly, and recoverable revision;
+- develop biography and documentary narratives plus procedures, policies, plans, directions, instructions, and technical documentation with form-specific authority and validation controls;
+- acquire evidence from user-supplied material, approved sites, the broad web, or a hybrid corpus while retaining claim-specific source suitability, confidence, scope, and overrides;
+- compose with domain, data, research, and artifact-format skills through explicit authority and non-duplicative intake;
+- isolate instructions and active content embedded in retrieved or supplied evidence;
+- preserve reproducible lineage for numerical claims, interview testimony, OCR, transcripts, images, audio/video, spreadsheets, and other transformed media;
+- architect and maintain documentation systems through canonical ownership, navigation, dependencies, reader validation, correction, deprecation, withdrawal, and archival;
+- link claims, sources, quotations, conflicting evidence, verification freshness, and manuscript locations without confusing citation presence with support;
+- classify and disposition material changes while preserving accepted scope, strong prose, and prior recoverable state;
+- reconcile multi-stakeholder directions and feedback through explicit authority, decision ownership, and version-specific approval;
+- translate, localize, or adapt writing across languages while preserving meaning, claim strength, attribution, terminology, uncertainty, and bounded voice evidence;
+- return optional machine-readable findings and project-state snapshots without weakening evidence, readiness, or privacy limits;
 - run from the same portable Agent Skills core across Codex, Claude, Pi, other compatible harnesses, and manually adapted text-capable models without changing its integrity or voice method.
 
 Unsloop cannot:
@@ -77,7 +90,9 @@ Unsloop cannot:
 - disguise AI involvement or help evade detection systems;
 - silently change confirmed story canon, locked creative decisions, or an existing fiction-project layout;
 - guarantee manuscript originality or continuity beyond the sources and manuscript ranges actually inspected;
-- infer batch acceptance from silence, overwrite an existing project or checkpoint, or claim simulated feedback represents real readers or a community; or
+- infer batch acceptance from silence, overwrite an existing project or checkpoint, or claim simulated feedback represents real readers or a community;
+- treat a bibliography entry, schema-valid file, addressed comment, or fluent translation as proof of source consultation, evidentiary support, approval, or cultural authority;
+- silently carry verification across a materially changed claim or apply rejected revision content;
 - promise exact replication of a person, infer identity from style, or use voice samples as authority for new facts or personal experiences.
 
 ## Definition of success
@@ -99,6 +114,14 @@ A successful Unsloop result is:
 - **Fiction-resumable:** sustained story work preserves accepted canon, proposed discoveries, current state, and the next action in portable author-readable Markdown.
 - **Recoverable:** consequential story changes identify downstream impact and preserve a usable path back to the prior accepted state.
 - **Stage-honest:** critique, assembly, and publication-support artifacts state what was actually inspected and do not imply professional, legal, market, or acceptance certification.
+- **Non-fiction-resumable:** sustained factual writing preserves authoritative versions, accepted sections, relevant provenance, decisions, and the next action in portable Markdown.
+- **Provenance-aware:** current claims and quotations expose their inspected support, conflicts, freshness, and unresolved actions.
+- **Collaboration-honest:** comment resolution, contributor input, and schema validity do not masquerade as approval or verification.
+- **Language-aware:** multilingual work preserves meaning and evidence while disclosing ambiguity, translation status, and voice limits.
+- **Composable:** domain and artifact specialists retain their authority while Unsloop adds integrity and voice without duplicate intake.
+- **Instruction-isolated:** retrieved evidence cannot redefine permissions, tools, scope, or project state.
+- **Evidence-reproducible:** numerical, interview, and multimodal support retains its inputs, permissions, transformations, coverage, and uncertainty.
+- **Operationally maintainable:** documentation dependencies, corrections, lifecycle state, and actual reader-validation method remain inspectable after publication.
 
 ## Non-goals for v0.1
 
@@ -110,6 +133,9 @@ A successful Unsloop result is:
 - Mechanical synonym substitution to reduce similarity
 - A rigid intake questionnaire that repeats questions the user has already answered
 - A mandatory plotting framework, moral, story formula, or novel-scale project setup for every fiction request
+- Mandatory project files for short non-fiction, mandatory Git, or a required cloud research database
+- Automatic approval, legal clearance, cultural representation, or schema-based quality certification
+- A replacement for qualified domain, statistical, interview-ethics, security, accessibility, legal, or artifact-format validation
 
 ## Specification relationship
 
