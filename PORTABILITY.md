@@ -12,7 +12,7 @@ The core is both harness-agnostic and model-agnostic:
 - every operational reference is relative to the skill directory;
 - no provider, model ID, proprietary tool name, hidden reasoning format, or UI control is required;
 - missing host capabilities have explicit fallbacks; and
-- evidence, voice, privacy, readiness, ethics, and non-mutating Audit rules do not change across hosts.
+- evidence, voice, section-flow, privacy, readiness, ethics, and non-mutating Audit rules do not change across hosts.
 
 Compatibility means the same method can load and run. It does not promise identical reasoning quality, context capacity, tool access, latency, cost, or output across models.
 

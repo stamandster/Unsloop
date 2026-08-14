@@ -131,6 +131,8 @@ Define product or system, version, platform, environment, audience, prerequisite
 
 Structure around the user's outcome and the form contract, not the order sources were found. Attribute claims where they enter. Use `CLAIMS.md`, `SOURCES.md`, `QUOTATIONS.md`, `REQUIREMENTS.md`, `SOURCE-POLICY.md`, and `RESEARCH-LOG.md` when persistence improves traceability.
 
+For chapters, headings, subheadings, phases, and other visible divisions, apply [section-flow.md](section-flow.md). Make each boundary express the actual narrative, argumentative, chronological, or operational relationship. Do not insert a generic bridge where hierarchy and sequence already orient the reader, and do not smooth away a necessary warning, exception, decision gate, or deliberate documentary cut.
+
 Validate at the right level:
 
 - documentary or biography: chronology, names, quotations, contested claims, inference labels, consent and privacy boundaries;

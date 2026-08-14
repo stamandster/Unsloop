@@ -14,6 +14,8 @@ Compare sentence length, vocabulary, abstraction, point of view, technicality, c
 
 Flag abrupt discontinuities for closer inspection. Do not treat them as proof of AI authorship or borrowing.
 
+For a multi-section artifact, use [section-flow.md](section-flow.md). Inspect each material boundary as the preceding close, heading or break, and next opening. Determine the intended relationship before calling it abrupt. Do not demand a bridge when the heading and sequence already supply the logic, and preserve intentional scene cuts, contrasts, time jumps, viewpoint changes, or procedural gates.
+
 ## Flag patterns, not words
 
 - **Empty abstraction:** announce importance without stating the claim.
@@ -80,6 +82,7 @@ For each sentence, ask:
 - Does an abstract noun hide a direct verb?
 - Is an ordinary word clearer than the polished one?
 - Does the transition express logic or only imitate formal prose?
+- Across a heading, can the reader tell why the prior section ended and why this section begins here?
 - Does the sentence sound like this writer's point or a generic template?
 
 Delete, specify, combine, simplify, or reconnect as needed. Preserve strong, natural passages.

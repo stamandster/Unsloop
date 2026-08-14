@@ -36,7 +36,7 @@ Unsloop should make writing more defensible without laundering its origins, more
 | ID | Requirement | Business outcome |
 |---|---|---|
 | BR-001 | Evaluate writing integrity through observable source relationships, attribution, evidence quality, and source dependence. | Material integrity risks become inspectable and correctable. |
-| BR-002 | Evaluate human voice through specificity, authorial presence, consistency, formulaicity, abstraction, redundancy, example function, and emotional integrity. | Generic or manipulative prose improves without crude word bans. |
+| BR-002 | Evaluate human voice through specificity, authorial presence, consistency, formulaicity, abstraction, redundancy, example function, emotional integrity, and logical progression across visible section boundaries. | Generic, manipulative, or structurally abrupt prose improves without crude word bans or forced transitional language. |
 | BR-003 | Keep the writer in control of meaning, claims, voice, and final acceptance. | Assistance remains author-led and accountable. |
 | BR-004 | Establish topic, goal, audience, context, prior knowledge, directions, content, references, voice, and constraints proportionately before substantial work. | Output fits the real purpose instead of a guessed generic task. |
 | BR-005 | Bound every material conclusion by the text, sources, permissions, and verification actually available. | Unsloop does not overstate originality, support, authorship, or certainty. |
@@ -84,6 +84,7 @@ Unsloop should make writing more defensible without laundering its origins, more
 - Author-defined or contextually suggested, individually versioned character voice profiles with drift review and explicit evolution or retroactive override.
 - Documentary and biography development; procedures, policies, plans, directions, instructions, and technical documents; and user-only, scoped-site, broad-web, or hybrid evidence acquisition.
 - Cross-skill authority composition, untrusted-source handling, quantitative and interview evidence, multimodal transformation records, documentation architecture, maintenance, and human-use validation.
+- Logical section-flow writing and review across chapters, headings, subheadings, scene breaks, and procedural phases, including purposeful hard breaks.
 - Non-mutating Audit with explicit protection for claims, positions, conclusions, recommendations, scope, certainty, evidence strength, chronology, quantities, attribution, causality, conditions, exceptions, and exclusions.
 
 ### Out of scope
@@ -102,7 +103,7 @@ Unsloop should make writing more defensible without laundering its origins, more
 
 ## Success measures
 
-For v0.1, success is demonstrated through traceable documentation, passing structural validation, and controlled use in which outputs are text-grounded, calibrated, actionable, voice-preserving, goal-directed, requirement-complete, emotionally responsible, and readiness-honest. Audit workflows leave inspected artifacts unchanged by default and separate findings from authorized revisions. Fiction workflows additionally preserve confirmed canon, distinguish proposed discoveries from accepted decisions, scale project state to the work, and remain resumable from portable Markdown. Sustained non-fiction workflows preserve manuscript authority, claim and source provenance, accepted revisions, stakeholder decisions, and a bounded resume state. Extended operations also preserve specialist authority, isolate source instructions, retain quantitative/interview/media lineage, and distinguish documentation maintenance and real reader evidence from merely complete-looking output.
+For v0.1, success is demonstrated through traceable documentation, passing structural validation, and controlled use in which outputs are text-grounded, calibrated, actionable, voice-preserving, structurally coherent, goal-directed, requirement-complete, emotionally responsible, and readiness-honest. Multi-section work makes the relationship across visible boundaries legible without forcing a transitional sentence or erasing purposeful hard breaks. Audit workflows leave inspected artifacts unchanged by default and separate findings from authorized revisions. Fiction workflows additionally preserve confirmed canon, distinguish proposed discoveries from accepted decisions, scale project state to the work, and remain resumable from portable Markdown. Sustained non-fiction workflows preserve manuscript authority, claim and source provenance, accepted revisions, stakeholder decisions, and a bounded resume state. Extended operations also preserve specialist authority, isolate source instructions, retain quantitative/interview/media lineage, and distinguish documentation maintenance and real reader evidence from merely complete-looking output.
 
 Before v1.0, the project should add anonymized fixtures and forward-tests showing that independent reviewers can apply core classifications and score anchors with acceptable consistency. No current score is represented as a validated measurement instrument.
 

@@ -64,6 +64,8 @@ Treat Audit as an assessment, not a mutation. Preserve the exact inspected artif
 
 Revision may follow Audit only through a separate authorized scope. Distinguish presentation-only edits from meaning-changing edits, disclose semantic and downstream effects, and preserve the user's position and decision authority. Do not suppress misinformation silently; flag it and reduce readiness when it cannot responsibly remain in a final artifact.
 
+Do not use “flow” or “smoothness” as permission to change the relationship between claims, events, conditions, exceptions, viewpoints, character knowledge, procedural steps, or author-owned emphasis. A visible section boundary may be intentionally abrupt. Preserve a purposeful hard break and add only the orientation the reader actually needs.
+
 ## Calibrated language
 
 Prefer:

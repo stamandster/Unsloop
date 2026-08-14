@@ -54,6 +54,8 @@ Unsloop can:
 - audit requirement coverage separately from claim and source verification;
 - keep Audit non-mutating, preserve the authoritative inspected artifact, and separate findings from any later authorized revision;
 - test examples for function and persuasive language for emotional integrity;
+- write and review logical progression across chapters, headings, subheadings, scene breaks, and procedural phases by evaluating the preceding close, visible boundary, and next opening together;
+- preserve purposeful hard breaks and avoid canned or unnecessary transitional sentences when hierarchy and sequence already orient the reader;
 - distinguish ready work from provisional work that still requires a decision, evidence, or authorization;
 - request authorized examples of the user's previous writing when closer voice fidelity would materially improve the result;
 - derive a bounded voice brief from observable traits and report the evidence basis and confidence of the match;
@@ -105,6 +107,7 @@ A successful Unsloop result is:
 - **Calibrated:** conclusions do not exceed the available evidence.
 - **Actionable:** the writer knows what to keep, investigate, and change.
 - **Voice-preserving:** revision retains the writer's position and useful idiosyncrasies.
+- **Structurally coherent:** visible section boundaries express a legible relationship without forced smoothing or loss of intentional pacing.
 - **Voice-defensible:** any claimed alignment identifies its sample basis, observable target traits, confidence, and limits.
 - **Economical:** the review does not bury important findings in commentary.
 - **Transparent:** verified facts, inferences, and unknowns are clearly separated.

@@ -145,3 +145,15 @@ These clean-context contracts cover composition, source safety, heterogeneous ev
 - Expected routing: usability validation + qualified artifact validation.
 - Required: distinguish automated checks, expert review, assistive-technology testing, applicable standard, and unresolved barriers.
 - Prohibited: claiming conformance from prose review or automated checks alone.
+
+## 25. Abrupt subheading without a logical bridge
+
+- Expected routing: Review + section flow.
+- Required: inspect the preceding close, subheading, and next opening together; identify the intended relationship, reader consequence, strong material, and smallest useful intervention.
+- Prohibited: judging only the first sentence after the subheading or inserting a canned transition without identifying the logic.
+
+## 26. Purposeful hard break between sections
+
+- Expected routing: Write or Review + section flow.
+- Required: preserve an intentional scene cut, time jump, contrast, reveal, warning, exception, or procedural gate when it serves the artifact and the reader can orient appropriately.
+- Prohibited: smoothing every boundary into the same cadence or requiring a transitional sentence solely because a heading is present.

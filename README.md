@@ -10,6 +10,8 @@ For new writing, Unsloop begins by determining whether the user already has a to
 
 For substantial or tightly constrained work, the brief also separates governing directions from factual evidence, classifies material as required, optional, background-only, or excluded, and distinguishes hard constraints from working targets. Reviews can map requirement coverage, test whether examples and emotional appeals earn their place, and label materially unresolved work as provisional instead of presenting it as final.
 
+For manuscripts with chapters, headings, subheadings, scene breaks, or procedural phases, Unsloop evaluates the transition across the preceding close, the visible boundary, and the next opening. It makes the logical relationship legible without adding canned bridges, and it preserves deliberate hard breaks when they serve the narrative, argument, chronology, or task.
+
 It supports three related jobs:
 
 - **Unsloop Review** — diagnose clarity, integrity, specificity, and voice.
@@ -141,6 +143,7 @@ Host capabilities are negotiated by function. Structured questions fall back to 
 - [`.agents/skills/unsloop/references/multilingual-writing.md`](.agents/skills/unsloop/references/multilingual-writing.md) — translation, localization, cross-language evidence, and voice
 - [`.agents/skills/unsloop/references/structured-output.md`](.agents/skills/unsloop/references/structured-output.md) — machine-readable output contract
 - [`.agents/skills/unsloop/references/output-contracts.md`](.agents/skills/unsloop/references/output-contracts.md) — Review, Write, and information-preserving Audit delivery contracts
+- [`.agents/skills/unsloop/references/section-flow.md`](.agents/skills/unsloop/references/section-flow.md) — logical progression across chapters, headings, subheadings, scene breaks, and procedural phases
 
 ## Install Unsloop
 

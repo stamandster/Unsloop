@@ -60,6 +60,8 @@ Ask whether the premise generates sustained pressure, scenes fulfill the narrati
 
 Map scene function and state change. Distinguish intentional quiet from stalled movement, useful delay from repetition, and surprise from missing causality. Identify the smallest structural intervention before recommending wholesale reordering.
 
+For chapter, scene, and subheading boundaries, apply [section-flow.md](section-flow.md). Test the preceding close, boundary marker, and next opening together. Preserve purposeful cuts, juxtaposition, time jumps, and viewpoint changes; flag a boundary only when its logic, orientation, pacing, or intended reader effect fails.
+
 ### Character and relationship
 
 Track goals, pressures, choices, knowledge, capabilities, emotional state, and relationship change across the inspected range. Do not demand likability, explicit self-awareness, or a conventional positive arc.

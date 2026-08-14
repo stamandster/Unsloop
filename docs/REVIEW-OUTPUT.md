@@ -83,6 +83,8 @@ For revision, briefly state:
 - what materially changed;
 - which claims or citations still need user confirmation.
 
+For a material chapter, heading, subheading, scene-break, or procedural-phase issue, identify the exact boundary; the apparent or intended relationship; the reader consequence; strong material to preserve; and the smallest useful intervention. Do not recommend a transitional sentence merely because a heading exists. If an abrupt break is purposeful and adequately orients the reader, identify it as effective rather than treating it as a defect. In Audit, keep any example bridge or reordering proposal separate from the unchanged artifact.
+
 When matching the user's voice is material, also state:
 
 - **Voice basis:** explicit instructions, current draft, and number/type of authorized samples used;

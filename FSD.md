@@ -34,7 +34,7 @@ No database, background service, model endpoint, provider account, or persistent
 | FS-003 | Progressive brief construction | Request, artifact, governing directions, references | `WritingBrief` with certainty, content roles, and constraints | PR-003, PR-004, PR-012 |
 | FS-004 | Evidence and voice boundary construction | Draft, sources, verification access, voice samples, authorization | `EvidenceBoundary` and optional `VoiceBrief` | PR-005, PR-008, PR-013 |
 | FS-005 | Integrity analysis | Draft plus available comparison evidence | Source relationships, claim findings, dependence assessment | PR-006, PR-011 |
-| FS-006 | Human-voice analysis | Draft, writing brief, optional voice brief | Voice/slop findings, example and emotional-integrity findings | PR-007, PR-008 |
+| FS-006 | Human-voice and section-flow analysis | Draft, writing brief, optional voice brief, visible section boundaries | Voice/slop, example, emotional-integrity, and cross-section-flow findings | PR-007, PR-008 |
 | FS-007 | Requirement and constraint audit | Brief, directions, artifact | `RequirementCoverage` records and constraint status | PR-004, PR-009 |
 | FS-008 | Result assembly and readiness | Findings, coverage, evidence boundary, requested output | Mode-specific output and `ReadinessState` when material | PR-009 |
 | FS-009 | Optional scoring | Supported findings and comparison evidence | Separated strength, risk, dependence, fidelity, and severity values | PR-010 |
@@ -441,7 +441,7 @@ Compare wording, syntax, idea order, detail selection, and rhetorical architectu
 
 ### FS-006 — Apply the human-voice lens
 
-Inspect the document as a whole, then identify repeated patterns rather than banned words. Test specificity, authorial presence, discontinuity, redundancy, formulaicity, abstraction, example function, emotional integrity, and alignment with an established voice brief. Preserve strong and useful irregularity.
+Inspect the document as a whole, then identify repeated patterns rather than banned words. Test specificity, authorial presence, discontinuity, redundancy, formulaicity, abstraction, example function, emotional integrity, and alignment with an established voice brief. For multi-section work, treat each material boundary as the preceding close, heading or break, and next opening; identify its intended logical relationship; require only the smallest orientation or bridge the reader needs; and preserve purposeful scene cuts, time jumps, contrasts, viewpoint changes, warnings, exceptions, and procedural gates. Preserve strong and useful irregularity.
 
 ### FS-007 — Audit requirements and constraints
 

@@ -8,6 +8,8 @@ For any fiction request—an isolated scene, flash fiction, short story, novella
 
 For multi-session non-fiction, also read [sustained-writing-projects.md](sustained-writing-projects.md). Load [research-provenance.md](research-provenance.md), [revision-control.md](revision-control.md), [collaborative-writing.md](collaborative-writing.md), or [multilingual-writing.md](multilingual-writing.md) only when the requested work needs that specialization.
 
+For any artifact with chapters, headings, subheadings, scene breaks, or procedural phases, read [section-flow.md](section-flow.md).
+
 ## Establish the brief
 
 Use the writing-brief procedure to resolve topic status first: accept an existing topic, refine a rough direction, or brainstorm distinct options from minimal seed context. Then identify the reader outcome, audience knowledge and concerns, context, governing directions, required, optional, background, and excluded material, factual references, desired length, format, and voice constraints. Distinguish hard constraints from working targets and component allocations.
@@ -31,6 +33,7 @@ For fiction, invention is part of the disclosed form. Keep invented story materi
 - Make each paragraph perform a distinct job.
 - Let structure follow the argument rather than forcing three-part symmetry.
 - Use transitions only where the logic needs them.
+- At each visible section boundary, make the closing movement, heading or break, and next opening express a legible relationship. Preserve a purposeful hard break and avoid adding a mechanical bridge when the structure already orients the reader.
 - Attribute sourced ideas as they enter the draft.
 - Mark uncertain facts or missing citations instead of smoothing over them.
 - Use optional material only when it earns its space; keep background material out of the artifact unless it becomes relevant.

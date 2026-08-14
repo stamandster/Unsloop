@@ -49,6 +49,7 @@ REQUIRED_FILES = (
     SKILL / "references" / "output-contracts.md",
     SKILL / "references" / "source-verification.md",
     SKILL / "references" / "write-mode.md",
+    SKILL / "references" / "section-flow.md",
     SKILL / "references" / "fiction-workflow.md",
     SKILL / "references" / "fiction-project-operations.md",
     SKILL / "references" / "character-voice-continuity.md",
@@ -230,6 +231,90 @@ PRODUCTION_CONTRACT = {
         "### Requirement coverage",
         "## Readiness labels",
         "Do not use **Ready**",
+    ),
+}
+
+SECTION_FLOW_CONTRACT = {
+    SKILL / "SKILL.md": (
+        "references/section-flow.md",
+        "closing passage, heading or break, and next opening",
+        "do not add a bridge when the heading and sequence already",
+    ),
+    SKILL / "references" / "section-flow.md": (
+        "## Inspect each boundary",
+        "## Choose the least artificial bridge",
+        "## Preserve purposeful hard breaks",
+        "## Apply the mode contract",
+        "## Check the manuscript at two scales",
+        "Do not require a transitional sentence at every heading",
+        "Keep any proposed transition or reordered heading separate from the audited artifact",
+    ),
+    SKILL / "references" / "write-mode.md": (
+        "For any artifact with chapters, headings, subheadings",
+        "closing movement, heading or break, and next opening",
+    ),
+    SKILL / "references" / "human-voice-review.md": (
+        "Inspect each material boundary as the preceding close, heading or break, and next opening",
+        "preserve intentional scene cuts",
+    ),
+    SKILL / "references" / "fiction-review.md": (
+        "For chapter, scene, and subheading boundaries",
+        "Preserve purposeful cuts",
+    ),
+    SKILL / "references" / "documentary-documentation.md": (
+        "For chapters, headings, subheadings, phases",
+        "do not smooth away a necessary warning",
+    ),
+    ROOT / "PRD.md": (
+        "### Cross-section flow",
+        "does not equate coherence with an added transitional sentence",
+    ),
+    ROOT / "BRD.md": (
+        "logical progression across visible section boundaries",
+        "Logical section-flow writing and review",
+    ),
+    ROOT / "FSD.md": (
+        "Human-voice and section-flow analysis",
+        "treat each material boundary as the preceding close, heading or break, and next opening",
+    ),
+    ROOT / "PROJECT.md": (
+        "write and review logical progression across chapters, headings, subheadings",
+        "**Structurally coherent:**",
+    ),
+    ROOT / "README.md": (
+        "For manuscripts with chapters, headings, subheadings",
+        "references/section-flow.md",
+    ),
+    ROOT / "ARCHITECTURE.md": (
+        "Shared section-flow contract",
+        "section-flow.md",
+    ),
+    ROOT / "docs" / "REVIEW-MODEL.md": (
+        "inspect the transition as a three-part boundary",
+        "Do not require a transitional sentence at every boundary",
+    ),
+    ROOT / "docs" / "REVIEW-OUTPUT.md": (
+        "For a material chapter, heading, subheading, scene-break",
+        "keep any example bridge or reordering proposal separate from the unchanged artifact",
+    ),
+    ROOT / "docs" / "ETHICS-AND-LIMITS.md": (
+        "Do not use “flow” or “smoothness” as permission",
+        "Preserve a purposeful hard break",
+    ),
+    ROOT / "DECISIONS.md": (
+        "## D-034 — Treat visible section boundaries as logical transitions",
+        "Do not require a transitional sentence",
+    ),
+    ROOT / "ROADMAP.md": (
+        "Add cross-section flow contracts",
+        "Forward-test abrupt, already-coherent, and intentionally discontinuous section boundaries",
+    ),
+    ROOT / "PORTABILITY.md": (
+        "evidence, voice, section-flow, privacy",
+    ),
+    ROOT / "tests" / "fixtures" / "operational-scenarios.md": (
+        "## 25. Abrupt subheading without a logical bridge",
+        "## 26. Purposeful hard break between sections",
     ),
 }
 
@@ -970,6 +1055,17 @@ def validate() -> list[str]:
             if requirement not in text:
                 errors.append(
                     f"production safeguard missing from {path.relative_to(ROOT)}: {requirement}"
+                )
+
+    for path, requirements in SECTION_FLOW_CONTRACT.items():
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for requirement in requirements:
+            if requirement not in text:
+                errors.append(
+                    f"section-flow safeguard missing from "
+                    f"{path.relative_to(ROOT)}: {requirement}"
                 )
 
     for path, requirements in GLOBAL_LINK_CONTRACT.items():

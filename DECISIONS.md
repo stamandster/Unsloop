@@ -207,3 +207,9 @@ For interconnected documentation, maintain canonical ownership, audience paths, 
 **Status:** Accepted
 
 An Audit may change the assessment of information, but not the audited information itself. Keep the inspected artifact unchanged by default. Report incorrect, unsupported, contradictory, misleading, or source-dependent material as findings with proposed corrections. Apply changes only in a separately authorized, bounded revision stage that distinguishes presentation-only edits from meaning-changing edits and preserves author-owned decisions.
+
+## D-034 — Treat visible section boundaries as logical transitions
+
+**Status:** Accepted
+
+Evaluate the preceding close, heading or break, and next opening as one boundary. Make the actual narrative, argumentative, chronological, or operational relationship legible with the smallest useful device. Do not require a transitional sentence where hierarchy and sequence already orient the reader, and preserve purposeful hard breaks instead of smoothing every section into a uniform cadence.

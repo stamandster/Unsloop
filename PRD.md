@@ -67,7 +67,7 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | PR-004 | Resolve direction priority; distinguish required, optional, background-only, and excluded content; distinguish hard constraints, working targets, allocations, and safety buffers. | BR-004, BR-012 |
 | PR-005 | State the evidence boundary whenever it limits a conclusion, and separate the writing brief, factual evidence, voice samples, and verification status. | BR-001, BR-005, BR-007 |
 | PR-006 | Review source relationships across wording, syntax, idea order, detail selection, and rhetorical architecture; classify supported relationships precisely. | BR-001, BR-005 |
-| PR-007 | Review specificity, authorial presence, consistency, redundancy, formulaicity, abstraction, example function, emotional integrity, and useful irregularity without classifying AI authorship. | BR-002, BR-007 |
+| PR-007 | Review specificity, authorial presence, consistency, redundancy, formulaicity, abstraction, example function, emotional integrity, useful irregularity, and logical flow across chapters, headings, subheadings, or other visible boundaries without classifying AI authorship or forcing artificial transitions. | BR-002, BR-007 |
 | PR-008 | When close voice fidelity matters, request representative authorized writing if evidence is thin; build a bounded voice brief, separate style from content, and report basis and confidence. | BR-002, BR-003, BR-007, BR-011 |
 | PR-009 | Rank findings by consequence and confidence, identify material to preserve, rewrite only when requested, and apply an honest readiness label when unresolved matters affect use. | BR-003, BR-009, BR-012 |
 | PR-010 | Score only on request or when it materially aids comparison; keep strength and risk families separate, use N/A when unsupported, and explain every score with evidence. | BR-005, BR-009 |
@@ -185,6 +185,10 @@ Given a request for Audit plus revision, Unsloop preserves the Audit result as a
 ### Voice fidelity
 
 Given authorized representative samples, Unsloop derives only observable task-relevant traits, does not import sample facts or memorable wording, adapts for the new genre and audience, and reports the basis and Low, Moderate, or High confidence when fidelity is material.
+
+### Cross-section flow
+
+Given a manuscript with chapters, headings, subheadings, scene breaks, procedural phases, or comparable divisions, Unsloop evaluates each material boundary through the preceding close, the heading or break, and the next opening. It identifies the actual relationship, uses the smallest necessary bridge, preserves a purposeful hard break, and does not equate coherence with an added transitional sentence. Review returns the boundary, consequence, and smallest intervention; Audit leaves the manuscript unchanged; Write revises only within the authorized scope without changing substantive information merely for smoothness.
 
 ### Fiction
 

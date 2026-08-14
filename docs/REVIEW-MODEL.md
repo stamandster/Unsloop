@@ -149,6 +149,10 @@ Look for abrupt changes in sentence length, vocabulary, abstraction, technicalit
 
 A discontinuity is a prompt for closer review. It is not proof of plagiarism or AI use.
 
+For chapters, headings, subheadings, scene breaks, procedural phases, or similar divisions, inspect the transition as a three-part boundary: the preceding close, the heading or break, and the next opening. Identify whether the relationship is continuation, narrowing, expansion, contrast, cause and effect, question and answer, chronology, viewpoint or setting change, procedural sequence, escalation, synthesis, or deliberate interruption. The reader should be able to understand why one section ended and why the next begins here.
+
+Do not require a transitional sentence at every boundary. The heading and sequence may already supply the logic. Preserve purposeful hard breaks when they create an appropriate cut, time jump, juxtaposition, reveal, warning, exception, or decision gate; add only the orientation needed to prevent accidental confusion. In Audit, report the issue without changing the manuscript.
+
 ### 3. Inspect concrete slop patterns
 
 Flag patterns rather than isolated words:

@@ -60,9 +60,11 @@
 - [x] Add quantitative, interview/oral-history, and multimodal evidence workflows and portable ledgers
 - [x] Add documentation-system architecture, dependency, maintenance, correction, deprecation, withdrawal, and archival controls
 - [x] Add reader, task, accessibility, plain-language, and localization validation evidence states
-- [x] Add 24 clean-context operational extension scenarios and deterministic ledger checks
+- [x] Add 26 clean-context operational extension scenarios and deterministic ledger checks
 - [x] Make Audit non-mutating with explicit semantic-field protection and separate revision authorization
 - [x] Add Audit information-preservation requirements, decision records, validator checks, and behavioral scenarios
+- [x] Add cross-section flow contracts for headings, subheadings, scene breaks, and procedural phases with purposeful-hard-break safeguards
+- [x] Add section-flow validator coverage and clean-context behavioral scenarios
 
 ## v0.2 — Examples and calibration
 
@@ -110,6 +112,7 @@
 - [ ] Forward-test numerical reproduction, interview permissions, OCR/transcript uncertainty, and visual-claim boundaries
 - [ ] Forward-test content dependency propagation, correction, deprecation, withdrawal, archival, and reader-validation labeling
 - [ ] Forward-test Audit-only, Audit-plus-copyedit, and Audit-plus-substantive-revision boundaries across models and harnesses
+- [ ] Forward-test abrupt, already-coherent, and intentionally discontinuous section boundaries across fiction, argument, documentary narrative, and controlled documentation
 
 ## v0.3 — Assisted audit tooling
 

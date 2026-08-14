@@ -11,6 +11,7 @@ Unsloop
 ├── Review — constructive diagnosis, including fiction craft review
 ├── Write  — author-led drafting, revision, assembly, and publication support
 ├── Audit  — non-mutating evidence-heavy source, continuity, canon, and research examination
+├── Shared section-flow contract — logical progression across headings without forced smoothing
 ├── Shared sustained-writing specialization — long-form operations across all three modes
 │   ├── Project state — onboarding, units, resume packets, assembly, recovery
 │   ├── Provenance and revision — claims, sources, quotations, changes, freshness
@@ -67,6 +68,7 @@ Unsloop/
                 ├── output-contracts.md
                 ├── source-verification.md
                 ├── write-mode.md
+                ├── section-flow.md
                 ├── fiction-workflow.md
                 ├── fiction-project-operations.md
                 ├── character-voice-continuity.md
