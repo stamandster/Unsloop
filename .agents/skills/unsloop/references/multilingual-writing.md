@@ -27,4 +27,4 @@ Do not label second-language features, code-switching, dialect, or culturally co
 
 ## Return the result
 
-State the translation mode, source and target boundary, terminology decisions, unresolved ambiguities, quotation status, material adaptations, and confidence. Recommend qualified linguistic, cultural, legal, or subject-matter review when the intended use makes it necessary.
+State the translation mode, source and target boundary, terminology decisions, unresolved ambiguities, quotation status, material adaptations, and confidence. In a translation Audit, leave both inspected source and target artifacts unchanged and present semantic corrections as separately authorized proposals. Recommend qualified linguistic, cultural, legal, or subject-matter review when the intended use makes it necessary.

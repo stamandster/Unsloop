@@ -2,6 +2,8 @@
 
 Version 0.1 uses these sources to set guardrails, not to claim that its rubric has been empirically validated.
 
+The non-mutating Audit invariant is a product-governance decision recorded in [`../DECISIONS.md`](../DECISIONS.md), not an empirical claim derived from the sources below. External evidence can change an Audit finding or confidence level; it cannot authorize revision of the inspected artifact.
+
 > **Specification role:** Evidence record supporting the guardrails and research posture in [`../BRD.md`](../BRD.md), [`../PRD.md`](../PRD.md), and [`ETHICS-AND-LIMITS.md`](ETHICS-AND-LIMITS.md). It is not part of the evidence corpus for an individual Unsloop review unless the task makes a listed source relevant.
 
 ## Academic integrity and similarity

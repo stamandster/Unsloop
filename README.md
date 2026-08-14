@@ -40,7 +40,7 @@ Fiction also uses the existing modes rather than a fourth one:
 
 - **Write:** discover, plan, draft, revise on request, assemble, or prepare a synopsis, query, blurb, pitch, or checklist.
 - **Review:** developmental, structure, pacing, character, relationship, POV, narration, dialogue, theme, line, copy, simulated-reader, or authenticity review.
-- **Audit:** evidence-heavy continuity, chronology, canon, research, historical, adaptation, attribution, or source comparison.
+- **Audit:** non-mutating, evidence-heavy continuity, chronology, canon, research, historical, adaptation, attribution, or source comparison.
 
 For an established manuscript, Unsloop inventories versions and inspected ranges, preserves the existing layout, assigns stable internal IDs, and proposes extracted state before creating or confirming it. For partial acceptance, branches, retcons, or large revisions, it updates only the accepted scope, maps downstream effects, and preserves a recoverable checkpoint.
 
@@ -126,6 +126,7 @@ Host capabilities are negotiated by function. Structured questions fall back to 
 - [`.agents/skills/unsloop/references/fiction-publication.md`](.agents/skills/unsloop/references/fiction-publication.md) — assembly, completion stages, and publication-support handoff
 - [`.agents/skills/unsloop/references/sustained-writing-projects.md`](.agents/skills/unsloop/references/sustained-writing-projects.md) — portable long-form non-fiction state and resumption
 - [`.agents/skills/unsloop/references/research-provenance.md`](.agents/skills/unsloop/references/research-provenance.md) — claim, source, quotation, conflict, and freshness tracking
+- [`.agents/skills/unsloop/references/integrity-review.md`](.agents/skills/unsloop/references/integrity-review.md) — non-mutating Audit, source relationships, evidence testing, and proposed corrections
 - [`.agents/skills/unsloop/references/documentary-documentation.md`](.agents/skills/unsloop/references/documentary-documentation.md) — biography, documentary, procedure, policy, plan, instruction, and technical-document contracts
 - [`.agents/skills/unsloop/references/source-acquisition.md`](.agents/skills/unsloop/references/source-acquisition.md) — supplied, scoped-site, broad-web, and hybrid research with override and confidence controls
 - [`.agents/skills/unsloop/references/skill-composition.md`](.agents/skills/unsloop/references/skill-composition.md) — responsibility and authority when Unsloop runs beside another skill
@@ -139,6 +140,7 @@ Host capabilities are negotiated by function. Structured questions fall back to 
 - [`.agents/skills/unsloop/references/collaborative-writing.md`](.agents/skills/unsloop/references/collaborative-writing.md) — stakeholder authority and feedback reconciliation
 - [`.agents/skills/unsloop/references/multilingual-writing.md`](.agents/skills/unsloop/references/multilingual-writing.md) — translation, localization, cross-language evidence, and voice
 - [`.agents/skills/unsloop/references/structured-output.md`](.agents/skills/unsloop/references/structured-output.md) — machine-readable output contract
+- [`.agents/skills/unsloop/references/output-contracts.md`](.agents/skills/unsloop/references/output-contracts.md) — Review, Write, and information-preserving Audit delivery contracts
 
 ## Install Unsloop
 

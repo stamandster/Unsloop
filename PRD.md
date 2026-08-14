@@ -12,7 +12,7 @@ Unsloop is one writing-integrity and human-voice skill with three modes:
 
 - **Unsloop Review:** diagnose an existing draft constructively and selectively.
 - **Unsloop Write:** draft or revise from an author-led brief while preserving evidenced voice.
-- **Unsloop Audit:** perform an evidence-heavy comparison of writing, requirements, claims, sources, or a similarity report.
+- **Unsloop Audit:** perform a non-mutating, evidence-heavy comparison of writing, requirements, claims, sources, or a similarity report.
 
 Review is the default for a broad request about existing writing. Depth—brief, standard, or deep—is independent of mode.
 
@@ -36,7 +36,7 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | Review a draft | Draft plus optional brief and sources | Prioritized diagnosis, preserved strengths, and revision only if requested. |
 | Draft new writing | Topic or topic path, purpose, audience, content, constraints, and optional voice samples | Requested artifact with material assumptions and limitations disclosed. |
 | Revise in the user's voice | Draft, requested changes, and sufficient voice evidence | Meaning-preserving revision plus basis and confidence when fidelity is material. |
-| Audit source use | Draft, sources or similarity report, and governing requirements | Evidence boundary, source map, claim checks, requirement coverage, and calibrated conclusion. |
+| Audit source use | Draft, sources or similarity report, and governing requirements | Unchanged inspected artifact, evidence boundary, source map, claim checks, requirement coverage, calibrated conclusion, and separately proposed corrections. |
 | Brainstorm a topic | Interests or subject area, purpose, audience, and constraints | Distinct feasible options with angles, reader value, scope, and evidence needs. |
 | Develop fiction | Story seed, premise, notes, outline, or manuscript plus author decisions | A proportionate path from discovery through planning, drafting, continuity, revision, and handoff. |
 | Continue a fiction project | Existing manuscript and project records | Work resumed from accepted canon and current state without silently overwriting the author's layout or decisions. |
@@ -200,7 +200,7 @@ Given partial acceptance, rejection, a branch, a retcon, or a consequential revi
 
 ### Fiction review and audit
 
-Given a focused fiction-review request, Unsloop selects Review or Audit and the smallest applicable contract. It identifies the manuscript boundary and project stage, ranks manuscript-level causes before symptoms, preserves strong material, names downstream impact, and distinguishes simulated reader hypotheses and authenticity questions from actual reader research or lived-experience authority.
+Given a focused fiction-review request, Unsloop selects Review or Audit and the smallest applicable contract. It identifies the manuscript boundary and project stage, ranks manuscript-level causes before symptoms, preserves strong material, names downstream impact, and distinguishes simulated reader hypotheses and authenticity questions from actual reader research or lived-experience authority. When Audit is selected, manuscript and story state remain unchanged and corrections remain separate proposals.
 
 ### Completion and publication handoff
 

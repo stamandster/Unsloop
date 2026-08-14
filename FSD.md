@@ -49,7 +49,7 @@ No database, background service, model endpoint, provider account, or persistent
 | FS-018 | Fiction-state transition and branch handling | Current state, batch disposition, branch or merge decision | Valid project, unit, canon, batch, and branch transitions | PR-020; NFR-008 |
 | FS-019 | Retcon impact and revision recovery | Proposed consequential change, accepted manuscript, records, available recovery capability | Impact map, approval boundary, checkpoint, dependency-ordered change, reconciliation | PR-020; NFR-009 |
 | FS-020 | Fiction project tooling | Approved profile or project, operation, paths, flags | Dry-run plan, structural diagnostics, checkpoint, or deterministic assembly | PR-021; NFR-001, NFR-002, NFR-009 |
-| FS-021 | Fiction review selection and output | Manuscript boundary, project stage, intended experience, requested focus, evidence | Focused Review or Audit contract with prioritized findings and limits | PR-022; NFR-003, NFR-010 |
+| FS-021 | Fiction review selection and output | Manuscript boundary, project stage, intended experience, requested focus, evidence | Focused Review or unchanged-artifact Audit contract with prioritized findings and limits | PR-022; NFR-003, NFR-010, NFR-019 |
 | FS-022 | Fiction completion and publication handoff | Accepted manuscript units, project state, supplied submission requirements | Assembly and manifest or bounded publication-support artifact | PR-023; NFR-003, NFR-010 |
 | FS-023 | Sustained non-fiction project orchestration | Long-form request, existing artifacts, approved profile, authoritative version | Resumable `WritingProjectState`, stable units, bounded next action, and handoff | PR-024; NFR-008 |
 | FS-024 | Research provenance management | Claims, sources, quotations, manuscript locations, access and verification state | Linked `SourceRecord`, `ClaimRecord`, and `QuotationRecord` state with conflicts and freshness | PR-025; NFR-003, NFR-011 |
@@ -120,7 +120,7 @@ No database, background service, model endpoint, provider account, or persistent
 | PR-041 | FS-023, FS-025, FS-040 |
 | PR-042 | FS-025, FS-034, FS-040, FS-041 |
 | PR-043 | FS-008, FS-034, FS-042 |
-| PR-044 | FS-001, FS-005, FS-008, FS-025, FS-043 |
+| PR-044 | FS-001, FS-005, FS-008, FS-021, FS-025, FS-043 |
 | NFR-001 | FS-011, FS-012 |
 | NFR-002 | FS-012 |
 | NFR-003 | FS-004–FS-008 |
@@ -139,7 +139,7 @@ No database, background service, model endpoint, provider account, or persistent
 | NFR-016 | FS-013, FS-033, FS-036 |
 | NFR-017 | FS-024, FS-037–FS-039 |
 | NFR-018 | FS-023, FS-034, FS-040–FS-042 |
-| NFR-019 | FS-008, FS-025, FS-043 |
+| NFR-019 | FS-008, FS-021, FS-025, FS-043 |
 
 ## Logical data model
 
@@ -281,7 +281,7 @@ Record checkpoint name, reason, affected relative paths, content hashes, creatio
 
 ### `FictionReviewContract`
 
-Record selected Review or Audit contract, project stage, intended reader experience, manuscript and evidence boundary, findings, downstream impact, preservation targets, smallest interventions, and unresolved limits. Simulated reader and authenticity outputs must include their non-representative boundary.
+Record selected Review or Audit contract, project stage, intended reader experience, manuscript and evidence boundary, findings, downstream impact, preservation targets, smallest interventions, and unresolved limits. For Audit, also record the unchanged manuscript and story-state versions plus separately proposed corrections. Simulated reader and authenticity outputs must include their non-representative boundary.
 
 ### `PublicationHandoff`
 
@@ -418,7 +418,7 @@ Request and materials
 
 ### FS-001 — Select mode and depth
 
-1. Choose Audit for explicit source, citation, similarity, or evidence-heavy comparison.
+1. Choose Audit for explicit source, citation, similarity, or non-mutating evidence-heavy comparison.
 2. Choose Write for requested drafting or revision.
 3. Choose Review for broad diagnosis of existing writing.
 4. Apply only the depth warranted by the request and available evidence.
@@ -496,7 +496,7 @@ Inspect the active host's exposed capabilities rather than inferring them from a
 1. Load the fiction workflow for every fiction task, regardless of mode.
 2. Select Write for discovery, planning, drafting, requested revision, assembly, and publication-support writing.
 3. Select Review for broad manuscript critique and craft-focused diagnosis.
-4. Select Audit for evidence-heavy continuity, canon, chronology, research, historical, adaptation, source, or requirement comparison.
+4. Select Audit for non-mutating evidence-heavy continuity, canon, chronology, research, historical, adaptation, source, or requirement comparison.
 5. For combined requests, identify the primary deliverable and apply secondary lenses proportionately.
 6. Default a broad existing-manuscript request to Review and a broad idea or premise request to Write.
 
@@ -694,7 +694,7 @@ Define audience, prior knowledge, language, assistive context, task, artifact ve
 | Named-author style request | PR-008, PR-013, PR-016 / FS-004, FS-006, FS-014 | Request becomes broad non-exclusive traits; no exact imitation or signature copying. |
 | Fiction project exceeds context | PR-017, NFR-008 / FS-013, FS-015 | Resume packet and relevant records support bounded continuation without full conversational history. |
 | Broad existing-novel critique | PR-018, PR-022 / FS-016, FS-021 | Review plus fiction workflow; standard developmental focus rather than every contract at maximum depth. |
-| Continuity comparison against canon | PR-018, PR-022 / FS-016, FS-021 | Audit with exact manuscript and record boundary, conflicts, downstream impact, and confidence. |
+| Continuity comparison against canon | PR-018, PR-022, PR-044 / FS-016, FS-021, FS-043 | Audit with exact unchanged manuscript and record boundary, conflicts, downstream impact, confidence, and separately proposed resolutions. |
 | Existing monolithic manuscript | PR-019 / FS-017 | File remains intact; stable internal units and Proposed state are presented before creation. |
 | Partial acceptance | PR-020 / FS-018 | Only accepted scope becomes active or Confirmed; rejected details cannot leak forward. |
 | Alternate branch merge | PR-020 / FS-018, FS-019 | Parent checkpoint and conflicts are inspected; accepted merge is checkpointed and reconciled. |
@@ -718,7 +718,7 @@ Define audience, prior knowledge, language, assistive context, task, artifact ve
 | Addressed comments without approval | PR-027 / FS-026 | Artifact remains unapproved until the authorized approver accepts that version. |
 | Cross-language source adaptation | PR-028 / FS-027 | Qualification, attribution, terminology, quotation status, and ambiguity remain visible. |
 | Cross-language voice evidence only | PR-028 / FS-027 | Higher-level traits and lower confidence; no feature-for-feature replication claim. |
-| JSON Audit requested | PR-029, NFR-013 / FS-028 | Validatable structure with equivalent evidence, confidence, readiness, and out-of-scope limits. |
+| JSON Audit requested | PR-029, PR-044, NFR-013, NFR-019 / FS-028, FS-043 | Validatable structure with equivalent evidence, confidence, readiness, out-of-scope limits, artifact-unchanged state, and mutation authorization. |
 | Schema-valid weak-evidence report | PR-029 / FS-028 | Syntax validity is not presented as evidentiary validity. |
 | Initialize sustained project | PR-030 / FS-029 | Dry-run, approved profile, explicit apply, no overwrite, optional authorized voice profile. |
 | Invalid claim source or state | PR-030 / FS-029 | Read-only check identifies the exact unknown ID or invalid state. |

@@ -22,7 +22,7 @@ Treat every subject and genre as available unless a governing rule or the user's
 
 - Choose **Write** for discovery, brainstorming, planning, drafting, author-requested revision, continuation, assembly, synopsis, query, blurb, or publication-support writing.
 - Choose **Review** for broad critique, developmental editing, structure, pacing, character, relationship, POV, narration, dialogue, theme, prose, line editing, copyediting, simulated reader response, or authenticity questions.
-- Choose **Audit** for evidence-heavy continuity, chronology, canon, research, historical accuracy, adaptation, attribution, source-dependence, or requirement comparison.
+- Choose **Audit** for non-mutating, evidence-heavy continuity, chronology, canon, research, historical accuracy, adaptation, attribution, source-dependence, or requirement comparison.
 
 For a broad request about an existing manuscript, default to Review. For a broad request about an idea or premise, use Write and begin discovery. When the task combines modes, identify the primary deliverable and apply the other lens only where it materially helps.
 
@@ -93,7 +93,7 @@ For persistent work, use [fiction-project-operations.md](fiction-project-operati
 
 ## Review or audit
 
-Use [fiction-review.md](fiction-review.md) to select a proportionate review contract. Return the assessment and highest-value findings before optional rewrites. Distinguish critique from evidence-heavy comparison, and never claim that a simulated response represents real readers or a community.
+Use [fiction-review.md](fiction-review.md) to select a proportionate review contract. Return the assessment and highest-value findings before optional rewrites. Audit leaves the inspected manuscript and story records unchanged; any requested rewrite follows as a separate, authorized revision stage. Distinguish critique from evidence-heavy comparison, and never claim that a simulated response represents real readers or a community.
 
 ## Complete and package
 

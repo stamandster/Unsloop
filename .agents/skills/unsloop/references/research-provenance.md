@@ -53,4 +53,4 @@ Bibliography formatting and citation style are output rules. They do not upgrade
 
 ## Return the result
 
-For a provenance Audit, report the inspected boundary, claim status, supporting and conflicting sources, draft locations, quotation findings, stale checks, and required actions. State whether the result is passage-level, source-level, or project-level.
+For a provenance Audit, report the inspected boundary, claim status, supporting and conflicting sources, draft locations, quotation findings, stale checks, and required actions. Keep the inspected manuscript and provenance records unchanged; corrections remain proposed until a separate revision scope authorizes them. State whether the result is passage-level, source-level, or project-level.

@@ -29,4 +29,4 @@ Minimize sensitive information, protect promised identity treatment, and avoid p
 
 ## Return the boundary
 
-State transcript type, inspected range, attribution status, permissions, corrections, corroboration, unresolved disputes, subject-response status, and restrictions that affect drafting or publication.
+State transcript type, inspected range, attribution status, permissions, corrections, corroboration, unresolved disputes, subject-response status, and restrictions that affect drafting or publication. In Audit, do not silently clean, replace, omit, or reattribute testimony; propose any manuscript or transcript change separately with its permission and semantic effect.

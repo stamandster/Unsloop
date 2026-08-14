@@ -28,4 +28,4 @@ When analysis requires specialist judgment, preserve the calculation and route m
 
 ## Return the result
 
-Report the claim, source or dataset IDs, formula or transformation, reproduced result, displayed result, variance, status, confidence, limitations, and required correction. Keep executable formulas or code with the project only when authorized and useful for reproduction.
+Report the claim, source or dataset IDs, formula or transformation, reproduced result, displayed result, variance, status, confidence, limitations, and required correction. In Audit, keep the displayed claim and artifact unchanged and classify the correction as a proposal; recalculate or revise only in a separately authorized stage. Keep executable formulas or code with the project only when authorized and useful for reproduction.

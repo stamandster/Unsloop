@@ -17,6 +17,8 @@ Record each stakeholder's role, decision authority, scope, supplied directions, 
 
 Do not treat seniority, repetition, or the latest comment as automatic authority. Use the documented direction hierarchy and surface unresolved conflicts.
 
+An auditor, reviewer, or specialist owns findings only within their assigned scope; a finding does not confer authority to change the artifact. In Audit, keep the inspected version unchanged and route every proposed correction to the documented revision decision owner.
+
 ## Consolidate feedback
 
 Normalize comments into stable issues with location, request, rationale, authority, affected requirement or evidence, conflicts, proposed response, owner, and disposition. Merge duplicates without erasing materially different reasons.
@@ -35,4 +37,4 @@ Do not flatten multiple contributors into generic institutional prose unless tha
 
 ## Handoff
 
-Report resolved, partially resolved, rejected, deferred, and blocked feedback; decisions still needed; affected artifact versions; requirements or claims requiring recheck; and the next approval owner. Do not call the artifact approved until the authorized approver accepts the relevant version.
+Report resolved, partially resolved, rejected, deferred, and blocked feedback; decisions still needed; affected artifact versions; requirements or claims requiring recheck; and the next approval owner. Distinguish the audited version from any separately revised version. Do not call the artifact approved until the authorized approver accepts the relevant version.

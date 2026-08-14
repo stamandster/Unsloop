@@ -6,7 +6,7 @@ Read this file when adapting Unsloop to a new agent harness, when a preferred to
 
 Keep `SKILL.md` and its relative `references/` as the authoritative operational package. Do not make the method depend on a provider, model family, proprietary tool name, hidden reasoning format, invocation syntax, or UI control.
 
-Harness adapters may define discovery paths, invocation commands, optional metadata, and tool mappings. They must not change Unsloop's evidence rules, voice safeguards, classifications, readiness states, or prohibitions.
+Harness adapters may define discovery paths, invocation commands, optional metadata, and tool mappings. They must not change Unsloop's evidence rules, voice safeguards, classifications, readiness states, non-mutating Audit boundary, or prohibitions.
 
 ## Negotiate capabilities
 
@@ -18,7 +18,7 @@ At the start of a task, use the capabilities already exposed by the host. Map th
 | Read a draft or source | File, attachment, repository, or document access | Ask the user to paste or attach the needed material. |
 | Verify an external source | Browser, search, retrieval, or connector | Mark the claim unverified and request the source or permission to continue elsewhere. |
 | Enforce a scoped research corpus | Domain/site filter or navigation restricted to approved locators | Request exact pages or visit only approved locators; do not substitute general web search. |
-| Edit an artifact | Native patch, file-edit, or document tool | Return a clearly delimited revision for the user to apply. |
+| Edit an artifact | Native patch, file-edit, or document tool | In Write or authorized revision, return a clearly delimited revision for the user to apply; Audit alone returns findings and proposals without mutation. |
 | Persist a voice profile | Authorized memory or storage mechanism | Keep the profile task-local; do not persist it. |
 | Maintain a writing project | Repository or document editing | Return the proposed or updated Markdown records for the user to save; keep all paths relative. |
 | Extract or inspect non-text evidence | Format, document, media, spreadsheet, OCR, or transcription tool | Request a native export or mark extraction incomplete; preserve the original-to-text transformation boundary. |
@@ -35,6 +35,7 @@ Do not switch harnesses, models, execution modes, or accounts merely to obtain a
 - For sustained non-fiction, resume from `writing/STATUS.md` and only the relevant claims, sources, requirements, decisions, changes, and manuscript range. Do not carry verification or approval across uninspected revisions.
 - For recurring fictional speakers, load only applicable Confirmed `CVP-*` profiles and current relationship or knowledge state; keep model suggestions Proposed.
 - For documentary or controlled documentation, preserve the artifact family, authority, source policy, exact corpus, validation status, and maintenance state across model or harness transfers.
+- For Audit, preserve the authoritative inspected version and keep findings, proposed corrections, and any later revised artifact distinguishable across model or harness transfers.
 - When another skill owns domain or artifact behavior, apply [skill-composition.md](skill-composition.md); do not duplicate its intake or overrule its specialized validation.
 - Do not weaken integrity, attribution, privacy, authorization, or uncertainty rules for a smaller or less capable model.
 - Treat model-generated judgments as decision support. Different models may vary in precision and consistency; compatibility does not guarantee equivalent output quality.

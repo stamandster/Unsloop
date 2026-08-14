@@ -14,12 +14,13 @@ The name covers the whole cycle: inspect source use, remove formulaic loops, rec
 |---|---|---|---|
 | **Unsloop Review** | Diagnose a draft | Constructive and selective | “Review this without rewriting it.” |
 | **Unsloop Write** | Draft or revise | Author-led and voice-preserving | “Rewrite this in my voice.” |
-| **Unsloop Audit** | Examine sources and evidence | Forensic and explicitly bounded | “Compare this paper with these sources.” |
+| **Unsloop Audit** | Examine sources and evidence | Non-mutating, forensic, and explicitly bounded | “Compare this paper with these sources without changing it.” |
 
 ## Naming rules
 
 - Use **Unsloop** when referring to the project, shared method, or core skill.
 - Use the two-word mode names in user-facing prose.
+- Reserve **Audit** for assessment that leaves the inspected artifact unchanged; call a later change **revision**, even when the user requests both in one workflow.
 - Use lowercase hyphenated names for future skill folders: `unsloop-review`, `unsloop-write`, and `unsloop-audit`.
 - Do not add new mode names for mere differences in depth. Use **brief**, **standard**, or **deep** as review-depth settings.
 - Do not call a stylistic review an “AI detection” mode.
@@ -47,4 +48,4 @@ Keep the modes in the core `unsloop` skill until at least one of these is true:
 - users need to install or invoke it independently;
 - forward-testing shows that separation improves reliability.
 
-A split changes packaging and discovery, not the underlying integrity, voice, evidence, or ethics contracts. Any proposed split must update the PRD, FSD, architecture, portability instructions, validator, and mode-specific acceptance tests together.
+A split changes packaging and discovery, not the underlying integrity, voice, evidence, non-mutating Audit, or ethics contracts. Any proposed split must update the PRD, FSD, architecture, portability instructions, validator, and mode-specific acceptance tests together.

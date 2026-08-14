@@ -22,4 +22,4 @@ Use an appropriate artifact or modality skill for extraction, rendering, workboo
 
 ## Return the boundary
 
-Identify the original and derived artifact, inspected range, extraction status, uncertainty, missing content, verification performed, and claims that require checking against the original.
+Identify the original and derived artifact, inspected range, extraction status, uncertainty, missing content, verification performed, and claims that require checking against the original. In Audit, leave both original and audited derivative unchanged; proposed OCR, transcript, table, caption, or claim corrections belong to a separate revision stage.

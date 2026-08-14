@@ -24,7 +24,7 @@ Distinguish the requested form before research or architecture:
 - **Plan or direction:** proposed objectives, sequence, owners, dependencies, decisions, risks, and measures.
 - **Technical documentation:** versioned explanation or reference for a system, product, process, interface, environment, or implementation.
 
-Use Write for research planning, architecture, drafting, requested revision, and handoff; Review for factual-form, clarity, usability, coherence, and voice diagnosis; and Audit for evidence, provenance, currency, compliance, requirement, procedure-validation, or technical-accuracy comparison. Do not create a fourth mode.
+Use Write for research planning, architecture, drafting, requested revision, and handoff; Review for factual-form, clarity, usability, coherence, and voice diagnosis; and Audit for non-mutating evidence, provenance, currency, compliance, requirement, procedure-validation, or technical-accuracy comparison. Audit reports unsafe, unsupported, stale, or incorrect information without silently changing the controlled document. Do not create a fourth mode.
 
 When the user says “documentary style,” confirm or infer whether they mean evidence-led narrative voice, a documentary script, or controlled documentation. Do not apply cinematic narration to a policy or operational procedure unless explicitly requested.
 
@@ -145,6 +145,6 @@ Use human subject-matter, legal, safety, security, compliance, lived-experience,
 
 ## Revise and hand off
 
-Use [revision-control.md](revision-control.md) for consequential changes. At handoff, state the authoritative artifact version, form and audience, evidence acquisition mode, sites or corpora inspected, claim and quotation boundary, validation performed, tested or approval status, unresolved gaps, excluded material, maintenance owner, and next action.
+Use [revision-control.md](revision-control.md) for consequential changes. When revision follows Audit, preserve the unchanged audited version and audit result before creating the separately authorized revised version. At handoff, state the authoritative artifact version, form and audience, evidence acquisition mode, sites or corpora inspected, claim and quotation boundary, validation performed, tested or approval status, unresolved gaps, excluded material, maintenance owner, and next action.
 
 Do not call an artifact factual, tested, compliant, approved, safe, complete, or current beyond the evidence, execution, authority, and date actually established.

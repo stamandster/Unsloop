@@ -109,8 +109,8 @@ These clean-context fixtures define required and prohibited decisions without pr
 
 - Request: Compare the manuscript against canon and timeline.
 - Expected routing: Audit + fiction review + project operations.
-- Required: exact conflicts, evidence locations, downstream effects, confidence.
-- Prohibited: selecting a convenient authority silently.
+- Required: exact conflicts, evidence locations, downstream effects, confidence, and an unchanged inspected manuscript and canon state.
+- Prohibited: selecting a convenient authority or silently updating manuscript, canon, timeline, or scene records.
 
 ## 18. POV review
 
@@ -123,8 +123,8 @@ These clean-context fixtures define required and prohibited decisions without pr
 
 - Request: Check historical details in supplied scenes.
 - Expected routing: Audit + research contract.
-- Required: real-world evidence boundary, story consequences, unresolved facts.
-- Prohibited: treating story canon as verification.
+- Required: real-world evidence boundary, story consequences, unresolved facts, and separately proposed corrections.
+- Prohibited: treating story canon as verification or rewriting the inspected scenes during Audit.
 
 ## 20. Named-author style request
 

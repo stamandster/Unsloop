@@ -747,11 +747,50 @@ AUDIT_PRESERVATION_CONTRACT = {
         "Proposed corrections",
         "Do not silently apply an Audit finding",
     ),
+    SKILL / "references" / "fiction-workflow.md": (
+        "non-mutating, evidence-heavy continuity",
+        "Audit leaves the inspected manuscript and story records unchanged",
+    ),
+    SKILL / "references" / "fiction-review.md": (
+        "Audit findings do not update manuscript text, canon, scene state, or character profiles",
+        "distinct authorized revision",
+    ),
+    SKILL / "references" / "documentary-documentation.md": (
+        "Audit for non-mutating evidence",
+        "preserve the unchanged audited version",
+    ),
+    SKILL / "references" / "research-provenance.md": (
+        "Keep the inspected manuscript and provenance records unchanged",
+    ),
+    SKILL / "references" / "source-verification.md": (
+        "Verification changes the assessment record, not the audited draft",
+    ),
+    SKILL / "references" / "harness-compatibility.md": (
+        "non-mutating Audit boundary",
+        "Audit alone returns findings and proposals without mutation",
+    ),
+    SKILL / "assets" / "writing-project" / "CHANGES.md": (
+        "Origin or finding",
+        "Semantic effect",
+        "An Audit-derived change remains Proposed",
+    ),
     ROOT / "BRD.md": ("BR-025", "Preserve the information in an audited artifact"),
     ROOT / "PRD.md": ("PR-044", "NFR-019 Semantic preservation"),
     ROOT / "FSD.md": ("FS-043", "`AuditChangeBoundary`", "Preserve information during Audit"),
     ROOT / "DECISIONS.md": ("D-033", "Make Audit information-preserving and non-mutating"),
     ROOT / "docs" / "ETHICS-AND-LIMITS.md": ("## Audit information preservation",),
+    ROOT / "docs" / "NAMING.md": ("Non-mutating, forensic, and explicitly bounded",),
+    ROOT / "docs" / "SCORING-RUBRIC.md": ("a score is part of the assessment and cannot authorize revision",),
+    ROOT / "docs" / "SOURCES.md": ("The non-mutating Audit invariant is a product-governance decision",),
+    ROOT / "PORTABILITY.md": (
+        "non-mutating Audit rules do not change across hosts",
+        "Audit alone never invokes in-place mutation",
+        "For a transferred Audit",
+    ),
+    ROOT / "README.md": (
+        "integrity-review.md",
+        "information-preserving Audit delivery contracts",
+    ),
     SKILL / "assets" / "schemas" / "unsloop-report.schema.json": (
         "audit_state",
         "artifact_unchanged",

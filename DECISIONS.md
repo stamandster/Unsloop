@@ -116,7 +116,7 @@ For persistent fiction, use visible author-approved Markdown under `story/` and 
 
 **Status:** Accepted
 
-Load the fiction workflow for every fiction request, then use Write for creation and packaging, Review for constructive manuscript diagnosis, and Audit for evidence-heavy project, continuity, research, or source comparison. Do not create a fourth fiction mode.
+Load the fiction workflow for every fiction request, then use Write for creation and packaging, Review for constructive manuscript diagnosis, and Audit for non-mutating evidence-heavy project, continuity, research, or source comparison. Do not create a fourth fiction mode.
 
 ## D-019 — Make consequential fiction changes recoverable
 

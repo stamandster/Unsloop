@@ -44,7 +44,7 @@ In voice review, distinguish the user's evidenced author voice, the designed nar
 
 For recurring speakers, review against separate versioned character voice profiles. Test stable personality, baseline tone, cadence, syntax, diction, discourse habits, knowledge, relationship posture, cast contrast, and allowed contextual variation. A Confirmed profile is locked until the author accepts a prospective evolution or retroactive override; do not alter it merely to rationalize drift.
 
-Route fiction across the existing modes. Use Write for creation, requested revision, assembly, and publication-support artifacts; Review for broad and craft-focused diagnosis; and Audit for evidence-heavy continuity, canon, chronology, research, historical, adaptation, and source comparison. A broad existing-manuscript request defaults to a standard developmental Review.
+Route fiction across the existing modes. Use Write for creation, requested revision, assembly, and publication-support artifacts; Review for broad and craft-focused diagnosis; and Audit for non-mutating evidence-heavy continuity, canon, chronology, research, historical, adaptation, and source comparison. A broad existing-manuscript request defaults to a standard developmental Review.
 
 When onboarding an existing manuscript, inventory versions and inspected ranges, preserve its layout, assign stable internal scene IDs without renaming files, and present extracted state as Proposed with manuscript locations and confidence before creating or promoting records.
 

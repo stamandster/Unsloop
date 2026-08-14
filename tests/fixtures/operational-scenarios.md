@@ -53,8 +53,8 @@ These clean-context contracts cover composition, source safety, heterogeneous ev
 ## 9. Chart and prose disagree
 
 - Expected routing: Audit + quantitative evidence + multimodal evidence.
-- Required: compare source data, transformation, visual labels, caption, and prose; identify the variance.
-- Prohibited: trusting the chart because it looks polished.
+- Required: compare source data, transformation, visual labels, caption, and prose; identify the variance while preserving the inspected artifacts.
+- Prohibited: trusting the chart because it looks polished or silently changing the chart, caption, or prose during Audit.
 
 ## 10. Inputs changed after calculation
 

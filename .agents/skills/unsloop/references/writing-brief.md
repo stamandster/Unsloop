@@ -168,7 +168,7 @@ Infer the draft's apparent topic, goal, audience, and context. State a material 
 
 ### Unsloop Audit
 
-Record the intended function of the writing, governing directions, content roles, and source or policy boundary. A persuasive, pastoral, commercial, academic, or personal goal never lowers the evidence standard. Distinguish required content supplied by the user from claims actually supported by sources.
+Record the intended function of the writing, governing directions, content roles, source or policy boundary, and authoritative inspected version. A persuasive, pastoral, commercial, academic, or personal goal never lowers the evidence standard. Distinguish required content supplied by the user from claims actually supported by sources. Leave the inspected artifact unchanged and treat correction as a separate revision decision.
 
 ## Run the success test
 

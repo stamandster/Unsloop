@@ -13,7 +13,7 @@ Read this file for critique, developmental editing, focused fiction review, cont
 
 ## Select mode and review type
 
-Use **Review** for constructive diagnosis based mainly on the manuscript. Use **Audit** when the task requires evidence-heavy comparison against canon, chronology, project records, research, source works, historical facts, or explicit requirements.
+Use **Review** for constructive diagnosis based mainly on the manuscript. Use **Audit** when the task requires non-mutating, evidence-heavy comparison against canon, chronology, project records, research, source works, historical facts, or explicit requirements. Audit findings do not update manuscript text, canon, scene state, or character profiles.
 
 Select only the contracts that fit the request and project stage:
 
@@ -43,6 +43,7 @@ Record:
 - requested review type and depth;
 - relevant author decisions and locked constraints;
 - whether rewriting, examples, or diagnosis only was requested; and
+- for Audit, the authoritative unchanged manuscript or record version and any separately authorized revision scope; and
 - any context limit that prevents manuscript-wide conclusions.
 
 When reviewing an excerpt, distinguish local findings from hypotheses requiring the full manuscript. When project records conflict with accepted prose, identify the conflict rather than choosing silently.
@@ -87,7 +88,7 @@ Preserve narrative and character voice. Do not line-edit unstable structure as t
 
 ### Research, adaptation, and integrity
 
-Use [integrity-review.md](integrity-review.md) and [source-verification.md](source-verification.md). Keep story canon separate from real-world support and describe publication or licensing questions as unresolved policy matters, not legal verdicts.
+Use [integrity-review.md](integrity-review.md) and [source-verification.md](source-verification.md). Keep story canon separate from real-world support and describe publication or licensing questions as unresolved policy matters, not legal verdicts. In Audit, report a contradiction or unsupported story record without silently resolving, retconning, or rewriting it.
 
 ## Prioritize findings
 
@@ -125,7 +126,7 @@ Return:
 3. **Continuity or requirement map:** only for evidence-heavy or multi-part work.
 4. **What should remain unchanged:** effective structure, scenes, voice, character work, or deliberate irregularity.
 5. **Revision sequence:** only when multiple changes depend on one another.
-6. **Revised example or manuscript:** only when requested.
+6. **Revised example or manuscript:** only when separately requested; after Audit, identify it as a distinct authorized revision rather than part of the inspected artifact.
 7. **Evidence and readiness limits:** uninspected ranges, missing records, research, authority, or professional review.
 
 Do not bury the assessment under a checklist or represent a focused review as a complete manuscript evaluation.

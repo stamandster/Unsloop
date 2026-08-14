@@ -40,6 +40,8 @@ If sources disagree, state the disagreement and the basis of each claim. Do not 
 
 Use short excerpts needed for comparison. Do not reproduce long protected passages. Preserve exact links or bibliographic details for sources actually checked.
 
+Verification changes the assessment record, not the audited draft. When verification exposes a false, unsupported, overstated, or mismatched claim, report the finding and proposed correction without applying it unless a separate bounded revision is authorized.
+
 When verified prose changes materially, mark the affected claim or quotation for recheck rather than carrying the old verification forward silently.
 
 Do not imply that checking one passage validates the whole source, every claim attached to it, or the completeness of the writer's source corpus.

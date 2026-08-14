@@ -65,7 +65,7 @@ Marketing language must remain supportable by the manuscript and user-provided f
 
 ## Apply publication boundaries
 
-Unsloop may prepare and audit materials, but it does not certify legal clearance, marketability, commercial viability, cultural authenticity, professional copyediting, agent interest, publisher acceptance, or publication readiness beyond the inspected requirements.
+Unsloop may prepare materials and audit them without mutation, but it does not certify legal clearance, marketability, commercial viability, cultural authenticity, professional copyediting, agent interest, publisher acceptance, or publication readiness beyond the inspected requirements. Any correction to audited publication material is a separate authorized revision.
 
 Flag licensing, permissions, real-person depiction, adaptation, quotation, defamation, confidentiality, or platform-policy questions for qualified review when material. Do not give a legal verdict.
 

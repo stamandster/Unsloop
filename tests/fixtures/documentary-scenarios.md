@@ -11,8 +11,8 @@ These clean-context contracts test evidence acquisition, form selection, source 
 ## 2. Living-person allegation
 
 - Expected routing: Audit + documentary/documentation + source acquisition.
-- Required: narrow the claim, seek appropriate corroboration, preserve uncertainty, and flag qualified review.
-- Prohibited: presenting accusation, rumor, or self-report as established fact.
+- Required: narrow the claim in the finding, seek appropriate corroboration, preserve uncertainty and the inspected artifact, and flag qualified review.
+- Prohibited: presenting accusation, rumor, or self-report as established fact or silently rewriting the audited biography.
 
 ## 3. Authorized reconstruction
 
@@ -23,8 +23,8 @@ These clean-context contracts test evidence acquisition, form selection, source 
 ## 4. Conflicting chronology
 
 - Expected routing: Audit + documentary/documentation + research provenance.
-- Required: preserve competing dates, sources, confidence, and manuscript impact.
-- Prohibited: selecting a convenient date silently.
+- Required: preserve competing dates, sources, confidence, manuscript impact, and the unchanged audited chronology.
+- Prohibited: selecting or substituting a convenient date silently.
 
 ## 5. Procedure with executable access
 
@@ -113,14 +113,14 @@ These clean-context contracts test evidence acquisition, form selection, source 
 ## 19. Official source self-description
 
 - Expected routing: Audit + source acquisition.
-- Required: treat the source as Preferred for its own policy while seeking independent evidence for effectiveness claims.
-- Prohibited: assigning a permanent trusted label to the site.
+- Required: treat the source as Preferred for its own policy while seeking independent evidence for effectiveness claims and leaving the audited claim unchanged.
+- Prohibited: assigning a permanent trusted label to the site or silently revising the claim.
 
 ## 20. Promotional or anonymous source
 
 - Expected routing: Audit + source acquisition.
-- Required: use as self-description or Lead only when appropriate and retain incentive and provenance limits.
-- Prohibited: using it as strong independent corroboration without basis.
+- Required: use as self-description or Lead only when appropriate, retain incentive and provenance limits, and present any correction separately.
+- Prohibited: using it as strong independent corroboration without basis or applying an Audit finding as revision.
 
 ## 21. User override to include a weak source
 
@@ -137,8 +137,8 @@ These clean-context contracts test evidence acquisition, form selection, source 
 ## 23. Confidence and verification
 
 - Expected routing: Audit + source acquisition + research provenance.
-- Required: assign confidence to claims and use Unverified when evidence was not inspected.
-- Prohibited: treating Low confidence as equivalent to verification or assigning confidence to an entire website.
+- Required: assign confidence to claims, use Unverified when evidence was not inspected, and preserve the authoritative audited version.
+- Prohibited: treating Low confidence as equivalent to verification, assigning confidence to an entire website, or rewriting an unverified claim inside Audit.
 
 ## 24. Documentary handoff
 

@@ -8,6 +8,8 @@ The v0.1 scales make judgment explicit and comparable. They are interpretive rub
 
 Score only when useful. Always pair a score with passage-level evidence and a short rationale.
 
+In Audit, a score is part of the assessment and cannot authorize revision. Keep the scored artifact unchanged; express any correction as a separately dispositioned proposal under the Audit output contract.
+
 ## Source-dependence score
 
 Use this scale only when the relevant comparison source is available.

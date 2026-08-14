@@ -1,6 +1,6 @@
 # Portability
 
-> **Document role:** Deployment, harness, and transfer sub-specification for `PR-014`–`PR-030`, `NFR-001`, `NFR-002`, `NFR-007`–`NFR-013`, and `FS-011`–`FS-029` in [`PRD.md`](PRD.md) and [`FSD.md`](FSD.md).
+> **Document role:** Deployment, harness, and transfer sub-specification for `PR-014`–`PR-044`, `NFR-001`–`NFR-002`, `NFR-007`–`NFR-019`, and `FS-011`–`FS-043` in [`PRD.md`](PRD.md) and [`FSD.md`](FSD.md).
 
 ## Guarantee
 
@@ -12,7 +12,7 @@ The core is both harness-agnostic and model-agnostic:
 - every operational reference is relative to the skill directory;
 - no provider, model ID, proprietary tool name, hidden reasoning format, or UI control is required;
 - missing host capabilities have explicit fallbacks; and
-- evidence, voice, privacy, readiness, and ethics rules do not change across hosts.
+- evidence, voice, privacy, readiness, ethics, and non-mutating Audit rules do not change across hosts.
 
 Compatibility means the same method can load and run. It does not promise identical reasoning quality, context capacity, tool access, latency, cost, or output across models.
 
@@ -30,7 +30,7 @@ Harness discovery link/copy   optional adapter to the same core
 Model and tool selection      supplied by the active harness
 ```
 
-Discovery paths, invocation syntax, UI metadata, and tool mappings are adapters. They may expose the core but must not fork or rewrite its method.
+Discovery paths, invocation syntax, UI metadata, and tool mappings are adapters. They may expose the core but must not fork or rewrite its method. An adapter must not collapse Audit and revision into one mutation step merely because the host offers in-place editing.
 
 ## Harness matrix
 
@@ -72,7 +72,7 @@ Quantitative, interview, media, content-map, maintenance, and usability ledgers 
 
 It requires no package manager, build step, MCP server, memory service, API key, environment variable, absolute filesystem path, or user-level configuration. Durable project decisions live in checked-in Markdown, so using Unsloop does not depend on a memory service.
 
-External access is optional and task-driven. A normal writing review works offline. An Audit that verifies online sources requires a host with source access or user-supplied source text. If neither exists, Unsloop marks the claim unverified instead of changing standards.
+External access is optional and task-driven. A normal writing review works offline. An Audit that verifies online sources requires a host with source access or user-supplied source text. If neither exists, Unsloop marks the claim unverified instead of changing standards or rewriting the audited claim.
 
 When external access exists, the portable contract governs it by capability rather than vendor: User-provided only, Scoped web, Broad web, or Hybrid. A host that cannot enforce a domain filter must navigate only approved locators or ask the user to supply pages; it may not silently approximate a scoped corpus with general search. Source suitability, verification, confidence, override, and actual test status remain separate in every harness.
 
@@ -82,7 +82,7 @@ Persistent fiction projects use visible, relative Markdown beneath an author-app
 
 Unsloop bundles reusable fiction templates as optional assets and `scripts/fiction_project.py` as an optional standard-library utility. The utility is not required to write or review fiction. It defaults mutation-capable operations to dry-run, confines paths to the selected project, refuses existing destinations, and has a manual Markdown fallback. Projects created from the templates remain ordinary author-owned files with no Unsloop runtime dependency.
 
-Interactive presentation adapts to the host. A native structured-input control may present short choices; plain text preserves the same decision when no such control exists. A native file editor may apply changes; otherwise Unsloop returns a delimited revision. Voice samples remain task inputs and are not persisted unless the user explicitly authorizes storage through an available mechanism.
+Interactive presentation adapts to the host. A native structured-input control may present short choices; plain text preserves the same decision when no such control exists. In Write or separately authorized revision, a native file editor may apply changes; otherwise Unsloop returns a delimited revision. Audit alone never invokes in-place mutation. Voice samples remain task inputs and are not persisted unless the user explicitly authorizes storage through an available mechanism.
 
 ## Optional user-level links
 
@@ -138,6 +138,7 @@ The dependency-free validator checks:
 - sustained non-fiction, provenance, revision, collaboration, multilingual, structured-output, template, and tooling contracts;
 - documentary/documentation form, source-acquisition scope, source-override, chronology, and validation-state contracts;
 - skill-composition, untrusted-source isolation, quantitative, interview, multimodal, documentation-system, maintenance, and reader-validation contracts;
+- Audit information preservation, semantic-change classification, structured artifact state, and separate revision authorization;
 - the project-owned multi-harness link utility;
 - BRD, PRD, and FSD traceability;
 - unresolved placeholders and broken relative Markdown links; and
@@ -159,5 +160,6 @@ After copying or cloning the project:
 8. For transferred research, confirm `SOURCE-POLICY.md` still reflects the intended corpus and that scoped domains, overrides, last-checked dates, and validation evidence remain current.
 9. Confirm that active specialist skills still own the same domain and artifact properties and that no transferred source content has been promoted to instructions.
 10. For transferred documentation systems, inspect `CONTENT-MAP.md`, `MAINTENANCE.md`, and relevant evidence ledgers before claiming currentness or usability.
+11. For a transferred Audit, retain the authoritative inspected artifact or identifier, confirm its unchanged state, and keep proposed corrections separate from any revised artifact and authorization record.
 
 Do not maintain divergent independent copies under the same skill name. The root specifications and method documents need not load during every invocation, but they must travel with the authoritative repository so maintainers can reproduce the product's rationale, requirements, and validation contract.
