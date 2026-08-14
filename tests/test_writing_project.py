@@ -239,6 +239,12 @@ class WritingProjectTests(unittest.TestCase):
         self.assertEqual(schema["properties"]["schema_version"]["const"], "1.0")
         self.assertIn("findings", schema["required"])
         self.assertIn("readiness", schema["required"])
+        self.assertIn("audit_state", schema["properties"])
+        audit_state = schema["properties"]["audit_state"]
+        self.assertIn("artifact_unchanged", audit_state["required"])
+        self.assertIn("audit_state", schema["allOf"][0]["then"]["required"])
+        finding_properties = schema["properties"]["findings"]["items"]["properties"]
+        self.assertIn("proposed_correction", finding_properties)
 
 
 if __name__ == "__main__":

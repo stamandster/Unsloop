@@ -52,6 +52,7 @@ Unsloop can:
 - classify supplied material as required, optional supporting, background only, or excluded;
 - distinguish hard constraints, working targets, component allocations, and safety buffers;
 - audit requirement coverage separately from claim and source verification;
+- keep Audit non-mutating, preserve the authoritative inspected artifact, and separate findings from any later authorized revision;
 - test examples for function and persuasive language for emotional integrity;
 - distinguish ready work from provisional work that still requires a decision, evidence, or authorization;
 - request authorized examples of the user's previous writing when closer voice fidelity would materially improve the result;
@@ -93,6 +94,7 @@ Unsloop cannot:
 - infer batch acceptance from silence, overwrite an existing project or checkpoint, or claim simulated feedback represents real readers or a community;
 - treat a bibliography entry, schema-valid file, addressed comment, or fluent translation as proof of source consultation, evidentiary support, approval, or cultural authority;
 - silently carry verification across a materially changed claim or apply rejected revision content;
+- silently alter audited claims, positions, recommendations, conclusions, scope, certainty, evidence strength, chronology, quantities, attribution, causality, conditions, exceptions, or exclusions;
 - promise exact replication of a person, infer identity from style, or use voice samples as authority for new facts or personal experiences.
 
 ## Definition of success
@@ -122,6 +124,7 @@ A successful Unsloop result is:
 - **Instruction-isolated:** retrieved evidence cannot redefine permissions, tools, scope, or project state.
 - **Evidence-reproducible:** numerical, interview, and multimodal support retains its inputs, permissions, transformations, coverage, and uncertainty.
 - **Operationally maintainable:** documentation dependencies, corrections, lifecycle state, and actual reader-validation method remain inspectable after publication.
+- **Audit-preserving:** the inspected artifact remains unchanged and every proposed correction exposes its semantic effect, authorization, and disposition.
 
 ## Non-goals for v0.1
 

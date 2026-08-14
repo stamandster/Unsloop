@@ -23,9 +23,13 @@ For a brief review, cap the concerns at the five most useful findings. For a sta
 Add:
 
 - **Evidence boundary:** versions and sources inspected or unavailable
+- **Artifact state:** confirm that Audit left the inspected artifact unchanged; if revision was separately authorized, identify the distinct revision stage and its scope
 - **Source map:** draft location, source, classified relationship, dependence score, confidence
 - **Claim verification:** verified, overstated or mismatched, secondary, and unverified claims
+- **Proposed corrections:** distinguish presentation-only from meaning-changing proposals and state semantic effects, decision owner, and disposition
 - **Integrity conclusion:** supported findings and unresolved questions without inferring intent
+
+Do not silently apply an Audit finding. If the user requests Audit plus revision, preserve the Audit output or record first, then return the separately authorized revision with its change boundary. A finding that information is false, unsupported, contradictory, misleading, or too source-dependent is not permission to substitute different information.
 
 When an outline, rubric, policy, template, or multi-part brief governs the artifact, add a **Requirement coverage** map with requirement, role, artifact location, support or decision, and status.
 

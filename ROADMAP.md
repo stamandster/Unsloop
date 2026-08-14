@@ -50,7 +50,7 @@
 - [x] Add an optional machine-readable Unsloop report schema and portable JSON project-state export
 - [x] Add sustained-writing templates and fail-closed standard-library project tooling
 - [x] Add Guided, Adaptive, and Autonomous sustained non-fiction collaboration cadences
-- [x] Add deterministic sustained-project tests and 27 clean-context behavioral scenario contracts
+- [x] Add deterministic sustained-project tests and 32 clean-context behavioral scenario contracts
 - [x] Add author-controlled, versioned character personality and dialogue profiles with drift and override controls
 - [x] Add documentary, biography, procedure, policy, plan, direction, instruction, and technical-documentation form contracts
 - [x] Add user-only, scoped-web, broad-web, and hybrid source acquisition with claim-specific suitability and non-upgrading overrides
@@ -61,6 +61,8 @@
 - [x] Add documentation-system architecture, dependency, maintenance, correction, deprecation, withdrawal, and archival controls
 - [x] Add reader, task, accessibility, plain-language, and localization validation evidence states
 - [x] Add 24 clean-context operational extension scenarios and deterministic ledger checks
+- [x] Make Audit non-mutating with explicit semantic-field protection and separate revision authorization
+- [x] Add Audit information-preservation requirements, decision records, validator checks, and behavioral scenarios
 
 ## v0.2 — Examples and calibration
 
@@ -107,6 +109,7 @@
 - [ ] Forward-test prompt injection, redirects, active downloads, credential requests, and hostile metadata in research corpora
 - [ ] Forward-test numerical reproduction, interview permissions, OCR/transcript uncertainty, and visual-claim boundaries
 - [ ] Forward-test content dependency propagation, correction, deprecation, withdrawal, archival, and reader-validation labeling
+- [ ] Forward-test Audit-only, Audit-plus-copyedit, and Audit-plus-substantive-revision boundaries across models and harnesses
 
 ## v0.3 — Assisted audit tooling
 

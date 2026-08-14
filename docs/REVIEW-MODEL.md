@@ -1,6 +1,6 @@
 # Review Model
 
-> **Specification role:** Normative method for `PR-003`–`PR-008`, `PR-016`–`PR-030`, `FS-003`–`FS-007`, and `FS-014`–`FS-029` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md). Ethical limits in [`ETHICS-AND-LIMITS.md`](ETHICS-AND-LIMITS.md) control whenever a method rule appears to conflict.
+> **Specification role:** Normative method for `PR-003`–`PR-008`, `PR-016`–`PR-044`, `FS-003`–`FS-007`, and `FS-014`–`FS-043` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md). Ethical limits in [`ETHICS-AND-LIMITS.md`](ETHICS-AND-LIMITS.md) control whenever a method rule appears to conflict.
 
 ## Overview
 
@@ -65,6 +65,8 @@ If evidence must be acquired, select User-provided only, Scoped web, Broad web, 
 For numerical evidence, inspect data version, population, period, units, fields, filters, exclusions, transformations, formulas, rounding, uncertainty, reproduced values, and agreement across prose and visuals. For interviews, inspect consent, attribution, record type, transcript range, quotation permission, correction and subject-response status, corroboration, and restrictions. For non-text evidence, inspect the original-to-derived transformation, coverage, missing content, and verification against the original.
 
 For documentation systems, map audience tasks, content types, canonical owners, supported versions, dependencies, reused explanations, and navigation. Apply change impact before releasing revisions. Maintain correction, deprecation, withdrawal, supersession, and archival state. Distinguish simulated reader hypotheses, automated checks, expert review, and observed human tests when evaluating comprehension, findability, task performance, accessibility, plain language, or localization.
+
+For Audit, establish the authoritative version and leave it unchanged. An audit may change the assessment of information, not the audited information. Report proposed corrections separately and identify whether each is presentation-only or meaning-changing. If revision is also requested, preserve the audit result as a distinct stage and establish a separate bounded revision contract.
 
 For substantial revision, establish the authoritative version, allowed scope, protected material, and approval cadence. Classify material changes, map downstream evidence and requirement effects, checkpoint consequential work, apply only accepted changes, and reconcile the manuscript and ledgers. For collaborators, distinguish governing authority, author-owned choices, subject-matter decisions, editorial recommendations, and optional preferences; addressed feedback is not approval.
 
@@ -203,6 +205,6 @@ Map claims and sources, compare source relationships passage by passage, apply t
 
 ## Revision rule
 
-Diagnose by default. Rewrite only when requested. When rewriting, preserve meaning, position, natural vocabulary, intended audience, and legitimate irregularity. If voice fidelity is material, report the evidence basis and Low, Moderate, or High confidence. Do not rewrite good prose merely because it is imperfect.
+Diagnose by default. Audit never rewrites by implication. Rewrite only when separately requested. When rewriting, preserve meaning, position, natural vocabulary, intended audience, and legitimate irregularity. If voice fidelity is material, report the evidence basis and Low, Moderate, or High confidence. Do not rewrite good prose merely because it is imperfect.
 
 Apply the mode-specific delivery and readiness rules in [`REVIEW-OUTPUT.md`](REVIEW-OUTPUT.md). Apply numeric anchors only under the conditions in [`SCORING-RUBRIC.md`](SCORING-RUBRIC.md).

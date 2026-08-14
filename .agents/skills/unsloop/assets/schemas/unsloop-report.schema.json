@@ -43,10 +43,34 @@
           "confidence": {"enum": ["Low", "Moderate", "High"]},
           "severity": {"enum": ["Low", "Moderate", "High", "Critical"]},
           "preserve": {"type": ["string", "null"]},
-          "action": {"type": "string"}
+          "action": {"type": "string"},
+          "proposed_correction": {
+            "type": ["object", "null"],
+            "properties": {
+              "classification": {"enum": ["Presentation-only", "Meaning-changing"]},
+              "summary": {"type": "string"},
+              "semantic_effect": {"type": "string"},
+              "downstream_effect": {"type": ["string", "null"]},
+              "decision_owner": {"type": ["string", "null"]},
+              "disposition": {"enum": ["Proposed", "Accepted", "Partially accepted", "Rejected", "Revision requested", "Applied", "Superseded"]}
+            },
+            "required": ["classification", "summary", "semantic_effect", "disposition"],
+            "additionalProperties": false
+          }
         },
         "additionalProperties": false
       }
+    },
+    "audit_state": {
+      "type": "object",
+      "required": ["artifact_unchanged", "mutation_authorization"],
+      "properties": {
+        "artifact_unchanged": {"type": "boolean"},
+        "mutation_authorization": {"enum": ["None", "Proposals only", "Presentation-only edits", "Specified meaning-changing edits"]},
+        "revised_artifact": {"type": ["string", "null"]},
+        "authorized_scope": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
     },
     "records": {
       "type": "object",
@@ -63,5 +87,14 @@
     },
     "out_of_scope": {"type": "array", "items": {"type": "string"}}
   },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"mode": {"const": "Audit"}},
+        "required": ["mode"]
+      },
+      "then": {"required": ["audit_state"]}
+    }
+  ],
   "additionalProperties": false
 }

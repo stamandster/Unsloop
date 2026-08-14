@@ -725,28 +725,70 @@ OPERATIONAL_EXTENSION_CONTRACT = {
     ),
 }
 
+AUDIT_PRESERVATION_CONTRACT = {
+    SKILL / "SKILL.md": (
+        "Audit may change the assessment of information, not the audited information itself",
+        "leave the audited artifact unchanged",
+        "Never silently replace, remove, strengthen, soften, or reorganize audited information",
+    ),
+    SKILL / "references" / "integrity-review.md": (
+        "## Preserve the audited information",
+        "Treat Audit as non-mutating by default",
+        "presentation-only or meaning-changing",
+        "leave it Proposed",
+    ),
+    SKILL / "references" / "revision-control.md": (
+        "Audit findings do not authorize their own application",
+        "presentation-only edits",
+        "specified meaning-changing edits",
+    ),
+    SKILL / "references" / "output-contracts.md": (
+        "Artifact state",
+        "Proposed corrections",
+        "Do not silently apply an Audit finding",
+    ),
+    ROOT / "BRD.md": ("BR-025", "Preserve the information in an audited artifact"),
+    ROOT / "PRD.md": ("PR-044", "NFR-019 Semantic preservation"),
+    ROOT / "FSD.md": ("FS-043", "`AuditChangeBoundary`", "Preserve information during Audit"),
+    ROOT / "DECISIONS.md": ("D-033", "Make Audit information-preserving and non-mutating"),
+    ROOT / "docs" / "ETHICS-AND-LIMITS.md": ("## Audit information preservation",),
+    SKILL / "assets" / "schemas" / "unsloop-report.schema.json": (
+        "audit_state",
+        "artifact_unchanged",
+        "proposed_correction",
+        "Meaning-changing",
+        '"then": {"required": ["audit_state"]}',
+    ),
+    ROOT / "tests" / "fixtures" / "writing-scenarios.md": (
+        "## 28. Audit-only unsupported claim",
+        "## 29. Audit plus grammar cleanup",
+        "## 31. Audit plus authorized substantive correction",
+        "## 32. Clarity edit that changes meaning",
+    ),
+}
+
 SPECIFICATION_CONTRACT = {
     ROOT / "BRD.md": (
         "## Business requirements",
         "BR-001",
-        "BR-024",
+        "BR-025",
         "[`PRD.md`](PRD.md)",
         "[`FSD.md`](FSD.md)",
     ),
     ROOT / "PRD.md": (
         "## Functional requirements",
         "PR-001",
-        "PR-043",
+        "PR-044",
         "NFR-001 Portability",
         "NFR-008 Long-form resilience",
-        "NFR-018 Documentation operability",
+        "NFR-019 Semantic preservation",
         "[`BRD.md`](BRD.md)",
         "[`FSD.md`](FSD.md)",
     ),
     ROOT / "FSD.md": (
         "## Functional components",
         "FS-001",
-        "FS-042",
+        "FS-043",
         "`WritingBrief`",
         "`EvidenceBoundary`",
         "`VoiceBrief`",
@@ -757,6 +799,7 @@ SPECIFICATION_CONTRACT = {
         "`ImpactMap`",
         "`PublicationHandoff`",
         "`WritingProjectState`",
+        "`AuditChangeBoundary`",
         "`StructuredUnsloopReport`",
         "## Verification matrix",
     ),
@@ -788,7 +831,7 @@ SPECIFICATION_CONTRACT = {
         "## D-016 — Separate the portable core from harness adapters",
         "## D-017 — Keep fiction inside Write and make its state author-owned",
         "## D-021 — Bound fiction feedback and publication claims",
-        "## D-032 — Treat documentation as an operated system after publication",
+        "## D-033 — Make Audit information-preserving and non-mutating",
     ),
 }
 
@@ -985,6 +1028,17 @@ def validate() -> list[str]:
             if requirement not in text:
                 errors.append(
                     f"operational-extension safeguard missing from "
+                    f"{path.relative_to(ROOT)}: {requirement}"
+                )
+
+    for path, requirements in AUDIT_PRESERVATION_CONTRACT.items():
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for requirement in requirements:
+            if requirement not in text:
+                errors.append(
+                    f"audit-preservation safeguard missing from "
                     f"{path.relative_to(ROOT)}: {requirement}"
                 )
 

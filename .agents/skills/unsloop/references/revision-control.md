@@ -6,6 +6,8 @@ Read this file for substantial revision, redline-style explanation, partial acce
 
 Record the authoritative input version, requested outcome, allowed scope, protected material, governing requirements, evidence boundary, desired comparison form, and approval cadence. Do not broaden “copyedit” into substantive rewriting or treat “make it better” as permission to change the writer's position.
 
+When revision follows Audit, preserve the audit as a separate non-mutating record. Record whether authorization permits proposals only, presentation-only edits, specified meaning-changing edits, or an explicitly bounded audit-and-revise batch. Audit findings do not authorize their own application.
+
 ## Classify changes
 
 Use stable `CHG-*` records when a project needs persistent control. Classify each material change as:
@@ -33,6 +35,8 @@ Before a consequential or bulk revision:
 7. reconcile the manuscript, ledgers, and resume state.
 
 Never overwrite an existing checkpoint or unrelated user work.
+
+Before applying an audit-derived revision, compare the before and after versions for claim, position, recommendation, conclusion, scope, certainty, evidence strength, chronology, quantity and unit, attribution, causality, condition, exception, and exclusion. Treat any difference in those fields as meaning-changing even when the prose sounds clearer.
 
 ## Process disposition
 

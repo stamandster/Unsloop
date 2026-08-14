@@ -1,6 +1,6 @@
 # Review Output Contracts
 
-> **Specification role:** Normative output and readiness sub-specification for `PR-009`–`PR-010`, `PR-016`–`PR-030`, `FS-008`–`FS-009`, and `FS-014`–`FS-029` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md).
+> **Specification role:** Normative output and readiness sub-specification for `PR-009`–`PR-010`, `PR-016`–`PR-044`, `FS-008`–`FS-009`, and `FS-014`–`FS-043` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md).
 
 ## Default: Unsloop Review
 
@@ -35,6 +35,8 @@ Include only when requested. If the user asks for both review and revision, keep
 
 ## Unsloop Audit
 
+Audit is non-mutating. State the authoritative inspected version and confirm that it remains unchanged. If the user separately requested revision, preserve the Audit as a distinct stage and identify the revised version and authorized scope.
+
 Add these sections:
 
 ### Evidence boundary
@@ -64,6 +66,10 @@ When the artifact is governed by an outline, rubric, policy, template, or multi-
 ### Integrity conclusion
 
 Summarize supported findings and unresolved questions. Do not infer intent.
+
+### Proposed corrections
+
+Do not apply corrections inside Audit. For each material proposal, identify its finding and location, classify it as **Presentation-only** or **Meaning-changing**, summarize its semantic and downstream effects, identify the decision owner, and record its disposition. Grammar, clarity, tone, cleanup, or formatting authority does not permit changing a claim, position, recommendation, conclusion, scope, certainty, evidence strength, chronology, quantity, attribution, causality, condition, exception, or exclusion.
 
 ## Unsloop Write
 

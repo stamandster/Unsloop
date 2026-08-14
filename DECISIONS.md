@@ -201,3 +201,9 @@ Do not collapse numbers, testimony, and extracted media into generic sources. Qu
 **Status:** Accepted
 
 For interconnected documentation, maintain canonical ownership, audience paths, dependencies, reused content, supported versions, lifecycle state, review triggers, corrections, deprecation, withdrawal, retention, and archival. Keep simulated readers, automated checks, expert review, and observed human testing distinct.
+
+## D-033 — Make Audit information-preserving and non-mutating
+
+**Status:** Accepted
+
+An Audit may change the assessment of information, but not the audited information itself. Keep the inspected artifact unchanged by default. Report incorrect, unsupported, contradictory, misleading, or source-dependent material as findings with proposed corrections. Apply changes only in a separately authorized, bounded revision stage that distinguishes presentation-only edits from meaning-changing edits and preserves author-owned decisions.

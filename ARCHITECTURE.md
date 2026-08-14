@@ -10,7 +10,7 @@ Unsloop is an umbrella project with one shared method and three modes.
 Unsloop
 ├── Review — constructive diagnosis, including fiction craft review
 ├── Write  — author-led drafting, revision, assembly, and publication support
-├── Audit  — evidence-heavy source, continuity, canon, and research examination
+├── Audit  — non-mutating evidence-heavy source, continuity, canon, and research examination
 ├── Shared sustained-writing specialization — long-form operations across all three modes
 │   ├── Project state — onboarding, units, resume packets, assembly, recovery
 │   ├── Provenance and revision — claims, sources, quotations, changes, freshness
@@ -135,6 +135,8 @@ Compose domain and artifact skills; isolate untrusted source instructions
         ↓
 Choose Review, Write, or Audit
         ↓
+For Audit: lock the inspected version and separate findings from revision authority
+        ↓
 Use, refine, or brainstorm the topic
         ↓
 Build the progressive writing brief
@@ -159,7 +161,7 @@ Run integrity lens + human-voice lens
         ↓
 Audit coverage, calibrate findings, test readiness, and serialize only when requested
         ↓
-Report diagnosis; revise only if requested
+Report diagnosis; preserve Audit; revise only through a separately authorized scope
 ```
 
 ## Future implementation seams

@@ -4,6 +4,23 @@ Read this file for source comparison, patchwriting analysis, plagiarism-risk rev
 
 Tie every material integrity finding to an inspected draft location, an available comparison or evidence gap, and a conclusion no stronger than that boundary permits.
 
+## Preserve the audited information
+
+Treat Audit as non-mutating by default. An audit may change the assessment of information, but it must not change the audited information itself. Keep the inspected artifact unchanged unless the user separately requests revision.
+
+Protect the artifact's claims, position, recommendations, conclusions, scope, certainty, evidence strength, chronology, quantities and units, attribution, causal language, conditions, exceptions, and exclusions. Do not hide a material change behind “clarity,” “flow,” “cleanup,” “accuracy,” or “tone.”
+
+When information appears false, unsupported, contradictory, misleading, or too dependent on a source:
+
+1. identify the exact passage and evidence boundary;
+2. state the finding and its confidence;
+3. propose the smallest responsible correction without applying it;
+4. classify the proposal as presentation-only or meaning-changing;
+5. name its expected semantic and downstream effects; and
+6. leave it Proposed until the applicable revision scope and decision owner authorize application.
+
+If the user requests both audit and revision, return or preserve the audit result as a distinct stage before changing the artifact. Apply only the authorized scope through [revision-control.md](revision-control.md). A request to fix grammar or formatting does not authorize changing a claim or the writer's position. An incorrect or unsupported statement must remain visible as a finding rather than being silently replaced with a more convenient assertion.
+
 ## Establish the evidence boundary
 
 Record which materials are available. Limit claims accordingly.

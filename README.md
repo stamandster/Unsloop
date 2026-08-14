@@ -14,7 +14,9 @@ It supports three related jobs:
 
 - **Unsloop Review** — diagnose clarity, integrity, specificity, and voice.
 - **Unsloop Write** — draft or revise while preserving the writer's intent and matching their evidenced tone and language style; its fiction workflow scales from a single scene to a novel, serial, or series.
-- **Unsloop Audit** — examine source use, attribution, evidence, and source dependence in depth.
+- **Unsloop Audit** — examine source use, attribution, evidence, and source dependence in depth without changing the audited artifact.
+
+Audit is information-preserving by default: it may change the assessment of a passage, but not the passage itself. Incorrect, unsupported, contradictory, misleading, or overly source-dependent information is reported as a finding with a separate proposed correction. If the user requests Audit plus revision, Unsloop preserves the Audit as a distinct stage, classifies presentation-only versus meaning-changing edits, and applies only the explicitly bounded revision scope.
 
 The implementation is one extensible, repository-scoped [Agent Skill](https://agentskills.io/specification) at [`.agents/skills/unsloop/SKILL.md`](.agents/skills/unsloop/SKILL.md). The operational core is model- and harness-agnostic. Codex and Pi discover the canonical repository path directly; Claude Code and other clients use thin discovery adapters pointing to the same directory. Codex support, UI metadata, invocation, and global-link behavior remain fully supported.
 

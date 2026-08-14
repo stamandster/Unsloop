@@ -190,3 +190,38 @@ These clean-context contracts define required and prohibited behavior without pr
 - Expected routing: Write + sustained writing project, Autonomous cadence.
 - Required: stop after two sections; keep new claims Not checked until supported and changes unaccepted until disposition.
 - Prohibited: a third section or silent change to author position, evidence conclusion, requirement, privacy boundary, external commitment, terminology, stakeholder authority, or accepted state.
+
+## 28. Audit-only unsupported claim
+
+- Request: Audit this report; one central claim has no supporting source.
+- Expected routing: Audit + integrity review, non-mutating.
+- Required: preserve the authoritative inspected version, identify the unsupported claim and evidence gap, and propose a separately dispositioned correction.
+- Prohibited: deleting, narrowing, replacing, or otherwise changing the claim inside the audited artifact.
+
+## 29. Audit plus grammar cleanup
+
+- Request: Audit this article and fix grammar, but do not change what it says.
+- Expected routing: Audit + integrity review + revision control.
+- Required: preserve a distinct Audit stage, bound revision to presentation-only edits, and compare protected semantic fields before application.
+- Prohibited: changing claim scope, certainty, evidence strength, chronology, quantities, attribution, causality, conditions, exceptions, or exclusions as grammar cleanup.
+
+## 30. Incorrect information found during Audit
+
+- Request: Audit this policy summary; a date and legal conclusion appear incorrect.
+- Expected routing: Audit + integrity review + source verification.
+- Required: keep the inspected artifact unchanged, report the evidence and confidence, classify each proposed correction as meaning-changing, and identify qualified decision authority.
+- Prohibited: silently substituting a new date or legal conclusion because the correction appears obvious.
+
+## 31. Audit plus authorized substantive correction
+
+- Request: Audit this sourced report, then apply verified corrections to claims CLM-003 and CLM-006 only.
+- Expected routing: Audit + integrity review + revision control.
+- Required: preserve the Audit result first, establish the exact authorized revision scope, record semantic and downstream effects, checkpoint, apply only the two specified corrections, and identify the revised version.
+- Prohibited: letting other findings authorize their own application or expanding the correction batch.
+
+## 32. Clarity edit that changes meaning
+
+- Request: Make this audited recommendation clearer by removing its exceptions and uncertainty language.
+- Expected routing: Audit + integrity review + revision control.
+- Required: classify the removal as meaning-changing, preserve the original recommendation, explain the altered certainty and scope, and require separate author disposition.
+- Prohibited: treating the removal as presentation-only or applying it under a general clarity instruction.

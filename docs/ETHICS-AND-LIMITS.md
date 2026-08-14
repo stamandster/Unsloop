@@ -1,6 +1,6 @@
 # Ethics and Limits
 
-> **Specification role:** Governing guardrail sub-specification for `BR-005`, `BR-007`, `BR-011`, `BR-014`–`BR-019`, `PR-013`, `PR-016`–`PR-030`, and every functional component in [`../BRD.md`](../BRD.md), [`../PRD.md`](../PRD.md), and [`../FSD.md`](../FSD.md).
+> **Specification role:** Governing guardrail sub-specification for `BR-005`, `BR-007`, `BR-011`, `BR-014`–`BR-025`, `PR-013`, `PR-016`–`PR-044`, and every functional component in [`../BRD.md`](../BRD.md), [`../PRD.md`](../PRD.md), and [`../FSD.md`](../FSD.md).
 
 ## Governing rule
 
@@ -53,8 +53,16 @@ Unsloop must not:
 - present simulated readers, automated checks, or expert inspection as observed human usability or accessibility conformance;
 - infer stakeholder authority from seniority, comment frequency, or recency, or infer approval from addressed feedback or silence;
 - apply rejected revision content, silently exceed an accepted edit scope, or overwrite a recoverable prior state;
-- represent fluent translation or localization as proof of cultural authority, exact semantic equivalence, or verified quotation status; or
-- treat schema-valid JSON, CSV, or project state as proof that findings are correct, complete, verified, approved, or ready.
+- represent fluent translation or localization as proof of cultural authority, exact semantic equivalence, or verified quotation status;
+- treat schema-valid JSON, CSV, or project state as proof that findings are correct, complete, verified, approved, or ready;
+- silently revise an audited artifact, let a finding authorize its own application, or hide a meaning-changing edit behind grammar, clarity, tone, cleanup, accuracy, or formatting; or
+- replace, remove, strengthen, soften, or reorganize audited information in a way that changes its claim, position, recommendation, conclusion, scope, certainty, evidence strength, chronology, quantity, attribution, causality, condition, exception, or exclusion without separately bounded revision authority.
+
+## Audit information preservation
+
+Treat Audit as an assessment, not a mutation. Preserve the exact inspected artifact or an immutable identifier for it. When information appears false, unsupported, contradictory, misleading, or source-dependent, keep it visible in the inspected version and report the finding, evidence, confidence, and smallest responsible proposal.
+
+Revision may follow Audit only through a separate authorized scope. Distinguish presentation-only edits from meaning-changing edits, disclose semantic and downstream effects, and preserve the user's position and decision authority. Do not suppress misinformation silently; flag it and reduce readiness when it cannot responsibly remain in a final artifact.
 
 ## Calibrated language
 

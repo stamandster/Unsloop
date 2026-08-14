@@ -17,11 +17,14 @@ Include:
 - requested outcome and review depth;
 - evidence status and limitations;
 - findings with stable IDs, locations, observation, classification, consequence, evidence, confidence, severity, preservation target, and smallest useful action;
+- for Audit, artifact-unchanged state, mutation authorization, and any proposed correction's presentation-only or meaning-changing classification, semantic effect, decision owner, and disposition;
 - requirement, claim, source, quotation, or change records when relevant;
 - readiness state and unresolved actions; and
 - explicit out-of-scope judgments.
 
 Use `null` or an omitted optional field when evidence is unavailable. Do not invent values to satisfy a schema. Keep human-readable labels alongside codes when interoperability benefits.
+
+Structured Audit output remains non-mutating. A serialized proposed correction does not authorize application, and an `Applied` disposition requires a separately authorized revision stage and revised artifact identifier.
 
 ## Protect portability and privacy
 

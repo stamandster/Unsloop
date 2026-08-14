@@ -71,6 +71,7 @@ No database, background service, model endpoint, provider account, or persistent
 | FS-040 | Documentation-system architecture | Documents, audiences, tasks, owners, versions, dependencies, links | `ContentMapEntry`, canonical ownership, navigation, and change-impact map | PR-041; NFR-008, NFR-018 |
 | FS-041 | Documentation maintenance | Published state, triggers, issue reports, changes, approval and retention | `MaintenanceRecord`, correction/deprecation/withdrawal disposition, release handoff | PR-042; NFR-011, NFR-018 |
 | FS-042 | Reader and usability validation | Artifact version, audience, tasks, environment, checks or participants | `UsabilityValidation`, barriers, method label, disposition, and retest state | PR-043; NFR-003, NFR-018 |
+| FS-043 | Audit information preservation | Audit request, authoritative artifact version, evidence boundary, findings, optional revision authorization | Unchanged audited artifact, `AuditChangeBoundary`, and separately dispositioned correction proposals | PR-044; NFR-003, NFR-019 |
 
 ## Requirements traceability
 
@@ -119,6 +120,7 @@ No database, background service, model endpoint, provider account, or persistent
 | PR-041 | FS-023, FS-025, FS-040 |
 | PR-042 | FS-025, FS-034, FS-040, FS-041 |
 | PR-043 | FS-008, FS-034, FS-042 |
+| PR-044 | FS-001, FS-005, FS-008, FS-025, FS-043 |
 | NFR-001 | FS-011, FS-012 |
 | NFR-002 | FS-012 |
 | NFR-003 | FS-004–FS-008 |
@@ -137,6 +139,7 @@ No database, background service, model endpoint, provider account, or persistent
 | NFR-016 | FS-013, FS-033, FS-036 |
 | NFR-017 | FS-024, FS-037–FS-039 |
 | NFR-018 | FS-023, FS-034, FS-040–FS-042 |
+| NFR-019 | FS-008, FS-025, FS-043 |
 
 ## Logical data model
 
@@ -178,6 +181,10 @@ Record only task-relevant observable traits: register, directness, cadence, voca
 | severity | Low, Moderate, High, or Critical |
 | confidence | Calibrated narrative or Low/Moderate/High where used |
 | correction | Smallest useful intervention |
+
+### `AuditChangeBoundary`
+
+Record the authoritative audited version, inspected range, artifact hash or stable identifier when available, mutation authorization, protected information fields, linked findings, proposed corrections, semantic effect, downstream effect, decision owner, disposition, and revised version when separately authorized. Use mutation authorization **None**, **Proposals only**, **Presentation-only edits**, or **Specified meaning-changing edits**. Audit alone always uses **None** or **Proposals only**.
 
 ### `RequirementCoverage`
 
@@ -362,7 +369,7 @@ Record source and target language or locale, audience, purpose, translation mode
 
 ### `StructuredUnsloopReport`
 
-Record schema version, mode, depth, artifact identifier and inspected boundary, evidence boundary, stable findings, optional requirement or provenance records, readiness, unresolved actions, and out-of-scope judgments. Missing evidence is null or omitted; it is never invented for schema completeness.
+Record schema version, mode, depth, artifact identifier and inspected boundary, evidence boundary, stable findings, optional requirement or provenance records, readiness, unresolved actions, and out-of-scope judgments. For Audit, include artifact-unchanged state, mutation authorization, and separately dispositioned proposed corrections. Missing evidence is null or omitted; it is never invented for schema completeness.
 
 ## Processing flow
 
@@ -397,6 +404,7 @@ Request and materials
   -> FS-027 when multilingual, establish translation mode, terminology, evidence, voice, and ambiguity boundaries
   -> FS-004 establish evidence boundary and optional VoiceBrief
   -> FS-005 and/or FS-006 apply relevant analysis lenses
+  -> FS-043 for Audit, preserve the inspected artifact and separate findings from any authorized revision stage
   -> FS-007 check requirements and hard constraints when material
   -> FS-009 score only when justified
   -> FS-008 assemble the mode contract and readiness state
@@ -538,7 +546,7 @@ Build a `TranslationBrief` before choices that could alter meaning. Preserve qua
 
 ### FS-028 — Assemble structured output
 
-Use a supplied schema when governing; otherwise use the optional portable Unsloop report schema. Preserve stable IDs, locations, observation, classification, evidence, confidence, severity, preservation target, action, readiness, unresolved actions, and out-of-scope judgments. Validate syntax and required fields when tooling permits. Never invent evidence or imply that schema validity establishes correctness.
+Use a supplied schema when governing; otherwise use the optional portable Unsloop report schema. Preserve stable IDs, locations, observation, classification, evidence, confidence, severity, preservation target, action, readiness, unresolved actions, and out-of-scope judgments. For Audit, preserve artifact state, mutation authorization, and proposed correction semantics without treating serialization as authorization. Validate syntax and required fields when tooling permits. Never invent evidence or imply that schema validity establishes correctness.
 
 ### FS-029 — Operate sustained project tooling
 
@@ -596,6 +604,15 @@ Use scheduled and event-driven review after source, product, policy, law, safety
 
 Define audience, prior knowledge, language, assistive context, task, artifact version, environment, success criteria, error tolerance, consent, and privacy. Test comprehension, findability, task performance, accessibility, plain language, or localization proportionately. Label evidence as Simulated hypothesis, Automated check, Expert review, Observed test, or Not run; record barriers, owner, disposition, and retest without generalizing beyond coverage or claiming conformance from automated checks alone.
 
+### FS-043 — Preserve information during Audit
+
+1. Resolve the authoritative artifact version and inspected range before analysis.
+2. Set Audit mutation authorization to **None** unless the user separately requests correction proposals, or **Proposals only** when proposals are requested without application.
+3. Preserve claims, positions, recommendations, conclusions, scope, certainty, evidence strength, chronology, quantities and units, attribution, causality, conditions, exceptions, and exclusions in the audited artifact.
+4. For each proposed correction, identify the finding, before-state meaning, presentation-only or meaning-changing classification, expected semantic and downstream effects, decision owner, and disposition.
+5. When Audit and revision are both requested, preserve the Audit result first, establish a separate revision contract, and apply only the authorized scope through FS-025.
+6. Confirm that the audited artifact remains unchanged or identify the separately revised version and exact authorization. Do not let a finding authorize its own application.
+
 ## Failure and boundary handling
 
 | Condition | Required behavior |
@@ -632,6 +649,10 @@ Define audience, prior knowledge, language, assistive context, task, artifact ve
 | Extracted media omits or obscures material content | Bound claims to the checked range and seek the original or mark the evidence incomplete. |
 | Documentation dependency cannot be reconciled | Mark affected units stale or decision-required rather than releasing inconsistent canonical guidance. |
 | Reader validation is simulated or automated | Label the method exactly and do not represent it as observed usability or accessibility conformance. |
+| Audit identifies false, unsupported, contradictory, or misleading information | Report the finding and proposed correction; leave the audited artifact unchanged. |
+| Audit is combined with grammar, clarity, tone, cleanup, or formatting | Apply only separately authorized presentation changes and reject any silent change to protected information fields. |
+| Proposed audit correction changes meaning | Classify the semantic effect, identify downstream impact and decision owner, and keep it Proposed until the bounded revision authority permits application. |
+| Audit and revision stages cannot be distinguished | Stop before mutation and return the non-mutating Audit plus the authorization needed for revision. |
 | Project tool destination already exists | Refuse overwrite and report the exact collision. |
 | Simulated reader or authenticity review requested | State the non-representative boundary and recommend qualified human input when material. |
 | Submission artifact lacks governing requirements | Use disclosed genre defaults only when low risk; otherwise request the requirements or mark the result provisional. |
@@ -721,6 +742,9 @@ Define audience, prior knowledge, language, assistive context, task, artifact ve
 | Published procedure becomes unsafe | PR-042 / FS-041 | Authority, emergency notice or withdrawal, affected units, reader risk, correction, and recovery path are controlled. |
 | Model simulates a novice reader | PR-043 / FS-042 | Result is a Simulated hypothesis with an actual test proposal, not observed evidence. |
 | Automated accessibility checks pass | PR-043, NFR-018 / FS-042 | Automated coverage and unresolved human or assistive-technology review remain explicit; no unsupported conformance claim. |
+| Audit finds an unsupported material claim | PR-044, NFR-019 / FS-005, FS-043 | Artifact remains unchanged; finding identifies the evidence gap and a separately dispositioned proposal. |
+| Audit plus copyedit request | PR-026, PR-044, NFR-019 / FS-025, FS-043 | Presentation edits stay inside scope; claim, position, certainty, quantity, attribution, and exceptions remain unchanged. |
+| Audit plus authorized substantive correction | PR-026, PR-044, NFR-012, NFR-019 / FS-025, FS-043 | Audit record precedes revision; semantic effects, authorization, checkpoint, applied scope, and revised version remain traceable. |
 
 ## Change control
 

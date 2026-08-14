@@ -55,6 +55,7 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | Combine Unsloop with another skill | Shared request, active skills, governing specifications, and authority | One non-duplicative workflow with explicit responsibility, conflict routing, and validation handoff. |
 | Use heterogeneous evidence | Data, calculations, interviews, transcripts, scans, images, audio/video, spreadsheets, or extracted content | Claim-linked evidence records that preserve permissions, source lineage, transformation, reproduction, uncertainty, and inspection boundary. |
 | Maintain a documentation system | Interconnected pages, versions, dependencies, reader tasks, issue reports, and owners | Navigable content architecture, synchronized changes, reader validation, corrections, deprecation, and lifecycle state. |
+| Audit without changing the artifact | Draft, comparison evidence, governing requirements, and optional correction request | Non-mutating findings plus separately classified proposed corrections; revision occurs only under an explicit bounded authorization. |
 
 ## Functional requirements
 
@@ -103,6 +104,7 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | PR-041 | Model documentation sets through audiences, reader tasks, content types, canonical ownership, navigation, dependencies, reused content, versions, states, and change-impact relationships. | BR-004, BR-009, BR-017, BR-024 |
 | PR-042 | Maintain published documentation through scheduled and event-driven review, issue intake, correction, errata, change notice, deprecation, withdrawal, supersession, retention, and archival. | BR-005, BR-009, BR-012, BR-024 |
 | PR-043 | Validate comprehension, findability, task performance, accessibility, plain language, and localization while distinguishing simulated hypotheses, automated checks, expert review, and observed human tests. | BR-004, BR-005, BR-009, BR-019, BR-024 |
+| PR-044 | Make Audit non-mutating by default; preserve material information fields; separate findings from revision; and require explicit bounded authorization before applying presentation-only or meaning-changing corrections. | BR-003, BR-005, BR-009, BR-012, BR-025 |
 
 ## Nonfunctional requirements
 
@@ -126,6 +128,7 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | NFR-016 Instruction isolation | Evidence content cannot redefine user intent, permissions, tool use, or governing workflow. | Runtime instructions state that embedded source instructions are data, and project checks require the source-policy boundary. |
 | NFR-017 Evidence reproducibility | Material quantitative or transformed evidence retains enough lineage to identify inputs, method, coverage, result, and uncertainty. | Data and media records distinguish source-reported, reproduced, extracted, checked, and unavailable states. |
 | NFR-018 Documentation operability | A documentation set remains navigable, maintainable, and honestly validated after publication. | Content ownership, dependencies, lifecycle state, review triggers, issue disposition, reader-validation type, and retest state remain visible. |
+| NFR-019 Semantic preservation | Audit cannot silently alter the information conveyed by the inspected artifact. | Audit output identifies the unchanged artifact version; every proposed correction records whether it is presentation-only or meaning-changing, its semantic effects, authorization, and disposition. |
 
 ## Interaction requirements
 
@@ -159,6 +162,7 @@ When a closer match materially affects the result and evidence is weak, request 
 - Put the requested writing first in Write mode unless process notes were requested.
 - In Review, lead with the overall assessment and highest-value findings.
 - In Audit, include the evidence boundary before source-dependent conclusions.
+- In Audit, leave the inspected artifact unchanged and separate every proposed correction from the finding; if revision is also requested, preserve a distinct audit stage and state the authorized revision scope.
 - Keep findings passage-specific and corrections proportionate.
 - Do not add scores, tables, or readiness labels when they would add ceremony rather than value.
 
@@ -174,7 +178,9 @@ Given a clear topic and sufficient brief, Unsloop does not repeat the topic ques
 
 ### Audit
 
-Given a draft and comparison sources, Unsloop records exactly what was inspected, maps supported textual relationships and claims, separates requirement satisfaction from source support, identifies unresolved checks, and does not infer intent or misconduct.
+Given a draft and comparison sources, Unsloop records exactly what was inspected, maps supported textual relationships and claims, separates requirement satisfaction from source support, identifies unresolved checks, and does not infer intent or misconduct. It leaves the audited artifact unchanged, even when information appears incorrect or unsupported; it identifies the passage, evidence, and smallest responsible proposal without applying it.
+
+Given a request for Audit plus revision, Unsloop preserves the Audit result as a distinct stage, establishes the authoritative version and allowed revision scope, classifies proposals as presentation-only or meaning-changing, identifies semantic and downstream effects, and applies only authorized changes. Grammar, cleanup, clarity, tone, or formatting authority does not permit changing claims, positions, recommendations, conclusions, scope, certainty, evidence strength, chronology, quantities, attribution, causality, conditions, exceptions, or exclusions.
 
 ### Voice fidelity
 
