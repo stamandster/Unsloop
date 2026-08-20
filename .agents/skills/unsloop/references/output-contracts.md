@@ -47,6 +47,8 @@ When other skills apply, return one artifact and identify only consequential res
 
 For a documentation system, identify release scope, supported versions, affected dependencies, stale or withdrawn units, corrections or redirects, maintenance owner, and reader-validation method. Simulated, automated, expert, and observed results must remain distinguishable.
 
+For spoken, timed, interactive, or media-assisted work, return the requested artifact first. Add only material delivery facts: overall constraint and estimate basis, section-allocation conflicts, safety buffer, included and unresolved media or interactions, authoritative source format, derivatives refreshed, validation actually performed, and readiness limits. Do not call a manuscript rehearsed, timed, playable, rendered, synchronized, or platform-ready from prose inspection alone.
+
 When inferred or missing brief elements materially shaped the artifact, add a compact **Brief assumptions** note. Omit obvious or inconsequential assumptions.
 
 When voice matching is material, add a compact note unless the user wants artifact-only output:
@@ -69,6 +71,8 @@ Use a readiness label only when unresolved matters affect whether the artifact c
 Do not label a simple low-stakes artifact merely to add ceremony. Never use **Ready** to imply exhaustive source verification when the evidence corpus was incomplete.
 
 For sustained projects, readiness applies to the stated artifact version and evidence boundary. A valid project ledger, JSON document, or assembly manifest does not by itself establish factual support, stakeholder approval, policy compliance, or publication readiness.
+
+For delivery work, an unresolved choice is material when it affects required content, duration, section order, media, accessibility, audience interaction, authoritative format, or a required derivative. Keep the artifact provisional until the choice is resolved or the user explicitly removes it from scope.
 
 ## Score display
 

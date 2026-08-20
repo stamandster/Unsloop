@@ -56,6 +56,10 @@ Unsloop can:
 - test examples for function and persuasive language for emotional integrity;
 - write and review logical progression across chapters, headings, subheadings, scene breaks, and procedural phases by evaluating the preceding close, visible boundary, and next opening together;
 - preserve purposeful hard breaks and avoid canned or unnecessary transitional sentences when hierarchy and sequence already orient the reader;
+- plan and review spoken, timed, interactive, media-assisted, or recorded writing against the complete delivery and audience-attention cost rather than manuscript words alone;
+- integrate quotations, data, readings, visuals, clips, and demonstrations through a clear audience need, orientation, accurate presentation, interpretation, and supported use without forcing a formula;
+- use purposeful questions, mixed-audience entry points, consequential optional-media decisions, and genre-appropriate closing movement;
+- identify authoritative content and keep required Markdown, DOCX, PDF, slide, web, audio, or other derivatives refreshed, validated, or explicitly stale;
 - distinguish ready work from provisional work that still requires a decision, evidence, or authorization;
 - request authorized examples of the user's previous writing when closer voice fidelity would materially improve the result;
 - derive a bounded voice brief from observable traits and report the evidence basis and confidence of the match;
@@ -95,6 +99,7 @@ Unsloop cannot:
 - guarantee manuscript originality or continuity beyond the sources and manuscript ranges actually inspected;
 - infer batch acceptance from silence, overwrite an existing project or checkpoint, or claim simulated feedback represents real readers or a community;
 - treat a bibliography entry, schema-valid file, addressed comment, or fluent translation as proof of source consultation, evidentiary support, approval, or cultural authority;
+- claim that delivered writing was rehearsed, accurately timed, rendered, playable, accessible, synchronized, or platform-ready when the corresponding check was not performed;
 - silently carry verification across a materially changed claim or apply rejected revision content;
 - silently alter audited claims, positions, recommendations, conclusions, scope, certainty, evidence strength, chronology, quantities, attribution, causality, conditions, exceptions, or exclusions;
 - promise exact replication of a person, infer identity from style, or use voice samples as authority for new facts or personal experiences.
@@ -108,6 +113,8 @@ A successful Unsloop result is:
 - **Actionable:** the writer knows what to keep, investigate, and change.
 - **Voice-preserving:** revision retains the writer's position and useful idiosyncrasies.
 - **Structurally coherent:** visible section boundaries express a legible relationship without forced smoothing or loss of intentional pacing.
+- **Delivery-honest:** timing, media, interaction, questions, audience fit, and closing movement reflect the actual planned experience, while estimates remain distinct from observed delivery.
+- **Format-consistent:** authoritative content and required derivatives expose freshness and actual validation rather than relying on filenames or export success.
 - **Voice-defensible:** any claimed alignment identifies its sample basis, observable target traits, confidence, and limits.
 - **Economical:** the review does not bury important findings in commentary.
 - **Transparent:** verified facts, inferences, and unknowns are clearly separated.

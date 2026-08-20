@@ -12,6 +12,8 @@ Separate tutorial, how-to, reference, explanation, policy, procedure, troublesho
 
 Give every material reusable statement one canonical source or an explicit synchronization rule. Map downstream pages, summaries, tables, diagrams, translations, examples, snippets, and generated outputs. Before a consequential change, identify affected units and version combinations; update or mark them stale together.
 
+For parallel Markdown, DOCX, PDF, slide, web, audio, or other delivery formats, distinguish canonical content from generated or adapted derivatives. After accepted changes, refresh required derivatives and record which comparison, render, playback, accessibility, or format validation occurred. A matching filename or successful export does not prove content synchronization or usable rendering.
+
 Check orphan pages, broken or redirected links, duplicate content, inconsistent terminology, unsupported versions, conflicting instructions, missing prerequisites, and circular navigation. A successful build does not prove that readers can find or use the information.
 
 ## Maintain published material

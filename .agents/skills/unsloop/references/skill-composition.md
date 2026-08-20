@@ -23,6 +23,8 @@ Examples: a talk-writing skill governs outline and domain rules while Unsloop au
 6. Run format or domain validation before Unsloop represents the artifact as ready.
 7. Return one coherent deliverable and a compact list of unresolved cross-role decisions.
 
+When one work has multiple required formats, identify the authoritative source or explicit synchronization rule. Route generation, rendering, playback, and format-specific accessibility checks to the artifact skill; Unsloop tracks whether every required derivative reflects the accepted content and which validation actually occurred. Mark an unrefreshed derivative stale rather than calling the artifact set synchronized.
+
 ## Resolve conflicts
 
 Apply non-waivable law, safety, privacy, authorization, and governing policy first; then current user direction; then the controlling domain or artifact specification; then accepted project decisions; then Unsloop defaults. Do not let a prose preference silently override a formula, technical interface, doctrinal rule, policy owner, accessibility requirement, or legal review boundary.

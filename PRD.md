@@ -28,6 +28,7 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 6. State evidence limits, uncertainty, and readiness honestly.
 7. Keep the project directory authoritative and portable.
 8. Preserve one model- and harness-agnostic method; isolate discovery, invocation, metadata, and tool mappings as optional adapters.
+9. Treat live delivery, audience attention, media, and required derivatives as part of the artifact when they affect actual use.
 
 ## Primary use cases
 
@@ -56,6 +57,8 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | Use heterogeneous evidence | Data, calculations, interviews, transcripts, scans, images, audio/video, spreadsheets, or extracted content | Claim-linked evidence records that preserve permissions, source lineage, transformation, reproduction, uncertainty, and inspection boundary. |
 | Maintain a documentation system | Interconnected pages, versions, dependencies, reader tasks, issue reports, and owners | Navigable content architecture, synchronized changes, reader validation, corrections, deprecation, and lifecycle state. |
 | Audit without changing the artifact | Draft, comparison evidence, governing requirements, and optional correction request | Non-mutating findings plus separately classified proposed corrections; revision occurs only under an explicit bounded authorization. |
+| Prepare delivered writing | Speech, presentation, lesson, narrated script, podcast, voiceover, demonstration, or other delivered artifact plus audience and constraints | Delivery-aware writing whose full timing or attention budget, evidence flow, questions, media, audience layers, and closing movement fit the intended use. |
+| Maintain synchronized output formats | Authoritative source artifact, required derivatives, accepted change, and available artifact validators | Refreshed or explicitly stale derivatives with recorded comparison, rendering, playback, accessibility, and format-specific validation boundaries. |
 
 ## Functional requirements
 
@@ -105,6 +108,8 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | PR-042 | Maintain published documentation through scheduled and event-driven review, issue intake, correction, errata, change notice, deprecation, withdrawal, supersession, retention, and archival. | BR-005, BR-009, BR-012, BR-024 |
 | PR-043 | Validate comprehension, findability, task performance, accessibility, plain language, and localization while distinguishing simulated hypotheses, automated checks, expert review, and observed human tests. | BR-004, BR-005, BR-009, BR-019, BR-024 |
 | PR-044 | Make Audit non-mutating by default; preserve material information fields; separate findings from revision; and require explicit bounded authorization before applying presentation-only or meaning-changing corrections. | BR-003, BR-005, BR-009, BR-012, BR-025 |
+| PR-045 | For live, recorded, timed, interactive, or media-assisted writing, establish a delivery contract; reconcile the overall constraint with section allocations and all audience-time elements; integrate evidence through need, orientation, presentation, interpretation, and use; and review questions, audience layers, optional media, and closing movement proportionately. | BR-003, BR-004, BR-005, BR-009, BR-012, BR-026 |
+| PR-046 | For required multi-format outputs, identify the authoritative source or synchronization rule; map derivative impact; refresh required derivatives after accepted changes; route rendering, playback, accessibility, and format checks to the applicable artifact capability; and report only validation actually performed. | BR-003, BR-005, BR-009, BR-022, BR-024, BR-026 |
 
 ## Nonfunctional requirements
 
@@ -129,6 +134,7 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | NFR-017 Evidence reproducibility | Material quantitative or transformed evidence retains enough lineage to identify inputs, method, coverage, result, and uncertainty. | Data and media records distinguish source-reported, reproduced, extracted, checked, and unavailable states. |
 | NFR-018 Documentation operability | A documentation set remains navigable, maintainable, and honestly validated after publication. | Content ownership, dependencies, lifecycle state, review triggers, issue disposition, reader-validation type, and retest state remain visible. |
 | NFR-019 Semantic preservation | Audit cannot silently alter the information conveyed by the inspected artifact. | Audit output identifies the unchanged artifact version; every proposed correction records whether it is presentation-only or meaning-changing, its semantic effects, authorization, and disposition. |
+| NFR-020 Delivery readiness | A delivered or multi-format artifact cannot appear ready by prose polish alone. | Readiness identifies the duration or attention basis, unresolved media or interaction decisions, authoritative format, derivative freshness, and actual rehearsal, comparison, render, playback, accessibility, or format validation boundary when material. |
 
 ## Interaction requirements
 
@@ -152,6 +158,7 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 - When another skill applies, identify responsibility once, reuse its resolved intake, and do not override specialized domain or format validation.
 - For numerical, interview, or multimodal evidence, ask only for missing permissions, originals, inputs, ranges, or transformations that materially affect support.
 - For documentation systems, establish canonical ownership, supported versions, dependencies, maintenance triggers, and required reader-validation type before a consequential release.
+- For delivered work, resolve the setting, hard duration or length, pace basis when material, section allocations, audience interaction, required and optional media, authoritative source format, required derivatives, and expected validation without asking for details already supplied by a governing specialist.
 
 ### Voice-sample request
 
@@ -189,6 +196,14 @@ Given authorized representative samples, Unsloop derives only observable task-re
 ### Cross-section flow
 
 Given a manuscript with chapters, headings, subheadings, scene breaks, procedural phases, or comparable divisions, Unsloop evaluates each material boundary through the preceding close, the heading or break, and the next opening. It identifies the actual relationship, uses the smallest necessary bridge, preserves a purposeful hard break, and does not equate coherence with an added transitional sentence. Review returns the boundary, consequence, and smallest intervention; Audit leaves the manuscript unchanged; Write revises only within the authorized scope without changing substantive information merely for smoothness.
+
+### Delivery and presentation writing
+
+Given a live, recorded, timed, interactive, or media-assisted artifact, Unsloop confirms the delivery contract and reconciles the overall limit with section allocations and every element that consumes delivery time or audience attention. It does not solve an overrun through assumed speed, omitted pauses, invisible media handling, or silent redistribution. Material evidence receives enough need, orientation, accurate presentation, interpretation, and supported use to function for the audience without imposing a fixed prose formula. Questions have a purpose, placement, answer path, and payoff rather than a quota. Mixed audiences receive a shared entry point and appropriate depth. Consequential optional media receives a decision brief and remains unselected until authorized; unresolved choices that affect use keep the artifact provisional. The closing produces the intended final audience state without forcing action or adding a new major point.
+
+### Multi-format artifact synchronization
+
+Given required parallel formats, Unsloop identifies the authoritative source or explicit synchronization rule, includes derivatives in change-impact analysis, and uses the applicable artifact capability for generation and validation. After accepted changes, required derivatives are refreshed and checked or marked stale. Handoff distinguishes comparison, rendering, playback, accessibility, rehearsal, and other validations actually performed; a successful export, matching filename, or polished manuscript does not establish synchronization or usability.
 
 ### Fiction
 
@@ -273,6 +288,7 @@ The v0.1 product baseline requires:
 - passing deterministic sustained-writing project operations and behavioral fixtures for onboarding, provenance, revision, collaboration, multilingual boundaries, assembly, export, and path safety.
 - passing character-profile, documentary-form, source-acquisition, override, scoped-corpus, and validation-status behavioral contracts.
 - passing skill-composition, untrusted-source, quantitative, interview, multimodal, documentation-system, maintenance, and reader-validation behavioral contracts.
+- passing delivery-budget, evidence-integration, question-function, mixed-audience, optional-media, closing, derivative-synchronization, and delivery-readiness behavioral contracts.
 
 Calibration, benchmark fixtures, inter-reviewer agreement, privacy review, and mode-split evidence remain later release work in [`ROADMAP.md`](ROADMAP.md).
 

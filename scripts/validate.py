@@ -50,6 +50,7 @@ REQUIRED_FILES = (
     SKILL / "references" / "source-verification.md",
     SKILL / "references" / "write-mode.md",
     SKILL / "references" / "section-flow.md",
+    SKILL / "references" / "delivery-and-presentation.md",
     SKILL / "references" / "fiction-workflow.md",
     SKILL / "references" / "fiction-project-operations.md",
     SKILL / "references" / "character-voice-continuity.md",
@@ -310,11 +311,102 @@ SECTION_FLOW_CONTRACT = {
         "Forward-test abrupt, already-coherent, and intentionally discontinuous section boundaries",
     ),
     ROOT / "PORTABILITY.md": (
-        "evidence, voice, section-flow, privacy",
+        "evidence, voice, section-flow, delivery-readiness, artifact-synchronization, privacy",
     ),
     ROOT / "tests" / "fixtures" / "operational-scenarios.md": (
         "## 25. Abrupt subheading without a logical bridge",
         "## 26. Purposeful hard break between sections",
+    ),
+}
+
+DELIVERY_PRESENTATION_CONTRACT = {
+    SKILL / "SKILL.md": (
+        "references/delivery-and-presentation.md",
+        "live, recorded, timed, interactive, media-assisted, or multi-format presentation writing",
+        "authoritative source and report which derivatives were actually refreshed and validated",
+    ),
+    SKILL / "references" / "delivery-and-presentation.md": (
+        "## Establish the delivery contract",
+        "## Reconcile the whole and its parts",
+        "## Integrate evidence for an audience",
+        "**Need:**",
+        "**Orient:**",
+        "**Present:**",
+        "**Interpret:**",
+        "**Use:**",
+        "not a mandatory five-sentence formula",
+        "## Make questions perform work",
+        "do not impose a quota",
+        "## Design for a mixed audience",
+        "## Govern optional media and interactions",
+        "Provisional—decision required",
+        "## Complete the closing movement",
+        "## Synchronize artifact formats",
+        "## Apply the mode contract",
+        "A polished manuscript is not proof",
+    ),
+    SKILL / "references" / "writing-brief.md": (
+        "For timed or performed work",
+        "delivery-and-presentation.md",
+    ),
+    SKILL / "references" / "multimodal-evidence.md": (
+        "## Plan optional presentation media",
+        "Provisional—decision required",
+    ),
+    SKILL / "references" / "usability-validation.md": (
+        "**Delivery and presentation:**",
+        "not an observed rehearsal",
+    ),
+    SKILL / "references" / "skill-composition.md": (
+        "identify the authoritative source or explicit synchronization rule",
+        "Mark an unrefreshed derivative stale",
+    ),
+    SKILL / "references" / "output-contracts.md": (
+        "For spoken, timed, interactive, or media-assisted work",
+        "Do not call a manuscript rehearsed, timed, playable, rendered, synchronized, or platform-ready",
+    ),
+    ROOT / "BRD.md": ("BR-026", "Delivery-aware speeches"),
+    ROOT / "PRD.md": ("PR-045", "PR-046", "NFR-020 Delivery readiness"),
+    ROOT / "FSD.md": (
+        "FS-044",
+        "FS-045",
+        "`DeliveryContract`",
+        "`PresentationElement`",
+        "`ArtifactSet`",
+    ),
+    ROOT / "README.md": (
+        "## Delivery and presentation writing",
+        "references/delivery-and-presentation.md",
+    ),
+    ROOT / "PROJECT.md": ("**Delivery-honest:**", "**Format-consistent:**"),
+    ROOT / "docs" / "REVIEW-MODEL.md": (
+        "establish a delivery contract before substantial drafting",
+        "This is a functional test, not a required five-sentence sequence",
+    ),
+    ROOT / "docs" / "REVIEW-OUTPUT.md": (
+        "For delivered or presented work",
+        "Mark a derivative stale",
+    ),
+    ROOT / "docs" / "ETHICS-AND-LIMITS.md": (
+        "For delivery and presentation work, Unsloop must not",
+        "present a model-based pace estimate as an observed rehearsal",
+    ),
+    ROOT / "docs" / "SOURCES.md": (
+        "The delivery and presentation contract is also a product-governance synthesis",
+        "Unsloop defines no universal words-per-minute default",
+    ),
+    ROOT / "DECISIONS.md": (
+        "## D-035 — Treat delivery as part of the writing artifact",
+        "## D-036 — Separate content authority from derivative validation",
+    ),
+    ROOT / "ROADMAP.md": (
+        "Add topic-neutral delivery and presentation contracts",
+        "Add 34 clean-context operational extension scenarios",
+    ),
+    ROOT / "PORTABILITY.md": ("delivery-readiness", "artifact-synchronization"),
+    ROOT / "tests" / "fixtures" / "operational-scenarios.md": (
+        "## 27. Timed presentation with readings, pauses, and media",
+        "## 34. Export succeeds without render or playback inspection",
     ),
 }
 
@@ -895,24 +987,25 @@ SPECIFICATION_CONTRACT = {
     ROOT / "BRD.md": (
         "## Business requirements",
         "BR-001",
-        "BR-025",
+        "BR-026",
         "[`PRD.md`](PRD.md)",
         "[`FSD.md`](FSD.md)",
     ),
     ROOT / "PRD.md": (
         "## Functional requirements",
         "PR-001",
-        "PR-044",
+        "PR-046",
         "NFR-001 Portability",
         "NFR-008 Long-form resilience",
         "NFR-019 Semantic preservation",
+        "NFR-020 Delivery readiness",
         "[`BRD.md`](BRD.md)",
         "[`FSD.md`](FSD.md)",
     ),
     ROOT / "FSD.md": (
         "## Functional components",
         "FS-001",
-        "FS-043",
+        "FS-045",
         "`WritingBrief`",
         "`EvidenceBoundary`",
         "`VoiceBrief`",
@@ -924,6 +1017,9 @@ SPECIFICATION_CONTRACT = {
         "`PublicationHandoff`",
         "`WritingProjectState`",
         "`AuditChangeBoundary`",
+        "`DeliveryContract`",
+        "`PresentationElement`",
+        "`ArtifactSet`",
         "`StructuredUnsloopReport`",
         "## Verification matrix",
     ),
@@ -1065,6 +1161,17 @@ def validate() -> list[str]:
             if requirement not in text:
                 errors.append(
                     f"section-flow safeguard missing from "
+                    f"{path.relative_to(ROOT)}: {requirement}"
+                )
+
+    for path, requirements in DELIVERY_PRESENTATION_CONTRACT.items():
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for requirement in requirements:
+            if requirement not in text:
+                errors.append(
+                    f"delivery-presentation safeguard missing from "
                     f"{path.relative_to(ROOT)}: {requirement}"
                 )
 

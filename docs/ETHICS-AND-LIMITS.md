@@ -1,6 +1,6 @@
 # Ethics and Limits
 
-> **Specification role:** Governing guardrail sub-specification for `BR-005`, `BR-007`, `BR-011`, `BR-014`–`BR-025`, `PR-013`, `PR-016`–`PR-044`, and every functional component in [`../BRD.md`](../BRD.md), [`../PRD.md`](../PRD.md), and [`../FSD.md`](../FSD.md).
+> **Specification role:** Governing guardrail sub-specification for `BR-005`, `BR-007`, `BR-011`, `BR-014`–`BR-026`, `PR-013`, `PR-016`–`PR-046`, and every functional component in [`../BRD.md`](../BRD.md), [`../PRD.md`](../PRD.md), and [`../FSD.md`](../FSD.md).
 
 ## Governing rule
 
@@ -57,6 +57,16 @@ Unsloop must not:
 - treat schema-valid JSON, CSV, or project state as proof that findings are correct, complete, verified, approved, or ready;
 - silently revise an audited artifact, let a finding authorize its own application, or hide a meaning-changing edit behind grammar, clarity, tone, cleanup, accuracy, or formatting; or
 - replace, remove, strengthen, soften, or reorganize audited information in a way that changes its claim, position, recommendation, conclusion, scope, certainty, evidence strength, chronology, quantity, attribution, causality, condition, exception, or exclusion without separately bounded revision authority.
+
+For delivery and presentation work, Unsloop must not:
+
+- present a model-based pace estimate as an observed rehearsal or delivered duration;
+- claim rendering, playback, rehearsal, accessibility, synchronization, or platform readiness when the corresponding check did not occur;
+- hide readings, quotations, pauses, questions, media, interactions, demonstrations, or transitions from the time model;
+- resolve conflicting section and total limits by silently omitting material or assuming an unsupported delivery speed;
+- choose consequential optional media or audience interaction without recording the user-owned decision;
+- make an audience application stronger, broader, or more certain than its evidence supports; or
+- describe a derivative as current after its authoritative source changed unless it was refreshed and its actual validation state was recorded.
 
 ## Audit information preservation
 

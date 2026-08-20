@@ -2,6 +2,8 @@
 
 Read this file when writing or reviewing a multi-section artifact, especially when chapters, headings, subheadings, scene breaks, procedural phases, or other visible divisions affect the reader's progression.
 
+For spoken transitions, timed sections, audience questions, readings, or media handoffs, also read [delivery-and-presentation.md](delivery-and-presentation.md).
+
 ## Inspect each boundary
 
 Treat a section boundary as a three-part transition:

@@ -12,6 +12,8 @@ For substantial or tightly constrained work, the brief also separates governing 
 
 For manuscripts with chapters, headings, subheadings, scene breaks, or procedural phases, Unsloop evaluates the transition across the preceding close, the visible boundary, and the next opening. It makes the logical relationship legible without adding canned bridges, and it preserves deliberate hard breaks when they serve the narrative, argument, chronology, or task.
 
+For speeches, presentations, lessons, narrated scripts, podcasts, voiceovers, demonstrations, and other delivered writing, Unsloop treats the real delivery as part of the artifact. It reconciles overall and section constraints; counts readings, pauses, questions, media, and interaction; gives evidence a clear audience-facing function; and keeps unresolved consequential media choices provisional. When multiple formats are required, it identifies the authoritative source and reports which derivatives were actually refreshed, rendered, played, compared, or otherwise validated.
+
 It supports three related jobs:
 
 - **Unsloop Review** — diagnose clarity, integrity, specificity, and voice.
@@ -21,6 +23,22 @@ It supports three related jobs:
 Audit is information-preserving by default: it may change the assessment of a passage, but not the passage itself. Incorrect, unsupported, contradictory, misleading, or overly source-dependent information is reported as a finding with a separate proposed correction. If the user requests Audit plus revision, Unsloop preserves the Audit as a distinct stage, classifies presentation-only versus meaning-changing edits, and applies only the explicitly bounded revision scope.
 
 The implementation is one extensible, repository-scoped [Agent Skill](https://agentskills.io/specification) at [`.agents/skills/unsloop/SKILL.md`](.agents/skills/unsloop/SKILL.md). The operational core is model- and harness-agnostic. Codex and Pi discover the canonical repository path directly; Claude Code and other clients use thin discovery adapters pointing to the same directory. Codex support, UI metadata, invocation, and global-link behavior remain fully supported.
+
+## Delivery and presentation writing
+
+Invoke Unsloop with a manuscript, outline, duration, audience, media options, or required output formats:
+
+```text
+$unsloop Turn this outline into a 12-minute narrated presentation and include time for the two quoted passages.
+$unsloop Review this training script for question function, evidence flow, mixed-audience clarity, and closing impact.
+$unsloop Audit whether the Markdown source and DOCX delivery copy are synchronized without changing either file.
+```
+
+The delivery contract is topic-neutral and has no universal speaking-rate default. It uses a user-, assignment-, or specialist-supplied pace when available and otherwise asks or discloses a conservative estimate when appropriate. It does not solve overruns by assuming faster speech or omitting pauses, setup, playback, observation, questions, answers, or interaction.
+
+For material evidence, Unsloop checks the functional movement from audience need through orientation, accurate presentation, interpretation, and supported use without forcing a fixed sentence formula. Optional media receives a decision brief covering what the audience perceives, its function, placement, handling, accessibility, and time or space cost. A polished manuscript remains provisional if an unresolved choice materially affects delivery.
+
+For parallel Markdown, DOCX, PDF, slides, web, audio, or other formats, Unsloop keeps content authority separate from format mechanics. The applicable artifact skill owns generation and rendering; Unsloop tracks whether required derivatives match the accepted content and states the exact validation boundary. See [delivery and presentation writing](.agents/skills/unsloop/references/delivery-and-presentation.md).
 
 ## Fiction writing
 
@@ -144,6 +162,7 @@ Host capabilities are negotiated by function. Structured questions fall back to 
 - [`.agents/skills/unsloop/references/structured-output.md`](.agents/skills/unsloop/references/structured-output.md) — machine-readable output contract
 - [`.agents/skills/unsloop/references/output-contracts.md`](.agents/skills/unsloop/references/output-contracts.md) — Review, Write, and information-preserving Audit delivery contracts
 - [`.agents/skills/unsloop/references/section-flow.md`](.agents/skills/unsloop/references/section-flow.md) — logical progression across chapters, headings, subheadings, scene breaks, and procedural phases
+- [`.agents/skills/unsloop/references/delivery-and-presentation.md`](.agents/skills/unsloop/references/delivery-and-presentation.md) — timing, evidence flow, questions, audience layers, media decisions, closings, and synchronized output formats
 
 ## Install Unsloop
 

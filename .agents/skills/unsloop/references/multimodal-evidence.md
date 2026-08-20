@@ -20,6 +20,12 @@ Use **Directly inspected**, **Extraction checked**, **Partially checked**, **Aut
 
 Use an appropriate artifact or modality skill for extraction, rendering, workbook calculation, or media inspection when available. Unsloop governs the evidentiary transformation and writing claims; it does not replace format-specific verification.
 
+## Plan optional presentation media
+
+When media is being considered for inclusion rather than merely inspected as evidence, read [delivery-and-presentation.md](delivery-and-presentation.md). For every consequential optional item, record its placement, what the audience will actually perceive, the claim or movement it serves, what to notice, intended response, spoken or written handling, accessibility alternative, and time, space, preparation, or technical cost. Give the user enough context to decide without opening the source artifact.
+
+Do not silently include optional media that materially changes structure, timing, accessibility, evidence, or tone. Keep the artifact **Provisional—decision required** while such a choice remains unresolved. Once selected, give the item full functional treatment rather than a decorative mention.
+
 ## Return the boundary
 
 Identify the original and derived artifact, inspected range, extraction status, uncertainty, missing content, verification performed, and claims that require checking against the original. In Audit, leave both original and audited derivative unchanged; proposed OCR, transcript, table, caption, or claim corrections belong to a separate revision stage.

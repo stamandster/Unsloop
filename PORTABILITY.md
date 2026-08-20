@@ -1,6 +1,6 @@
 # Portability
 
-> **Document role:** Deployment, harness, and transfer sub-specification for `PR-014`–`PR-044`, `NFR-001`–`NFR-002`, `NFR-007`–`NFR-019`, and `FS-011`–`FS-043` in [`PRD.md`](PRD.md) and [`FSD.md`](FSD.md).
+> **Document role:** Deployment, harness, and transfer sub-specification for `PR-014`–`PR-046`, `NFR-001`–`NFR-002`, `NFR-007`–`NFR-020`, and `FS-011`–`FS-045` in [`PRD.md`](PRD.md) and [`FSD.md`](FSD.md).
 
 ## Guarantee
 
@@ -12,7 +12,7 @@ The core is both harness-agnostic and model-agnostic:
 - every operational reference is relative to the skill directory;
 - no provider, model ID, proprietary tool name, hidden reasoning format, or UI control is required;
 - missing host capabilities have explicit fallbacks; and
-- evidence, voice, section-flow, privacy, readiness, ethics, and non-mutating Audit rules do not change across hosts.
+- evidence, voice, section-flow, delivery-readiness, artifact-synchronization, privacy, ethics, and non-mutating Audit rules do not change across hosts.
 
 Compatibility means the same method can load and run. It does not promise identical reasoning quality, context capacity, tool access, latency, cost, or output across models.
 

@@ -28,6 +28,8 @@ Use Write for research planning, architecture, drafting, requested revision, and
 
 When the user says “documentary style,” confirm or infer whether they mean evidence-led narrative voice, a documentary script, or controlled documentation. Do not apply cinematic narration to a policy or operational procedure unless explicitly requested.
 
+For documentary scripts, narrated explanations, timed training, guided demonstrations, or presentation-bound controlled documents, read [delivery-and-presentation.md](delivery-and-presentation.md).
+
 ## Build the document contract
 
 Extract before asking:

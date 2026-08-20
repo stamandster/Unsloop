@@ -1,6 +1,6 @@
 # Review Output Contracts
 
-> **Specification role:** Normative output and readiness sub-specification for `PR-009`–`PR-010`, `PR-016`–`PR-044`, `FS-008`–`FS-009`, and `FS-014`–`FS-043` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md).
+> **Specification role:** Normative output and readiness sub-specification for `PR-009`–`PR-010`, `PR-016`–`PR-046`, `FS-008`–`FS-009`, and `FS-014`–`FS-045` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md).
 
 ## Default: Unsloop Review
 
@@ -119,6 +119,8 @@ When skills are composed, name only material responsibility boundaries: which sp
 For quantitative evidence, report the linked claim, inputs, formula or transformation, source-reported and reproduced values, variance, display locations, status, uncertainty, and required action. For interviews, report attribution and permission status without exposing protected identity. For multimodal evidence, report original artifact, inspected range, extraction, missing content, and verification state.
 
 For documentation systems, state release scope, supported versions, canonical or changed units, affected dependencies, stale content, corrections or redirects, approval, and maintenance owner. Reader-validation results must identify Simulated hypothesis, Automated check, Expert review, Observed test, or Not run plus coverage and retest state.
+
+For delivered or presented work, return the requested artifact first. Then report only material delivery information: total and section constraints; the estimate or rehearsal basis; readings, pauses, questions, media, interactions, and transitions included in the time model; unresolved allocation conflicts; safety buffer; consequential audience, evidence-integration, media, interaction, or closing decisions; the authoritative content source; derivatives refreshed; validation actually performed; and the resulting readiness label. Mark a derivative stale when the authoritative source changed but the derivative was not refreshed. Do not describe estimated timing as observed delivery, successful export as rendered or playable output, or unchecked derivatives as synchronized.
 
 For collaborative work, identify resolved, partially resolved, rejected, deferred, and blocked feedback; the decision owner; affected artifact version; and approval state. Never equate addressed comments with approval.
 

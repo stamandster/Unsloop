@@ -72,6 +72,8 @@ No database, background service, model endpoint, provider account, or persistent
 | FS-041 | Documentation maintenance | Published state, triggers, issue reports, changes, approval and retention | `MaintenanceRecord`, correction/deprecation/withdrawal disposition, release handoff | PR-042; NFR-011, NFR-018 |
 | FS-042 | Reader and usability validation | Artifact version, audience, tasks, environment, checks or participants | `UsabilityValidation`, barriers, method label, disposition, and retest state | PR-043; NFR-003, NFR-018 |
 | FS-043 | Audit information preservation | Audit request, authoritative artifact version, evidence boundary, findings, optional revision authorization | Unchanged audited artifact, `AuditChangeBoundary`, and separately dispositioned correction proposals | PR-044; NFR-003, NFR-019 |
+| FS-044 | Delivery and presentation orchestration | Delivered-writing request, brief, governing directions, timing or attention constraints, audience, evidence, questions, media, interaction, closing goal | `DeliveryContract`, reconciled element plan, delivery-aware artifact or findings, and bounded readiness | PR-045; NFR-003, NFR-020 |
+| FS-045 | Multi-format artifact synchronization | Authoritative source or synchronization rule, required derivatives, accepted changes, available artifact capabilities and validation | `ArtifactSet` with current/stale state, validation records, and honest handoff | PR-046; NFR-007, NFR-018, NFR-020 |
 
 ## Requirements traceability
 
@@ -121,6 +123,8 @@ No database, background service, model endpoint, provider account, or persistent
 | PR-042 | FS-025, FS-034, FS-040, FS-041 |
 | PR-043 | FS-008, FS-034, FS-042 |
 | PR-044 | FS-001, FS-005, FS-008, FS-021, FS-025, FS-043 |
+| PR-045 | FS-003, FS-006–FS-008, FS-035, FS-039, FS-042, FS-044 |
+| PR-046 | FS-008, FS-025, FS-035, FS-040–FS-042, FS-045 |
 | NFR-001 | FS-011, FS-012 |
 | NFR-002 | FS-012 |
 | NFR-003 | FS-004–FS-008 |
@@ -140,6 +144,7 @@ No database, background service, model endpoint, provider account, or persistent
 | NFR-017 | FS-024, FS-037–FS-039 |
 | NFR-018 | FS-023, FS-034, FS-040–FS-042 |
 | NFR-019 | FS-008, FS-021, FS-025, FS-043 |
+| NFR-020 | FS-008, FS-035, FS-039, FS-042, FS-044, FS-045 |
 
 ## Logical data model
 
@@ -185,6 +190,18 @@ Record only task-relevant observable traits: register, directness, cadence, voca
 ### `AuditChangeBoundary`
 
 Record the authoritative audited version, inspected range, artifact hash or stable identifier when available, mutation authorization, protected information fields, linked findings, proposed corrections, semantic effect, downstream effect, decision owner, disposition, and revised version when separately authorized. Use mutation authorization **None**, **Proposals only**, **Presentation-only edits**, or **Specified meaning-changing edits**. Audit alone always uses **None** or **Proposals only**.
+
+### `DeliveryContract`
+
+Record setting (**Live**, **Recorded**, **Interactive**, or **Hybrid**), audience layers and intended final state, overall duration or attention constraint and type, pace and basis when material, section allocations, safety buffer, required and optional presentation elements, accessibility needs, authoritative source format, required derivatives, validation expectation, and unresolved decisions. A pace or word-count estimate is planning evidence, not observed delivery time.
+
+### `PresentationElement`
+
+Record element ID, type (**Spoken text**, **Quotation/reading**, **Pause**, **Question**, **Media**, **Demonstration**, **Interview**, **Interaction**, **Transition**, **Opening**, or **Closing**), placement, required/optional state, function, audience perception, evidence or claim link, introduction and follow-through, estimated time or attention cost and basis, accessibility alternative, decision owner, disposition, and actual observation when available.
+
+### `ArtifactSet`
+
+Record the authoritative source or explicit synchronization rule, accepted content version, every required derivative, generation or adaptation method, content comparison state, freshness (**Current**, **Stale**, **Unresolved**, or **Not required**), validation type and scope, artifact capability or owner, checked version, unresolved issue, and readiness effect. A successful export does not establish synchronization, usable rendering, playback, accessibility, or rehearsal.
 
 ### `RequirementCoverage`
 
@@ -380,6 +397,7 @@ Request and materials
   -> FS-001 select mode and depth
   -> FS-002 resolve topic path when new writing lacks a topic
   -> FS-003 build the smallest sufficient WritingBrief
+  -> FS-044 when delivery matters, establish and reconcile the DeliveryContract and presentation elements
   -> FS-016 when fiction, route the job across Write, Review, or Audit
   -> FS-014 when fiction, build the FictionBrief and select the proportionate lifecycle action
   -> FS-015 when persistent fiction is approved, load or maintain portable story state
@@ -414,6 +432,7 @@ Request and materials
   -> FS-040 for documentation sets, maintain content architecture and dependency impact
   -> FS-041 process published-document review, correction, deprecation, withdrawal, and archival
   -> FS-042 distinguish simulated, automated, expert, and observed reader validation
+  -> FS-045 when multiple formats are required, refresh or mark derivatives stale and record actual validation
 ```
 
 ### FS-001 — Select mode and depth
@@ -613,6 +632,29 @@ Define audience, prior knowledge, language, assistive context, task, artifact ve
 5. When Audit and revision are both requested, preserve the Audit result first, establish a separate revision contract, and apply only the authorized scope through FS-025.
 6. Confirm that the audited artifact remains unchanged or identify the separately revised version and exact authorization. Do not let a finding authorize its own application.
 
+### FS-044 — Orchestrate delivery and presentation writing
+
+1. Select this function only when live or recorded delivery, timing, audience interaction, media, or presentation formats materially affect the artifact.
+2. Establish the `DeliveryContract` from existing directions before asking; resolve overall constraint, allocation total, pace basis when material, audience layers, elements, media decisions, authoritative format, required derivatives, and validation expectation.
+3. If source, requested, and allocated totals conflict, present the discrepancy and decision options. Do not infer a new total or silently redistribute sections.
+4. Estimate the complete audience-time or attention cost, including quoted/read text, pauses, questions and answers, transitions, media setup/playback/observation/follow-through, demonstrations, interviews, interactions, accessibility descriptions, opening, and closing. Preserve a proportionate safety buffer.
+5. Integrate material evidence through the functions **Need**, **Orient**, **Present**, **Interpret**, and **Use** only to the degree needed. Permit direct presentation when context already performs the earlier functions.
+6. Review material questions for function, placement, answer path, pause or response, and payoff; never impose a question quota.
+7. For mixed audiences, provide a shared entry point, explain material unfamiliar concepts, and offer useful depth without flattening or singling out groups unnecessarily.
+8. Give consequential optional media or interaction a compact decision brief covering placement, audience perception, function, intended response, handling, cost, accessibility, recommendation, and alternative. Keep it unselected and readiness Provisional while a material choice remains open.
+9. Make the closing establish the intended final audience state, resolve the governing movement, and offer action only when appropriate without introducing a new major point.
+10. In Review, diagnose only what the inspected artifact and delivery evidence support. In Audit, preserve every inspected artifact unchanged. In Write, implement only confirmed delivery and media decisions.
+
+### FS-045 — Synchronize multi-format artifact sets
+
+1. Identify the authoritative source or explicit synchronization rule and the exact accepted content version.
+2. Inventory required derivatives and route generation, rendering, playback, accessibility, or other format-specific mechanics to the applicable artifact capability or specialist.
+3. Include required derivatives in every consequential revision impact map.
+4. After accepted changes, refresh each required derivative and compare it with the authoritative content at the level appropriate to the format.
+5. Record rendering, pagination, media placement, speaker cues, playback, accessibility, timing, rehearsal, or other checks only when actually performed.
+6. Mark an unrefreshed, uninspected, mismatched, or unavailable derivative **Stale** or **Unresolved** and reduce readiness proportionately.
+7. In Audit, leave the source and derivatives unchanged and report consistency findings separately. Never infer synchronization from filenames, timestamps, export success, or polished appearance.
+
 ## Failure and boundary handling
 
 | Condition | Required behavior |
@@ -664,6 +706,13 @@ Define audience, prior knowledge, language, assistive context, task, artifact ve
 | Reviewer comments conflict or lack authority | Surface the conflict and route it to the documented decision owner; do not infer approval. |
 | Translation term or source meaning is ambiguous | Preserve the ambiguity, offer bounded choices, and lower readiness or confidence when material. |
 | Structured output lacks evidence for a required optional value | Use null or omit the optional field; never fabricate a value to satisfy the schema. |
+| Overall delivery limit and section allocations conflict | Show the source, requested, and allocated totals and obtain the authorized adjustment; do not redistribute silently. |
+| Delivery estimate omits pauses, readings, media, or interaction | Recalculate the complete audience-time cost and reduce readiness until the plan fits. |
+| Timed artifact fits only at an unsupported pace | Request or disclose a defensible pace and revise content; do not assume faster delivery as the solution. |
+| Consequential optional media remains undecided | Leave it unselected, show the decision brief, and keep the affected artifact provisional. |
+| Evidence appears without audience orientation or interpretation | Diagnose the missing function and propose the smallest connection; do not add unsupported application. |
+| Required derivative was not refreshed after an accepted change | Mark it stale and do not call the artifact set synchronized or ready. |
+| Render, playback, rehearsal, or accessibility validation was not performed | State **Not run** or the narrower actual check; do not infer success from prose or export. |
 
 ## Verification matrix
 
@@ -745,6 +794,14 @@ Define audience, prior knowledge, language, assistive context, task, artifact ve
 | Audit finds an unsupported material claim | PR-044, NFR-019 / FS-005, FS-043 | Artifact remains unchanged; finding identifies the evidence gap and a separately dispositioned proposal. |
 | Audit plus copyedit request | PR-026, PR-044, NFR-019 / FS-025, FS-043 | Presentation edits stay inside scope; claim, position, certainty, quantity, attribution, and exceptions remain unchanged. |
 | Audit plus authorized substantive correction | PR-026, PR-044, NFR-012, NFR-019 / FS-025, FS-043 | Audit record precedes revision; semantic effects, authorization, checkpoint, applied scope, and revised version remain traceable. |
+| Timed presentation with pauses and media | PR-045, NFR-020 / FS-003, FS-044 | Overall ceiling, section totals, pace basis, pauses, readings, media handling, interaction, and safety buffer reconcile without assumed speed. |
+| Source and section durations disagree | PR-004, PR-045 / FS-003, FS-044 | Discrepancy and adjustment choices are shown; no silent redistribution occurs. |
+| Statistic or quotation dropped into a speech | PR-005, PR-045 / FS-004, FS-044 | Review identifies missing need, orientation, interpretation, or supported use without imposing a fixed formula. |
+| Decorative stack of rhetorical questions | PR-007, PR-045 / FS-006, FS-044 | Questions are tested for function, answer path, pause, and payoff; unnecessary questions are removed rather than varied mechanically. |
+| Optional video changes timing and accessibility | PR-040, PR-045, NFR-020 / FS-039, FS-044 | Context-rich decision brief, explicit selection, full handling cost, alternative content, and provisional state until resolved. |
+| Mixed novice and expert audience | PR-003, PR-045 / FS-003, FS-044 | Shared entry point, necessary explanation, and worthwhile depth appear without treating either group as uniform. |
+| Markdown source changed but DOCX was not regenerated | PR-046, NFR-020 / FS-025, FS-045 | DOCX is marked stale; no synchronization or platform-readiness claim is made. |
+| Export succeeded without render or playback inspection | PR-046, NFR-020 / FS-035, FS-045 | Handoff reports export only and keeps rendering, playback, accessibility, or rehearsal Not run. |
 
 ## Change control
 

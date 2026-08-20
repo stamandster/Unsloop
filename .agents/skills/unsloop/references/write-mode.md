@@ -10,6 +10,8 @@ For multi-session non-fiction, also read [sustained-writing-projects.md](sustain
 
 For any artifact with chapters, headings, subheadings, scene breaks, or procedural phases, read [section-flow.md](section-flow.md).
 
+For spoken, timed, interactive, media-assisted, or multi-format delivery, read [delivery-and-presentation.md](delivery-and-presentation.md).
+
 ## Establish the brief
 
 Use the writing-brief procedure to resolve topic status first: accept an existing topic, refine a rough direction, or brainstorm distinct options from minimal seed context. Then identify the reader outcome, audience knowledge and concerns, context, governing directions, required, optional, background, and excluded material, factual references, desired length, format, and voice constraints. Distinguish hard constraints from working targets and component allocations.
@@ -38,6 +40,7 @@ For fiction, invention is part of the disclosed form. Keep invented story materi
 - Mark uncertain facts or missing citations instead of smoothing over them.
 - Use optional material only when it earns its space; keep background material out of the artifact unless it becomes relevant.
 - Make examples clarify a claim, judgment, consequence, or next step rather than merely decorate the prose.
+- Introduce material evidence with enough need and orientation for the audience to understand why it appears, what to notice, what it supports, and what follows from it.
 
 ## Revise without voice laundering
 

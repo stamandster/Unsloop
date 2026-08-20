@@ -13,6 +13,7 @@ Identify representative audience, prior knowledge, language, assistive needs, ta
 - **Task performance:** observe completion, errors, hesitation, backtracking, time, recovery, and escalation using the intended environment.
 - **Accessibility:** check structure, headings, labels, link purpose, reading order, alternatives for non-text content, keyboard or assistive operation, contrast or visual dependence, language clarity, and required standard with appropriate tools or reviewers.
 - **Plain language and localization:** test terminology, sentence load, assumed knowledge, cultural or jurisdictional fit, and translation-specific ambiguity with the intended audience.
+- **Delivery and presentation:** test actual duration, pacing, pauses, audience orientation, media handling, transitions, audibility or playback, interaction, and closing comprehension in the intended setting. A model estimate or word-count calculation is not an observed rehearsal.
 
 Do not manufacture participants or observations. Label model-only output **Simulated hypothesis**, automated output **Automated check**, expert inspection **Expert review**, and actual sessions **Observed test**.
 

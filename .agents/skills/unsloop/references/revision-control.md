@@ -34,6 +34,8 @@ Before a consequential or bulk revision:
 6. apply changes in bounded batches; and
 7. reconcile the manuscript, ledgers, and resume state.
 
+When the work has required derivatives, include them in the impact map. Refresh and validate them after accepted changes or mark them stale; do not let a revised canonical source coexist with apparently final but outdated outputs.
+
 Never overwrite an existing checkpoint or unrelated user work.
 
 Before applying an audit-derived revision, compare the before and after versions for claim, position, recommendation, conclusion, scope, certainty, evidence strength, chronology, quantity and unit, attribution, causality, condition, exception, and exclusion. Treat any difference in those fields as meaning-changing even when the prose sounds clearer.

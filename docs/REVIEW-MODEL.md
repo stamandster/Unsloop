@@ -1,6 +1,6 @@
 # Review Model
 
-> **Specification role:** Normative method for `PR-003`–`PR-008`, `PR-016`–`PR-044`, `FS-003`–`FS-007`, and `FS-014`–`FS-043` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md). Ethical limits in [`ETHICS-AND-LIMITS.md`](ETHICS-AND-LIMITS.md) control whenever a method rule appears to conflict.
+> **Specification role:** Normative method for `PR-003`–`PR-008`, `PR-016`–`PR-046`, `FS-003`–`FS-007`, and `FS-014`–`FS-045` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md). Ethical limits in [`ETHICS-AND-LIMITS.md`](ETHICS-AND-LIMITS.md) control whenever a method rule appears to conflict.
 
 ## Overview
 
@@ -65,6 +65,12 @@ If evidence must be acquired, select User-provided only, Scoped web, Broad web, 
 For numerical evidence, inspect data version, population, period, units, fields, filters, exclusions, transformations, formulas, rounding, uncertainty, reproduced values, and agreement across prose and visuals. For interviews, inspect consent, attribution, record type, transcript range, quotation permission, correction and subject-response status, corroboration, and restrictions. For non-text evidence, inspect the original-to-derived transformation, coverage, missing content, and verification against the original.
 
 For documentation systems, map audience tasks, content types, canonical owners, supported versions, dependencies, reused explanations, and navigation. Apply change impact before releasing revisions. Maintain correction, deprecation, withdrawal, supersession, and archival state. Distinguish simulated reader hypotheses, automated checks, expert review, and observed human tests when evaluating comprehension, findability, task performance, accessibility, plain language, or localization.
+
+For speeches, presentations, narrated scripts, podcasts, voiceovers, lessons, demos, timed readings, and media-assisted work, establish a delivery contract before substantial drafting. Record the live, recorded, interactive, or hybrid setting; audience layers; total limit and section allocations; the basis for any pace estimate; readings, quotations, pauses, questions, demonstrations, media, and interactions that consume audience time; accessibility needs; authoritative source; derivative formats; and required validation. Reconcile the whole with its parts, retain a safety buffer, and never solve an overrun by silently omitting delivery elements or assuming a faster speaker.
+
+Integrate material evidence through its audience function: establish the need, orient the audience, present the evidence accurately, interpret what it establishes, and use it for the artifact's goal. This is a functional test, not a required five-sentence sequence. Give each material question a purpose, placement, answer path, expected pause or response, and payoff; do not impose a question quota. Give mixed audiences a shared entry point before optional depth. Treat consequential media choices as **Provisional—decision required** until accepted, and close with the movement appropriate to the genre rather than a generic recap or forced call to action.
+
+When one work has multiple formats, distinguish the authoritative content source from its derivatives. After an authoritative change, refresh affected derivatives and record only validation that actually occurred—such as rendering, playback, rehearsal, accessibility inspection, or platform checks. A successful export or a model timing estimate does not establish delivery readiness.
 
 For Audit, establish the authoritative version and leave it unchanged. An audit may change the assessment of information, not the audited information. Report proposed corrections separately and identify whether each is presentation-only or meaning-changing. If revision is also requested, preserve the audit result as a distinct stage and establish a separate bounded revision contract.
 

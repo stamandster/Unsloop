@@ -213,3 +213,15 @@ An Audit may change the assessment of information, but not the audited informati
 **Status:** Accepted
 
 Evaluate the preceding close, heading or break, and next opening as one boundary. Make the actual narrative, argumentative, chronological, or operational relationship legible with the smallest useful device. Do not require a transitional sentence where hierarchy and sequence already orient the reader, and preserve purposeful hard breaks instead of smoothing every section into a uniform cadence.
+
+## D-035 — Treat delivery as part of the writing artifact
+
+**Status:** Accepted
+
+For live, recorded, timed, interactive, or media-assisted writing, model the complete audience experience rather than prose length alone. Reconcile the whole and section allocations, count every material delivery element, use pace only with a disclosed basis, give evidence and questions functional roles, provide mixed-audience entry and depth, resolve consequential optional media, and make the closing establish the intended final state. Do not import a universal speaking rate, question quota, evidence formula, or call-to-action requirement.
+
+## D-036 — Separate content authority from derivative validation
+
+**Status:** Accepted
+
+When one work exists in multiple required formats, identify one authoritative source or an explicit synchronization rule. Include derivatives in revision impact, refresh them after accepted changes, and route generation and format checks to the applicable artifact capability. Record only comparisons, renders, playback, accessibility checks, rehearsal, or other validation actually performed; otherwise mark the derivative stale or unresolved.

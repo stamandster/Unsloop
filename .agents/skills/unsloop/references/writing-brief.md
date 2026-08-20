@@ -70,7 +70,7 @@ Capture these fields when they matter:
 8. **Exclusions:** information, claims, framing, disclosures, implications, or source uses to avoid.
 9. **Reference material:** notes, documents, links, data, sources, and earlier discussions that may support the content; identify which are authoritative for facts and which merely provide leads.
 10. **Voice target:** tone, formality, language style, emotional restraint, and any authorized writing samples.
-11. **Format and delivery constraints:** length, structure, citation style, template, platform, deadline, accessibility needs, and any component allocations.
+11. **Format and delivery constraints:** length or duration, structure, citation style, template, platform, deadline, live or recorded setting, pace when material, pauses, interaction, media, accessibility needs, authoritative source format, required derivatives, validation expectation, and any component allocations.
 
 For fiction, map these general fields to the fiction-specific brief without duplicating them. In particular, keep real-world research references separate from story canon, and keep author voice evidence separate from narrative and character voice design.
 
@@ -93,6 +93,8 @@ Do not treat all supplied material as required. Do not criticize the omission of
 - **Safety buffer:** reserved capacity for quotations, citations, captions, delivery variation, or other real use.
 
 When allocations exist, compare their total with the overall constraint. Do not silently redistribute them or solve an overrun by assuming hidden capacity.
+
+For timed or performed work, count every material delivery element rather than equating manuscript word count with duration. Read [delivery-and-presentation.md](delivery-and-presentation.md) when pace, pauses, quotations, readings, questions, media, demonstrations, interaction, or synchronized formats affect feasibility or readiness.
 
 ## Establish the direction hierarchy
 

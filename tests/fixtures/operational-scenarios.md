@@ -1,6 +1,6 @@
 # Operational Extension Behavioral Scenarios
 
-These clean-context contracts cover composition, source safety, heterogeneous evidence, documentation systems, maintenance, and human-use validation.
+These clean-context contracts cover composition, source safety, heterogeneous evidence, documentation systems, maintenance, human-use validation, section flow, and delivery and presentation.
 
 ## 1. Domain skill and Unsloop together
 
@@ -157,3 +157,51 @@ These clean-context contracts cover composition, source safety, heterogeneous ev
 - Expected routing: Write or Review + section flow.
 - Required: preserve an intentional scene cut, time jump, contrast, reveal, warning, exception, or procedural gate when it serves the artifact and the reader can orient appropriately.
 - Prohibited: smoothing every boundary into the same cadence or requiring a transitional sentence solely because a heading is present.
+
+## 27. Timed presentation with readings, pauses, and media
+
+- Expected routing: Write + delivery and presentation.
+- Required: establish the total and section limits, pace-estimate basis, safety buffer, and audience-time cost of spoken text, readings, pauses, questions, media, interaction, and transitions.
+- Prohibited: timing only the prose or treating a words-per-minute estimate as an observed rehearsal.
+
+## 28. Overall and section durations disagree
+
+- Expected routing: Write or Review + delivery and presentation.
+- Required: expose the mismatch, preserve author-owned priorities, and request or propose an explicit allocation decision before substantial drafting.
+- Prohibited: silently changing a section limit, omitting required material, or assuming a faster speaker to make the totals appear consistent.
+
+## 29. Evidence dropped into a speech without audience integration
+
+- Expected routing: Review + delivery and presentation + evidence integrity.
+- Required: identify the audience need, orientation, accurate presentation, supported interpretation, and intended use while preserving the source's actual claim strength.
+- Prohibited: imposing a rigid sentence formula or making an application stronger than the evidence supports.
+
+## 30. Decorative rhetorical-question stack
+
+- Expected routing: Review + delivery and presentation + human voice.
+- Required: test each material question for purpose, placement, answer path, expected pause or response, and payoff; preserve only questions that perform work.
+- Prohibited: enforcing a question quota or retaining questions merely because they sound polished.
+
+## 31. Optional media changes timing and accessibility
+
+- Expected routing: Write + delivery and presentation + multimodal evidence.
+- Required: record the media's placement, perception, function, intended response, handling, audience-time cost, and accessibility needs; keep a consequential unresolved choice Provisional—decision required.
+- Prohibited: silently selecting the media or omitting its handling and accessibility cost from the delivery contract.
+
+## 32. Presentation for a mixed audience
+
+- Expected routing: Write or Review + delivery and presentation.
+- Required: provide a shared entry point for newcomers, preserve useful depth for experienced listeners, and explain necessary terms without flattening the content.
+- Prohibited: assuming one uniform level of prior knowledge or turning the presentation into two disconnected versions.
+
+## 33. Authoritative Markdown changes while DOCX remains stale
+
+- Expected routing: Write + delivery and presentation + skill composition.
+- Required: identify Markdown as authoritative, mark the DOCX derivative stale, refresh it through the applicable artifact skill when authorized, and record the actual rendering and synchronization checks.
+- Prohibited: calling the formats synchronized because both files exist or because export completed.
+
+## 34. Export succeeds without render or playback inspection
+
+- Expected routing: Write or Review + delivery and presentation + usability validation.
+- Required: distinguish export success from rendering, playback, rehearsal, accessibility, and platform validation; report only checks that actually occurred and lower readiness when a required check is missing.
+- Prohibited: claiming presentation readiness, playability, accessibility, or platform compatibility from export success alone.

@@ -16,6 +16,8 @@ Flag abrupt discontinuities for closer inspection. Do not treat them as proof of
 
 For a multi-section artifact, use [section-flow.md](section-flow.md). Inspect each material boundary as the preceding close, heading or break, and next opening. Determine the intended relationship before calling it abrupt. Do not demand a bridge when the heading and sequence already supply the logic, and preserve intentional scene cuts, contrasts, time jumps, viewpoint changes, or procedural gates.
 
+For spoken or presented work, use [delivery-and-presentation.md](delivery-and-presentation.md). Test whether questions, pauses, evidence introductions, media handling, audience address, and the closing perform a real function in delivery rather than imitating a presentation template.
+
 ## Flag patterns, not words
 
 - **Empty abstraction:** announce importance without stating the claim.
