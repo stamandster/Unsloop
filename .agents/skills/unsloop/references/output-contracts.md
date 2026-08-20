@@ -49,6 +49,8 @@ For a documentation system, identify release scope, supported versions, affected
 
 For spoken, timed, interactive, or media-assisted work, return the requested artifact first. Add only material delivery facts: overall constraint and estimate basis, section-allocation conflicts, safety buffer, included and unresolved media or interactions, authoritative source format, derivatives refreshed, validation actually performed, and readiness limits. Do not call a manuscript rehearsed, timed, playable, rendered, synchronized, or platform-ready from prose inspection alone.
 
+For a Writing-Pattern and Assistance Audit, begin with **AI authorship determination: Not assessable from prose alone** unless direct process evidence supports a narrower assistance statement. Then report the evidence boundary; separate Specificity, Authorial voice, optional Voice fidelity, Redundancy, Formulaicity, Abstraction, and optional Slop density; passage evidence; any measured counts with method and limitations; authorized-sample comparison; assistance provenance; and external detector results. Do not provide or imply one combined AI score. Keep the artifact unchanged and route any requested revision through a separate quality or voice goal rather than detector evasion.
+
 When inferred or missing brief elements materially shaped the artifact, add a compact **Brief assumptions** note. Omit obvious or inconsequential assumptions.
 
 When voice matching is material, add a compact note unless the user wants artifact-only output:

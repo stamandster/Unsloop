@@ -1,28 +1,84 @@
 # Unsloop
 
-**Writing integrity and human-voice review.**
+**Author-led writing. Traceable evidence. Defensible voice.**
 
-Unsloop is a writing-quality project built around a simple idea: judge the text and the evidence, not a detector score or a stylistic hunch.
+Unsloop is a portable, model-agnostic writing lifecycle system for planning, drafting, revising, reviewing, auditing, researching, validating, maintaining, and packaging written work. It preserves author control, evidence provenance, human voice, continuity, and honest readiness from the first idea through long-form development and final handoff.
+
+Unsloop began with a narrower concern: identifying generic, formulaic, over-polished, or source-dependent writing without pretending that style proves AI authorship. That integrity-and-voice lens remains important, but the project now supports the full writing process—topic discovery, creative and factual development, evidence acquisition, controlled revision, persistent project state, delivery planning, multi-format synchronization, and non-mutating audit.
 
 The project is governed by a traceable specification stack: [`BRD.md`](BRD.md) defines the business need and boundaries, [`PRD.md`](PRD.md) defines product behavior and acceptance criteria, and [`FSD.md`](FSD.md) defines the executable workflow and validation model. The project directory is authoritative across local, user-wide, and harness-specific use.
 
-For new writing, Unsloop begins by determining whether the user already has a topic, has a rough direction to refine, or wants to brainstorm distinct topic options. If the topic is already clear, it does not ask the user to repeat it. When the active harness exposes a structured choice control—including Codex's control—Unsloop uses it for short, consequential decisions; otherwise it presents the same choices conversationally without changing execution modes. It then builds a progressive writing brief from what the user has already supplied: topic, goal, audience, prior knowledge, context, governing directions, content roles, exclusions, reference material, voice target, and format or delivery constraints. It marks material details as known, inferred, or unknown and asks only about gaps that could change the result.
+Repository-profile copy, suggested topics, and the GitHub About description are maintained in [`docs/GITHUB-ABOUT.md`](docs/GITHUB-ABOUT.md).
 
-For substantial or tightly constrained work, the brief also separates governing directions from factual evidence, classifies material as required, optional, background-only, or excluded, and distinguishes hard constraints from working targets. Reviews can map requirement coverage, test whether examples and emotional appeals earn their place, and label materially unresolved work as provisional instead of presenting it as final.
+## What Unsloop is
 
-For manuscripts with chapters, headings, subheadings, scene breaks, or procedural phases, Unsloop evaluates the transition across the preceding close, the visible boundary, and the next opening. It makes the logical relationship legible without adding canned bridges, and it preserves deliberate hard breaks when they serve the narrative, argument, chronology, or task.
+Unsloop combines three modes under one shared method:
 
-For speeches, presentations, lessons, narrated scripts, podcasts, voiceovers, demonstrations, and other delivered writing, Unsloop treats the real delivery as part of the artifact. It reconciles overall and section constraints; counts readings, pauses, questions, media, and interaction; gives evidence a clear audience-facing function; and keeps unresolved consequential media choices provisional. When multiple formats are required, it identifies the authoritative source and reports which derivatives were actually refreshed, rendered, played, compared, or otherwise validated.
+| Mode | Primary job | Default behavior |
+|---|---|---|
+| **Unsloop Review** | Diagnose an existing draft | Prioritize consequential issues, preserve strong material, and revise only when asked. |
+| **Unsloop Write** | Create or revise writing | Build from an author-led brief, evidenced voice, relevant sources, and explicit constraints. |
+| **Unsloop Audit** | Examine writing and evidence | Preserve the inspected artifact, bound every conclusion to available evidence, and keep proposed corrections separate. |
 
-It supports three related jobs:
+Specializations extend those modes without creating separate products: fiction, sustained non-fiction, documentary and controlled documentation, research provenance, source acquisition, quantitative and interview evidence, multilingual writing, collaboration, documentation systems, presentation delivery, structured output, and writing-pattern or assistance audit.
 
-- **Unsloop Review** — diagnose clarity, integrity, specificity, and voice.
-- **Unsloop Write** — draft or revise while preserving the writer's intent and matching their evidenced tone and language style; its fiction workflow scales from a single scene to a novel, serial, or series.
-- **Unsloop Audit** — examine source use, attribution, evidence, and source dependence in depth without changing the audited artifact.
+## Common ways to use Unsloop
 
-Audit is information-preserving by default: it may change the assessment of a passage, but not the passage itself. Incorrect, unsupported, contradictory, misleading, or overly source-dependent information is reported as a finding with a separate proposed correction. If the user requests Audit plus revision, Unsloop preserves the Audit as a distinct stage, classifies presentation-only versus meaning-changing edits, and applies only the explicitly bounded revision scope.
+| Goal | Example request | What Unsloop contributes |
+|---|---|---|
+| Find a direction | `$unsloop I need to write for new managers but do not have a topic.` | Distinct topic options, reader value, scope, evidence needs, and a selected brief. |
+| Draft from source material | `$unsloop Write this report from my notes and supplied sources.` | Goal-directed structure, claim boundaries, attribution, and author-owned decisions. |
+| Revise in your voice | `$unsloop Revise this using my authorized samples without importing their facts.` | Evidence-based voice target, meaning preservation, and confidence disclosure. |
+| Review a manuscript | `$unsloop Review this chapter for structure, specificity, continuity, and flow.` | Prioritized findings, material to preserve, and the smallest useful interventions. |
+| Audit evidence | `$unsloop Audit these claims and citations without changing the document.` | Non-mutating source, claim, quotation, requirement, and provenance findings. |
+| Sustain long-form work | `$unsloop Continue this book from its writing project and accepted checkpoint.` | Portable state, stable units, controlled decisions, recovery, assembly, and resumability. |
+| Develop fiction | `$unsloop Develop this premise into a novel using Adaptive collaboration.` | Scene-to-series workflow, canon, chronology, character voices, revision, and handoff. |
+| Build factual documents | `$unsloop Create this policy, procedure, plan, or technical guide from approved evidence.` | Form-specific authority, branches, validation, maintenance, and version controls. |
+| Maintain documentation | `$unsloop Update this documentation set and trace affected pages and versions.` | Canonical ownership, dependency impact, lifecycle state, and reader validation. |
+| Prepare delivered writing | `$unsloop Turn this outline into a timed presentation with readings and media.` | Complete timing, audience design, evidence integration, media decisions, and format checks. |
+| Assess AI-related concerns | `$unsloop Audit this draft's patterns and supplied detector report.` | Component profile, transparent measurements, provenance, and no unsupported AI verdict. |
+| Compose with another skill | `$unsloop Apply integrity and voice controls while the document skill owns DOCX layout.` | Shared intake, explicit authority, unified handoff, and honest validation boundaries. |
 
-The implementation is one extensible, repository-scoped [Agent Skill](https://agentskills.io/specification) at [`.agents/skills/unsloop/SKILL.md`](.agents/skills/unsloop/SKILL.md). The operational core is model- and harness-agnostic. Codex and Pi discover the canonical repository path directly; Claude Code and other clients use thin discovery adapters pointing to the same directory. Codex support, UI metadata, invocation, and global-link behavior remain fully supported.
+## Operating contract
+
+- The author retains control of goals, meaning, voice, creative canon, evidence decisions, and consequential changes.
+- Topic, directions, factual evidence, voice samples, and model-generated proposals remain distinct.
+- Audit is information-preserving: findings cannot silently rewrite the inspected artifact.
+- Project files are visible, portable, model-agnostic, and created only when persistent state is useful and approved.
+- Domain and artifact skills keep authority over specialized facts, file mechanics, rendering, formulas, and executable validation.
+- Readiness means only what the evidence and checks actually establish; polished output is not treated as verified, approved, rehearsed, synchronized, or publication-certified by appearance alone.
+
+The implementation is one extensible, repository-scoped [Agent Skill](https://agentskills.io/specification) at [`.agents/skills/unsloop/SKILL.md`](.agents/skills/unsloop/SKILL.md). Codex, Claude Code, Pi, other Agent Skills clients, and manually adapted text-capable harnesses can use the same authoritative core.
+
+For manuscripts with chapters, headings, subheadings, scene breaks, or procedural phases, Unsloop writes and reviews the close, visible boundary, and next opening as one logical transition. It preserves purposeful hard breaks and does not add a bridging sentence when hierarchy and sequence already orient the reader. See the [section-flow contract](.agents/skills/unsloop/references/section-flow.md).
+
+## Writing-pattern and assistance audit
+
+When asked for an “AI score,” AI detection, AI-like word or transition analysis, comparison with prior writing, or interpretation of a detector report, Unsloop runs a non-mutating **Writing-Pattern and Assistance Audit**. It does not estimate the probability that AI wrote the text. With prose alone, it reports:
+
+```text
+AI authorship determination: Not assessable from prose alone.
+```
+
+The audit can score Specificity and Authorial voice as strengths; Redundancy, Formulaicity, and Abstraction as risks; Voice fidelity when authorized comparison samples exist; and optional Slop density as a writing-quality summary. Every component includes passage evidence and direction. No strength, risk, voice, provenance, or detector value is combined into one AI score.
+
+Mechanically calculated observations—such as repeated transition counts, repeated phrases, or sentence-length distribution—state their method, inspected range, comparison baseline, and limitations. Revision history, metadata, prompts, outputs, or disclosures are reported separately as assistance provenance and only for the stages they document. A supplied detector result remains labeled as an external vendor result; Unsloop does not reinterpret its percentage as authorship probability.
+
+```text
+$unsloop Audit this draft for formulaic writing and explain whether the prose alone can establish AI authorship.
+$unsloop Compare this draft with my three authorized samples and report voice fidelity without inferring identity or misconduct.
+$unsloop Interpret this detector report alongside the draft, keeping its result separate from Unsloop's pattern profile.
+```
+
+See the [Writing-Pattern and Assistance Audit contract](.agents/skills/unsloop/references/writing-pattern-assistance-audit.md).
+
+An optional dependency-free helper produces reproducible descriptive measurements without an AI score:
+
+```text
+python .agents/skills/unsloop/scripts/writing_pattern_metrics.py draft.txt --transition "however" --transition "in addition"
+```
+
+It writes JSON to standard output and leaves the draft unchanged. The output declares its token, sentence, paragraph, repeated-phrase, sentence-opening, and user-supplied transition rules plus known limitations.
 
 ## Delivery and presentation writing
 
@@ -147,6 +203,7 @@ Host capabilities are negotiated by function. Structured questions fall back to 
 - [`.agents/skills/unsloop/references/sustained-writing-projects.md`](.agents/skills/unsloop/references/sustained-writing-projects.md) — portable long-form non-fiction state and resumption
 - [`.agents/skills/unsloop/references/research-provenance.md`](.agents/skills/unsloop/references/research-provenance.md) — claim, source, quotation, conflict, and freshness tracking
 - [`.agents/skills/unsloop/references/integrity-review.md`](.agents/skills/unsloop/references/integrity-review.md) — non-mutating Audit, source relationships, evidence testing, and proposed corrections
+- [`.agents/skills/unsloop/references/writing-pattern-assistance-audit.md`](.agents/skills/unsloop/references/writing-pattern-assistance-audit.md) — calibrated pattern scoring, measurements, sample comparison, assistance provenance, and detector-report interpretation
 - [`.agents/skills/unsloop/references/documentary-documentation.md`](.agents/skills/unsloop/references/documentary-documentation.md) — biography, documentary, procedure, policy, plan, instruction, and technical-document contracts
 - [`.agents/skills/unsloop/references/source-acquisition.md`](.agents/skills/unsloop/references/source-acquisition.md) — supplied, scoped-site, broad-web, and hybrid research with override and confidence controls
 - [`.agents/skills/unsloop/references/skill-composition.md`](.agents/skills/unsloop/references/skill-composition.md) — responsibility and authority when Unsloop runs beside another skill

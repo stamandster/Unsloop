@@ -1,6 +1,6 @@
 # Review Output Contracts
 
-> **Specification role:** Normative output and readiness sub-specification for `PR-009`–`PR-010`, `PR-016`–`PR-046`, `FS-008`–`FS-009`, and `FS-014`–`FS-045` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md).
+> **Specification role:** Normative output and readiness sub-specification for `PR-009`–`PR-010`, `PR-016`–`PR-047`, `FS-008`–`FS-009`, and `FS-014`–`FS-046` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md).
 
 ## Default: Unsloop Review
 
@@ -70,6 +70,20 @@ Summarize supported findings and unresolved questions. Do not infer intent.
 ### Proposed corrections
 
 Do not apply corrections inside Audit. For each material proposal, identify its finding and location, classify it as **Presentation-only** or **Meaning-changing**, summarize its semantic and downstream effects, identify the decision owner, and record its disposition. Grammar, clarity, tone, cleanup, or formatting authority does not permit changing a claim, position, recommendation, conclusion, scope, certainty, evidence strength, chronology, quantity, attribution, causality, condition, exception, or exclusion.
+
+### Writing-pattern and assistance assessment
+
+When requested, begin with **AI authorship determination: Not assessable from prose alone**, qualified only by direct process evidence and never by style. Then report proportionately:
+
+- the evidence boundary across prose, authorized samples, voice directions, process records, detector reports, and contextual limits;
+- directional component scores with passage evidence and no combined AI total;
+- objective measurements only with method, unit, coverage, baseline, and limitations;
+- authorized-sample voice comparison with relevance and confidence;
+- assistance provenance limited to the stages and artifact ranges directly supported;
+- external detector results with tool, version, date, inspected input, threshold or settings, vendor result, and limitations; and
+- the strongest calibrated conclusion plus unresolved questions.
+
+Keep the inspected artifact unchanged. If revision is separately requested, name the genuine writing goal being improved and do not optimize against a detector or conceal assistance.
 
 ## Unsloop Write
 

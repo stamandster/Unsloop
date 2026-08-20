@@ -19,6 +19,7 @@ Include:
 - findings with stable IDs, locations, observation, classification, consequence, evidence, confidence, severity, preservation target, and smallest useful action;
 - for Audit, artifact-unchanged state, mutation authorization, and any proposed correction's presentation-only or meaning-changing classification, semantic effect, decision owner, and disposition;
 - requirement, claim, source, quotation, or change records when relevant;
+- for a writing-pattern and assistance assessment, the authorship boundary, directional component scores, method-bounded measurements, assistance provenance, and separately reported external detector results;
 - readiness state and unresolved actions; and
 - explicit out-of-scope judgments.
 

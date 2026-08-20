@@ -7,6 +7,7 @@
 **Goal:** Turn the project vision into a coherent method and usable core skill.
 
 - [x] Define Unsloop, Review, Write, and Audit
+- [x] Reposition public documentation around the full writing lifecycle and add governed GitHub repository copy
 - [x] Separate integrity and human-voice lenses
 - [x] Define source-dependence scoring
 - [x] Define directional voice-profile scores
@@ -60,7 +61,7 @@
 - [x] Add quantitative, interview/oral-history, and multimodal evidence workflows and portable ledgers
 - [x] Add documentation-system architecture, dependency, maintenance, correction, deprecation, withdrawal, and archival controls
 - [x] Add reader, task, accessibility, plain-language, and localization validation evidence states
-- [x] Add 34 clean-context operational extension scenarios and deterministic ledger checks
+- [x] Add 40 clean-context operational extension scenarios and deterministic ledger checks
 - [x] Make Audit non-mutating with explicit semantic-field protection and separate revision authorization
 - [x] Add Audit information-preservation requirements, decision records, validator checks, and behavioral scenarios
 - [x] Add cross-section flow contracts for headings, subheadings, scene breaks, and procedural phases with purposeful-hard-break safeguards
@@ -68,6 +69,8 @@
 - [x] Add topic-neutral delivery and presentation contracts for timing, evidence flow, questions, mixed audiences, media, and closings
 - [x] Add canonical-source, derivative-freshness, artifact-validation, and delivery-readiness controls
 - [x] Add delivery and multi-format requirement traceability, validator coverage, and clean-context behavioral scenarios
+- [x] Add a non-mutating Writing-Pattern and Assistance Audit with component scoring, measurement, provenance, sample-comparison, and detector-report boundaries
+- [x] Add structured-report fields, validator traceability, and six clean-context assistance-audit scenarios
 
 ## v0.2 — Examples and calibration
 
@@ -119,6 +122,8 @@
 - [ ] Forward-test timed speeches, narrated scripts, lessons, demonstrations, podcasts, and media-assisted presentations across different pace and interaction assumptions
 - [ ] Forward-test evidence-introduction, rhetorical-question, mixed-audience, optional-media, closing, and overrun behavior without imposing fixed formulas or quotas
 - [ ] Forward-test Markdown/DOCX/PDF/slide/web/audio artifact-set synchronization and honest validation handoff with applicable artifact skills
+- [ ] Forward-test prose-only AI-score requests, direct assistance records, incomplete detector reports, and conflicting provenance without producing authorship probabilities
+- [ ] Calibrate pattern-score and measurement interpretation across genre, language, translation, templates, collaboration, disability-related patterns, and editing intensity
 
 ## v0.3 — Assisted audit tooling
 

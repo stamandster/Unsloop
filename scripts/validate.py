@@ -32,6 +32,8 @@ REQUIRED_FILES = (
     ROOT / "tests" / "fixtures" / "documentary-scenarios.md",
     ROOT / "tests" / "test_operational_scenarios.py",
     ROOT / "tests" / "fixtures" / "operational-scenarios.md",
+    ROOT / "tests" / "test_writing_pattern_metrics.py",
+    ROOT / "docs" / "GITHUB-ABOUT.md",
     ROOT / "docs" / "NAMING.md",
     ROOT / "docs" / "REVIEW-MODEL.md",
     ROOT / "docs" / "SCORING-RUBRIC.md",
@@ -51,6 +53,7 @@ REQUIRED_FILES = (
     SKILL / "references" / "write-mode.md",
     SKILL / "references" / "section-flow.md",
     SKILL / "references" / "delivery-and-presentation.md",
+    SKILL / "references" / "writing-pattern-assistance-audit.md",
     SKILL / "references" / "fiction-workflow.md",
     SKILL / "references" / "fiction-project-operations.md",
     SKILL / "references" / "character-voice-continuity.md",
@@ -73,6 +76,7 @@ REQUIRED_FILES = (
     SKILL / "references" / "structured-output.md",
     SKILL / "scripts" / "fiction_project.py",
     SKILL / "scripts" / "writing_project.py",
+    SKILL / "scripts" / "writing_pattern_metrics.py",
     SKILL / "assets" / "fiction-project" / "BRIEF.md",
     SKILL / "assets" / "fiction-project" / "STATUS.md",
     SKILL / "assets" / "fiction-project" / "SCENES.md",
@@ -311,7 +315,7 @@ SECTION_FLOW_CONTRACT = {
         "Forward-test abrupt, already-coherent, and intentionally discontinuous section boundaries",
     ),
     ROOT / "PORTABILITY.md": (
-        "evidence, voice, section-flow, delivery-readiness, artifact-synchronization, privacy",
+        "evidence, voice, section-flow, delivery-readiness, artifact-synchronization, writing-pattern authorship boundaries, privacy",
     ),
     ROOT / "tests" / "fixtures" / "operational-scenarios.md": (
         "## 25. Abrupt subheading without a logical bridge",
@@ -401,12 +405,183 @@ DELIVERY_PRESENTATION_CONTRACT = {
     ),
     ROOT / "ROADMAP.md": (
         "Add topic-neutral delivery and presentation contracts",
-        "Add 34 clean-context operational extension scenarios",
+        "Add 40 clean-context operational extension scenarios",
     ),
     ROOT / "PORTABILITY.md": ("delivery-readiness", "artifact-synchronization"),
     ROOT / "tests" / "fixtures" / "operational-scenarios.md": (
         "## 27. Timed presentation with readings, pauses, and media",
         "## 34. Export succeeds without render or playback inspection",
+    ),
+}
+
+WRITING_PATTERN_ASSISTANCE_CONTRACT = {
+    SKILL / "SKILL.md": (
+        "references/writing-pattern-assistance-audit.md",
+        "writing-pattern and assistance audits",
+        "never an AI-authorship probability",
+        "do not create a composite authorship score",
+    ),
+    SKILL / "references" / "writing-pattern-assistance-audit.md": (
+        "## Separate the questions",
+        "## Establish the evidence boundary",
+        "**AI authorship determination:** Not assessable from prose alone.",
+        "## Build the pattern profile",
+        "## Use measurements honestly",
+        "## Compare authorized writing samples",
+        "## Handle provenance and detector reports",
+        "## Return the audit",
+        "## Preserve the safety boundary",
+        "Do not create a total",
+        "External detector result",
+        "Do not add artificial errors",
+        "scripts/writing_pattern_metrics.py",
+    ),
+    SKILL / "references" / "scoring.md": (
+        "## Writing-pattern and assistance audit profile",
+        "Do not provide an AI-authorship percentage",
+    ),
+    SKILL / "references" / "human-voice-review.md": (
+        "writing-pattern-assistance-audit.md",
+        "without converting it into an authorship probability",
+    ),
+    SKILL / "references" / "integrity-review.md": (
+        "writing-pattern-assistance-audit.md",
+        "separate evidence types",
+    ),
+    SKILL / "references" / "output-contracts.md": (
+        "For a Writing-Pattern and Assistance Audit",
+        "Do not provide or imply one combined AI score",
+    ),
+    SKILL / "references" / "structured-output.md": (
+        "for a writing-pattern and assistance assessment",
+        "separately reported external detector results",
+    ),
+    SKILL / "assets" / "schemas" / "unsloop-report.schema.json": (
+        '"writing_pattern_assessment"',
+        '"authorship_boundary"',
+        '"Not assessable from prose alone"',
+        '"pattern_scores"',
+        '"assistance_provenance"',
+        '"external_detector_reports"',
+    ),
+    SKILL / "scripts" / "writing_pattern_metrics.py": (
+        "Not assessable from prose alone",
+        "requested_transition_counts",
+        "do not determine human or AI authorship",
+        "--transition",
+    ),
+    ROOT / "BRD.md": ("BR-027", "Writing-Pattern and Assistance Audit"),
+    ROOT / "PRD.md": ("PR-047", "NFR-021 Authorship calibration"),
+    ROOT / "FSD.md": (
+        "FS-046",
+        "`WritingPatternAssessment`",
+        "`TextMeasure`",
+        "`AssistanceProvenance`",
+        "`DetectorReport`",
+    ),
+    ROOT / "README.md": (
+        "## Writing-pattern and assistance audit",
+        "references/writing-pattern-assistance-audit.md",
+        "scripts/writing_pattern_metrics.py",
+    ),
+    ROOT / "PROJECT.md": ("**Authorship-calibrated:**", "combine stylistic scores"),
+    ROOT / "ARCHITECTURE.md": (
+        "Shared writing-pattern and assistance audit",
+        "writing-pattern-assistance-audit.md",
+    ),
+    ROOT / "docs" / "NAMING.md": ("Writing-Pattern and Assistance Audit", "must not be shortened to “AI Score.”"),
+    ROOT / "docs" / "REVIEW-MODEL.md": (
+        "## Writing-pattern and assistance specialization",
+        "Not assessable from prose alone",
+    ),
+    ROOT / "docs" / "REVIEW-OUTPUT.md": (
+        "### Writing-pattern and assistance assessment",
+        "no combined AI total",
+    ),
+    ROOT / "docs" / "SCORING-RUBRIC.md": (
+        "## Writing-Pattern and Assistance Audit display",
+        "no transition, phrase, sentence-length, lexical-diversity",
+    ),
+    ROOT / "docs" / "ETHICS-AND-LIMITS.md": (
+        "For writing-pattern and assistance assessment, Unsloop must not",
+        "average style scores, measurements, sample mismatch, provenance, or external detector output",
+    ),
+    ROOT / "docs" / "SOURCES.md": (
+        "The Writing-Pattern and Assistance Audit operationalizes the detector-limit sources",
+    ),
+    ROOT / "DECISIONS.md": ("## D-037 — Replace AI-score requests with an evidence-bound assistance audit",),
+    ROOT / "ROADMAP.md": (
+        "Add a non-mutating Writing-Pattern and Assistance Audit",
+        "Add 40 clean-context operational extension scenarios",
+    ),
+    ROOT / "PORTABILITY.md": (
+        "writing-pattern authorship boundaries",
+        "For a transferred Writing-Pattern and Assistance Audit",
+    ),
+    ROOT / "tests" / "fixtures" / "operational-scenarios.md": (
+        "## 35. Draft-only request for an AI score",
+        "## 40. Request to rewrite solely to beat an AI detector",
+    ),
+    ROOT / "tests" / "test_writing_project.py": (
+        "writing_pattern_assessment",
+        "external_detector_reports",
+    ),
+    ROOT / "tests" / "test_writing_pattern_metrics.py": (
+        "without_authorship_score",
+        "repeated_phrases_and_openings",
+        "empty_text_returns_declared_zero_boundary",
+    ),
+}
+
+PROJECT_IDENTITY_CONTRACT = {
+    SKILL / "SKILL.md": (
+        "Guide writing from topic discovery through drafting",
+        "not the project's defining category",
+    ),
+    SKILL / "agents" / "openai.yaml": (
+        "Author-led writing, evidence, voice, and audits",
+        "plan, draft, revise, review, audit, research, validate, maintain, or package writing",
+    ),
+    ROOT / "README.md": (
+        "Author-led writing. Traceable evidence. Defensible voice.",
+        "portable, model-agnostic writing lifecycle system",
+        "## What Unsloop is",
+        "## Common ways to use Unsloop",
+        "## Operating contract",
+        "docs/GITHUB-ABOUT.md",
+    ),
+    ROOT / "PROJECT.md": (
+        "author-led writing lifecycle system",
+        "**Author direction and control:**",
+        "**Integrity and evidence:**",
+        "**Voice and craft:**",
+        "**Continuity and operation:**",
+    ),
+    ROOT / "BRD.md": ("model-agnostic writing lifecycle system",),
+    ROOT / "PRD.md": (
+        "writing-lifecycle skill",
+        "do not reduce Unsloop to a checker, detector, or rewriting filter",
+    ),
+    ROOT / "FSD.md": ("full writing lifecycle",),
+    ROOT / "ARCHITECTURE.md": (
+        "portable writing lifecycle system",
+        "GITHUB-ABOUT.md",
+    ),
+    ROOT / "docs" / "NAMING.md": (
+        "full writing lifecycle",
+        "does not name the umbrella product",
+    ),
+    ROOT / "PORTABILITY.md": ("preserves the full writing lifecycle",),
+    ROOT / "DECISIONS.md": ("## D-038 — Position Unsloop as a writing lifecycle system",),
+    ROOT / "ROADMAP.md": (
+        "Reposition public documentation around the full writing lifecycle",
+    ),
+    ROOT / "docs" / "GITHUB-ABOUT.md": (
+        "## Recommended repository description",
+        "Portable, model-agnostic writing workflows for author-led drafting",
+        "Author-led writing. Traceable evidence. Defensible voice.",
+        "## Suggested GitHub topics",
+        "Unsloop is not an AI detector",
     ),
 }
 
@@ -987,25 +1162,26 @@ SPECIFICATION_CONTRACT = {
     ROOT / "BRD.md": (
         "## Business requirements",
         "BR-001",
-        "BR-026",
+        "BR-027",
         "[`PRD.md`](PRD.md)",
         "[`FSD.md`](FSD.md)",
     ),
     ROOT / "PRD.md": (
         "## Functional requirements",
         "PR-001",
-        "PR-046",
+        "PR-047",
         "NFR-001 Portability",
         "NFR-008 Long-form resilience",
         "NFR-019 Semantic preservation",
         "NFR-020 Delivery readiness",
+        "NFR-021 Authorship calibration",
         "[`BRD.md`](BRD.md)",
         "[`FSD.md`](FSD.md)",
     ),
     ROOT / "FSD.md": (
         "## Functional components",
         "FS-001",
-        "FS-045",
+        "FS-046",
         "`WritingBrief`",
         "`EvidenceBoundary`",
         "`VoiceBrief`",
@@ -1020,6 +1196,10 @@ SPECIFICATION_CONTRACT = {
         "`DeliveryContract`",
         "`PresentationElement`",
         "`ArtifactSet`",
+        "`WritingPatternAssessment`",
+        "`TextMeasure`",
+        "`AssistanceProvenance`",
+        "`DetectorReport`",
         "`StructuredUnsloopReport`",
         "## Verification matrix",
     ),
@@ -1172,6 +1352,28 @@ def validate() -> list[str]:
             if requirement not in text:
                 errors.append(
                     f"delivery-presentation safeguard missing from "
+                    f"{path.relative_to(ROOT)}: {requirement}"
+                )
+
+    for path, requirements in WRITING_PATTERN_ASSISTANCE_CONTRACT.items():
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for requirement in requirements:
+            if requirement not in text:
+                errors.append(
+                    f"writing-pattern-assistance safeguard missing from "
+                    f"{path.relative_to(ROOT)}: {requirement}"
+                )
+
+    for path, requirements in PROJECT_IDENTITY_CONTRACT.items():
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for requirement in requirements:
+            if requirement not in text:
+                errors.append(
+                    f"project-identity safeguard missing from "
                     f"{path.relative_to(ROOT)}: {requirement}"
                 )
 

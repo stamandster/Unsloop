@@ -4,22 +4,24 @@
 
 ## Vision
 
-Unsloop helps writing become more original, defensible, specific, readable, and recognizably human without sanding away the writer's character.
+Unsloop is an author-led writing lifecycle system. It helps people move from topic discovery and purpose through drafting, revision, review, audit, research, validation, maintenance, and handoff while preserving control, evidence provenance, human voice, continuity, and honest readiness.
 
-The project addresses two connected problems:
+The project coordinates four connected concerns:
 
-1. **Writing integrity:** plagiarism and patchwriting risk, incomplete attribution, source-dependent structure, weak evidence, and citation problems.
-2. **Human voice:** generic phrasing, empty abstraction, formulaic structure, repetition, over-polishing, and loss of the writer's actual point of view.
+1. **Author direction and control:** the goal, audience, meaning, constraints, voice, creative canon, and consequential decisions remain author-owned.
+2. **Integrity and evidence:** attribution, paraphrase, claims, quotations, source dependence, research scope, provenance, and uncertainty remain inspectable and defensible.
+3. **Voice and craft:** prose stays specific, readable, structurally coherent, emotionally responsible, and recognizably grounded in the writer's choices.
+4. **Continuity and operation:** long-form state, versions, collaboration, delivery, derivative formats, validation, maintenance, and resumption remain explicit and portable.
 
-These problems overlap, but they are not identical. A passage can be fully original and still sound generic. It can also avoid verbatim overlap while following a source's syntax, idea order, incidental details, and rhetorical architecture.
+These concerns overlap, but they are not interchangeable. Formulaic or AI-associated writing patterns are one evidence-bound Audit specialization within this larger lifecycle—not the project's defining category and never proof of machine authorship.
 
 ## Product promise
 
-Unsloop evaluates observable features of writing. It does not infer misconduct or machine authorship from style alone.
+Unsloop supports writing from first direction through durable delivery and evaluates observable features when reviewing or auditing. It does not infer misconduct or machine authorship from style alone.
 
 For substantial work, Unsloop first establishes what the writing is meant to accomplish for a particular audience. It uses a progressive brief, distinguishing what is known, reasonably inferred, and still unknown, so that missing context does not silently become invented content.
 
-Every material finding should answer four questions:
+Every material review or audit finding should answer four questions:
 
 1. What passage or claim is under review?
 2. What concrete feature creates concern?
@@ -28,10 +30,10 @@ Every material finding should answer four questions:
 
 ## Intended users
 
-- Writers revising academic, professional, technical, religious, personal, persuasive, or creative work, including fiction from a single scene through a multi-book series
-- Editors who need a repeatable integrity-and-voice review
-- Researchers or educators comparing a draft with supplied sources
-- Collaborators who want AI-assisted writing to remain accountable and author-led
+- Writers planning, drafting, revising, reviewing, maintaining, or delivering academic, professional, technical, religious, personal, persuasive, documentary, or creative work
+- Editors and auditors who need repeatable, information-preserving diagnosis across integrity, voice, structure, continuity, and requirements
+- Researchers, educators, and documentation teams managing claims, sources, versions, long-form state, or reader-facing systems
+- Collaborators who want model-assisted writing to remain accountable, portable, resumable, and author-led
 
 ## Scope
 
@@ -42,6 +44,8 @@ Unsloop can:
 - distinguish quotation, acceptable paraphrase, patchwriting, structural borrowing, and unattributed borrowing;
 - assess evidence strength and citation placement;
 - identify concrete forms of generic or formulaic prose;
+- translate AI-score or machine-authorship requests into a non-mutating writing-pattern and assistance assessment with separate component scores, measurements, provenance, and detector-report boundaries;
+- compare a draft with authorized writing samples for voice fidelity without treating similarity or mismatch as proof of identity, human authorship, or AI use;
 - preserve strong passages and explain why they work;
 - revise text when the user requests revision;
 - draft new text from the user's purpose, position, facts, and natural vocabulary;
@@ -90,6 +94,7 @@ Unsloop can:
 Unsloop cannot:
 
 - prove AI authorship from prose style;
+- combine stylistic scores, text measurements, voice mismatch, provenance, or detector output into an AI-authorship probability;
 - convert a similarity score into a plagiarism verdict;
 - establish that no borrowing occurred when the comparison corpus is incomplete;
 - verify a source it cannot access;
@@ -110,6 +115,7 @@ A successful Unsloop result is:
 
 - **Text-grounded:** findings point to actual language, structure, claims, or sources.
 - **Calibrated:** conclusions do not exceed the available evidence.
+- **Authorship-calibrated:** prose-only audits say authorship is not assessable, while direct assistance evidence is limited to the process stage and artifact range it actually documents.
 - **Actionable:** the writer knows what to keep, investigate, and change.
 - **Voice-preserving:** revision retains the writer's position and useful idiosyncrasies.
 - **Structurally coherent:** visible section boundaries express a legible relationship without forced smoothing or loss of intentional pacing.

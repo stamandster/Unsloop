@@ -6,28 +6,30 @@
 
 ## Purpose
 
-Unsloop is a portable writing-integrity and human-voice system. It helps a writer, editor, researcher, or collaborator produce writing that is original, supportable, specific, readable, and recognizably theirs without turning stylistic signals or similarity scores into unsupported verdicts. For fiction, it also provides an author-controlled path from a story seed through planning, drafting, continuity, revision, and handoff without assuming a subject domain or surrendering canon decisions to the model.
+Unsloop is a portable, model-agnostic writing lifecycle system. It helps a writer, editor, researcher, documentation team, or collaborator move from topic discovery and purpose through drafting, revision, review, non-mutating audit, research, validation, maintenance, and handoff. Across that lifecycle, it preserves author control, evidence provenance, human voice, continuity, and honest readiness without turning stylistic signals or similarity scores into unsupported verdicts.
 
 ## Business problem
 
-AI-assisted and source-informed writing creates two related but distinct risks:
+Model-assisted, source-informed, collaborative, and long-form writing creates four related risks:
 
-1. **Integrity risk:** attribution, paraphrase, evidence, citation, or structure may remain too dependent on a source.
-2. **Voice risk:** prose may become generic, formulaic, over-polished, emotionally manufactured, or detached from the writer's actual judgment.
+1. **Direction and control risk:** goals, audience needs, constraints, creative canon, or consequential decisions may be guessed, blurred, or silently transferred away from the author.
+2. **Integrity and evidence risk:** attribution, paraphrase, claims, quotations, source scope, provenance, or structure may remain unsupported or too dependent on a source.
+3. **Voice and craft risk:** prose may become generic, formulaic, over-polished, emotionally manufactured, structurally abrupt, or detached from the writer's judgment.
+4. **Continuity and readiness risk:** versions, long-form state, collaboration, delivery requirements, derivative formats, maintenance, or validation may appear complete while remaining stale, inconsistent, or unverified.
 
-Existing detector-centered approaches do not solve either problem reliably. A useful system must evaluate observable text and available evidence, preserve accountable human authorship, and clearly state what it cannot establish.
+Detector-centered approaches address none of these risks reliably. A useful writing lifecycle system must guide creation as well as inspection, preserve accountable human authorship, evaluate observable text and available evidence, and state clearly what it cannot establish.
 
 ## Vision and value proposition
 
-Unsloop should make writing more defensible without laundering its origins, more human without manufacturing quirks, and more polished without erasing the writer. Its value is a repeatable method that combines integrity review, voice-aware drafting, and evidence-bounded auditing in one coherent system.
+Unsloop should help an author develop, sustain, examine, and deliver writing without laundering its origins, manufacturing quirks, erasing the writer, or overstating readiness. Its value is one repeatable and portable method that combines author-led planning and drafting, controlled revision, selective review, non-mutating audit, research provenance, long-form continuity, and delivery-aware handoff.
 
 ## Stakeholders and users
 
 | Stakeholder | Need |
 |---|---|
-| Writer | Improve a draft or create new writing—including sustained fiction—while retaining intent, position, natural language, and control of consequential creative decisions. |
-| Editor or collaborator | Diagnose high-value problems consistently without rewriting sound prose unnecessarily. |
-| Researcher or educator | Compare drafts with sources and separate textual evidence from misconduct judgments. |
+| Writer | Discover, plan, create, revise, sustain, and deliver writing—including fiction and long-form factual work—while retaining intent, position, natural language, and consequential decisions. |
+| Editor or collaborator | Diagnose high-value problems, coordinate bounded changes, and preserve accepted material and authority. |
+| Researcher, educator, or documentation team | Develop and maintain evidence-led work while keeping claims, sources, versions, reader needs, and validation boundaries inspectable. |
 | Project maintainer | Evolve one portable, testable source of truth without divergent skill copies. |
 | Affected reader or institution | Receive writing whose evidence, attribution, uncertainty, and authorship claims are not misrepresented. |
 
@@ -61,6 +63,7 @@ Unsloop should make writing more defensible without laundering its origins, more
 | BR-024 | Support documentation systems through architecture, dependency control, reader validation, correction, deprecation, maintenance, and archival. | Published information remains findable, usable, synchronized, and responsibly current after initial delivery. |
 | BR-025 | Preserve the information in an audited artifact unless the user separately authorizes a bounded revision. | Audit findings remain independent, reviewable assessments and cannot silently change the writer's claims, position, evidence, or intended meaning. |
 | BR-026 | Support live, recorded, timed, interactive, media-assisted, and multi-format writing through delivery-aware budgets, evidence integration, audience design, optional-content decisions, and verified artifact synchronization. | A polished manuscript is not mistaken for a deliverable that fits its real duration, audience, media, accessibility, or output-format constraints. |
+| BR-027 | Provide a defensible way to assess formulaic or assistance-related writing concerns without converting stylistic patterns, sample mismatch, measurements, provenance, or detector reports into an AI-authorship probability. | Users receive actionable pattern evidence and honest assistance provenance while writers are protected from unsupported machine-authorship conclusions. |
 
 ## Scope
 
@@ -87,6 +90,7 @@ Unsloop should make writing more defensible without laundering its origins, more
 - Cross-skill authority composition, untrusted-source handling, quantitative and interview evidence, multimodal transformation records, documentation architecture, maintenance, and human-use validation.
 - Logical section-flow writing and review across chapters, headings, subheadings, scene breaks, and procedural phases, including purposeful hard breaks.
 - Delivery-aware speeches, presentations, narrated scripts, lessons, demonstrations, podcasts, and voiceovers with whole/section constraint reconciliation, evidence framing, purposeful questions, audience layers, media decisions, closing movement, and format handoff.
+- Non-mutating Writing-Pattern and Assistance Audit with directional component scores, passage evidence, method-declared measurements, authorized voice comparison, process provenance, and bounded interpretation of external detector reports.
 - Non-mutating Audit with explicit protection for claims, positions, conclusions, recommendations, scope, certainty, evidence strength, chronology, quantities, attribution, causality, conditions, exceptions, and exclusions.
 
 ### Out of scope
@@ -105,7 +109,7 @@ Unsloop should make writing more defensible without laundering its origins, more
 
 ## Success measures
 
-For v0.1, success is demonstrated through traceable documentation, passing structural validation, and controlled use in which outputs are text-grounded, calibrated, actionable, voice-preserving, structurally coherent, goal-directed, requirement-complete, emotionally responsible, and readiness-honest. Multi-section work makes the relationship across visible boundaries legible without forcing a transitional sentence or erasing purposeful hard breaks. Delivered work reconciles its complete audience-time cost, makes evidence and questions perform clear functions, resolves consequential media choices, and distinguishes authoritative content from refreshed and actually validated derivatives. Audit workflows leave inspected artifacts unchanged by default and separate findings from authorized revisions. Fiction workflows additionally preserve confirmed canon, distinguish proposed discoveries from accepted decisions, scale project state to the work, and remain resumable from portable Markdown. Sustained non-fiction workflows preserve manuscript authority, claim and source provenance, accepted revisions, stakeholder decisions, and a bounded resume state. Extended operations also preserve specialist authority, isolate source instructions, retain quantitative/interview/media lineage, and distinguish documentation maintenance and real reader evidence from merely complete-looking output.
+For v0.1, success is demonstrated through traceable documentation, passing structural validation, and controlled use in which outputs are text-grounded, calibrated, actionable, voice-preserving, structurally coherent, goal-directed, requirement-complete, emotionally responsible, and readiness-honest. Multi-section work makes the relationship across visible boundaries legible without forcing a transitional sentence or erasing purposeful hard breaks. Delivered work reconciles its complete audience-time cost, makes evidence and questions perform clear functions, resolves consequential media choices, and distinguishes authoritative content from refreshed and actually validated derivatives. Writing-pattern audits report component scores and reproducible observations without manufacturing an AI probability, keep detector results separate, and distinguish stylistic inference from direct assistance provenance. Audit workflows leave inspected artifacts unchanged by default and separate findings from authorized revisions. Fiction workflows additionally preserve confirmed canon, distinguish proposed discoveries from accepted decisions, scale project state to the work, and remain resumable from portable Markdown. Sustained non-fiction workflows preserve manuscript authority, claim and source provenance, accepted revisions, stakeholder decisions, and a bounded resume state. Extended operations also preserve specialist authority, isolate source instructions, retain quantitative/interview/media lineage, and distinguish documentation maintenance and real reader evidence from merely complete-looking output.
 
 Before v1.0, the project should add anonymized fixtures and forward-tests showing that independent reviewers can apply core classifications and score anchors with acceptable consistency. No current score is represented as a validated measurement instrument.
 

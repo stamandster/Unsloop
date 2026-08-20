@@ -6,6 +6,8 @@ The non-mutating Audit invariant is a product-governance decision recorded in [`
 
 The delivery and presentation contract is also a product-governance synthesis of specialist writing practices, not an empirical universal timing standard. Unsloop defines no universal words-per-minute default. Any pace estimate must state its basis, and actual delivery, rendering, playback, accessibility, synchronization, or platform readiness requires the corresponding validation rather than inference from the manuscript alone.
 
+The Writing-Pattern and Assistance Audit operationalizes the detector-limit sources below without claiming they validate Unsloop's component scores. Its prose-only authorship boundary, separation of measurements from interpretation, and refusal to average detector results with textual patterns are product-governance safeguards. Direct process records may establish a bounded form of assistance; style remains non-diagnostic.
+
 > **Specification role:** Evidence record supporting the guardrails and research posture in [`../BRD.md`](../BRD.md), [`../PRD.md`](../PRD.md), and [`ETHICS-AND-LIMITS.md`](ETHICS-AND-LIMITS.md). It is not part of the evidence corpus for an individual Unsloop review unless the task makes a listed source relevant.
 
 ## Academic integrity and similarity

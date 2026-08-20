@@ -1,6 +1,6 @@
 # Review Model
 
-> **Specification role:** Normative method for `PR-003`–`PR-008`, `PR-016`–`PR-046`, `FS-003`–`FS-007`, and `FS-014`–`FS-045` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md). Ethical limits in [`ETHICS-AND-LIMITS.md`](ETHICS-AND-LIMITS.md) control whenever a method rule appears to conflict.
+> **Specification role:** Normative method for `PR-003`–`PR-008`, `PR-016`–`PR-047`, `FS-003`–`FS-007`, and `FS-014`–`FS-046` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md). Ethical limits in [`ETHICS-AND-LIMITS.md`](ETHICS-AND-LIMITS.md) control whenever a method rule appears to conflict.
 
 ## Overview
 
@@ -71,6 +71,16 @@ For speeches, presentations, narrated scripts, podcasts, voiceovers, lessons, de
 Integrate material evidence through its audience function: establish the need, orient the audience, present the evidence accurately, interpret what it establishes, and use it for the artifact's goal. This is a functional test, not a required five-sentence sequence. Give each material question a purpose, placement, answer path, expected pause or response, and payoff; do not impose a question quota. Give mixed audiences a shared entry point before optional depth. Treat consequential media choices as **Provisional—decision required** until accepted, and close with the movement appropriate to the genre rather than a generic recap or forced call to action.
 
 When one work has multiple formats, distinguish the authoritative content source from its derivatives. After an authoritative change, refresh affected derivatives and record only validation that actually occurred—such as rendering, playback, rehearsal, accessibility inspection, or platform checks. A successful export or a model timing estimate does not establish delivery readiness.
+
+## Writing-pattern and assistance specialization
+
+Route AI-score, AI-detection, machine-authorship, AI-like style, authorized-sample comparison, writing-assistance provenance, and detector-report requests through a non-mutating Unsloop Audit. Separate four questions: observable writing quality, alignment with an authorized voice target, process evidence of assistance, and the meaning of a supplied detector result. Do not collapse their answers into one score.
+
+With prose alone, state **AI authorship determination: Not assessable from prose alone**. Score only the existing directional components: Specificity and Authorial voice as strengths; Redundancy, Formulaicity, and Abstraction as risks; Voice fidelity only with an authorized target; and Slop density only as optional writing-quality risk. Cite passage evidence, identify score direction, and use `N/A` when unsupported.
+
+Raw pattern counts are objective only within their declared method. Record the measure, unit, matching or tokenization rule, inspected range, exclusions, baseline, and limitations. Treat genre, language, translation, templates, editing, collaboration, accessibility-related patterns, and required institutional language as interpretive context. Do not convert repeated transitions, lexical measures, syntactic regularity, paragraph uniformity, or style discontinuity into a unique machine-authorship marker.
+
+Use revision history, metadata, prompts, model outputs, disclosures, or comparable records only for the assistance stage and artifact range they directly establish. Keep external detector tool, version, date, input boundary, settings, vendor result, and limitations separate from Unsloop scores. Neither sample match nor mismatch proves identity, human authorship, AI use, ghostwriting, or misconduct. A request to lower a detector score may be reframed as a quality or voice revision but cannot authorize detector evasion.
 
 For Audit, establish the authoritative version and leave it unchanged. An audit may change the assessment of information, not the audited information. Report proposed corrections separately and identify whether each is presentation-only or meaning-changing. If revision is also requested, preserve the audit result as a distinct stage and establish a separate bounded revision contract.
 

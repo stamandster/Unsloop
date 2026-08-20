@@ -8,13 +8,15 @@
 
 ## Product definition
 
-Unsloop is one writing-integrity and human-voice skill with three modes:
+Unsloop is one portable, model-agnostic writing-lifecycle skill with three modes:
 
 - **Unsloop Review:** diagnose an existing draft constructively and selectively.
 - **Unsloop Write:** draft or revise from an author-led brief while preserving evidenced voice.
 - **Unsloop Audit:** perform a non-mutating, evidence-heavy comparison of writing, requirements, claims, sources, or a similarity report.
 
 Review is the default for a broad request about existing writing. Depth—brief, standard, or deep—is independent of mode.
+
+Topic discovery, fiction, sustained non-fiction, documentary and controlled documentation, research, collaboration, multilingual work, delivery, structured output, and writing-pattern or assistance audit are specializations inside the three modes, not separate public products. Formulaic-writing review remains a useful capability, but it does not define Unsloop's category.
 
 Fiction is a specialization within Unsloop Write, not a fourth mode. It supports isolated scenes, flash fiction, short stories, novellas, novels, serials, and series across any user-chosen subject or genre.
 
@@ -29,6 +31,7 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 7. Keep the project directory authoritative and portable.
 8. Preserve one model- and harness-agnostic method; isolate discovery, invocation, metadata, and tool mappings as optional adapters.
 9. Treat live delivery, audience attention, media, and required derivatives as part of the artifact when they affect actual use.
+10. Support the writing lifecycle from topic discovery through maintenance and handoff; do not reduce Unsloop to a checker, detector, or rewriting filter.
 
 ## Primary use cases
 
@@ -59,6 +62,7 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | Audit without changing the artifact | Draft, comparison evidence, governing requirements, and optional correction request | Non-mutating findings plus separately classified proposed corrections; revision occurs only under an explicit bounded authorization. |
 | Prepare delivered writing | Speech, presentation, lesson, narrated script, podcast, voiceover, demonstration, or other delivered artifact plus audience and constraints | Delivery-aware writing whose full timing or attention budget, evidence flow, questions, media, audience layers, and closing movement fit the intended use. |
 | Maintain synchronized output formats | Authoritative source artifact, required derivatives, accepted change, and available artifact validators | Refreshed or explicitly stale derivatives with recorded comparison, rendering, playback, accessibility, and format-specific validation boundaries. |
+| Assess AI-related writing concerns responsibly | Draft, optional authorized writing samples, process records, and optional external detector report | Non-mutating writing-pattern profile, method-bounded measurements, assistance provenance, and a calibrated authorship boundary rather than an AI probability. |
 
 ## Functional requirements
 
@@ -110,6 +114,7 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | PR-044 | Make Audit non-mutating by default; preserve material information fields; separate findings from revision; and require explicit bounded authorization before applying presentation-only or meaning-changing corrections. | BR-003, BR-005, BR-009, BR-012, BR-025 |
 | PR-045 | For live, recorded, timed, interactive, or media-assisted writing, establish a delivery contract; reconcile the overall constraint with section allocations and all audience-time elements; integrate evidence through need, orientation, presentation, interpretation, and use; and review questions, audience layers, optional media, and closing movement proportionately. | BR-003, BR-004, BR-005, BR-009, BR-012, BR-026 |
 | PR-046 | For required multi-format outputs, identify the authoritative source or synchronization rule; map derivative impact; refresh required derivatives after accepted changes; route rendering, playback, accessibility, and format checks to the applicable artifact capability; and report only validation actually performed. | BR-003, BR-005, BR-009, BR-022, BR-024, BR-026 |
+| PR-047 | When asked for an AI score, machine-authorship judgment, AI-like pattern analysis, writing-sample comparison, assistance assessment, or detector-report interpretation, run a non-mutating Writing-Pattern and Assistance Audit that separates component style scores, method-declared measurements, authorized voice comparison, direct process provenance, and external detector results; never combine them into an AI-authorship probability or automatic decision. | BR-002, BR-005, BR-007, BR-009, BR-011, BR-027 |
 
 ## Nonfunctional requirements
 
@@ -135,6 +140,7 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | NFR-018 Documentation operability | A documentation set remains navigable, maintainable, and honestly validated after publication. | Content ownership, dependencies, lifecycle state, review triggers, issue disposition, reader-validation type, and retest state remain visible. |
 | NFR-019 Semantic preservation | Audit cannot silently alter the information conveyed by the inspected artifact. | Audit output identifies the unchanged artifact version; every proposed correction records whether it is presentation-only or meaning-changing, its semantic effects, authorization, and disposition. |
 | NFR-020 Delivery readiness | A delivered or multi-format artifact cannot appear ready by prose polish alone. | Readiness identifies the duration or attention basis, unresolved media or interaction decisions, authoritative format, derivative freshness, and actual rehearsal, comparison, render, playback, accessibility, or format validation boundary when material. |
+| NFR-021 Authorship calibration | Textual pattern assessment cannot overstate what prose, samples, process evidence, or detector reports establish about AI involvement. | Draft-only output states “Not assessable from prose alone”; every score names its direction and evidence; every measurement states method and coverage; provenance and detector results remain separate; no composite AI score is produced. |
 
 ## Interaction requirements
 
@@ -204,6 +210,14 @@ Given a live, recorded, timed, interactive, or media-assisted artifact, Unsloop 
 ### Multi-format artifact synchronization
 
 Given required parallel formats, Unsloop identifies the authoritative source or explicit synchronization rule, includes derivatives in change-impact analysis, and uses the applicable artifact capability for generation and validation. After accepted changes, required derivatives are refreshed and checked or marked stale. Handoff distinguishes comparison, rendering, playback, accessibility, rehearsal, and other validations actually performed; a successful export, matching filename, or polished manuscript does not establish synchronization or usability.
+
+### Writing-pattern and assistance audit
+
+Given a request for an AI score, AI detection, or a judgment that prose was machine-generated, Unsloop uses Audit and leaves the inspected artifact unchanged. With prose alone it states **AI authorship determination: Not assessable from prose alone** and substitutes a directional component profile: Specificity and Authorial voice as strengths; Redundancy, Formulaicity, and Abstraction as risks; optional Voice fidelity only with authorized comparison samples; and optional Slop density only as writing-quality risk. It cites passage evidence and never creates one combined AI number.
+
+Given calculable textual features, Unsloop reports only values actually measured and identifies the method, unit, inspected range, exclusions, comparison baseline, and material limitations. Given revision history, metadata, prompts, model outputs, disclosures, or other process records, it reports the exact assistance scope directly supported without inferring the remainder of the workflow. Given an external detector report, it records the tool, version, date, inspected input, settings or threshold, vendor result, and limits as an **External detector result**; it does not restate the result as authorship probability or average it with Unsloop scores.
+
+Given authorized writing samples, Unsloop may assess voice alignment with a confidence label but cannot treat either similarity or mismatch as proof of identity, human authorship, AI use, ghostwriting, or misconduct. Genre, language, translation, templates, collaboration, editing, disability-related patterns, and institutional requirements remain part of interpretation. A request to lower a detector score is redirected to genuine quality goals and cannot authorize detector evasion.
 
 ### Fiction
 
@@ -289,6 +303,7 @@ The v0.1 product baseline requires:
 - passing character-profile, documentary-form, source-acquisition, override, scoped-corpus, and validation-status behavioral contracts.
 - passing skill-composition, untrusted-source, quantitative, interview, multimodal, documentation-system, maintenance, and reader-validation behavioral contracts.
 - passing delivery-budget, evidence-integration, question-function, mixed-audience, optional-media, closing, derivative-synchronization, and delivery-readiness behavioral contracts.
+- passing writing-pattern profile, measurement-method, authorized-sample, process-provenance, external-detector, fairness, and anti-evasion behavioral contracts.
 
 Calibration, benchmark fixtures, inter-reviewer agreement, privacy review, and mode-split evidence remain later release work in [`ROADMAP.md`](ROADMAP.md).
 

@@ -225,3 +225,15 @@ For live, recorded, timed, interactive, or media-assisted writing, model the com
 **Status:** Accepted
 
 When one work exists in multiple required formats, identify one authoritative source or an explicit synchronization rule. Include derivatives in revision impact, refresh them after accepted changes, and route generation and format checks to the applicable artifact capability. Record only comparisons, renders, playback, accessibility checks, rehearsal, or other validation actually performed; otherwise mark the derivative stale or unresolved.
+
+## D-037 — Replace AI-score requests with an evidence-bound assistance audit
+
+**Status:** Accepted
+
+Do not create an AI-authorship percentage from prose style. Translate the request into a non-mutating Writing-Pattern and Assistance Audit that keeps directional writing-quality scores, method-declared measurements, authorized voice comparison, direct process provenance, and external detector reports separate. Prose alone receives the boundary “Not assessable from prose alone.” Direct records may establish a narrower form of assistance but never authorize inference about unobserved workflow stages. Revision may address genuine writing goals, not detector evasion.
+
+## D-038 — Position Unsloop as a writing lifecycle system
+
+**Status:** Accepted
+
+Lead public and maintainer documentation with Unsloop's full author-led writing lifecycle: topic discovery, planning, drafting, revision, review, non-mutating audit, research, validation, maintenance, and handoff. Preserve Review, Write, and Audit as the three public modes and describe fiction, documentation, research, delivery, long-form operation, and writing-pattern assessment as specializations inside them. Treat generic or AI-associated prose review as one evidence-bound Audit capability, not the project's category.

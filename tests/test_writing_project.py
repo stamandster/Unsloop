@@ -245,6 +245,16 @@ class WritingProjectTests(unittest.TestCase):
         self.assertIn("audit_state", schema["allOf"][0]["then"]["required"])
         finding_properties = schema["properties"]["findings"]["items"]["properties"]
         self.assertIn("proposed_correction", finding_properties)
+        self.assertIn("writing_pattern_assessment", schema["properties"])
+        pattern_assessment = schema["properties"]["writing_pattern_assessment"]
+        self.assertEqual(
+            pattern_assessment["properties"]["authorship_boundary"]["const"],
+            "Not assessable from prose alone",
+        )
+        self.assertIn("pattern_scores", pattern_assessment["required"])
+        self.assertIn("external_detector_reports", pattern_assessment["required"])
+        self.assertIn("writing_pattern_assessment", schema["allOf"][1]["if"]["required"])
+        self.assertEqual(schema["allOf"][1]["then"]["properties"]["mode"]["const"], "Audit")
 
 
 if __name__ == "__main__":

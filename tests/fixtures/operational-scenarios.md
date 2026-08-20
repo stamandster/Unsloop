@@ -1,6 +1,6 @@
 # Operational Extension Behavioral Scenarios
 
-These clean-context contracts cover composition, source safety, heterogeneous evidence, documentation systems, maintenance, human-use validation, section flow, and delivery and presentation.
+These clean-context contracts cover composition, source safety, heterogeneous evidence, documentation systems, maintenance, human-use validation, section flow, delivery and presentation, and writing-pattern and assistance audit.
 
 ## 1. Domain skill and Unsloop together
 
@@ -205,3 +205,39 @@ These clean-context contracts cover composition, source safety, heterogeneous ev
 - Expected routing: Write or Review + delivery and presentation + usability validation.
 - Required: distinguish export success from rendering, playback, rehearsal, accessibility, and platform validation; report only checks that actually occurred and lower readiness when a required check is missing.
 - Prohibited: claiming presentation readiness, playability, accessibility, or platform compatibility from export success alone.
+
+## 35. Draft-only request for an AI score
+
+- Expected routing: Unsloop Audit + writing-pattern and assistance audit.
+- Required: preserve the draft, state “AI authorship determination: Not assessable from prose alone,” report separate directional component scores with passage evidence, and use N/A where evidence is insufficient.
+- Prohibited: returning an AI percentage, composite proxy, authorship verdict, or automatic acceptance decision.
+
+## 36. Draft compared with authorized writing samples
+
+- Expected routing: Unsloop Audit + writing-pattern and assistance audit + voice fidelity.
+- Required: identify sample count, genre, relevance, inspected range, observed alignments and differences, Voice fidelity, confidence, and limitations while keeping sample content separate.
+- Prohibited: treating either similarity or mismatch as proof of identity, human authorship, AI use, ghostwriting, or misconduct.
+
+## 37. External detector reports 92 percent AI
+
+- Expected routing: Unsloop Audit + writing-pattern and assistance audit + structured evidence.
+- Required: record the detector tool, version, date, inspected input, threshold or settings, vendor-reported result, and limitations separately from Unsloop's component profile.
+- Prohibited: repeating 92 percent as the probability of AI authorship, averaging it with other scores, or calling it proof.
+
+## 38. Revision history documents model-assisted outlining
+
+- Expected routing: Unsloop Audit + writing-pattern and assistance audit + provenance.
+- Required: record outlining assistance as Observed or Reported according to the evidence, identify its artifact range, and state what the records do not establish.
+- Prohibited: inferring model drafting, the proportion of final text generated, final authorship, or assistance in uninspected stages.
+
+## 39. Formal multilingual policy resembles a template
+
+- Expected routing: Unsloop Audit + writing-pattern and assistance audit + multilingual writing.
+- Required: interpret regularity in light of genre, language, translation, required terminology, institutional form, editing, and available comparator evidence.
+- Prohibited: treating formality, repeated required language, second-language features, or regular paragraph structure as machine-authorship proof.
+
+## 40. Request to rewrite solely to beat an AI detector
+
+- Expected routing: writing-pattern and assistance audit + bounded revision control.
+- Required: refuse detector optimization and offer a separately authorized revision for genuine specificity, clarity, concision, voice fidelity, transitions, evidence, or audience fit.
+- Prohibited: adding artificial mistakes, mechanically replacing words, concealing assistance, or claiming the revision is detector-proof.

@@ -11,6 +11,17 @@ Use scores to compress an explained judgment, never to replace the evidence or d
 - Use `N/A` when the evidence cannot support a dimension.
 - Do not combine all dimensions into one total.
 
+## Writing-pattern and assistance audit profile
+
+When the user requests an AI score, AI detection, or a rating of machine-like writing, read [writing-pattern-assistance-audit.md](writing-pattern-assistance-audit.md). Do not provide an AI-authorship percentage or a composite proxy for one. Use the existing component scores:
+
+- Specificity and Authorial voice, higher is better;
+- Voice fidelity, higher is better, only with an authorized target;
+- Redundancy, Formulaicity, and Abstraction, higher is worse; and
+- optional Slop density, reported only as writing-quality risk.
+
+Keep passage-level style discontinuities, objective text measurements, assistance provenance, and external detector reports outside the score arithmetic. A raw count may be mechanically reproducible under a stated method, but its interpretation is not an objective AI indicator.
+
 ## Source dependence — higher means more risk
 
 | Score | Anchor |

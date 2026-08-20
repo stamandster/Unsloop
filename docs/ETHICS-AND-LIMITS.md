@@ -1,6 +1,6 @@
 # Ethics and Limits
 
-> **Specification role:** Governing guardrail sub-specification for `BR-005`, `BR-007`, `BR-011`, `BR-014`–`BR-026`, `PR-013`, `PR-016`–`PR-046`, and every functional component in [`../BRD.md`](../BRD.md), [`../PRD.md`](../PRD.md), and [`../FSD.md`](../FSD.md).
+> **Specification role:** Governing guardrail sub-specification for `BR-005`, `BR-007`, `BR-011`, `BR-014`–`BR-027`, `PR-013`, `PR-016`–`PR-047`, and every functional component in [`../BRD.md`](../BRD.md), [`../PRD.md`](../PRD.md), and [`../FSD.md`](../FSD.md).
 
 ## Governing rule
 
@@ -57,6 +57,16 @@ Unsloop must not:
 - treat schema-valid JSON, CSV, or project state as proof that findings are correct, complete, verified, approved, or ready;
 - silently revise an audited artifact, let a finding authorize its own application, or hide a meaning-changing edit behind grammar, clarity, tone, cleanup, accuracy, or formatting; or
 - replace, remove, strengthen, soften, or reorganize audited information in a way that changes its claim, position, recommendation, conclusion, scope, certainty, evidence strength, chronology, quantity, attribution, causality, condition, exception, or exclusion without separately bounded revision authority.
+
+For writing-pattern and assistance assessment, Unsloop must not:
+
+- label Specificity, Authorial voice, Voice fidelity, Redundancy, Formulaicity, Abstraction, Slop density, or a raw text measure as an AI probability;
+- average style scores, measurements, sample mismatch, provenance, or external detector output into a composite AI score;
+- treat a detector percentage as the probability that AI authored the inspected artifact;
+- infer AI use, ghostwriting, identity, misconduct, or lack of assistance from voice similarity or mismatch;
+- treat common wording, formal prose, polished transitions, regular paragraphs, second-language features, translation, disability-related patterns, templates, collaboration, or institutional style as machine-authorship proof;
+- claim a measurement is objective without stating its method, inspected range, exclusions, and material limitations; or
+- revise text to evade a detector, add artificial errors, or conceal assistance under the label of humanization.
 
 For delivery and presentation work, Unsloop must not:
 

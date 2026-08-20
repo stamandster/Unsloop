@@ -72,6 +72,77 @@
       },
       "additionalProperties": false
     },
+    "writing_pattern_assessment": {
+      "type": "object",
+      "required": ["assessment_name", "authorship_boundary", "pattern_scores", "measurements", "assistance_provenance", "external_detector_reports"],
+      "properties": {
+        "assessment_name": {"const": "Writing-Pattern and Assistance Audit"},
+        "authorship_boundary": {"const": "Not assessable from prose alone"},
+        "pattern_scores": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["dimension", "direction", "score", "basis"],
+            "properties": {
+              "dimension": {"enum": ["Specificity", "Authorial voice", "Voice fidelity", "Redundancy", "Formulaicity", "Abstraction", "Slop density"]},
+              "direction": {"enum": ["higher-is-better", "higher-is-worse"]},
+              "score": {"type": ["number", "null"], "minimum": 1, "maximum": 5},
+              "confidence": {"type": ["string", "null"], "enum": ["Low", "Moderate", "High", null]},
+              "basis": {"type": "string"}
+            },
+            "additionalProperties": false
+          }
+        },
+        "measurements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "value", "method", "coverage", "limitations"],
+            "properties": {
+              "name": {"type": "string"},
+              "value": {"type": ["number", "string"]},
+              "method": {"type": "string"},
+              "coverage": {"type": "string"},
+              "baseline": {"type": ["string", "null"]},
+              "limitations": {"type": "array", "items": {"type": "string"}}
+            },
+            "additionalProperties": false
+          }
+        },
+        "assistance_provenance": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["evidence", "status", "scope", "limitation"],
+            "properties": {
+              "evidence": {"type": "string"},
+              "status": {"enum": ["Observed", "Reported", "Unverified", "Unavailable"]},
+              "scope": {"type": "string"},
+              "limitation": {"type": "string"}
+            },
+            "additionalProperties": false
+          }
+        },
+        "external_detector_reports": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["tool", "version", "date", "input_boundary", "reported_result", "threshold", "limitations"],
+            "properties": {
+              "tool": {"type": "string"},
+              "version": {"type": ["string", "null"]},
+              "date": {"type": ["string", "null"]},
+              "input_boundary": {"type": "string"},
+              "reported_result": {"type": "string"},
+              "threshold": {"type": ["string", "null"]},
+              "limitations": {"type": "array", "items": {"type": "string"}}
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
     "records": {
       "type": "object",
       "additionalProperties": {"type": "array", "items": {"type": "object"}}
@@ -94,6 +165,13 @@
         "required": ["mode"]
       },
       "then": {"required": ["audit_state"]}
+    },
+    {
+      "if": {"required": ["writing_pattern_assessment"]},
+      "then": {
+        "properties": {"mode": {"const": "Audit"}},
+        "required": ["audit_state"]
+      }
     }
   ],
   "additionalProperties": false

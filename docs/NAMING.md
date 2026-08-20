@@ -6,7 +6,9 @@
 
 **Unsloop** is the main project and shared method.
 
-The name covers the whole cycle: inspect source use, remove formulaic loops, recover the writer's point, and keep the result accountable.
+The name covers the full writing lifecycle: discover and define the work, create and revise it, inspect evidence and voice, sustain long-form state, validate real requirements, and deliver or maintain the result accountably.
+
+Generic or formulaic prose remains one important review concern, but “AI slop checker,” “humanizer,” or “AI detector” does not name the umbrella product.
 
 ## Mode names
 
@@ -24,6 +26,7 @@ The name covers the whole cycle: inspect source use, remove formulaic loops, rec
 - Use lowercase hyphenated names for future skill folders: `unsloop-review`, `unsloop-write`, and `unsloop-audit`.
 - Do not add new mode names for mere differences in depth. Use **brief**, **standard**, or **deep** as review-depth settings.
 - Do not call a stylistic review an “AI detection” mode.
+- Use **Writing-Pattern and Assistance Audit** for the Audit specialization that answers AI-score, machine-authorship, assistance-provenance, sample-comparison, or detector-report requests. It is not a fourth mode and must not be shortened to “AI Score.”
 - Treat fiction as a workflow specialization within **Unsloop Write**, not as **Unsloop Fiction** or a fourth mode.
 - Route fiction through **Unsloop Write**, **Unsloop Review**, or **Unsloop Audit** according to the requested job; “fiction” describes the specialization, not the mode.
 - Use **story canon** for facts established inside fiction. Do not use “story bible” as the project-record name; `CANON.md` is topic-neutral and avoids a religious implication.

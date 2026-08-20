@@ -8,7 +8,7 @@
 
 ## Purpose
 
-This document defines how the product requirements are executed by the portable Markdown/YAML Agent Skill, its progressive references, optional harness adapters, and project-owned maintenance scripts. It specifies behavior, data concepts, states, decision rules, failure handling, and verification without binding the method to one model provider or agent runtime.
+This document defines how Unsloop's full writing lifecycle—from topic discovery and drafting through revision, review, non-mutating audit, research, validation, maintenance, and handoff—is executed by the portable Markdown/YAML Agent Skill, its progressive references, optional harness adapters, and project-owned maintenance scripts. It specifies behavior, data concepts, states, decision rules, failure handling, and verification without binding the method to one model provider or agent runtime.
 
 ## System boundary
 
@@ -74,6 +74,7 @@ No database, background service, model endpoint, provider account, or persistent
 | FS-043 | Audit information preservation | Audit request, authoritative artifact version, evidence boundary, findings, optional revision authorization | Unchanged audited artifact, `AuditChangeBoundary`, and separately dispositioned correction proposals | PR-044; NFR-003, NFR-019 |
 | FS-044 | Delivery and presentation orchestration | Delivered-writing request, brief, governing directions, timing or attention constraints, audience, evidence, questions, media, interaction, closing goal | `DeliveryContract`, reconciled element plan, delivery-aware artifact or findings, and bounded readiness | PR-045; NFR-003, NFR-020 |
 | FS-045 | Multi-format artifact synchronization | Authoritative source or synchronization rule, required derivatives, accepted changes, available artifact capabilities and validation | `ArtifactSet` with current/stale state, validation records, and honest handoff | PR-046; NFR-007, NFR-018, NFR-020 |
+| FS-046 | Writing-pattern and assistance audit | AI-score or authorship request, inspected prose, optional authorized samples, process records, detector reports, genre and language context | Unchanged artifact, `WritingPatternAssessment`, component profile, method-bounded measurements, provenance findings, and calibrated conclusion | PR-047; NFR-003, NFR-019, NFR-021 |
 
 ## Requirements traceability
 
@@ -125,6 +126,7 @@ No database, background service, model endpoint, provider account, or persistent
 | PR-044 | FS-001, FS-005, FS-008, FS-021, FS-025, FS-043 |
 | PR-045 | FS-003, FS-006–FS-008, FS-035, FS-039, FS-042, FS-044 |
 | PR-046 | FS-008, FS-025, FS-035, FS-040–FS-042, FS-045 |
+| PR-047 | FS-001, FS-003, FS-005–FS-009, FS-027–FS-028, FS-043, FS-046 |
 | NFR-001 | FS-011, FS-012 |
 | NFR-002 | FS-012 |
 | NFR-003 | FS-004–FS-008 |
@@ -145,6 +147,7 @@ No database, background service, model endpoint, provider account, or persistent
 | NFR-018 | FS-023, FS-034, FS-040–FS-042 |
 | NFR-019 | FS-008, FS-021, FS-025, FS-043 |
 | NFR-020 | FS-008, FS-035, FS-039, FS-042, FS-044, FS-045 |
+| NFR-021 | FS-005–FS-009, FS-027–FS-028, FS-043, FS-046 |
 
 ## Logical data model
 
@@ -202,6 +205,22 @@ Record element ID, type (**Spoken text**, **Quotation/reading**, **Pause**, **Qu
 ### `ArtifactSet`
 
 Record the authoritative source or explicit synchronization rule, accepted content version, every required derivative, generation or adaptation method, content comparison state, freshness (**Current**, **Stale**, **Unresolved**, or **Not required**), validation type and scope, artifact capability or owner, checked version, unresolved issue, and readiness effect. A successful export does not establish synchronization, usable rendering, playback, accessibility, or rehearsal.
+
+### `WritingPatternAssessment`
+
+Record the inspected artifact and range, assessment name, exact authorship boundary, genre and language context, component scores with direction and evidence, passage findings, measured text features, authorized comparison boundary, assistance provenance, external detector reports, calibrated conclusion, and unresolved questions. Do not add a composite AI score.
+
+### `TextMeasure`
+
+Record measure name, value and unit, exact method or matching rule, inspected coverage and exclusions, comparison baseline when used, tool or calculation record when applicable, and limitations. A reproducible count is an observation under that method, not an objective AI indicator.
+
+### `AssistanceProvenance`
+
+Record evidence item, status (**Observed**, **Reported**, **Unverified**, or **Unavailable**), supported assistance scope, affected artifact range, and limitation. Distinguish brainstorming, outlining, drafting, rewriting, translation, editing, research, formatting, and unknown assistance without inferring unobserved stages.
+
+### `DetectorReport`
+
+Record tool, version, date, inspected input, vendor-reported result, threshold or settings, unavailable context, and limitations. Keep the record separate from Unsloop component scores and do not reinterpret the vendor result as the probability that AI authored the artifact.
 
 ### `RequirementCoverage`
 
@@ -386,7 +405,7 @@ Record source and target language or locale, audience, purpose, translation mode
 
 ### `StructuredUnsloopReport`
 
-Record schema version, mode, depth, artifact identifier and inspected boundary, evidence boundary, stable findings, optional requirement or provenance records, readiness, unresolved actions, and out-of-scope judgments. For Audit, include artifact-unchanged state, mutation authorization, and separately dispositioned proposed corrections. Missing evidence is null or omitted; it is never invented for schema completeness.
+Record schema version, mode, depth, artifact identifier and inspected boundary, evidence boundary, stable findings, optional requirement or provenance records, optional `WritingPatternAssessment`, readiness, unresolved actions, and out-of-scope judgments. For Audit, include artifact-unchanged state, mutation authorization, and separately dispositioned proposed corrections. Missing evidence is null or omitted; it is never invented for schema completeness.
 
 ## Processing flow
 
@@ -398,6 +417,7 @@ Request and materials
   -> FS-002 resolve topic path when new writing lacks a topic
   -> FS-003 build the smallest sufficient WritingBrief
   -> FS-044 when delivery matters, establish and reconcile the DeliveryContract and presentation elements
+  -> FS-046 for AI-score, machine-authorship, assistance, sample-comparison, or detector-report requests, preserve the artifact and separate pattern, measurement, provenance, and detector evidence
   -> FS-016 when fiction, route the job across Write, Review, or Audit
   -> FS-014 when fiction, build the FictionBrief and select the proportionate lifecycle action
   -> FS-015 when persistent fiction is approved, load or maintain portable story state
@@ -655,6 +675,19 @@ Define audience, prior knowledge, language, assistive context, task, artifact ve
 6. Mark an unrefreshed, uninspected, mismatched, or unavailable derivative **Stale** or **Unresolved** and reduce readiness proportionately.
 7. In Audit, leave the source and derivatives unchanged and report consistency findings separately. Never infer synchronization from filenames, timestamps, export success, or polished appearance.
 
+### FS-046 — Audit writing patterns and assistance evidence
+
+1. Route requests for an AI score, AI detection, machine-authorship judgment, AI-like wording or transition analysis, authorized-sample comparison, assistance provenance, or detector interpretation to this Audit specialization. Preserve the inspected artifact unchanged.
+2. Establish the evidence boundary across prose, authorized samples, directions or voice brief, process records, detector reports, and genre, language, audience, or institutional context.
+3. With prose alone, state **AI authorship determination: Not assessable from prose alone**. Direct provenance may support a narrower assistance statement but cannot establish unobserved stages or the amount of final authorship.
+4. Score Specificity and Authorial voice as strengths; Redundancy, Formulaicity, and Abstraction as risks; Voice fidelity only with an authorized target; and Slop density only as optional writing-quality risk. Cite passage evidence, name score direction, use `N/A` when unsupported, and create no total.
+5. Inspect repeated transitions and phrases, sentence and paragraph movement, syntactic or rhetorical templates, specificity, actors and actions, abstraction, agent omission, qualification, certainty, and local style discontinuities. Adjust interpretation for genre, language, translation, templates, collaboration, editing, accessibility-related patterns, and required institutional wording.
+6. When calculating features, preserve `TextMeasure` method, unit, range, exclusions, baseline, and limitations. Use the optional dependency-free measurement helper when its declared tokenization and heuristics fit; otherwise use another transparent method. Do not invent values or treat a reproducible count as a unique machine-authorship marker.
+7. Compare authorized samples only for voice alignment. Report sample relevance and confidence; neither a match nor mismatch proves identity, human authorship, AI use, ghostwriting, or misconduct.
+8. Record process records as `AssistanceProvenance` with the narrow scope they establish. Record supplied detector output as `DetectorReport`, not an endorsed probability, and never average it with Unsloop scores.
+9. Return the authorship boundary, evidence boundary, component profile, measurements, passage findings, comparison, provenance, detector reports, and calibrated conclusion proportionately. For high-stakes use, require qualified human review, applicable policy, complete evidence, and a response opportunity.
+10. If revision is requested to beat a detector, refuse the evasion goal and offer a separately authorized revision for genuine specificity, clarity, concision, voice fidelity, transitions, evidence, or audience fit.
+
 ## Failure and boundary handling
 
 | Condition | Required behavior |
@@ -713,6 +746,12 @@ Define audience, prior knowledge, language, assistive context, task, artifact ve
 | Evidence appears without audience orientation or interpretation | Diagnose the missing function and propose the smallest connection; do not add unsupported application. |
 | Required derivative was not refreshed after an accepted change | Mark it stale and do not call the artifact set synchronized or ready. |
 | Render, playback, rehearsal, or accessibility validation was not performed | State **Not run** or the narrower actual check; do not infer success from prose or export. |
+| User requests one AI probability from prose patterns | State that authorship is not assessable from prose alone and provide separate directional components with passage evidence. |
+| A text measurement lacks method, range, or limitations | Omit the unsupported value or calculate it transparently; do not present pseudo-objective precision. |
+| Authorized comparison samples differ from the draft | Report the specific voice differences and confidence; do not infer AI use, identity, ghostwriting, or misconduct. |
+| Process evidence documents one form of assistance | Report only that supported scope and artifact range; do not infer the rest of the workflow. |
+| External detector reports a probability or label | Preserve it as a vendor-reported result with tool and input boundary; do not adopt, average, or convert it into an Unsloop verdict. |
+| User asks to rewrite solely to lower a detector score | Decline detector optimization and offer revision against genuine writing goals without adding artificial errors or concealing assistance. |
 
 ## Verification matrix
 
@@ -802,6 +841,12 @@ Define audience, prior knowledge, language, assistive context, task, artifact ve
 | Mixed novice and expert audience | PR-003, PR-045 / FS-003, FS-044 | Shared entry point, necessary explanation, and worthwhile depth appear without treating either group as uniform. |
 | Markdown source changed but DOCX was not regenerated | PR-046, NFR-020 / FS-025, FS-045 | DOCX is marked stale; no synchronization or platform-readiness claim is made. |
 | Export succeeded without render or playback inspection | PR-046, NFR-020 / FS-035, FS-045 | Handoff reports export only and keeps rendering, playback, accessibility, or rehearsal Not run. |
+| Draft-only request for an AI score | PR-047, NFR-021 / FS-005–FS-009, FS-046 | Output states that authorship is not assessable from prose alone, returns separate component scores with passage evidence, and produces no total. |
+| Draft plus authorized same-writer samples | PR-047, NFR-003, NFR-021 / FS-006, FS-009, FS-046 | Voice fidelity names sample relevance and confidence; similarity or mismatch is not treated as identity or assistance proof. |
+| External detector reports “92% AI” | PR-047, NFR-021 / FS-005, FS-027, FS-046 | Tool, version, date, input, settings, and vendor result remain separate; Unsloop does not repeat 92% as authorship probability. |
+| Revision history documents model-assisted outlining | PR-047, NFR-021 / FS-005, FS-024, FS-046 | Provenance records outlining assistance only and does not infer drafting or final authorship. |
+| Formal multilingual policy resembles a template | PR-007, PR-047, NFR-003, NFR-021 / FS-006, FS-026, FS-046 | Genre, language, translation, and required wording qualify interpretation; regularity is not treated as AI evidence. |
+| Request to rewrite solely to beat a detector | PR-013, PR-047, NFR-003, NFR-021 / FS-006, FS-025, FS-046 | Evasion is refused; any revision is separately scoped to genuine writing quality and preserves meaning and provenance. |
 
 ## Change control
 

@@ -4,7 +4,7 @@
 
 ## Product shape
 
-Unsloop is an umbrella project with one shared method and three modes.
+Unsloop is a portable writing lifecycle system with one shared author-control and evidence method and three modes. The modes operate from topic discovery through drafting, revision, research, validation, maintenance, and handoff. Formulaic-writing or AI-assistance review is one Audit specialization, not the system boundary.
 
 ```text
 Unsloop
@@ -13,6 +13,7 @@ Unsloop
 ├── Audit  — non-mutating evidence-heavy source, continuity, canon, and research examination
 ├── Shared section-flow contract — logical progression across headings without forced smoothing
 ├── Shared delivery contract — timing, evidence flow, audience attention, media, and artifact-set readiness
+├── Shared writing-pattern and assistance audit — component profile, measurements, provenance, and detector boundaries
 ├── Shared sustained-writing specialization — long-form operations across all three modes
 │   ├── Project state — onboarding, units, resume packets, assembly, recovery
 │   ├── Provenance and revision — claims, sources, quotations, changes, freshness
@@ -48,6 +49,7 @@ Unsloop/
 │   ├── validate.py
 │   └── link_global_skill.py
 ├── docs/
+│   ├── GITHUB-ABOUT.md
 │   ├── NAMING.md
 │   ├── REVIEW-MODEL.md
 │   ├── SCORING-RUBRIC.md
@@ -59,6 +61,7 @@ Unsloop/
         └── unsloop/
             ├── SKILL.md
             ├── agents/openai.yaml
+            ├── scripts/writing_pattern_metrics.py
             ├── references/
                 ├── integrity-review.md
                 ├── harness-compatibility.md
@@ -71,6 +74,7 @@ Unsloop/
                 ├── write-mode.md
                 ├── section-flow.md
                 ├── delivery-and-presentation.md
+                ├── writing-pattern-assistance-audit.md
                 ├── fiction-workflow.md
                 ├── fiction-project-operations.md
                 ├── character-voice-continuity.md

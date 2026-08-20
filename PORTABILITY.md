@@ -1,10 +1,10 @@
 # Portability
 
-> **Document role:** Deployment, harness, and transfer sub-specification for `PR-014`–`PR-046`, `NFR-001`–`NFR-002`, `NFR-007`–`NFR-020`, and `FS-011`–`FS-045` in [`PRD.md`](PRD.md) and [`FSD.md`](FSD.md).
+> **Document role:** Deployment, harness, and transfer sub-specification for `PR-014`–`PR-047`, `NFR-001`–`NFR-002`, `NFR-007`–`NFR-021`, and `FS-011`–`FS-046` in [`PRD.md`](PRD.md) and [`FSD.md`](FSD.md).
 
 ## Guarantee
 
-Unsloop's canonical operational core lives at `.agents/skills/unsloop`. Copying or cloning the project preserves the skill, its relative references, optional harness metadata, product documentation, link utility, and validator as one unit.
+Unsloop's canonical operational core lives at `.agents/skills/unsloop`. Copying or cloning the project preserves the full writing lifecycle—from topic discovery through drafting, revision, review, audit, research, validation, maintenance, and handoff—together with its relative references, optional harness metadata, product documentation, link utility, and validator as one unit.
 
 The core is both harness-agnostic and model-agnostic:
 
@@ -12,7 +12,7 @@ The core is both harness-agnostic and model-agnostic:
 - every operational reference is relative to the skill directory;
 - no provider, model ID, proprietary tool name, hidden reasoning format, or UI control is required;
 - missing host capabilities have explicit fallbacks; and
-- evidence, voice, section-flow, delivery-readiness, artifact-synchronization, privacy, ethics, and non-mutating Audit rules do not change across hosts.
+- evidence, voice, section-flow, delivery-readiness, artifact-synchronization, writing-pattern authorship boundaries, privacy, ethics, and non-mutating Audit rules do not change across hosts.
 
 Compatibility means the same method can load and run. It does not promise identical reasoning quality, context capacity, tool access, latency, cost, or output across models.
 
@@ -161,5 +161,6 @@ After copying or cloning the project:
 9. Confirm that active specialist skills still own the same domain and artifact properties and that no transferred source content has been promoted to instructions.
 10. For transferred documentation systems, inspect `CONTENT-MAP.md`, `MAINTENANCE.md`, and relevant evidence ledgers before claiming currentness or usability.
 11. For a transferred Audit, retain the authoritative inspected artifact or identifier, confirm its unchanged state, and keep proposed corrections separate from any revised artifact and authorization record.
+12. For a transferred Writing-Pattern and Assistance Audit, preserve the inspected range, authorized sample boundary, measurement method, provenance records, detector-report metadata, and the rule that no host may convert them into a composite AI probability.
 
 Do not maintain divergent independent copies under the same skill name. The root specifications and method documents need not load during every invocation, but they must travel with the authoritative repository so maintainers can reproduce the product's rationale, requirements, and validation contract.

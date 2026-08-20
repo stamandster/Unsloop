@@ -1,5 +1,7 @@
 # Integrity Review
 
+For AI-score, AI-detection, machine-authorship, writing-assistance, or detector-report requests, also read [writing-pattern-assistance-audit.md](writing-pattern-assistance-audit.md). Keep textual patterns, comparison samples, process provenance, and detector outputs as separate evidence types.
+
 Read this file for source comparison, patchwriting analysis, plagiarism-risk review, evidence assessment, or a deep audit.
 
 Tie every material integrity finding to an inspected draft location, an available comparison or evidence gap, and a conclusion no stronger than that boundary permits.

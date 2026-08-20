@@ -1,4 +1,4 @@
 interface:
   display_name: "Unsloop"
-  short_description: "Integrity, voice, evidence, delivery, and audits"
-  default_prompt: "Use $unsloop to draft, review, audit, research, validate, revise, or package writing with human voice, safe source acquisition, evidence provenance, delivery-aware presentation, synchronized artifact formats, portable project state, and explicit skill composition. Keep Audit non-mutating and separate findings from any authorized revision."
+  short_description: "Author-led writing, evidence, voice, and audits"
+  default_prompt: "Use $unsloop to plan, draft, revise, review, audit, research, validate, maintain, or package writing while preserving author control, human voice, evidence provenance, portable continuity, and honest readiness. Keep Audit non-mutating and never turn style into an AI-authorship probability."

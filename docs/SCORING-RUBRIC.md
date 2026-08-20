@@ -1,6 +1,6 @@
 # Scoring Rubric
 
-> **Specification role:** Interpretive scoring sub-specification for `PR-010` and `FS-009` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md). It does not define a detector, authorship probability, or validated measurement instrument.
+> **Specification role:** Interpretive scoring sub-specification for `PR-010`, `PR-047`, `FS-009`, and `FS-046` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md). It does not define a detector, authorship probability, or validated measurement instrument.
 
 ## Purpose and limits
 
@@ -99,6 +99,19 @@ Suggested interpretation:
 | 2.6–3.3 | Noticeable |
 | 3.4–4.1 | High |
 | 4.2–5.0 | Severe |
+
+## Writing-Pattern and Assistance Audit display
+
+An AI-score or machine-authorship request uses the existing human-voice profile; it does not create another scale. Report:
+
+- Specificity and Authorial voice as strengths, higher is better;
+- Voice fidelity only with an authorized target, higher is better;
+- Redundancy, Formulaicity, and Abstraction as risks, higher is worse; and
+- optional Slop density only as the mean of the three writing-quality risks.
+
+Do not combine these values with one another, source dependence, text measurements, process provenance, or an external detector result. Always state **AI authorship determination: Not assessable from prose alone** when no direct process evidence exists.
+
+Mechanically calculated observations remain outside the rubric. Each value must identify its method, inspected range, exclusions, baseline when used, and limitations. Counts can be reproducible without being diagnostic; no transition, phrase, sentence-length, lexical-diversity, syntactic, or paragraph-regularity measure is an objective AI-authorship score.
 
 ## Finding severity
 
