@@ -4,9 +4,29 @@
 
 Unsloop is a portable, model-agnostic writing lifecycle system for planning, drafting, revising, reviewing, auditing, researching, validating, maintaining, and packaging written work. It preserves author control, evidence provenance, human voice, continuity, and honest readiness from the first idea through long-form development and final handoff.
 
-Unsloop began with a narrower concern: identifying generic, formulaic, over-polished, or source-dependent writing without pretending that style proves AI authorship. That integrity-and-voice lens remains important, but the project now supports the full writing process—topic discovery, creative and factual development, evidence acquisition, controlled revision, persistent project state, delivery planning, multi-format synchronization, and non-mutating audit.
+Unsloop began with two narrower concerns:
 
-The project is governed by a traceable specification stack: [`BRD.md`](BRD.md) defines the business need and boundaries, [`PRD.md`](PRD.md) defines product behavior and acceptance criteria, and [`FSD.md`](FSD.md) defines the executable workflow and validation model. The project directory is authoritative across local, user-wide, and harness-specific use.
+- identifying generic, formulaic, over-polished, or source-dependent writing;
+- avoiding unsupported AI-authorship conclusions based on style alone.
+
+That integrity-and-voice lens remains important, but the project now supports the full writing process:
+
+- topic discovery;
+- creative and factual development;
+- evidence acquisition;
+- controlled revision;
+- persistent project state;
+- delivery planning;
+- multi-format synchronization; and
+- non-mutating audit.
+
+The project is governed by a traceable specification stack:
+
+- [`BRD.md`](BRD.md) defines the business need and boundaries;
+- [`PRD.md`](PRD.md) defines product behavior and acceptance criteria; and
+- [`FSD.md`](FSD.md) defines the executable workflow and validation model.
+
+The project directory is authoritative across local, user-wide, and harness-specific use.
 
 Repository-profile copy, suggested topics, and the GitHub About description are maintained in [`docs/GITHUB-ABOUT.md`](docs/GITHUB-ABOUT.md).
 
@@ -20,7 +40,20 @@ Unsloop combines three modes under one shared method:
 | **Unsloop Write** | Create or revise writing | Build from an author-led brief, evidenced voice, relevant sources, and explicit constraints. |
 | **Unsloop Audit** | Examine writing and evidence | Preserve the inspected artifact, bound every conclusion to available evidence, and keep proposed corrections separate. |
 
-Specializations extend those modes without creating separate products: fiction, sustained non-fiction, documentary and controlled documentation, research provenance, source acquisition, quantitative and interview evidence, multilingual writing, collaboration, documentation systems, presentation delivery, structured output, and writing-pattern or assistance audit.
+Specializations extend those modes without creating separate products:
+
+- fiction;
+- sustained non-fiction;
+- documentary and controlled documentation;
+- research provenance;
+- source acquisition;
+- quantitative and interview evidence;
+- multilingual writing;
+- collaboration;
+- documentation systems;
+- presentation delivery;
+- structured output; and
+- writing-pattern or assistance audit.
 
 ## Common ways to use Unsloop
 
@@ -224,7 +257,11 @@ Host capabilities are negotiated by function. Structured questions fall back to 
 
 ## Install Unsloop
 
-Unsloop has no required runtime dependencies: the baseline skill is Markdown and YAML. Git is needed only when cloning or updating the full project, and Python is needed only for the optional validator, global-link helper, and project-operation commands.
+Unsloop has no required runtime dependencies:
+
+- The baseline skill is Markdown and YAML.
+- Git is needed only when cloning or updating the full project.
+- Python is needed only for the optional validator, global-link helper, and project-operation commands.
 
 Choose one primary installation method. The linked methods preserve this project as the authoritative source and are preferred for active development. Copied installations are independent snapshots and must be updated separately.
 
@@ -404,7 +441,12 @@ Update a cloned checkout with `git pull`; linked installations follow that check
 
 For a close match, Unsloop may request two or three representative pieces previously written by the user, ideally in a similar genre. It derives an observable voice brief from those samples while keeping their facts, anecdotes, and distinctive wording out of the new work unless the user explicitly makes them relevant. Voice matching always reports its evidence basis and confidence; it never claims exact replication.
 
-Factual references and voice samples have different jobs: references support what the writing says; samples help establish how it should sound. Unsloop does not treat a sample's claims or experiences as evidence for the new work.
+Factual references and voice samples have different jobs:
+
+- Factual references support what the writing says.
+- Voice samples help establish how it should sound.
+
+Unsloop does not treat a sample's claims or experiences as evidence for the new work.
 
 ## Status
 
