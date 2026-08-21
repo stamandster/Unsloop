@@ -18,6 +18,7 @@ REQUIRED_FILES = (
     ROOT / "PRD.md",
     ROOT / "FSD.md",
     ROOT / "PROJECT.md",
+    ROOT / "HISTORY.md",
     ROOT / "ARCHITECTURE.md",
     ROOT / "ROADMAP.md",
     ROOT / "DECISIONS.md",
@@ -552,6 +553,15 @@ PROJECT_IDENTITY_CONTRACT = {
         "## Common ways to use Unsloop",
         "## Operating contract",
         "docs/GITHUB-ABOUT.md",
+        "[`HISTORY.md`](HISTORY.md)",
+    ),
+    ROOT / "HISTORY.md": (
+        "## Origin",
+        "## What remained constant",
+        "## How Unsloop has been developed",
+        "## Milestone record",
+        "## Current identity",
+        "descriptive, not normative",
     ),
     ROOT / "PROJECT.md": (
         "author-led writing lifecycle system",
@@ -569,6 +579,7 @@ PROJECT_IDENTITY_CONTRACT = {
     ROOT / "ARCHITECTURE.md": (
         "portable writing lifecycle system",
         "GITHUB-ABOUT.md",
+        "HISTORY.md",
     ),
     ROOT / "docs" / "NAMING.md": (
         "full writing lifecycle",

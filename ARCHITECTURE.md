@@ -42,6 +42,7 @@ Unsloop/
 ├── PRD.md
 ├── FSD.md
 ├── PROJECT.md
+├── HISTORY.md
 ├── ARCHITECTURE.md
 ├── ROADMAP.md
 ├── DECISIONS.md

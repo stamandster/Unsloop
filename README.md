@@ -248,6 +248,7 @@ Host capabilities are negotiated by function. Structured questions fall back to 
 - [`PRD.md`](PRD.md) — modes, use cases, functional and nonfunctional requirements, and acceptance criteria
 - [`FSD.md`](FSD.md) — functional components, data concepts, processing flow, failure handling, and test traceability
 - [`PROJECT.md`](PROJECT.md) — concise vision, principles, scope, and success definition
+- [`HISTORY.md`](HISTORY.md) — narrative of how Unsloop evolved and which principles remained constant
 - [`ARCHITECTURE.md`](ARCHITECTURE.md) — project and skill structure
 - [`docs/NAMING.md`](docs/NAMING.md) — naming system and mode boundaries
 - [`docs/REVIEW-MODEL.md`](docs/REVIEW-MODEL.md) — the two-part method
