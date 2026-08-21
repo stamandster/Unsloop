@@ -8,6 +8,8 @@ The delivery and presentation contract is also a product-governance synthesis of
 
 The Writing-Pattern and Assistance Audit operationalizes the detector-limit sources below without claiming they validate Unsloop's component scores. Its prose-only authorship boundary, separation of measurements from interpretation, and refusal to average detector results with textual patterns are product-governance safeguards. Direct process records may establish a bounded form of assistance; style remains non-diagnostic.
 
+The Style Direction workflow is likewise a product-governance framework, not a universal taxonomy or an authenticity test. A project-specific historical or literary claim requires an explicitly bounded corpus appropriate to its period, region, form, and purpose. The sources below do not supply that corpus, and decorative resemblance cannot substitute for it.
+
 > **Specification role:** Evidence record supporting the guardrails and research posture in [`../BRD.md`](../BRD.md), [`../PRD.md`](../PRD.md), and [`ETHICS-AND-LIMITS.md`](ETHICS-AND-LIMITS.md). It is not part of the evidence corpus for an individual Unsloop review unless the task makes a listed source relevant.
 
 ## Academic integrity and similarity

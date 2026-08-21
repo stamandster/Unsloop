@@ -247,3 +247,27 @@ These clean-context contracts cover composition, source safety, heterogeneous ev
 - Expected routing: Write + revision control + integrity review + human-voice review.
 - Required: preserve the useful author-supplied observation with proportionate personal scope and evidence-status framing, separate the embedded externally checkable claim, and support, qualify, or leave that claim explicitly unresolved on its own evidence.
 - Prohibited: deleting the observation solely because it lacks external verification, treating its personal label as factual support, inventing first-person content, or strengthening the author's perspective without authorization.
+
+## 42. Explicit Early Modern dramatic-verse direction
+
+- Expected routing: Unsloop Write + Style Direction + proportionate writing brief.
+- Required: use the supplied direction without asking for style selection again; distinguish author, narrative, viewpoint, dialogue, and form channels; resolve period/tradition, dramatic form, verse/prose behavior, meter, rhetoric, register, speakability, authenticity stance, readability, evidence basis, and permitted modernization to the depth needed.
+- Prohibited: treating scattered archaisms as sufficient, claiming Elizabethan and Jacobean practice is homogeneous, or presenting the output as historically authentic without a bounded supporting corpus.
+
+## 43. Author wants help selecting a writing style
+
+- Expected routing: Unsloop Write + Style Direction + structured choice or conversational fallback.
+- Required: offer evidenced personal voice, historical or literary tradition, custom designed style, and restrained genre default as genuinely different paths; recommend only with stated reasons and preserve the author's decision.
+- Prohibited: imposing a rigid preset catalog, confusing personal voice with literary style, or asking for already supplied purpose, audience, form, or direction.
+
+## 44. Novel style changes across periods
+
+- Expected routing: Unsloop Write or Review + Style Direction + style evolution + revision control.
+- Required: select Stable, Gradual, or Phase-based evolution; assign `STP-*` scope, trigger, retained and changed traits, function, Proposed/Confirmed/Superseded state, and author disposition; identify transition behavior and affected manuscript range.
+- Prohibited: letting a Proposed phase alter Confirmed prose, calling accidental drift evolution, or retroactively changing earlier chapters without an impact map and authorization.
+
+## 45. Historical-style authenticity audit
+
+- Expected routing: Unsloop Audit + Style Direction + evidence boundary.
+- Required: leave prose and style state unchanged; report the declared period, region, form, corpus, authenticity stance, modernization policy, intentional anachronisms, evidence quality, confidence, and passage-specific convention or drift findings.
+- Prohibited: authenticating a text from surface vocabulary, treating a named-author resemblance as proof, or applying corrections inside Audit.

@@ -46,6 +46,7 @@ REQUIRED_FILES = (
     SKILL / "references" / "integrity-review.md",
     SKILL / "references" / "human-voice-review.md",
     SKILL / "references" / "voice-fidelity.md",
+    SKILL / "references" / "style-direction.md",
     SKILL / "references" / "writing-brief.md",
     SKILL / "references" / "scoring.md",
     SKILL / "references" / "output-contracts.md",
@@ -89,6 +90,7 @@ REQUIRED_FILES = (
     SKILL / "assets" / "fiction-project" / "DECISIONS.md",
     SKILL / "assets" / "fiction-project" / "SERIES.md",
     SKILL / "assets" / "fiction-project" / "VOICE.md",
+    SKILL / "assets" / "fiction-project" / "STYLE.md",
     SKILL / "assets" / "fiction-project" / "WORLD.md",
     SKILL / "assets" / "fiction-project" / "GLOSSARY.md",
     SKILL / "assets" / "fiction-project" / "KNOWLEDGE.md",
@@ -97,6 +99,7 @@ REQUIRED_FILES = (
     SKILL / "assets" / "writing-project" / "BRIEF.md",
     SKILL / "assets" / "writing-project" / "STATUS.md",
     SKILL / "assets" / "writing-project" / "OUTLINE.md",
+    SKILL / "assets" / "writing-project" / "STYLE.md",
     SKILL / "assets" / "writing-project" / "SECTIONS.md",
     SKILL / "assets" / "writing-project" / "SOURCES.md",
     SKILL / "assets" / "writing-project" / "SOURCE-POLICY.md",
@@ -315,7 +318,7 @@ SECTION_FLOW_CONTRACT = {
         "Forward-test abrupt, already-coherent, and intentionally discontinuous section boundaries",
     ),
     ROOT / "PORTABILITY.md": (
-        "evidence, voice, personal-perspective preservation, section-flow, delivery-readiness, artifact-synchronization, writing-pattern authorship boundaries, privacy",
+        "evidence, voice, Style Direction and evolution, personal-perspective preservation, section-flow, delivery-readiness, artifact-synchronization, writing-pattern authorship boundaries, privacy",
     ),
     ROOT / "tests" / "fixtures" / "operational-scenarios.md": (
         "## 25. Abrupt subheading without a logical bridge",
@@ -405,7 +408,7 @@ DELIVERY_PRESENTATION_CONTRACT = {
     ),
     ROOT / "ROADMAP.md": (
         "Add topic-neutral delivery and presentation contracts",
-        "Add 41 clean-context operational extension scenarios",
+        "Add 45 clean-context operational extension scenarios",
     ),
     ROOT / "PORTABILITY.md": ("delivery-readiness", "artifact-synchronization"),
     ROOT / "tests" / "fixtures" / "operational-scenarios.md": (
@@ -512,7 +515,7 @@ WRITING_PATTERN_ASSISTANCE_CONTRACT = {
     ROOT / "DECISIONS.md": ("## D-037 — Replace AI-score requests with an evidence-bound assistance audit",),
     ROOT / "ROADMAP.md": (
         "Add a non-mutating Writing-Pattern and Assistance Audit",
-        "Add 41 clean-context operational extension scenarios",
+        "Add 45 clean-context operational extension scenarios",
     ),
     ROOT / "PORTABILITY.md": (
         "writing-pattern authorship boundaries",
@@ -539,7 +542,7 @@ PROJECT_IDENTITY_CONTRACT = {
         "not the project's defining category",
     ),
     SKILL / "agents" / "openai.yaml": (
-        "Author-led writing, evidence, voice, and audits",
+        "Author-led writing, style, evidence, and audits",
         "plan, draft, revise, review, audit, research, validate, maintain, or package writing",
     ),
     ROOT / "README.md": (
@@ -1218,45 +1221,112 @@ PERSONAL_PERSPECTIVE_CONTRACT = {
     ),
     ROOT / "ROADMAP.md": (
         "Preserve scoped author-supplied personal perspective during authorized revision",
-        "Add 41 clean-context operational extension scenarios",
+        "Add 45 clean-context operational extension scenarios",
     ),
     ROOT / "tests" / "fixtures" / "operational-scenarios.md": (
         "## 41. Authorized revision includes a personal observation and a general claim",
         "deleting the observation solely because it lacks external verification",
     ),
     ROOT / "tests" / "test_operational_scenarios.py": (
-        "list(range(1, 42))",
-        "self.assertEqual(len(sections), 41)",
+        "list(range(1, 46))",
+        "self.assertEqual(len(sections), 45)",
     ),
+}
+
+STYLE_DIRECTION_CONTRACT = {
+    SKILL / "agents" / "openai.yaml": ("governed Style Direction", "separate style channels"),
+    SKILL / "SKILL.md": (
+        "references/style-direction.md",
+        "StyleBrief",
+        "historical or literary",
+    ),
+    SKILL / "references" / "style-direction.md": (
+        "## Select the style path",
+        "My evidenced voice",
+        "Historical or literary tradition",
+        "Custom designed style",
+        "Genre default",
+        "Period-forward",
+        "Balanced (Recommended)",
+        "Modern-reader-forward",
+        "Stable",
+        "Gradual",
+        "Phase-based",
+        "Early Modern English dramatic verse",
+        "Do not claim exact author imitation",
+    ),
+    SKILL / "references" / "fiction-workflow.md": ("StyleBrief", "style-direction.md"),
+    SKILL / "references" / "write-mode.md": ("StyleBrief", "authenticity"),
+    SKILL / "references" / "voice-fidelity.md": ("StyleBrief", "tradition-level"),
+    SKILL / "references" / "multilingual-writing.md": ("source-period", "period-equivalent form"),
+    SKILL / "references" / "human-voice-review.md": ("StyleBrief", "ornamental archaism"),
+    SKILL / "references" / "output-contracts.md": ("StyleBrief", "historically authentic"),
+    SKILL / "references" / "fiction-project-operations.md": ("STYLE.md", "StyleBrief"),
+    SKILL / "references" / "sustained-writing-projects.md": ("STYLE.md", "STP-*"),
+    SKILL / "assets" / "fiction-project" / "STYLE.md": (
+        "Profile state: Proposed", "Authenticity stance: Unselected", "Evolution model: Unselected", "STP-001",
+    ),
+    SKILL / "assets" / "fiction-project" / "BRIEF.md": ("Style Direction:", "Style profile and phase:"),
+    SKILL / "assets" / "fiction-project" / "STATUS.md": ("Active StyleBrief and phase:", "Required style profile:"),
+    SKILL / "assets" / "writing-project" / "STYLE.md": (
+        "Profile state: Proposed", "Authenticity stance: Unselected", "Evolution model: Unselected", "STP-001",
+    ),
+    SKILL / "assets" / "writing-project" / "BRIEF.md": ("Style Direction:", "Style profile and phase:"),
+    SKILL / "assets" / "writing-project" / "STATUS.md": ("Active StyleBrief and phase:",),
+    SKILL / "scripts" / "fiction_project.py": ("--style", "STYLE_PROFILE_STATES", "Approval decision"),
+    SKILL / "scripts" / "writing_project.py": ("--style", "STYLE_PROFILE_STATES", "Approval decision"),
+    ROOT / "BRD.md": ("BR-028", "Style Direction"),
+    ROOT / "PRD.md": ("PR-048", "PR-049", "NFR-022 Style traceability", "### Style direction and evolution"),
+    ROOT / "FSD.md": ("FS-047", "FS-048", "`StyleBrief`", "`StylePhase`"),
+    ROOT / "README.md": ("## Style direction and evolution", "Early Modern English dramatic verse", "--style"),
+    ROOT / "PROJECT.md": ("**Style-defensible:**",),
+    ROOT / "ARCHITECTURE.md": ("Shared Style Direction specialization", "style-direction.md"),
+    ROOT / "PORTABILITY.md": ("Style Direction and evolution", "writing/STYLE.md"),
+    ROOT / "docs" / "NAMING.md": ("Use **Style Direction**",),
+    ROOT / "docs" / "REVIEW-MODEL.md": ("## Style Direction specialization",),
+    ROOT / "docs" / "REVIEW-OUTPUT.md": ("When a `StyleBrief` applies",),
+    ROOT / "docs" / "ETHICS-AND-LIMITS.md": ("## Style direction, influence, and authenticity",),
+    ROOT / "DECISIONS.md": ("## D-040 — Treat style as a governed direction, not a preset catalog",),
+    ROOT / "ROADMAP.md": ("Add governed Style Direction selection", "45 clean-context operational extension scenarios"),
+    ROOT / "tests" / "fixtures" / "operational-scenarios.md": (
+        "## 42. Explicit Early Modern dramatic-verse direction",
+        "## 45. Historical-style authenticity audit",
+    ),
+    ROOT / "tests" / "test_operational_scenarios.py": ("list(range(1, 46))", "self.assertEqual(len(sections), 45)"),
+    ROOT / "tests" / "test_fiction_project.py": ("test_style_profile_requires_complete_author_approval_when_confirmed",),
+    ROOT / "tests" / "test_writing_project.py": ("test_style_profile_requires_complete_author_approval_when_confirmed",),
 }
 
 SPECIFICATION_CONTRACT = {
     ROOT / "BRD.md": (
         "## Business requirements",
         "BR-001",
-        "BR-027",
+        "BR-028",
         "[`PRD.md`](PRD.md)",
         "[`FSD.md`](FSD.md)",
     ),
     ROOT / "PRD.md": (
         "## Functional requirements",
         "PR-001",
-        "PR-047",
+        "PR-049",
         "NFR-001 Portability",
         "NFR-008 Long-form resilience",
         "NFR-019 Semantic preservation",
         "NFR-020 Delivery readiness",
         "NFR-021 Authorship calibration",
+        "NFR-022 Style traceability",
         "[`BRD.md`](BRD.md)",
         "[`FSD.md`](FSD.md)",
     ),
     ROOT / "FSD.md": (
         "## Functional components",
         "FS-001",
-        "FS-046",
+        "FS-048",
         "`WritingBrief`",
         "`EvidenceBoundary`",
         "`VoiceBrief`",
+        "`StyleBrief`",
+        "`StylePhase`",
         "`RequirementCoverage`",
         "`ReadinessState`",
         "`FictionBrief`",
@@ -1304,6 +1374,7 @@ SPECIFICATION_CONTRACT = {
         "## D-017 — Keep fiction inside Write and make its state author-owned",
         "## D-021 — Bound fiction feedback and publication claims",
         "## D-033 — Make Audit information-preserving and non-mutating",
+        "## D-040 — Treat style as a governed direction, not a preset catalog",
     ),
 }
 
@@ -1566,6 +1637,17 @@ def validate() -> list[str]:
             if requirement not in text:
                 errors.append(
                     f"personal-perspective safeguard missing from "
+                    f"{path.relative_to(ROOT)}: {requirement}"
+                )
+
+    for path, requirements in STYLE_DIRECTION_CONTRACT.items():
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for requirement in requirements:
+            if requirement not in text:
+                errors.append(
+                    f"style-direction safeguard missing from "
                     f"{path.relative_to(ROOT)}: {requirement}"
                 )
 

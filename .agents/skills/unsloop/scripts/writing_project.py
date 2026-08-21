@@ -37,6 +37,15 @@ CHANGE_STATES = {
     "Proposed", "Accepted", "Partially accepted", "Rejected",
     "Revision requested", "Applied", "Superseded",
 }
+STYLE_PROFILE_STATES = {"Proposed", "Confirmed", "Superseded"}
+STYLE_SOURCE_TYPES = {
+    "My evidenced voice", "Historical or literary tradition",
+    "Custom designed style", "Genre default", "Unselected",
+}
+AUTHENTICITY_STANCES = {
+    "Period-forward", "Balanced", "Modern-reader-forward", "Not applicable", "Unselected",
+}
+STYLE_EVOLUTION_MODELS = {"Stable", "Gradual", "Phase-based", "Unselected"}
 READINESS_STATES = {
     "Ready", "Ready with noted limitations", "Provisional—decision required",
     "Not ready—evidence or authorization missing",
@@ -145,6 +154,8 @@ def init_command(args: argparse.Namespace) -> int:
         if not args.voice_authorized:
             raise ValueError("--voice requires --voice-authorized")
         names.append("VOICE.md")
+    if getattr(args, "style", False):
+        names.append("STYLE.md")
 
     plan = [(name, root / "writing" / name) for name in names]
     plan.append(("MANUSCRIPT.md", root / "manuscript" / "001-opening.md"))
@@ -415,6 +426,43 @@ def check_command(args: argparse.Namespace) -> int:
         if not authorization or authorization.startswith("["):
             errors.append("writing/VOICE.md lacks explicit storage authorization")
 
+    style = writing / "STYLE.md"
+    if style.is_file():
+        style_text = style.read_text(encoding="utf-8")
+        profile_state = find_field(style_text, "Profile state")
+        direction_source = find_field(style_text, "Direction source")
+        authenticity = find_field(style_text, "Authenticity stance")
+        evolution = find_field(style_text, "Evolution model")
+        approval = find_field(style_text, "Approval decision")
+        superseded_by = find_field(style_text, "Superseded by")
+        if profile_state not in STYLE_PROFILE_STATES:
+            errors.append(f"invalid writing style profile state: {profile_state}")
+        if direction_source not in STYLE_SOURCE_TYPES:
+            errors.append(f"invalid writing style direction source: {direction_source}")
+        if authenticity not in AUTHENTICITY_STANCES:
+            errors.append(f"invalid writing style authenticity stance: {authenticity}")
+        if evolution not in STYLE_EVOLUTION_MODELS:
+            errors.append(f"invalid writing style evolution model: {evolution}")
+        if profile_state == "Confirmed":
+            if direction_source == "Unselected" or authenticity == "Unselected" or evolution == "Unselected":
+                errors.append("Confirmed writing style profile retains an Unselected field")
+            if not approval or approval.startswith("["):
+                errors.append("Confirmed writing style profile lacks author approval")
+        if profile_state == "Superseded" and (
+            not superseded_by or superseded_by.startswith("[") or superseded_by == "not applicable"
+        ):
+            errors.append("Superseded writing style profile lacks replacement linkage")
+        for cells in table_rows(style):
+            if len(cells) < 10 or not cells[0].startswith("STP-"):
+                continue
+            phase_id, phase_state, decision = cells[0], cells[1], cells[9]
+            if phase_state not in STYLE_PROFILE_STATES:
+                errors.append(f"invalid writing style phase state for {phase_id}: {phase_state}")
+            if phase_state == "Confirmed" and (
+                not decision or decision.startswith("[") or decision in {"—", "-"}
+            ):
+                errors.append(f"Confirmed writing style phase lacks author approval: {phase_id}")
+
     for warning in warnings:
         print(f"WARNING {warning}")
     for error in errors:
@@ -601,6 +649,7 @@ def build_parser() -> argparse.ArgumentParser:
     init.add_argument("--terminology", action="store_true")
     init.add_argument("--voice", action="store_true", help="include the optional VOICE.md template")
     init.add_argument("--voice-authorized", action="store_true", help="confirm explicit storage authorization")
+    init.add_argument("--style", action="store_true", help="include the optional STYLE.md template")
     init.add_argument("--apply", action="store_true")
     init.set_defaults(func=init_command)
 

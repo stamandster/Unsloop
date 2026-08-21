@@ -243,3 +243,9 @@ Lead public and maintainer documentation with Unsloop's full author-led writing 
 **Status:** Accepted
 
 Do not treat every uncited first-person observation, interpretation, unresolved question, or tentative perspective as a defective external claim. During authorized revision, preserve useful author-supplied personal material with genre-appropriate scope and evidence-status framing rather than deleting it solely because external verification is absent. Identify and verify or qualify embedded externally checkable claims separately. Never invent personal content, strengthen the author's position silently, or use perspective framing to disguise unsupported facts.
+
+## D-040 — Treat style as a governed direction, not a preset catalog
+
+**Status:** Accepted
+
+Expose **Style Direction** across the existing Review, Write, and Audit modes. Let authors choose evidenced personal voice, a historical or literary tradition, a custom design, or a restrained genre default; preserve the result in a `StyleBrief` only to the degree useful. Keep author, narrative/document, viewpoint, dialogue, translation, and delivery channels distinct. Historical work declares authenticity and readability stance plus evidence limits. Style may remain Stable, evolve Gradually, or change through author-approved Phases, but Confirmed state cannot drift silently. Named-author requests become non-exclusive trait descriptions rather than signature imitation.

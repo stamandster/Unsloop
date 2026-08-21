@@ -13,6 +13,8 @@
 - Source acquisition: [User-provided only, Scoped web, Broad web, Hybrid, or not needed]
 - Validation target: [factual, chronological, procedural, policy, technical, accessibility, qualified review, or other]
 - Voice target: [authorized basis or task-local target]
+- Style Direction: [evidenced personal voice, historical or literary tradition, custom design, genre default, or not selected]
+- Style profile and phase: [`writing/STYLE.md` and applicable STP ID, task-local brief, or not applicable]
 - Hard constraints: [format, length, date, policy, or delivery]
 - Collaboration cadence: [Guided, Adaptive, or Autonomous if used]
 - Owner, effective date, and review cycle: [owner and maintenance expectations]

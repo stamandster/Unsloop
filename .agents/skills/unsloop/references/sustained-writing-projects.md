@@ -55,6 +55,7 @@ writing/
   BRIEF.md
   STATUS.md
   OUTLINE.md
+  STYLE.md
   SECTIONS.md
   CLAIMS.md
   SOURCES.md
@@ -87,6 +88,8 @@ Create only the files the project needs. Use relative paths and stable IDs:
 - `REQ-*` for requirements;
 - `DEC-*` for decisions; and
 - `CHG-*` for proposed or applied changes.
+
+Add `STYLE.md` only when a selected Style Direction or planned stylistic evolution must remain stable across sections, sessions, models, or collaborators. Keep author voice, document voice, quoted-source voice, and form-specific conventions distinct. Style phases use stable `STP-*` identifiers and Proposed, Confirmed, or Superseded state; a confirmed phase cannot change silently.
 
 Add `CHRONOLOGY.md` for evidence-led narrative or biography and `VALIDATION.md` for procedures, policies, plans, or technical documents only when those records improve control. Read [documentary-documentation.md](documentary-documentation.md) for form-specific contracts and [source-acquisition.md](source-acquisition.md) for supplied, scoped-web, broad-web, or hybrid research.
 

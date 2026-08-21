@@ -70,11 +70,14 @@ Capture these fields when they matter:
 8. **Exclusions:** information, claims, framing, disclosures, implications, or source uses to avoid.
 9. **Reference material:** notes, documents, links, data, sources, and earlier discussions that may support the content; identify which are authoritative for facts and which merely provide leads.
 10. **Voice target:** tone, formality, language style, emotional restraint, and any authorized writing samples.
-11. **Format and delivery constraints:** length or duration, structure, citation style, template, platform, deadline, live or recorded setting, pace when material, pauses, interaction, media, accessibility needs, authoritative source format, required derivatives, validation expectation, and any component allocations.
+11. **Style direction:** when material, the selected historical, literary, rhetorical, house, custom, or genre-default profile; authenticity stance; evidence basis; and stable, gradual, or phase-based evolution.
+12. **Format and delivery constraints:** length or duration, structure, citation style, template, platform, deadline, live or recorded setting, pace when material, pauses, interaction, media, accessibility needs, authoritative source format, required derivatives, validation expectation, and any component allocations.
 
 For fiction, map these general fields to the fiction-specific brief without duplicating them. In particular, keep real-world research references separate from story canon, and keep author voice evidence separate from narrative and character voice design.
 
-Do not collapse these fields. Topic is not goal. Audience is not prior knowledge. Governing directions are not factual evidence. Factual references are not voice samples. Context is not permission to invent facts.
+Do not collapse these fields. Topic is not goal. Audience is not prior knowledge. Governing directions are not factual evidence. Factual references are not voice samples. Author voice is not a selected literary or historical style. Context is not permission to invent facts.
+
+When style materially shapes the artifact, read [style-direction.md](style-direction.md). Use an explicit direction without a redundant question. If the direction is open, distinguish My evidenced voice, Historical or literary tradition, Custom designed style, and Genre default. A period label does not establish authenticity, and a named author does not authorize signature imitation.
 
 ### Classify content roles
 

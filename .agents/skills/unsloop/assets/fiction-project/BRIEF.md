@@ -22,6 +22,8 @@
 - Narrative distance and reliability: [design]
 - Voice direction: [narrative and character distinctions]
 - Recurring-character voice setup: [author-defined, proposals requested, or mixed]
+- Style Direction: [evidenced personal voice, historical or literary tradition, custom design, genre default, or not selected]
+- Style profile and phase: [`story/STYLE.md` and applicable STP ID, task-local brief, or not applicable]
 
 ## Boundaries and constraints
 

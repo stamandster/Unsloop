@@ -50,15 +50,16 @@ Extract before asking. Capture only fields that affect the current stage:
 1. form, scale, and starting state;
 2. premise and narrative promise;
 3. intended reader experience;
-4. audience, positioning, genre, and tonal range;
+4. audience, positioning, genre, tonal range, and any material historical, literary, or custom style direction;
 5. POV system, person, tense, distance, reliability, and switching rules;
-6. author voice evidence, narrative design, viewpoint voice, and dialogue distinctions;
+6. author voice evidence, selected style direction, narrative design, viewpoint voice, and dialogue distinctions;
 7. characters, relationships, setting, conflict, chronology, arcs, themes or questions, known scenes, and ending direction;
 8. real-world research boundary and invented rules;
 9. content, format, length, deadline, continuity, and series constraints;
 10. locked author decisions and decision authority when collaborators are involved; and
-11. collaboration cadence and maximum batch for sustained creation; and
-12. recurring-character personality and speech decisions: user-defined, model-proposed for approval, or a deliberate mixture.
+11. collaboration cadence and maximum batch for sustained creation;
+12. recurring-character personality and speech decisions: user-defined, model-proposed for approval, or a deliberate mixture; and
+13. stable, gradual, or phase-based style evolution when the design changes across eras, books, narrators, or character ages.
 
 Do not require a moral, lesson, market category, or predetermined structure. For sustained work, summarize a compact creative contract and mark consequential elements Known, Inferred, or Unknown before architecture or drafting.
 
@@ -79,11 +80,11 @@ Cadence controls pause frequency, not story ownership. In every cadence, preserv
 Move through only the phases the work needs:
 
 1. **Discover:** topic, seed, premise, and intended experience.
-2. **Contract:** scope, narration, voice, boundaries, research, cadence, and locked decisions.
+2. **Contract:** scope, narration, voice, style direction, boundaries, research, cadence, and locked decisions.
 3. **Foundation:** characters, relationships, setting, world rules, chronology, and central pressure.
 4. **Architecture:** plot spine, arcs, subplots, reveals, setups, payoffs, escalation, and ending direction.
 5. **Scene design:** causal sequence, scene purpose, POV, objective or pressure, turn, consequence, knowledge, continuity, and research.
-6. **Draft:** write the approved unit or batch, then check POV, tense, distance, knowledge, motivation, spatial and temporal continuity, dialogue distinction, causality, voice, and research.
+6. **Draft:** write the approved unit or batch, then check POV, tense, distance, knowledge, motivation, spatial and temporal continuity, dialogue distinction, causality, voice, confirmed style phase, and research.
 7. **Accept:** present the prose first, then material decisions and Proposed details; update state only according to the user's disposition.
 8. **Revise:** separate contract, structure, character, continuity, POV, theme, research, prose, line, and copy passes when combining them would obscure causes.
 
@@ -110,6 +111,8 @@ Keep these channels separate:
 - real-world research evidence.
 
 Do not import facts, autobiography, characters, settings, opinions, or memorable wording from voice samples. Convert named-author imitation requests into broad, non-exclusive traits without copying signature language, protected characters, distinctive worlds, or recognizable rhetorical sequences.
+
+For a selected historical, literary, rhetorical, or custom direction, read [style-direction.md](style-direction.md). Keep the `StyleBrief` separate from author, narrative, viewpoint, and dialogue voice. Confirm a new style phase before applying it to accepted manuscript scope, and do not use surface archaism as proof of authenticity.
 
 Story canon establishes what is true inside the fiction, not what is verified in the real world. Fiction may invent people, events, dialogue, worlds, and emotions when clearly presented as fiction. Do not present invention as authentic quotation, personal testimony, allegation, or factual verification. Never claim originality against an incomplete comparison corpus.
 

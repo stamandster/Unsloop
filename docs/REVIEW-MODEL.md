@@ -1,6 +1,6 @@
 # Review Model
 
-> **Specification role:** Normative method for `PR-003`–`PR-008`, `PR-016`–`PR-047`, `FS-003`–`FS-007`, and `FS-014`–`FS-046` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md). Ethical limits in [`ETHICS-AND-LIMITS.md`](ETHICS-AND-LIMITS.md) control whenever a method rule appears to conflict.
+> **Specification role:** Normative method for `PR-003`–`PR-008`, `PR-016`–`PR-049`, `FS-003`–`FS-007`, and `FS-014`–`FS-048` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md). Ethical limits in [`ETHICS-AND-LIMITS.md`](ETHICS-AND-LIMITS.md) control whenever a method rule appears to conflict.
 
 ## Overview
 
@@ -87,6 +87,14 @@ For Audit, establish the authoritative version and leave it unchanged. An audit 
 For substantial revision, establish the authoritative version, allowed scope, protected material, and approval cadence. Classify material changes, map downstream evidence and requirement effects, checkpoint consequential work, apply only accepted changes, and reconcile the manuscript and ledgers. For collaborators, distinguish governing authority, author-owned choices, subject-matter decisions, editorial recommendations, and optional preferences; addressed feedback is not approval.
 
 For multilingual work, establish translation mode, target locale, terminology authority, quotation policy, evidence boundary, and voice basis. Preserve meaning, qualification, attribution, uncertainty, and claim strength. Evaluate second-language and dialect features against the approved audience and purpose rather than a dominant-language norm.
+
+## Style Direction specialization
+
+When a selected style materially governs the work, establish or load its `StyleBrief` before judging consistency. Use the author's explicit direction without a redundant selection question; otherwise offer evidenced personal voice, historical or literary tradition, custom design, or a restrained genre default only when the choice would change the result.
+
+Review the active style through functional coordinates such as syntax, diction, cadence, imagery, rhetoric, structure, verse/prose behavior, narrative distance, and delivery—not a word blacklist or decorative signals. Keep author voice, narrative or document style, viewpoint-character filtering, character dialogue, and form conventions separate. For historical or literary work, compare only against the declared period, region, form, corpus, authenticity stance, modernization policy, and evidence boundary.
+
+For Stable, Gradual, or Phase-based evolution, identify the applicable `STP-*` scope before evaluating drift. Distinguish an approved transition or intentional deviation from accidental inconsistency. Review recommends the smallest intervention; Audit records the same evidence without changing prose or project state. Surface archaism, a genre label, or resemblance to a named author cannot by itself establish authenticity.
 
 ## Lens A — Writing integrity
 

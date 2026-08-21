@@ -75,6 +75,8 @@ No database, background service, model endpoint, provider account, or persistent
 | FS-044 | Delivery and presentation orchestration | Delivered-writing request, brief, governing directions, timing or attention constraints, audience, evidence, questions, media, interaction, closing goal | `DeliveryContract`, reconciled element plan, delivery-aware artifact or findings, and bounded readiness | PR-045; NFR-003, NFR-020 |
 | FS-045 | Multi-format artifact synchronization | Authoritative source or synchronization rule, required derivatives, accepted changes, available artifact capabilities and validation | `ArtifactSet` with current/stale state, validation records, and honest handoff | PR-046; NFR-007, NFR-018, NFR-020 |
 | FS-046 | Writing-pattern and assistance audit | AI-score or authorship request, inspected prose, optional authorized samples, process records, detector reports, genre and language context | Unchanged artifact, `WritingPatternAssessment`, component profile, method-bounded measurements, provenance findings, and calibrated conclusion | PR-047; NFR-003, NFR-019, NFR-021 |
+| FS-047 | Style Direction construction and application | Writing request, purpose, form, audience, author voice evidence, optional period or tradition corpus | `StyleBrief`, separated voice channels, authenticity and readability contract, bounded draft or findings | PR-048; NFR-003, NFR-004, NFR-022 |
+| FS-048 | Style evolution and continuity | Active `StyleBrief`, manuscript scope, proposed phase or observed drift, author disposition | Versioned `StylePhase` state, approved transition or drift finding, reconciled optional `STYLE.md` | PR-049; NFR-008, NFR-012, NFR-022 |
 
 ## Requirements traceability
 
@@ -127,6 +129,8 @@ No database, background service, model endpoint, provider account, or persistent
 | PR-045 | FS-003, FS-006–FS-008, FS-035, FS-039, FS-042, FS-044 |
 | PR-046 | FS-008, FS-025, FS-035, FS-040–FS-042, FS-045 |
 | PR-047 | FS-001, FS-003, FS-005–FS-009, FS-027–FS-028, FS-043, FS-046 |
+| PR-048 | FS-003, FS-004, FS-006, FS-013, FS-027, FS-047 |
+| PR-049 | FS-006–FS-008, FS-015, FS-023, FS-025, FS-047–FS-048 |
 | NFR-001 | FS-011, FS-012 |
 | NFR-002 | FS-012 |
 | NFR-003 | FS-004–FS-008 |
@@ -148,6 +152,7 @@ No database, background service, model endpoint, provider account, or persistent
 | NFR-019 | FS-008, FS-021, FS-025, FS-043 |
 | NFR-020 | FS-008, FS-035, FS-039, FS-042, FS-044, FS-045 |
 | NFR-021 | FS-005–FS-009, FS-027–FS-028, FS-043, FS-046 |
+| NFR-022 | FS-003, FS-006, FS-013, FS-015, FS-023, FS-047–FS-048 |
 
 ## Logical data model
 
@@ -176,6 +181,14 @@ Record the draft version, supplied excerpts, full supplied sources, externally v
 ### `VoiceBrief`
 
 Record only task-relevant observable traits: register, directness, cadence, vocabulary, viewpoint, certainty, warmth, transitions, punctuation, rhetorical habits, preferred or avoided expressions, useful irregularity, basis, confidence, and limitations. Do not store sample facts, identity inferences, or a persistent profile by default.
+
+### `StyleBrief`
+
+Record profile state (**Proposed**, **Confirmed**, or **Superseded**), direction source (**Evidenced personal voice**, **Historical or literary tradition**, **Custom designed style**, or **Genre default**), scope, period, region, tradition, form, medium, audience, reader experience, style coordinates, voice-channel boundaries, authenticity stance (**Period-forward**, **Balanced**, or **Modern-reader-forward**), modernization and intentional-anachronism policy, evidence corpus and limitations, confidence, evolution model, approval decision, and replacement link when superseded. A style label is a direction to specify, not evidence of authenticity.
+
+### `StylePhase`
+
+Record stable `STP-*` ID, applicable scope or range, trigger, traits added, retained, reduced, or retired, narrative or document function, evidence basis, state, author decision, approved deviations, and supersession link. Only one Confirmed phase may govern the same channel and scope unless the contract explicitly defines concurrent layers.
 
 ### `Finding`
 
@@ -416,6 +429,8 @@ Request and materials
   -> FS-001 select mode and depth
   -> FS-002 resolve topic path when new writing lacks a topic
   -> FS-003 build the smallest sufficient WritingBrief
+  -> FS-047 when style is consequential, establish or load the StyleBrief and separate its voice and form channels
+  -> FS-048 when style changes or drift matters, apply the confirmed evolution model and author-owned phase state
   -> FS-044 when delivery matters, establish and reconcile the DeliveryContract and presentation elements
   -> FS-046 for AI-score, machine-authorship, assistance, sample-comparison, or detector-report requests, preserve the artifact and separate pattern, measurement, provenance, and detector evidence
   -> FS-016 when fiction, route the job across Write, Review, or Audit
@@ -688,6 +703,23 @@ Define audience, prior knowledge, language, assistive context, task, artifact ve
 9. Return the authorship boundary, evidence boundary, component profile, measurements, passage findings, comparison, provenance, detector reports, and calibrated conclusion proportionately. For high-stakes use, require qualified human review, applicable policy, complete evidence, and a response opportunity.
 10. If revision is requested to beat a detector, refuse the evasion goal and offer a separately authorized revision for genuine specificity, clarity, concision, voice fidelity, transitions, evidence, or audience fit.
 
+### FS-047 — Establish and apply Style Direction
+
+1. If the author supplied a clear direction, use it without a redundant selector. Otherwise, when style materially affects the outcome, offer **My evidenced voice**, **Historical or literary tradition**, **Custom designed style**, or **Genre default** through a structured selector when available and equivalent plain text otherwise.
+2. Build the `StyleBrief` proportionately. Separate evidenced author voice, narrative or document style, viewpoint-character voice, character dialogue, and form or delivery conventions; do not let one channel silently redefine another.
+3. For a historical or literary tradition, resolve period, region, form, medium, corpus boundary, authenticity stance, reader accessibility, modernization policy, intentional anachronisms, evidence basis, and confidence. Treat neighboring periods and movements as varied contexts rather than one preset.
+4. Translate named-author requests into high-level, non-exclusive traits grounded where possible in broader tradition evidence. Do not copy signature wording, characters, worlds, or distinctive rhetorical patterns.
+5. Apply functional coordinates—such as syntax, diction, cadence, imagery, rhetoric, structure, verse/prose behavior, narrative distance, and performance—rather than sprinkling decorative markers. For Early Modern dramatic verse, consider meter, rhyme, enjambment, caesura, verse/prose distribution, dramatic situation, rhetoric, register, and speakability together.
+6. In Review, compare the artifact with the applicable confirmed brief and identify consequence and smallest useful intervention. In Audit, preserve the artifact and style state unchanged and separate evidence-backed conventions, uncertain attribution, modernization, and anachronism.
+
+### FS-048 — Maintain stylistic evolution
+
+1. Select **Stable**, **Gradual**, or **Phase-based** evolution only when relevant. Define trigger, scope, retained traits, changed traits, narrative or document function, and transition behavior.
+2. Keep new phases Proposed until author acceptance. Confirmed phases govern drafting and revision within their scope and cannot drift, broaden, or be replaced silently.
+3. Before changing a Confirmed phase, show the trait diff and affected manuscript range, map downstream voice, character, translation, format, and audience effects, obtain the author's disposition, and use recoverable revision controls when consequential.
+4. Preserve the prior phase as Superseded with its replacement link. Record intentional deviations separately from accidental drift.
+5. Persist `story/STYLE.md` or `writing/STYLE.md` only when multi-session continuity benefits and the layout is approved. Never persist source samples by implication.
+
 ## Failure and boundary handling
 
 | Condition | Required behavior |
@@ -752,6 +784,10 @@ Define audience, prior knowledge, language, assistive context, task, artifact ve
 | Process evidence documents one form of assistance | Report only that supported scope and artifact range; do not infer the rest of the workflow. |
 | External detector reports a probability or label | Preserve it as a vendor-reported result with tool and input boundary; do not adopt, average, or convert it into an Unsloop verdict. |
 | User asks to rewrite solely to lower a detector score | Decline detector optimization and offer revision against genuine writing goals without adding artificial errors or concealing assistance. |
+| Explicit style direction already supplied | Build the proportionate `StyleBrief` from it; do not ask the author to select a style again. |
+| Historical style corpus is absent or incomplete | Use qualified tradition-level guidance, disclose the evidence limit, and do not claim period authenticity. |
+| Surface archaism conflicts with function or readability | Diagnose the specific mismatch; do not add more archaic markers as a substitute for coherent syntax, form, rhetoric, or dramatic purpose. |
+| Proposed style phase conflicts with Confirmed style | Keep it Proposed, show the diff and affected scope, and require author disposition before application. |
 
 ## Verification matrix
 
@@ -848,6 +884,10 @@ Define audience, prior knowledge, language, assistive context, task, artifact ve
 | Revision history documents model-assisted outlining | PR-047, NFR-021 / FS-005, FS-024, FS-046 | Provenance records outlining assistance only and does not infer drafting or final authorship. |
 | Formal multilingual policy resembles a template | PR-007, PR-047, NFR-003, NFR-021 / FS-006, FS-026, FS-046 | Genre, language, translation, and required wording qualify interpretation; regularity is not treated as AI evidence. |
 | Request to rewrite solely to beat a detector | PR-013, PR-047, NFR-003, NFR-021 / FS-006, FS-025, FS-046 | Evasion is refused; any revision is separately scoped to genuine writing quality and preserves meaning and provenance. |
+| Explicit Early Modern dramatic-verse request | PR-048, NFR-022 / FS-003, FS-047 | No redundant style selector; the brief resolves form, period/tradition, authenticity, readability, evidence, and functional verse or dramatic coordinates. |
+| Named living or historical author requested as style | PR-048 / FS-004, FS-047 | Request becomes high-level, non-exclusive traits and broader tradition guidance without signature imitation. |
+| Style evolves across manuscript phases | PR-049, NFR-008, NFR-022 / FS-025, FS-048 | Proposed and Confirmed phases have explicit scope and transitions; no unapproved drift or retroactive change occurs. |
+| Historical-style authenticity audit | PR-044, PR-048–PR-049 / FS-043, FS-047–FS-048 | Artifact remains unchanged; findings distinguish evidenced convention, modernization, intentional anachronism, uncertainty, and unsupported authenticity claims. |
 
 ## Change control
 

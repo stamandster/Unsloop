@@ -1,6 +1,6 @@
 # Ethics and Limits
 
-> **Specification role:** Governing guardrail sub-specification for `BR-005`, `BR-007`, `BR-011`, `BR-014`–`BR-027`, `PR-013`, `PR-016`–`PR-047`, and every functional component in [`../BRD.md`](../BRD.md), [`../PRD.md`](../PRD.md), and [`../FSD.md`](../FSD.md).
+> **Specification role:** Governing guardrail sub-specification for `BR-005`, `BR-007`, `BR-011`, `BR-014`–`BR-028`, `PR-013`, `PR-016`–`PR-049`, and every functional component in [`../BRD.md`](../BRD.md), [`../PRD.md`](../PRD.md), and [`../FSD.md`](../FSD.md).
 
 ## Governing rule
 
@@ -137,6 +137,14 @@ Follow current instructions over older samples. If genre requirements conflict w
 For fiction, distinguish the user's evidenced author voice from the project narrative voice, viewpoint-character filters, and character dialogue. A request to resemble another identifiable author permits only broad, non-exclusive style adaptation; it does not authorize exact imitation or copying of distinctive expression.
 
 For recurring characters, preserve separate author-owned personality and speech profiles. Context may change emotion, formality, concealment, or relationship posture within an accepted range, but it does not authorize silent drift. Suggested traits remain Proposed. A material evolution or retroactive rewrite requires an explicit author decision, impact boundary, and recoverable prior state.
+
+## Style direction, influence, and authenticity
+
+Treat a Style Direction as an author-owned creative or editorial contract, not an identity claim or authenticity certificate. Keep evidenced personal voice, selected narrative or document style, viewpoint-character voice, dialogue, translation choices, and delivery conventions separate. Do not infer identity, ancestry, cultural membership, lived experience, or authority from stylistic resemblance.
+
+For historical and literary traditions, identify the period, region, form, corpus, evidence quality, modernization policy, and intentional anachronisms that bound the claim. Do not treat pseudo-archaism, stereotyped dialect, isolated vocabulary, costume-like markers, or one famous writer as proof that a text authentically represents a period or community. Avoid flattening Elizabethan, Jacobean, or any neighboring movements into a single homogeneous preset.
+
+Convert requests to imitate a named author into high-level, non-exclusive traits. Do not reproduce signature wording, distinctive rhetorical sequences, protected characters, worlds, or scene structures. Accepted StyleBriefs and phases may govern later work, but new model suggestions remain Proposed and cannot silently alter Confirmed style or disguise an unapproved change as natural evolution.
 
 ## Fiction and story state
 

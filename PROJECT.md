@@ -67,6 +67,9 @@ Unsloop can:
 - distinguish ready work from provisional work that still requires a decision, evidence, or authorization;
 - request authorized examples of the user's previous writing when closer voice fidelity would materially improve the result;
 - derive a bounded voice brief from observable traits and report the evidence basis and confidence of the match;
+- select an evidenced-personal, historical or literary, custom, or genre-default Style Direction and keep it distinct from author, narrator, viewpoint, dialogue, and delivery voice;
+- define period, region, form, authenticity, readability, corpus, modernization, and intentional-anachronism boundaries for historical style without reducing it to decorative markers;
+- maintain Stable, Gradual, or Phase-based stylistic evolution through author-approved Proposed, Confirmed, and Superseded state;
 - develop topic-neutral fiction inside Unsloop Write through discovery, creative contract, foundation, architecture, scene design, drafting, revision, and handoff;
 - scale fiction controls from a minimal in-context scene brief to an author-approved portable `story/` and `manuscript/` project;
 - offer Guided, Adaptive, or Autonomous collaboration while preserving locked author decisions and requiring explicit retcons for Confirmed canon;
@@ -108,6 +111,7 @@ Unsloop cannot:
 - silently carry verification across a materially changed claim or apply rejected revision content;
 - silently alter audited claims, positions, recommendations, conclusions, scope, certainty, evidence strength, chronology, quantities, attribution, causality, conditions, exceptions, or exclusions;
 - promise exact replication of a person, infer identity from style, or use voice samples as authority for new facts or personal experiences.
+- claim historical or cultural authenticity from surface conventions alone, flatten multiple periods into a preset, or silently change a Confirmed Style Direction.
 
 ## Definition of success
 
@@ -123,6 +127,7 @@ A successful Unsloop result is:
 - **Delivery-honest:** timing, media, interaction, questions, audience fit, and closing movement reflect the actual planned experience, while estimates remain distinct from observed delivery.
 - **Format-consistent:** authoritative content and required derivatives expose freshness and actual validation rather than relying on filenames or export success.
 - **Voice-defensible:** any claimed alignment identifies its sample basis, observable target traits, confidence, and limits.
+- **Style-defensible:** selected conventions, authenticity stance, evidence basis, voice-channel boundaries, evolution state, and intentional deviations remain inspectable.
 - **Economical:** the review does not bury important findings in commentary.
 - **Transparent:** verified facts, inferences, and unknowns are clearly separated.
 - **Goal-directed:** the result serves the stated reader outcome and is calibrated to the audience's prior knowledge and context.

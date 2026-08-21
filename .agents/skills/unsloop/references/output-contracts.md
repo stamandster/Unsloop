@@ -61,6 +61,16 @@ When voice matching is material, add a compact note unless the user wants artifa
 - **Target traits:** the few traits that materially shaped the result
 - **Confidence:** Low, Moderate, or High, with any important limit
 
+When a selected style direction is material, add only the applicable information:
+
+- **Style path and scope:** evidenced voice, historical or literary tradition, custom design, or genre default
+- **Authenticity stance:** Period-forward, Balanced, Modern-reader-forward, or not applicable
+- **Evidence and confidence:** corpus or decision basis plus material limitations
+- **Evolution:** Stable, Gradual, or the applicable Confirmed/Proposed `StylePhase`
+- **Deviations:** intentional modernization, anachronism, mixed influence, or unresolved drift that affects use
+
+Do not call the artifact historically authentic merely because it contains period signals or matches a `StyleBrief` structurally.
+
 When a persistent fiction project uses stored state, do not imply that a complete-looking ledger proves manuscript consistency. State unresolved contradictions, uninspected manuscript ranges, and provisional canon when they affect the next work.
 
 ## Readiness labels

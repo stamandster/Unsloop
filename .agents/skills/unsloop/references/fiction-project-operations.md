@@ -53,6 +53,7 @@ story/
   STATUS.md
   SCENES.md
   CANON.md
+  STYLE.md
   CHARACTERS.md
   CHARACTER-VOICES.md
   TIMELINE.md
@@ -70,6 +71,7 @@ story/
   SERIES.md
   STATUS.md
   CANON.md
+  STYLE.md
   CHARACTERS.md
   CHARACTER-VOICES.md
   TIMELINE.md
@@ -91,6 +93,7 @@ Add optional ledgers only when they earn their maintenance cost:
 - `KNOWLEDGE.md` for secrets, misconceptions, reveals, and who knows what when;
 - `BRANCHES.md` for alternate paths and merge disposition; and
 - `VOICE.md` only for an explicitly authorized distilled profile, never source samples.
+- `STYLE.md` for a confirmed or evolving Style Direction whose constraints must survive batches or sessions.
 
 `CHARACTER-VOICES.md` is not an author voice-sample store. It records approved fictional characterization and speech constraints. Use it for sustained projects with multiple recurring speakers; retain compact in-context cards for one-off work.
 
@@ -227,6 +230,7 @@ Do not require Git. Do not commit, branch, copy, or checkpoint without authority
 After an accepted batch, update only affected records:
 
 - `BRIEF.md`: creative contract, authority, cadence, constraints, and locked decisions;
+- `STYLE.md`: StyleBrief, channel boundaries, authenticity stance, evolution model, confirmed phases, and approved deviations;
 - `STATUS.md`: phase, cadence, last accepted unit, immediate state, open decisions, Proposed details, risks, next action, batch limit, and required context;
 - `SCENES.md`: stable ID, manuscript location, unit state, POV, time, place, purpose, pressure, turn, consequence, knowledge, setup/payoff, research, and continuity;
 - `CANON.md`: scoped fact, state, basis, and retcon reference;

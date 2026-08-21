@@ -28,6 +28,7 @@ Generic or formulaic prose remains one important review concern, but “AI slop 
 - Do not call a stylistic review an “AI detection” mode.
 - Use **Writing-Pattern and Assistance Audit** for the Audit specialization that answers AI-score, machine-authorship, assistance-provenance, sample-comparison, or detector-report requests. It is not a fourth mode and must not be shortened to “AI Score.”
 - Treat fiction as a workflow specialization within **Unsloop Write**, not as **Unsloop Fiction** or a fourth mode.
+- Use **Style Direction** for the public specialization and `StyleBrief` or `StylePhase` for its records. Do not call it a fourth mode, a style preset catalog, or an authenticity certificate.
 - Route fiction through **Unsloop Write**, **Unsloop Review**, or **Unsloop Audit** according to the requested job; “fiction” describes the specialization, not the mode.
 - Use **story canon** for facts established inside fiction. Do not use “story bible” as the project-record name; `CANON.md` is topic-neutral and avoids a religious implication.
 - Use **simulated reader response**, not “beta reader,” unless real beta-reader feedback is actually being analyzed.

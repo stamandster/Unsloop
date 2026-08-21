@@ -6,6 +6,7 @@
 - Last completed checkpoint: [initial state]
 - Maximum batch: [approved limit]
 - Next approved action: [next action]
+- Active StyleBrief and phase: [`story/STYLE.md` plus STP ID, task-local brief, or not applicable]
 
 ## Immediate story state
 
@@ -30,6 +31,7 @@
 
 - Required project files: `story/BRIEF.md`, `story/SCENES.md`
 - Required character voice profiles: [applicable Confirmed CVP IDs or none]
+- Required style profile: [`story/STYLE.md` and applicable phase or none]
 - Required manuscript range: [accepted range needed to continue]
 - Evidence boundary: [files and ranges last inspected]
 

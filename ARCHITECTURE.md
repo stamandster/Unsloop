@@ -14,6 +14,7 @@ Unsloop
 ├── Shared section-flow contract — logical progression across headings without forced smoothing
 ├── Shared delivery contract — timing, evidence flow, audience attention, media, and artifact-set readiness
 ├── Shared writing-pattern and assistance audit — component profile, measurements, provenance, and detector boundaries
+├── Shared Style Direction specialization — author-evidenced, historical/literary, custom, or genre direction with controlled evolution
 ├── Shared sustained-writing specialization — long-form operations across all three modes
 │   ├── Project state — onboarding, units, resume packets, assembly, recovery
 │   ├── Provenance and revision — claims, sources, quotations, changes, freshness
@@ -67,6 +68,7 @@ Unsloop/
                 ├── harness-compatibility.md
                 ├── human-voice-review.md
                 ├── voice-fidelity.md
+                ├── style-direction.md
                 ├── writing-brief.md
                 ├── scoring.md
                 ├── output-contracts.md
@@ -95,8 +97,8 @@ Unsloop/
                 ├── collaborative-writing.md
                 ├── multilingual-writing.md
                 └── structured-output.md
-            ├── assets/fiction-project/  portable author-readable templates
-            ├── assets/writing-project/  sustained non-fiction templates
+            ├── assets/fiction-project/  portable author-readable templates, including optional STYLE.md
+            ├── assets/writing-project/  sustained non-fiction templates, including optional STYLE.md
             ├── assets/schemas/  optional interchange contracts
             ├── scripts/fiction_project.py  optional fiction operations
             └── scripts/writing_project.py  optional sustained-writing operations

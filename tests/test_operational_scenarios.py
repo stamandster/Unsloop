@@ -13,12 +13,12 @@ class OperationalScenarioFixtureTests(unittest.TestCase):
     def test_all_numbered_scenarios_are_present_and_ordered(self) -> None:
         text = FIXTURES.read_text(encoding="utf-8")
         numbers = [int(value) for value in re.findall(r"^## (\d+)\.", text, re.MULTILINE)]
-        self.assertEqual(numbers, list(range(1, 42)))
+        self.assertEqual(numbers, list(range(1, 46)))
 
     def test_each_scenario_defines_routing_required_and_prohibited_behavior(self) -> None:
         text = FIXTURES.read_text(encoding="utf-8")
         sections = re.split(r"^## \d+\. ", text, flags=re.MULTILINE)[1:]
-        self.assertEqual(len(sections), 41)
+        self.assertEqual(len(sections), 45)
         for section in sections:
             self.assertIn("- Expected routing:", section)
             self.assertIn("- Required:", section)
@@ -33,6 +33,7 @@ class OperationalScenarioFixtureTests(unittest.TestCase):
             "section flow",
             "delivery and presentation",
             "writing-pattern and assistance audit",
+            "style direction",
         ):
             self.assertIn(token, text)
 

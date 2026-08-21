@@ -1,6 +1,6 @@
 # Review Output Contracts
 
-> **Specification role:** Normative output and readiness sub-specification for `PR-009`–`PR-010`, `PR-016`–`PR-047`, `FS-008`–`FS-009`, and `FS-014`–`FS-046` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md).
+> **Specification role:** Normative output and readiness sub-specification for `PR-009`–`PR-010`, `PR-016`–`PR-049`, `FS-008`–`FS-009`, and `FS-014`–`FS-048` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md).
 
 ## Default: Unsloop Review
 
@@ -24,6 +24,8 @@ For each finding, include:
 ### Voice and style
 
 Identify the few patterns with the largest effect. Include scores only when requested or when they materially clarify the review.
+
+When a `StyleBrief` applies, name its source path, scope, authenticity stance, applicable phase, evidence basis, and confidence. Keep author voice, narrative or document style, viewpoint voice, character dialogue, and form conventions separate. Distinguish accidental drift, approved evolution, modernization, intentional anachronism, and unsupported authenticity claims.
 
 ### What should remain unchanged
 
@@ -106,6 +108,8 @@ When matching the user's voice is material, also state:
 - **Voice basis:** explicit instructions, current draft, and number/type of authorized samples used;
 - **Target traits:** the few observable traits that materially shaped the result;
 - **Confidence:** Low, Moderate, or High, plus any conflict or limitation.
+
+When Style Direction is material, also state the direction source, applicable scope or `STP-*` phase, authenticity/readability stance, defining functional traits, evidence limitations, intentional deviations, and author decision still required. Do not present a genre label, named author, or surface archaism as proof of authenticity.
 
 For a small fiction request, return the scene or story first and add only material assumptions or limitations. For a persistent fiction checkpoint, return the requested creative artifact first, then only:
 

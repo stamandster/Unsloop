@@ -1,6 +1,6 @@
 # Portability
 
-> **Document role:** Deployment, harness, and transfer sub-specification for `PR-014`–`PR-047`, `NFR-001`–`NFR-002`, `NFR-007`–`NFR-021`, and `FS-011`–`FS-046` in [`PRD.md`](PRD.md) and [`FSD.md`](FSD.md).
+> **Document role:** Deployment, harness, and transfer sub-specification for `PR-014`–`PR-049`, `NFR-001`–`NFR-002`, `NFR-007`–`NFR-022`, and `FS-011`–`FS-048` in [`PRD.md`](PRD.md) and [`FSD.md`](FSD.md).
 
 ## Guarantee
 
@@ -12,7 +12,7 @@ The core is both harness-agnostic and model-agnostic:
 - every operational reference is relative to the skill directory;
 - no provider, model ID, proprietary tool name, hidden reasoning format, or UI control is required;
 - missing host capabilities have explicit fallbacks; and
-- evidence, voice, personal-perspective preservation, section-flow, delivery-readiness, artifact-synchronization, writing-pattern authorship boundaries, privacy, ethics, and non-mutating Audit rules do not change across hosts.
+- evidence, voice, Style Direction and evolution, personal-perspective preservation, section-flow, delivery-readiness, artifact-synchronization, writing-pattern authorship boundaries, privacy, ethics, and non-mutating Audit rules do not change across hosts.
 
 Compatibility means the same method can load and run. It does not promise identical reasoning quality, context capacity, tool access, latency, cost, or output across models.
 
@@ -82,6 +82,8 @@ Persistent fiction projects use visible, relative Markdown beneath an author-app
 
 Unsloop bundles reusable fiction templates as optional assets and `scripts/fiction_project.py` as an optional standard-library utility. The utility is not required to write or review fiction. It defaults mutation-capable operations to dry-run, confines paths to the selected project, refuses existing destinations, and has a manual Markdown fallback. Projects created from the templates remain ordinary author-owned files with no Unsloop runtime dependency.
 
+An approved `story/STYLE.md` or `writing/STYLE.md` is ordinary portable project state. The optional project utilities create it only with `--style`; the same StyleBrief and phase contracts remain available manually when Python is absent. Source writing samples are not copied into these records.
+
 Interactive presentation adapts to the host. A native structured-input control may present short choices; plain text preserves the same decision when no such control exists. In Write or separately authorized revision, a native file editor may apply changes; otherwise Unsloop returns a delimited revision. Audit alone never invokes in-place mutation. Voice samples remain task inputs and are not persisted unless the user explicitly authorizes storage through an available mechanism.
 
 ## Optional user-level links
@@ -135,6 +137,7 @@ The dependency-free validator checks:
 - harness-compatibility, writing-brief, voice-fidelity, evidence, and ethics safeguards;
 - fiction routing, onboarding, state-transition, retcon, recovery, review, publication, template, and tooling contracts;
 - character voice profile, contextual-variation, drift, author-override, and profile-version contracts;
+- Style Direction selection, authenticity, voice-channel separation, evolution, drift, template, and project-tool contracts;
 - sustained non-fiction, provenance, revision, collaboration, multilingual, structured-output, template, and tooling contracts;
 - documentary/documentation form, source-acquisition scope, source-override, chronology, and validation-state contracts;
 - skill-composition, untrusted-source isolation, quantitative, interview, multimodal, documentation-system, maintenance, and reader-validation contracts;
@@ -162,5 +165,6 @@ After copying or cloning the project:
 10. For transferred documentation systems, inspect `CONTENT-MAP.md`, `MAINTENANCE.md`, and relevant evidence ledgers before claiming currentness or usability.
 11. For a transferred Audit, retain the authoritative inspected artifact or identifier, confirm its unchanged state, and keep proposed corrections separate from any revised artifact and authorization record.
 12. For a transferred Writing-Pattern and Assistance Audit, preserve the inspected range, authorized sample boundary, measurement method, provenance records, detector-report metadata, and the rule that no host may convert them into a composite AI probability.
+13. When `STYLE.md` exists, confirm its active `StyleBrief`, applicable Confirmed phase, evidence boundary, and approved deviations before drafting or revision; do not treat copied samples or surface markers as proof of authenticity.
 
 Do not maintain divergent independent copies under the same skill name. The root specifications and method documents need not load during every invocation, but they must travel with the authoritative repository so maintainers can reproduce the product's rationale, requirements, and validation contract.

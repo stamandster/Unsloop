@@ -49,6 +49,7 @@ Specializations extend those modes without creating separate products:
 - source acquisition;
 - quantitative and interview evidence;
 - multilingual writing;
+- style direction and stylistic evolution;
 - collaboration;
 - documentation systems;
 - presentation delivery;
@@ -62,6 +63,7 @@ Specializations extend those modes without creating separate products:
 | Find a direction | `$unsloop I need to write for new managers but do not have a topic.` | Distinct topic options, reader value, scope, evidence needs, and a selected brief. |
 | Draft from source material | `$unsloop Write this report from my notes and supplied sources.` | Goal-directed structure, claim boundaries, attribution, and author-owned decisions. |
 | Revise in your voice | `$unsloop Revise this using my authorized samples without importing their facts.` | Evidence-based voice target, meaning preservation, and confidence disclosure. |
+| Design a writing style | `$unsloop Write this as Early Modern English dramatic verse, balanced for modern readers.` | A bounded Style Direction, authenticity stance, formal constraints, evidence limits, and controlled evolution. |
 | Review a manuscript | `$unsloop Review this chapter for structure, specificity, continuity, and flow.` | Prioritized findings, material to preserve, and the smallest useful interventions. |
 | Audit evidence | `$unsloop Audit these claims and citations without changing the document.` | Non-mutating source, claim, quotation, requirement, and provenance findings. |
 | Sustain long-form work | `$unsloop Continue this book from its writing project and accepted checkpoint.` | Portable state, stable units, controlled decisions, recovery, assembly, and resumability. |
@@ -114,6 +116,33 @@ python .agents/skills/unsloop/scripts/writing_pattern_metrics.py draft.txt --tra
 
 It writes JSON to standard output and leaves the draft unchanged. The output declares its token, sentence, paragraph, repeated-phrase, sentence-opening, and user-supplied transition rules plus known limitations.
 
+## Style direction and evolution
+
+Unsloop supports **Style Direction** across Write, Review, and Audit—not as a new mode or a catalog of rigid presets. When style is consequential and not already clear, the author can choose:
+
+- **My evidenced voice:** derive task-relevant traits from authorized samples;
+- **Historical or literary tradition:** use a period-, region-, form-, and corpus-bounded style;
+- **Custom designed style:** combine explicit traits for this work; or
+- **Genre default:** use restrained conventions suited to the form and audience.
+
+The style contract keeps the author's evidenced personal voice, the selected narrative or document style, viewpoint-character voice, character dialogue, and delivery or form conventions separate. A request such as **Early Modern English dramatic verse rooted in Elizabethan and Jacobean traditions** therefore resolves more than archaic vocabulary: form, verse/prose distribution, meter, rhyme, enjambment, caesura, rhetoric, register, dramatic function, performance, audience readability, and evidence basis all remain inspectable. Elizabethan and Jacobean are treated as varied historical contexts, not one homogeneous preset.
+
+Historical or literary directions use one of three authenticity stances:
+
+- **Period-forward:** favor evidenced period conventions even when they increase reader effort;
+- **Balanced (Recommended):** retain defining conventions while controlling opacity; or
+- **Modern-reader-forward:** preserve selected signals and dramatic logic while modernizing more aggressively.
+
+Style can remain **Stable**, evolve **Gradually**, or change by approved **Phases**. Consequential phase changes remain Proposed until accepted; Confirmed style cannot drift silently. Named-author requests are translated into high-level, non-exclusive traits and broader tradition evidence rather than copied signature wording, characters, worlds, or rhetorical patterns. Surface archaism alone never proves historical authenticity.
+
+```text
+$unsloop Write this monologue as Early Modern English dramatic verse, Balanced for modern readers.
+$unsloop Suggest three materially different Style Directions for this speculative novel.
+$unsloop Review chapters 8–10 against the Confirmed StyleBrief and flag unapproved phase drift.
+```
+
+For sustained work, an approved `story/STYLE.md` or `writing/STYLE.md` may preserve the StyleBrief and phase history without storing source samples. See [Style Direction and Evolution](.agents/skills/unsloop/references/style-direction.md).
+
 ## Delivery and presentation writing
 
 Invoke Unsloop with a manuscript, outline, duration, audience, media options, or required output formats:
@@ -160,7 +189,7 @@ The skill includes a dependency-free utility for approved Markdown projects. Pyt
 
 ```text
 python .agents/skills/unsloop/scripts/fiction_project.py init --root PATH --profile compact
-python .agents/skills/unsloop/scripts/fiction_project.py init --root PATH --profile full --apply
+python .agents/skills/unsloop/scripts/fiction_project.py init --root PATH --profile full --style --apply
 python .agents/skills/unsloop/scripts/fiction_project.py check --root PATH
 python .agents/skills/unsloop/scripts/fiction_project.py checkpoint --root PATH --name NAME --reason REASON --include FILE
 python .agents/skills/unsloop/scripts/fiction_project.py assemble --root PATH --output assembled/manuscript.md
@@ -190,7 +219,7 @@ Unsloop also supports translation, localization, bilingual drafting, cross-langu
 
 ```text
 python .agents/skills/unsloop/scripts/writing_project.py init --root PATH --profile compact
-python .agents/skills/unsloop/scripts/writing_project.py init --root PATH --profile research --apply
+python .agents/skills/unsloop/scripts/writing_project.py init --root PATH --profile research --style --apply
 python .agents/skills/unsloop/scripts/writing_project.py init --root PATH --profile research --extra chronology --extra validation --apply
 python .agents/skills/unsloop/scripts/writing_project.py init --root PATH --profile full --extra data --extra interviews --extra media --extra content-map --extra maintenance --extra usability --apply
 python .agents/skills/unsloop/scripts/writing_project.py check --root PATH
@@ -230,6 +259,7 @@ Host capabilities are negotiated by function. Structured questions fall back to 
 - [`DECISIONS.md`](DECISIONS.md) — durable design decisions
 - [`PORTABILITY.md`](PORTABILITY.md) — discovery, dependencies, and transfer guarantees
 - [`.agents/skills/unsloop/references/fiction-workflow.md`](.agents/skills/unsloop/references/fiction-workflow.md) — scalable fiction lifecycle, project state, and continuity controls
+- [`.agents/skills/unsloop/references/style-direction.md`](.agents/skills/unsloop/references/style-direction.md) — selectable Style Direction, authenticity stance, channel separation, and controlled evolution
 - [`.agents/skills/unsloop/references/fiction-project-operations.md`](.agents/skills/unsloop/references/fiction-project-operations.md) — onboarding, acceptance, branches, retcons, and recovery
 - [`.agents/skills/unsloop/references/character-voice-continuity.md`](.agents/skills/unsloop/references/character-voice-continuity.md) — immutable-until-approved character personality and speech profiles
 - [`.agents/skills/unsloop/references/fiction-review.md`](.agents/skills/unsloop/references/fiction-review.md) — focused developmental, craft, continuity, and integrity review

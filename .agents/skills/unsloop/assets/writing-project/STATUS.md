@@ -10,6 +10,7 @@
 - Current readiness: Provisional—decision required
 - Next approved action: Confirm the brief and first unit
 - Files needed to resume: `writing/BRIEF.md`, `writing/STATUS.md`, `writing/OUTLINE.md`, `writing/SECTIONS.md`
+- Active StyleBrief and phase: [`writing/STYLE.md` plus STP ID, task-local brief, or not applicable]
 
 ## Immediate context
 

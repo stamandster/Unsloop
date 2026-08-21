@@ -22,6 +22,15 @@ PROJECT_PHASES = {
 UNIT_STATES = {"Planned", "Drafted", "Revised", "Accepted", "Cut", "Archived"}
 CANON_STATES = {"Proposed", "Confirmed", "Superseded"}
 VOICE_PROFILE_STATES = {"Proposed", "Confirmed", "Superseded"}
+STYLE_PROFILE_STATES = {"Proposed", "Confirmed", "Superseded"}
+STYLE_SOURCE_TYPES = {
+    "My evidenced voice", "Historical or literary tradition",
+    "Custom designed style", "Genre default", "Unselected",
+}
+AUTHENTICITY_STANCES = {
+    "Period-forward", "Balanced", "Modern-reader-forward", "Not applicable", "Unselected",
+}
+STYLE_EVOLUTION_MODELS = {"Stable", "Gradual", "Phase-based", "Unselected"}
 EXTRAS = {"world": "WORLD.md", "glossary": "GLOSSARY.md", "knowledge": "KNOWLEDGE.md", "branches": "BRANCHES.md"}
 BASE_PROFILES = {
     "compact": ("BRIEF.md", "STATUS.md", "SCENES.md"),
@@ -98,6 +107,8 @@ def init_command(args: argparse.Namespace) -> int:
         if not args.voice_authorized:
             raise ValueError("--voice requires --voice-authorized")
         plan.append(("VOICE.md", root / "story" / "VOICE.md"))
+    if getattr(args, "style", False):
+        plan.append(("STYLE.md", root / "story" / "STYLE.md"))
 
     collisions = [destination for _, destination in plan if destination.exists()]
     if collisions:
@@ -240,6 +251,43 @@ def check_command(args: argparse.Namespace) -> int:
         if not authorization or authorization.startswith("["):
             errors.append("story/VOICE.md lacks explicit storage authorization")
 
+    style = story / "STYLE.md"
+    if style.is_file():
+        style_text = style.read_text(encoding="utf-8")
+        profile_state = find_field(style_text, "Profile state")
+        direction_source = find_field(style_text, "Direction source")
+        authenticity = find_field(style_text, "Authenticity stance")
+        evolution = find_field(style_text, "Evolution model")
+        approval = find_field(style_text, "Approval decision")
+        superseded_by = find_field(style_text, "Superseded by")
+        if profile_state not in STYLE_PROFILE_STATES:
+            errors.append(f"invalid fiction style profile state: {profile_state}")
+        if direction_source not in STYLE_SOURCE_TYPES:
+            errors.append(f"invalid fiction style direction source: {direction_source}")
+        if authenticity not in AUTHENTICITY_STANCES:
+            errors.append(f"invalid fiction style authenticity stance: {authenticity}")
+        if evolution not in STYLE_EVOLUTION_MODELS:
+            errors.append(f"invalid fiction style evolution model: {evolution}")
+        if profile_state == "Confirmed":
+            if direction_source == "Unselected" or authenticity == "Unselected" or evolution == "Unselected":
+                errors.append("Confirmed fiction style profile retains an Unselected field")
+            if not approval or approval.startswith("["):
+                errors.append("Confirmed fiction style profile lacks author approval")
+        if profile_state == "Superseded" and (
+            not superseded_by or superseded_by.startswith("[") or superseded_by == "not applicable"
+        ):
+            errors.append("Superseded fiction style profile lacks replacement linkage")
+        for cells in table_rows(style):
+            if len(cells) < 10 or not cells[0].startswith("STP-"):
+                continue
+            phase_id, phase_state, decision = cells[0], cells[1], cells[9]
+            if phase_state not in STYLE_PROFILE_STATES:
+                errors.append(f"invalid fiction style phase state for {phase_id}: {phase_state}")
+            if phase_state == "Confirmed" and (
+                not decision or decision.startswith("[") or decision in {"—", "-"}
+            ):
+                errors.append(f"Confirmed fiction style phase lacks author approval: {phase_id}")
+
     for warning in warnings:
         print(f"WARNING {warning}")
     for error in errors:
@@ -368,6 +416,7 @@ def build_parser() -> argparse.ArgumentParser:
     init.add_argument("--extra", action="append", choices=tuple(EXTRAS))
     init.add_argument("--voice", action="store_true", help="include the optional VOICE.md template")
     init.add_argument("--voice-authorized", action="store_true", help="confirm explicit storage authorization")
+    init.add_argument("--style", action="store_true", help="include the optional STYLE.md template")
     init.add_argument("--apply", action="store_true")
     init.set_defaults(func=init_command)
 

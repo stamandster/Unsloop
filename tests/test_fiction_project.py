@@ -29,6 +29,7 @@ class FictionProjectTests(unittest.TestCase):
             "extra": None,
             "voice": False,
             "voice_authorized": False,
+            "style": False,
             "apply": apply,
         }
         values.update(extra)
@@ -82,6 +83,40 @@ class FictionProjectTests(unittest.TestCase):
             )
             self.assertTrue((root / "story" / "VOICE.md").is_file())
             self.assertEqual(fiction_project.check_command(Args(root=str(root))), 0)
+
+    def test_style_profile_requires_complete_author_approval_when_confirmed(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.assertEqual(fiction_project.init_command(self.init_args(root, style=True)), 0)
+            style = root / "story" / "STYLE.md"
+            self.assertTrue(style.is_file())
+            self.assertEqual(fiction_project.check_command(Args(root=str(root))), 0)
+            style.write_text(
+                style.read_text(encoding="utf-8")
+                .replace("Profile state: Proposed", "Profile state: Confirmed")
+                .replace("Direction source: Unselected", "Direction source: Custom designed style")
+                .replace("Authenticity stance: Unselected", "Authenticity stance: Not applicable")
+                .replace("Evolution model: Unselected", "Evolution model: Stable"),
+                encoding="utf-8",
+            )
+            self.assertEqual(fiction_project.check_command(Args(root=str(root))), 1)
+            style.write_text(
+                style.read_text(encoding="utf-8").replace(
+                    "[decision ID or pending]", "DEC-style-approved"
+                ),
+                encoding="utf-8",
+            )
+            self.assertEqual(fiction_project.check_command(Args(root=str(root))), 0)
+            style.write_text(
+                style.read_text(encoding="utf-8")
+                .replace("| STP-001 | Proposed |", "| STP-001 | Confirmed |")
+                .replace(
+                    "| DEC-style-approved |\n\n## Open decisions",
+                    "| [decision ID or pending] |\n\n## Open decisions",
+                ),
+                encoding="utf-8",
+            )
+            self.assertEqual(fiction_project.check_command(Args(root=str(root))), 1)
 
     def test_check_detects_duplicate_scene_and_invalid_state(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

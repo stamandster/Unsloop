@@ -16,7 +16,7 @@ Unsloop is one portable, model-agnostic writing-lifecycle skill with three modes
 
 Review is the default for a broad request about existing writing. Depth—brief, standard, or deep—is independent of mode.
 
-Topic discovery, fiction, sustained non-fiction, documentary and controlled documentation, research, collaboration, multilingual work, delivery, structured output, and writing-pattern or assistance audit are specializations inside the three modes, not separate public products. Formulaic-writing review remains a useful capability, but it does not define Unsloop's category.
+Topic discovery, Style Direction and evolution, fiction, sustained non-fiction, documentary and controlled documentation, research, collaboration, multilingual work, delivery, structured output, and writing-pattern or assistance audit are specializations inside the three modes, not separate public products. Formulaic-writing review remains a useful capability, but it does not define Unsloop's category.
 
 Fiction is a specialization within Unsloop Write, not a fourth mode. It supports isolated scenes, flash fiction, short stories, novellas, novels, serials, and series across any user-chosen subject or genre.
 
@@ -54,6 +54,7 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | Reconcile collaborators | Multiple directions, comments, roles, and approval authorities | Consolidated feedback, surfaced conflicts, decision ownership, and version-bounded approval state. |
 | Translate or localize | Source artifact, target language or locale, audience, terminology, and evidence | Meaning- and evidence-preserving adaptation with explicit ambiguity, quotation, voice, and cultural limits. |
 | Return structured results | Requested mode, artifact, evidence, and supplied or default schema | Machine-readable findings that preserve evidence, confidence, readiness, privacy, and human-readable meaning. |
+| Select or evolve a Style Direction | Purpose, form, audience, optional period or tradition, desired reader experience, and optional evidence corpus | A confirmed `StyleBrief`, explicit channel boundaries, authenticity stance, evolution model, and evidence-bounded application or review. |
 | Sustain a fictional cast | Character decisions, context, manuscript, and optional author-approved changes | Distinct versioned personality and speech profiles, drift review, and controlled evolution without silent mutation. |
 | Develop documentary or controlled documentation | Topic, intended use, authority, supplied evidence and/or approved research scope | A form-specific biography, documentary, procedure, policy, plan, direction, instruction, or technical artifact with traceable evidence and validation status. |
 | Combine Unsloop with another skill | Shared request, active skills, governing specifications, and authority | One non-duplicative workflow with explicit responsibility, conflict routing, and validation handoff. |
@@ -115,6 +116,8 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | PR-045 | For live, recorded, timed, interactive, or media-assisted writing, establish a delivery contract; reconcile the overall constraint with section allocations and all audience-time elements; integrate evidence through need, orientation, presentation, interpretation, and use; and review questions, audience layers, optional media, and closing movement proportionately. | BR-003, BR-004, BR-005, BR-009, BR-012, BR-026 |
 | PR-046 | For required multi-format outputs, identify the authoritative source or synchronization rule; map derivative impact; refresh required derivatives after accepted changes; route rendering, playback, accessibility, and format checks to the applicable artifact capability; and report only validation actually performed. | BR-003, BR-005, BR-009, BR-022, BR-024, BR-026 |
 | PR-047 | When asked for an AI score, machine-authorship judgment, AI-like pattern analysis, writing-sample comparison, assistance assessment, or detector-report interpretation, run a non-mutating Writing-Pattern and Assistance Audit that separates component style scores, method-declared measurements, authorized voice comparison, direct process provenance, and external detector results; never combine them into an AI-authorship probability or automatic decision. | BR-002, BR-005, BR-007, BR-009, BR-011, BR-027 |
+| PR-048 | When a writing style materially affects the work, establish a `StyleBrief` from the author's evidenced voice, a historical or literary tradition, a custom design, or a restrained genre default; separate all voice and form channels; and define authenticity, readability, evidence, and imitation boundaries before consequential drafting or revision. | BR-002, BR-003, BR-004, BR-005, BR-007, BR-028 |
+| PR-049 | Support Stable, Gradual, or Phase-based stylistic evolution with Proposed, Confirmed, and Superseded state, author-approved transitions, scoped application, portable optional `STYLE.md` records, and drift-aware Review or non-mutating Audit. | BR-003, BR-008, BR-009, BR-012, BR-017, BR-028 |
 
 ## Nonfunctional requirements
 
@@ -141,6 +144,7 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | NFR-019 Semantic preservation | Audit cannot silently alter the information conveyed by the inspected artifact. | Audit output identifies the unchanged artifact version; every proposed correction records whether it is presentation-only or meaning-changing, its semantic effects, authorization, and disposition. |
 | NFR-020 Delivery readiness | A delivered or multi-format artifact cannot appear ready by prose polish alone. | Readiness identifies the duration or attention basis, unresolved media or interaction decisions, authoritative format, derivative freshness, and actual rehearsal, comparison, render, playback, accessibility, or format validation boundary when material. |
 | NFR-021 Authorship calibration | Textual pattern assessment cannot overstate what prose, samples, process evidence, or detector reports establish about AI involvement. | Draft-only output states “Not assessable from prose alone”; every score names its direction and evidence; every measurement states method and coverage; provenance and detector results remain separate; no composite AI score is produced. |
+| NFR-022 Style traceability | A consequential selected style and its evolution remain stable and inspectable across sections, sessions, models, languages, and collaborators without implying authenticity beyond the evidence. | The active `StyleBrief`, applicable phase, evidence basis, approved deviations, and channel boundaries can be identified; Confirmed style changes require an explicit disposition. |
 
 ## Interaction requirements
 
@@ -160,6 +164,7 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 - For collaboration, ask only about unresolved authority conflicts that materially affect the artifact and route decisions to the documented owner.
 - For translation or localization, establish the source/target language, audience, translation mode, and terminology authority before choices that could alter meaning.
 - For recurring fictional characters, accept author-defined personality and speech settings or offer materially different context-based proposals; lock only accepted profiles and pause before changes.
+- When style is consequential and not already specified, offer evidenced personal voice, historical or literary tradition, custom design, or genre default; resolve authenticity and evolution only to the depth needed.
 - For documentary and controlled documents, establish the artifact family and source acquisition mode before research; never leave an approved scoped corpus silently.
 - When another skill applies, identify responsibility once, reuse its resolved intake, and do not override specialized domain or format validation.
 - For numerical, interview, or multimodal evidence, ask only for missing permissions, originals, inputs, ranges, or transformations that materially affect support.
@@ -198,6 +203,14 @@ Given a request for Audit plus revision, Unsloop preserves the Audit result as a
 ### Voice fidelity
 
 Given authorized representative samples, Unsloop derives only observable task-relevant traits, does not import sample facts or memorable wording, adapts for the new genre and audience, and reports the basis and Low, Moderate, or High confidence when fidelity is material.
+
+### Style direction and evolution
+
+Given an explicit style request, Unsloop does not ask the author to select a style again. It builds a `StyleBrief` that separates author voice, selected narrative or document style, viewpoint voice, character dialogue, and form or delivery conventions. For historical or literary traditions, it records period, region, form, corpus boundary, authenticity stance, readability target, evidence basis, confidence, modernization policy, and intentional anachronisms; it does not infer authenticity from decorative markers or collapse related periods into one preset.
+
+Given no selected direction when style materially affects the outcome, Unsloop offers evidenced personal voice, historical or literary tradition, custom design, or a restrained genre default through a structured selector when available and an equivalent conversational fallback otherwise. Named-author requests become bounded high-level, non-exclusive traits without signature imitation.
+
+Given a Stable, Gradual, or Phase-based evolution, each consequential transition has scope, trigger, trait diff, rationale, state, and author decision. Proposed changes do not alter Confirmed style; Review identifies drift and the smallest intervention; Audit leaves the artifact and style state unchanged.
 
 ### Cross-section flow
 
@@ -298,6 +311,7 @@ The v0.1 product baseline requires:
 - project-authoritative Codex, shared Agent Skills, Claude, and Pi linking with collision protection;
 - explicit disclosure that scoring is interpretive and not empirically validated.
 - validated fiction routing, cadence, portable-state, canon, voice-separation, and manuscript-resumption contracts.
+- validated Style Direction, authenticity, voice-channel separation, evolution, portable-state, and drift-control contracts.
 - passing deterministic fiction-project operations and behavioral fixtures for cross-mode routing, onboarding, state lifecycles, retcons, recovery, review, and assembly.
 - passing deterministic sustained-writing project operations and behavioral fixtures for onboarding, provenance, revision, collaboration, multilingual boundaries, assembly, export, and path safety.
 - passing character-profile, documentary-form, source-acquisition, override, scoped-corpus, and validation-status behavioral contracts.

@@ -12,15 +12,19 @@ For any artifact with chapters, headings, subheadings, scene breaks, or procedur
 
 For spoken, timed, interactive, media-assisted, or multi-format delivery, read [delivery-and-presentation.md](delivery-and-presentation.md).
 
+For historical, literary, rhetorical, house, custom, or evolving style work, read [style-direction.md](style-direction.md). Use the selected style path and authenticity stance without collapsing them into the user's evidenced voice.
+
 ## Establish the brief
 
-Use the writing-brief procedure to resolve topic status first: accept an existing topic, refine a rough direction, or brainstorm distinct options from minimal seed context. Then identify the reader outcome, audience knowledge and concerns, context, governing directions, required, optional, background, and excluded material, factual references, desired length, format, and voice constraints. Distinguish hard constraints from working targets and component allocations.
+Use the writing-brief procedure to resolve topic status first: accept an existing topic, refine a rough direction, or brainstorm distinct options from minimal seed context. Then identify the reader outcome, audience knowledge and concerns, context, governing directions, required, optional, background, and excluded material, factual references, desired length, format, voice constraints, and any material style direction. Distinguish hard constraints from working targets and component allocations.
 
 For substantial, high-stakes, or tightly constrained work, summarize the intended direction in one short paragraph before drafting. Apply the direction hierarchy when instructions conflict; do not treat governing directions as factual evidence.
 
 Do not start substantial drafting while a missing goal, required source, or factual boundary would force invention or materially change the result. For low-risk gaps, proceed with a stated assumption when the user prefers not to answer.
 
 When the user requests their voice and the current draft or conversation is insufficient, request representative previous writing. Build a bounded voice brief using the voice-fidelity procedure before drafting. If the user declines, proceed and label confidence rather than pretending the target is well established.
+
+When a selected style materially governs the work, build a proportionate `StyleBrief`. For sustained work, identify whether the style is Stable, Gradual, or Phase-based and keep new phases Proposed until accepted. Use Period-forward, Balanced, or Modern-reader-forward when historical texture and readability must be balanced.
 
 Do not invent personal experience, emotion, expertise, evidence, or certainty to make prose seem human.
 
@@ -41,6 +45,7 @@ For fiction, invention is part of the disclosed form. Keep invented story materi
 - Use optional material only when it earns its space; keep background material out of the artifact unless it becomes relevant.
 - Make examples clarify a claim, judgment, consequence, or next step rather than merely decorate the prose.
 - Introduce material evidence with enough need and orientation for the audience to understand why it appears, what to notice, what it supports, and what follows from it.
+- Apply style traits for a defined function rather than sprinkling surface markers. Keep intentional deviations visible and do not treat one locally plausible feature as proof of whole-work authenticity.
 
 ## Revise without voice laundering
 
@@ -65,14 +70,14 @@ Change:
 
 ## Finalize
 
-Run the writing-brief success test. Check required-content coverage and verify hard constraints, including the sum of any component allocations. Compare the result with the voice brief, not with isolated phrases from the samples. Run the human-voice review. Then check every source-based claim, quotation, citation, and locator that the available evidence permits. State any remaining verification needs and apply an honest readiness label when they materially affect use.
+Run the writing-brief success test. Check required-content coverage and verify hard constraints, including the sum of any component allocations. Compare the result with the voice brief and any confirmed `StyleBrief`, not with isolated phrases from samples or a vague period label. Run the human-voice review. Then check every source-based claim, quotation, citation, and locator that the available evidence permits. State any remaining verification needs and apply an honest readiness label when they materially affect use.
 
 Perform one final preservation check: confirm that every substantive change improves the goal, integrity, requirement coverage, clarity, or evidenced voice target. Restore wording that was merely normalized without a defensible gain.
 
 Confirm that no useful personal perspective was deleted solely because it lacked external verification. If retained personal material contains a general factual claim, scope the personal statement and verify, qualify, or mark the factual portion separately. Do not use a personal label to launder misinformation or model-generated experience.
 
-For persistent fiction, update only the project records affected by the accepted work. Preserve confirmed canon, label unaccepted discoveries as Proposed, surface contradictions, and keep the resume state compact enough for another model or session to continue without relying on conversational memory.
+For persistent fiction, update only the project records affected by the accepted work. Preserve confirmed canon and style phases, label unaccepted discoveries as Proposed, surface contradictions or style drift, and keep the resume state compact enough for another model or session to continue without relying on conversational memory.
 
-For persistent non-fiction, update only accepted manuscript units and affected project records. Recheck provenance after material claim changes, preserve rejected revisions, reconcile requirements and decisions, and update the compact resume state without treating ledgers as proof of accuracy or approval.
+For persistent non-fiction, update only accepted manuscript units and affected project records. Recheck provenance after material claim changes, preserve rejected revisions and confirmed style state, reconcile requirements and decisions, and update the compact resume state without treating ledgers as proof of accuracy or approval.
 
 Do not add deliberate errors or awkwardness. Human voice comes from purpose, selection, judgment, and specificity—not degradation.

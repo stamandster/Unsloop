@@ -30,6 +30,7 @@ class WritingProjectTests(unittest.TestCase):
             "terminology": False,
             "voice": False,
             "voice_authorized": False,
+            "style": False,
             "apply": apply,
         }
         values.update(extra)
@@ -148,6 +149,40 @@ class WritingProjectTests(unittest.TestCase):
                 writing_project.init_command(self.init_args(root, voice=True, voice_authorized=True)), 0
             )
             self.assertEqual(writing_project.check_command(Args(root=str(root))), 0)
+
+    def test_style_profile_requires_complete_author_approval_when_confirmed(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.assertEqual(writing_project.init_command(self.init_args(root, style=True)), 0)
+            style = root / "writing" / "STYLE.md"
+            self.assertTrue(style.is_file())
+            self.assertEqual(writing_project.check_command(Args(root=str(root))), 0)
+            style.write_text(
+                style.read_text(encoding="utf-8")
+                .replace("Profile state: Proposed", "Profile state: Confirmed")
+                .replace("Direction source: Unselected", "Direction source: Historical or literary tradition")
+                .replace("Authenticity stance: Unselected", "Authenticity stance: Balanced")
+                .replace("Evolution model: Unselected", "Evolution model: Phase-based"),
+                encoding="utf-8",
+            )
+            self.assertEqual(writing_project.check_command(Args(root=str(root))), 1)
+            style.write_text(
+                style.read_text(encoding="utf-8").replace(
+                    "[decision ID or pending]", "DEC-style-approved"
+                ),
+                encoding="utf-8",
+            )
+            self.assertEqual(writing_project.check_command(Args(root=str(root))), 0)
+            style.write_text(
+                style.read_text(encoding="utf-8")
+                .replace("| STP-001 | Proposed |", "| STP-001 | Confirmed |")
+                .replace(
+                    "| DEC-style-approved |\n\n## Open decisions",
+                    "| [decision ID or pending] |\n\n## Open decisions",
+                ),
+                encoding="utf-8",
+            )
+            self.assertEqual(writing_project.check_command(Args(root=str(root))), 1)
 
     def test_check_detects_invalid_claim_source_and_state(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

@@ -21,6 +21,8 @@ Do not assume language variety, identity, fluency, or cultural membership from p
 
 An author's style may not transfer feature-for-feature across languages. Build the target from supported higher-level traits such as directness, warmth, density, formality, cadence, and rhetorical posture. Distinguish the author's voice from translator conventions and target-genre norms. Report lower confidence when evidence is sparse or only cross-language samples exist.
 
+When a historical or literary `StyleBrief` applies, distinguish source-period features, translator choices, target-language historical conventions, and deliberate modernization. Do not assume that an archaic feature in one language has a functional or period-equivalent form in another. Read [style-direction.md](style-direction.md) and record any change to authenticity stance or style phase caused by translation.
+
 ## Review fairly
 
 Do not label second-language features, code-switching, dialect, or culturally conventional structure as slop merely because they differ from a dominant-language norm. Evaluate clarity and suitability against the approved audience and purpose.

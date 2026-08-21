@@ -8,6 +8,8 @@ Evaluate whether the prose serves this writer's goal for this audience. Do not r
 
 Identify audience, purpose, genre, appropriate formality, and whether to preserve the writer's own voice or follow a publication style. When the review concerns fidelity to the user's voice, establish the evidence basis and bounded voice brief before judging alignment. Do not make prose more formal unless the purpose requires it.
 
+When the work declares a historical, literary, rhetorical, house, custom, or evolving style direction, read [style-direction.md](style-direction.md). Evaluate it against the confirmed `StyleBrief`, applicable phase, intended function, and evidence boundary rather than against a generic preference for modern smoothness.
+
 ## Inspect the whole document
 
 Compare sentence length, vocabulary, abstraction, point of view, technicality, certainty, punctuation, transitions, and paragraph construction.
@@ -38,6 +40,8 @@ For spoken or presented work, use [delivery-and-presentation.md](delivery-and-pr
 Do not ban individual words. A familiar transition, technical term, abstract noun, or balanced structure may be exactly right in context.
 
 In fiction, distinguish weak repetition from deliberate motif, voice-specific recurrence, incantation, comic pattern, or thematic echo. Distinguish generic emotional labeling from controlled restraint or viewpoint-limited understanding. Do not flatten narrators and characters into a single polished voice merely to create surface consistency.
+
+For period-informed work, distinguish purposeful convention from ornamental archaism, anachronism, modern-reader adaptation, or unsupported authenticity. Do not penalize an approved modernization or intentional mixed influence merely because it departs from the historical corpus.
 
 ## Test authorial presence
 
