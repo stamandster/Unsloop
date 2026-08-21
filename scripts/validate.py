@@ -315,7 +315,7 @@ SECTION_FLOW_CONTRACT = {
         "Forward-test abrupt, already-coherent, and intentionally discontinuous section boundaries",
     ),
     ROOT / "PORTABILITY.md": (
-        "evidence, voice, section-flow, delivery-readiness, artifact-synchronization, writing-pattern authorship boundaries, privacy",
+        "evidence, voice, personal-perspective preservation, section-flow, delivery-readiness, artifact-synchronization, writing-pattern authorship boundaries, privacy",
     ),
     ROOT / "tests" / "fixtures" / "operational-scenarios.md": (
         "## 25. Abrupt subheading without a logical bridge",
@@ -405,7 +405,7 @@ DELIVERY_PRESENTATION_CONTRACT = {
     ),
     ROOT / "ROADMAP.md": (
         "Add topic-neutral delivery and presentation contracts",
-        "Add 40 clean-context operational extension scenarios",
+        "Add 41 clean-context operational extension scenarios",
     ),
     ROOT / "PORTABILITY.md": ("delivery-readiness", "artifact-synchronization"),
     ROOT / "tests" / "fixtures" / "operational-scenarios.md": (
@@ -512,7 +512,7 @@ WRITING_PATTERN_ASSISTANCE_CONTRACT = {
     ROOT / "DECISIONS.md": ("## D-037 — Replace AI-score requests with an evidence-bound assistance audit",),
     ROOT / "ROADMAP.md": (
         "Add a non-mutating Writing-Pattern and Assistance Audit",
-        "Add 40 clean-context operational extension scenarios",
+        "Add 41 clean-context operational extension scenarios",
     ),
     ROOT / "PORTABILITY.md": (
         "writing-pattern authorship boundaries",
@@ -1158,6 +1158,78 @@ AUDIT_PRESERVATION_CONTRACT = {
     ),
 }
 
+PERSONAL_PERSPECTIVE_CONTRACT = {
+    SKILL / "SKILL.md": (
+        "distinguish externally checkable factual claims from author-supplied personal observations",
+        "do not remove it solely because it lacks external verification",
+        "must never invent first-person content",
+    ),
+    SKILL / "references" / "revision-control.md": (
+        "## Preserve personal perspective without laundering facts",
+        "Externally checkable factual claim",
+        "Lack of external verification by itself is not a reason to delete",
+        "A perspective label does not make a factual assertion supported",
+    ),
+    SKILL / "references" / "integrity-review.md": (
+        "Classify author-supplied personal material before treating it as an unsupported external claim",
+        "propose scoping or labeling rather than deletion",
+    ),
+    SKILL / "references" / "human-voice-review.md": (
+        "legitimate forms of authorial presence",
+        "never invent or intensify a first-person position",
+    ),
+    SKILL / "references" / "write-mode.md": (
+        "useful author-supplied observations, interpretations, unresolved questions, and tentative perspectives",
+        "no useful personal perspective was deleted solely because it lacked external verification",
+    ),
+    SKILL / "references" / "output-contracts.md": (
+        "preserve useful author-supplied observations, interpretations, unresolved questions, and tentative perspectives",
+        "Do not imply that a perspective label verifies the factual portion",
+    ),
+    ROOT / "README.md": (
+        "Authorized revision preserves useful author-supplied observations",
+        "lack of external verification alone is not a deletion rule",
+    ),
+    ROOT / "PROJECT.md": ("**Perspective-honest:**",),
+    ROOT / "BRD.md": ("personal perspective", "rather than deleting them solely"),
+    ROOT / "PRD.md": (
+        "preserve and honestly scope useful author-supplied observations",
+        "useful author-supplied perspective is not dropped solely",
+    ),
+    ROOT / "FSD.md": (
+        "protected personal perspective",
+        "personal-perspective type, scope, and evidence-status framing",
+        "Authorized revision contains an uncited personal observation and an embedded general claim",
+    ),
+    ROOT / "docs" / "ETHICS-AND-LIMITS.md": (
+        "## Personal perspective and evidence status",
+        "Lack of external verification alone does not justify deleting",
+        "use a personal-perspective label to launder misinformation",
+    ),
+    ROOT / "docs" / "REVIEW-MODEL.md": (
+        "Scope and label personal material proportionately rather than deleting it solely",
+    ),
+    ROOT / "docs" / "REVIEW-OUTPUT.md": (
+        "retain useful author-supplied observations, interpretations, unresolved questions, and tentative perspectives",
+    ),
+    ROOT / "PORTABILITY.md": ("personal-perspective preservation",),
+    ROOT / "DECISIONS.md": (
+        "## D-039 — Preserve scoped personal perspective during authorized revision",
+    ),
+    ROOT / "ROADMAP.md": (
+        "Preserve scoped author-supplied personal perspective during authorized revision",
+        "Add 41 clean-context operational extension scenarios",
+    ),
+    ROOT / "tests" / "fixtures" / "operational-scenarios.md": (
+        "## 41. Authorized revision includes a personal observation and a general claim",
+        "deleting the observation solely because it lacks external verification",
+    ),
+    ROOT / "tests" / "test_operational_scenarios.py": (
+        "list(range(1, 42))",
+        "self.assertEqual(len(sections), 41)",
+    ),
+}
+
 SPECIFICATION_CONTRACT = {
     ROOT / "BRD.md": (
         "## Business requirements",
@@ -1483,6 +1555,17 @@ def validate() -> list[str]:
             if requirement not in text:
                 errors.append(
                     f"audit-preservation safeguard missing from "
+                    f"{path.relative_to(ROOT)}: {requirement}"
+                )
+
+    for path, requirements in PERSONAL_PERSPECTIVE_CONTRACT.items():
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for requirement in requirements:
+            if requirement not in text:
+                errors.append(
+                    f"personal-perspective safeguard missing from "
                     f"{path.relative_to(ROOT)}: {requirement}"
                 )
 

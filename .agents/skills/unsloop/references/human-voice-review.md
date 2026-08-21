@@ -51,6 +51,8 @@ Ask whether a reader can identify what the writer thinks and why. Look for:
 - natural emphasis;
 - sentence variation that follows thought.
 
+Author-supplied observations, interpretations, open questions, and tentative perspectives can be legitimate forms of authorial presence. Do not delete them merely because they are not externally verified facts. When revision is authorized, preserve useful personal material with scope and evidence-status framing proportionate to the genre. Separate any embedded externally checkable claim for independent support, and never invent or intensify a first-person position on the author's behalf.
+
 ## Test examples for function
 
 For each material anecdote, illustration, scenario, comparison, or case, ask:

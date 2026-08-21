@@ -53,7 +53,7 @@ No database, background service, model endpoint, provider account, or persistent
 | FS-022 | Fiction completion and publication handoff | Accepted manuscript units, project state, supplied submission requirements | Assembly and manifest or bounded publication-support artifact | PR-023; NFR-003, NFR-010 |
 | FS-023 | Sustained non-fiction project orchestration | Long-form request, existing artifacts, approved profile, authoritative version | Resumable `WritingProjectState`, stable units, bounded next action, and handoff | PR-024; NFR-008 |
 | FS-024 | Research provenance management | Claims, sources, quotations, manuscript locations, access and verification state | Linked `SourceRecord`, `ClaimRecord`, and `QuotationRecord` state with conflicts and freshness | PR-025; NFR-003, NFR-011 |
-| FS-025 | General revision control | Authoritative version, revision contract, proposed changes, disposition | Classified `RevisionChange` records, impact map, checkpoint, accepted application, reconciliation | PR-026; NFR-009, NFR-012 |
+| FS-025 | General revision control | Authoritative version, revision contract, proposed changes, disposition, protected personal perspective | Classified `RevisionChange` records, personal-perspective scope and evidence status when material, impact map, checkpoint, accepted application, reconciliation | PR-026; NFR-009, NFR-012 |
 | FS-026 | Collaborative authority and feedback | Stakeholders, directions, feedback, requirements, artifact version | `StakeholderDirection` map, consolidated issues, conflict decisions, approval state | PR-027; NFR-003 |
 | FS-027 | Multilingual writing adaptation | Source and target language, audience, mode, terminology, sources, voice evidence | `TranslationBrief`, adapted artifact, ambiguity and evidence report | PR-028; NFR-003, NFR-004 |
 | FS-028 | Structured result assembly | Mode output, evidence boundary, findings, requested or default schema | Validatable `StructuredUnsloopReport` with equivalent limits | PR-029; NFR-003, NFR-013 |
@@ -393,7 +393,7 @@ Record `QTE-*` identifier, minimal exact text or privacy-preserving fingerprint,
 
 ### `RevisionChange`
 
-Record `CHG-*` identifier, location, classification, before/after summary, reason, evidence or requirement effect, voice effect, disposition, and checkpoint. Use **Proposed**, **Accepted**, **Partially accepted**, **Rejected**, **Revision requested**, **Applied**, or **Superseded**.
+Record `CHG-*` identifier, location, classification, before/after summary, reason, evidence or requirement effect, voice effect, personal-perspective type, scope, and evidence-status framing when material, disposition, and checkpoint. Use **Proposed**, **Accepted**, **Partially accepted**, **Rejected**, **Revision requested**, **Applied**, or **Superseded**. A perspective label cannot establish an embedded factual claim.
 
 ### `StakeholderDirection`
 
@@ -573,7 +573,7 @@ Keep sources, claims, quotations, manuscript locations, access, verification, co
 
 ### FS-025 — Control revision
 
-Establish the authoritative version, requested scope, protected material, change classification, and approval cadence before substantial revision. Map downstream claim, citation, quotation, requirement, terminology, summary, conclusion, and dependent-artifact effects. Checkpoint consequential scope, process Accepted, Partially accepted, Rejected, Revision requested, Applied, and Superseded dispositions precisely, and reconcile affected records afterward.
+Establish the authoritative version, requested scope, protected material, change classification, and approval cadence before substantial revision. Before deleting material for lack of verification, classify it as an externally checkable claim, author-supplied observation or experience, interpretation or tentative perspective, or unresolved question. Preserve useful personal material with the smallest genre-appropriate scope and evidence-status framing; identify and verify or qualify embedded factual claims separately. Do not invent first-person content, strengthen a tentative view, or use perspective framing to disguise unsupported facts. Map downstream claim, citation, quotation, requirement, terminology, summary, conclusion, and dependent-artifact effects. Checkpoint consequential scope, process Accepted, Partially accepted, Rejected, Revision requested, Applied, and Superseded dispositions precisely, and reconcile affected records afterward.
 
 ### FS-026 — Coordinate collaborators
 
@@ -833,6 +833,7 @@ Define audience, prior knowledge, language, assistive context, task, artifact ve
 | Audit finds an unsupported material claim | PR-044, NFR-019 / FS-005, FS-043 | Artifact remains unchanged; finding identifies the evidence gap and a separately dispositioned proposal. |
 | Audit plus copyedit request | PR-026, PR-044, NFR-019 / FS-025, FS-043 | Presentation edits stay inside scope; claim, position, certainty, quantity, attribution, and exceptions remain unchanged. |
 | Audit plus authorized substantive correction | PR-026, PR-044, NFR-012, NFR-019 / FS-025, FS-043 | Audit record precedes revision; semantic effects, authorization, checkpoint, applied scope, and revised version remain traceable. |
+| Authorized revision contains an uncited personal observation and an embedded general claim | PR-005, PR-009, PR-026, NFR-012 / FS-004, FS-006, FS-025 | Preserve and scope the useful author-supplied observation, label its evidence status proportionately, and verify or qualify the general claim separately; do not delete the perspective merely because it lacks external verification. |
 | Timed presentation with pauses and media | PR-045, NFR-020 / FS-003, FS-044 | Overall ceiling, section totals, pace basis, pauses, readings, media handling, interaction, and safety buffer reconcile without assumed speed. |
 | Source and section durations disagree | PR-004, PR-045 / FS-003, FS-044 | Discrepancy and adjustment choices are shown; no silent redistribution occurs. |
 | Statistic or quotation dropped into a speech | PR-005, PR-045 / FS-004, FS-044 | Review identifies missing need, orientation, interpretation, or supported use without imposing a fixed formula. |

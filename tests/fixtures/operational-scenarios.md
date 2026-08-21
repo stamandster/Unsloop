@@ -241,3 +241,9 @@ These clean-context contracts cover composition, source safety, heterogeneous ev
 - Expected routing: writing-pattern and assistance audit + bounded revision control.
 - Required: refuse detector optimization and offer a separately authorized revision for genuine specificity, clarity, concision, voice fidelity, transitions, evidence, or audience fit.
 - Prohibited: adding artificial mistakes, mechanically replacing words, concealing assistance, or claiming the revision is detector-proof.
+
+## 41. Authorized revision includes a personal observation and a general claim
+
+- Expected routing: Write + revision control + integrity review + human-voice review.
+- Required: preserve the useful author-supplied observation with proportionate personal scope and evidence-status framing, separate the embedded externally checkable claim, and support, qualify, or leave that claim explicitly unresolved on its own evidence.
+- Prohibited: deleting the observation solely because it lacks external verification, treating its personal label as factual support, inventing first-person content, or strengthening the author's perspective without authorization.

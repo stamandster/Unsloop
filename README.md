@@ -43,6 +43,7 @@ Specializations extend those modes without creating separate products: fiction, 
 
 - The author retains control of goals, meaning, voice, creative canon, evidence decisions, and consequential changes.
 - Topic, directions, factual evidence, voice samples, and model-generated proposals remain distinct.
+- Authorized revision preserves useful author-supplied observations, questions, and tentative perspectives through proportionate scoping and evidence-status framing; lack of external verification alone is not a deletion rule.
 - Audit is information-preserving: findings cannot silently rewrite the inspected artifact.
 - Project files are visible, portable, model-agnostic, and created only when persistent state is useful and approved.
 - Domain and artifact skills keep authority over specialized facts, file mechanics, rendering, formulas, and executable validation.

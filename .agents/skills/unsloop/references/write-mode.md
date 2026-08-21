@@ -47,6 +47,7 @@ For fiction, invention is part of the disclosed form. Keep invented story materi
 Preserve:
 
 - the writer's position;
+- useful author-supplied observations, interpretations, unresolved questions, and tentative perspectives with genre-appropriate scope and evidence-status framing;
 - natural vocabulary;
 - useful sentence rhythms;
 - legitimate repetition used for emphasis;
@@ -55,7 +56,7 @@ Preserve:
 
 Change:
 
-- unsupported or overstated claims;
+- unsupported or overstated externally checkable claims, while distinguishing them from scoped personal perspective;
 - source-shaped syntax or sequence;
 - empty abstractions;
 - redundant restatement;
@@ -67,6 +68,8 @@ Change:
 Run the writing-brief success test. Check required-content coverage and verify hard constraints, including the sum of any component allocations. Compare the result with the voice brief, not with isolated phrases from the samples. Run the human-voice review. Then check every source-based claim, quotation, citation, and locator that the available evidence permits. State any remaining verification needs and apply an honest readiness label when they materially affect use.
 
 Perform one final preservation check: confirm that every substantive change improves the goal, integrity, requirement coverage, clarity, or evidenced voice target. Restore wording that was merely normalized without a defensible gain.
+
+Confirm that no useful personal perspective was deleted solely because it lacked external verification. If retained personal material contains a general factual claim, scope the personal statement and verify, qualify, or mark the factual portion separately. Do not use a personal label to launder misinformation or model-generated experience.
 
 For persistent fiction, update only the project records affected by the accepted work. Preserve confirmed canon, label unaccepted discoveries as Proposed, surface contradictions, and keep the resume state compact enough for another model or session to continue without relying on conversational memory.
 

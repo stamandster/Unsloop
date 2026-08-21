@@ -86,6 +86,12 @@ Revision may follow Audit only through a separate authorized scope. Distinguish 
 
 Do not use “flow” or “smoothness” as permission to change the relationship between claims, events, conditions, exceptions, viewpoints, character knowledge, procedural steps, or author-owned emphasis. A visible section boundary may be intentionally abrupt. Preserve a purposeful hard break and add only the orientation the reader actually needs.
 
+## Personal perspective and evidence status
+
+In authorized revision, distinguish externally checkable claims from author-supplied observations or experiences, interpretations, unresolved questions, and tentative perspectives. Preserve useful personal material by scoping it to the writer or inspected experience and labeling its evidence status when the reader could otherwise mistake it for established fact. Natural framing may be sufficient; do not force a conspicuous label into every genre.
+
+Lack of external verification alone does not justify deleting an otherwise relevant author-supplied perspective. It also does not verify an embedded general claim. Separate that claim and support, qualify, or leave it explicitly unresolved. Never invent first-person content, intensify a tentative view, represent model-generated reflection as the user's, or use a personal-perspective label to launder misinformation, unsafe direction, unlawful content, or a material claim that governing requirements require to be verified.
+
 ## Calibrated language
 
 Prefer:

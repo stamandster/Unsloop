@@ -225,6 +225,6 @@ Map claims and sources, compare source relationships passage by passage, apply t
 
 ## Revision rule
 
-Diagnose by default. Audit never rewrites by implication. Rewrite only when separately requested. When rewriting, preserve meaning, position, natural vocabulary, intended audience, and legitimate irregularity. If voice fidelity is material, report the evidence basis and Low, Moderate, or High confidence. Do not rewrite good prose merely because it is imperfect.
+Diagnose by default. Audit never rewrites by implication. Rewrite only when separately requested. When rewriting, preserve meaning, position, natural vocabulary, intended audience, legitimate irregularity, and useful author-supplied personal perspective. Distinguish externally checkable claims from observations, interpretations, unresolved questions, and tentative perspectives. Scope and label personal material proportionately rather than deleting it solely for lack of external verification; verify or qualify any embedded factual claim separately. If voice fidelity is material, report the evidence basis and Low, Moderate, or High confidence. Do not rewrite good prose merely because it is imperfect.
 
 Apply the mode-specific delivery and readiness rules in [`REVIEW-OUTPUT.md`](REVIEW-OUTPUT.md). Apply numeric anchors only under the conditions in [`SCORING-RUBRIC.md`](SCORING-RUBRIC.md).

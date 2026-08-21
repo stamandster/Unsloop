@@ -89,6 +89,8 @@ Keep the inspected artifact unchanged. If revision is separately requested, name
 
 For drafting, return the requested artifact first unless the user asks for process notes. Add a compact integrity note only when sources, uncertain claims, or attribution choices need attention.
 
+For authorized revision, retain useful author-supplied observations, interpretations, unresolved questions, and tentative perspectives with genre-appropriate scope and evidence-status framing. Report the distinction only when it materially affects use. A perspective label does not verify an embedded general claim, which must be supported, qualified, or kept explicitly unresolved on its own basis.
+
 If the result depends on consequential inferred or unresolved details about the goal, audience, prior knowledge, context, required content, or constraints, add a compact **Brief assumptions** note.
 
 For revision, briefly state:

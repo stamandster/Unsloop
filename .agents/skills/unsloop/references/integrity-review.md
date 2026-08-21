@@ -29,6 +29,8 @@ Record which materials are available. Limit claims accordingly.
 
 Keep the writing brief distinct from the evidence corpus. A required claim in the brief is not supported until an appropriate source or other evidence supports it.
 
+Classify author-supplied personal material before treating it as an unsupported external claim. A scoped observation can support only what the writer reports noticing or experiencing; an interpretation or tentative perspective expresses judgment; an unresolved question asserts no answer. Record the evidence status and identify any embedded externally checkable claim separately. In Audit, propose scoping or labeling rather than deletion when the personal material remains useful. A personal-perspective label never upgrades a factual assertion, and the inspected artifact remains unchanged.
+
 - With a draft only, flag unsupported claims and passages that warrant comparison; do not diagnose source dependence.
 - With source excerpts, make findings only about the compared passages.
 - With full sources, inspect context as well as local wording.

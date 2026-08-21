@@ -237,3 +237,9 @@ Do not create an AI-authorship percentage from prose style. Translate the reques
 **Status:** Accepted
 
 Lead public and maintainer documentation with Unsloop's full author-led writing lifecycle: topic discovery, planning, drafting, revision, review, non-mutating audit, research, validation, maintenance, and handoff. Preserve Review, Write, and Audit as the three public modes and describe fiction, documentation, research, delivery, long-form operation, and writing-pattern assessment as specializations inside them. Treat generic or AI-associated prose review as one evidence-bound Audit capability, not the project's category.
+
+## D-039 — Preserve scoped personal perspective during authorized revision
+
+**Status:** Accepted
+
+Do not treat every uncited first-person observation, interpretation, unresolved question, or tentative perspective as a defective external claim. During authorized revision, preserve useful author-supplied personal material with genre-appropriate scope and evidence-status framing rather than deleting it solely because external verification is absent. Identify and verify or qualify embedded externally checkable claims separately. Never invent personal content, strengthen the author's position silently, or use perspective framing to disguise unsupported facts.

@@ -118,6 +118,7 @@ A successful Unsloop result is:
 - **Authorship-calibrated:** prose-only audits say authorship is not assessable, while direct assistance evidence is limited to the process stage and artifact range it actually documents.
 - **Actionable:** the writer knows what to keep, investigate, and change.
 - **Voice-preserving:** revision retains the writer's position and useful idiosyncrasies.
+- **Perspective-honest:** useful author-supplied observations, interpretations, unresolved questions, and tentative perspectives remain scoped to their actual basis instead of being deleted for lacking external verification or mislabeled as fact.
 - **Structurally coherent:** visible section boundaries express a legible relationship without forced smoothing or loss of intentional pacing.
 - **Delivery-honest:** timing, media, interaction, questions, audience fit, and closing movement reflect the actual planned experience, while estimates remain distinct from observed delivery.
 - **Format-consistent:** authoritative content and required derivatives expose freshness and actual validation rather than relying on filenames or export success.
