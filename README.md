@@ -74,6 +74,87 @@ Specializations extend those modes without creating separate products:
 | Assess AI-related concerns | `$unsloop Audit this draft's patterns and supplied detector report.` | Component profile, transparent measurements, provenance, and no unsupported AI verdict. |
 | Compose with another skill | `$unsloop Apply integrity and voice controls while the document skill owns DOCX layout.` | Shared intake, explicit authority, unified handoff, and honest validation boundaries. |
 
+## Example workflows
+
+These examples show the path through Unsloop, not a mandatory sequence for every request. A clear, self-contained job skips unnecessary questions, files, and checkpoints.
+
+### Review an existing draft
+
+```text
+$unsloop Review this chapter for structure, source integrity, specificity, voice, and transitions. Do not rewrite it yet.
+```
+
+- **Establishes:** the apparent goal, audience, artifact boundary, supplied sources, and material review assumptions.
+- **Runs:** a proportionate Review across integrity, human voice, requirements, and section flow, ranking causes before surface symptoms.
+- **Returns:** an overall assessment, prioritized passage-specific findings, strong material to preserve, evidence limits, and the smallest useful interventions.
+- **Pauses when:** the authoritative version, intended meaning, or evidence boundary is too ambiguous for a responsible conclusion; revision begins only if requested.
+
+### Write from a topic—or discover one
+
+```text
+$unsloop I need an article for first-time managers. Help me choose a useful topic, then draft it in my natural professional voice.
+```
+
+- **Establishes:** whether to use an existing topic, refine a direction, or brainstorm; then confirms the goal, audience, prior knowledge, context, content, voice evidence, and constraints.
+- **Runs:** topic selection, a progressive writing brief, optional voice-sample intake, architecture, drafting, and a final integrity and human-voice pass.
+- **Returns:** the requested draft first, followed only by material assumptions, verification needs, or readiness limits.
+- **Pauses when:** materially different topic choices, unsupported required claims, or consequential author-owned decisions must be resolved.
+
+### Audit claims without changing the document
+
+```text
+$unsloop Audit this report against the supplied sources and policy requirements. Leave the report unchanged and propose corrections separately.
+```
+
+- **Establishes:** the authoritative artifact and inspected range, comparison corpus, access level, governing requirements, and zero-mutation boundary.
+- **Runs:** source mapping, claim and quotation verification, attribution and dependence analysis, requirement coverage, confidence calibration, and information-preservation checks.
+- **Returns:** the unchanged-artifact confirmation, evidence boundary, findings, unresolved checks, and separately classified presentation-only or meaning-changing proposals.
+- **Pauses when:** applying a proposal would require revision authority, a decision owner, missing evidence, or a change to protected information.
+
+### Develop sustained fiction
+
+```text
+$unsloop Develop this premise into a novel using Adaptive collaboration. Preserve the manuscript's existing structure and ask before creating project files.
+```
+
+- **Establishes:** the creative goal and reader experience, genre and scope, boundaries, narrative and character voices, collaboration cadence, locked decisions, and proportionate project state.
+- **Runs:** premise and narrative promise, characters and setting, architecture, scene planning, bounded drafting batches, continuity checks, author disposition, and accepted-state updates.
+- **Returns:** creative work first, then Proposed discoveries, continuity or research concerns, the checkpoint, and the next approved action.
+- **Pauses when:** Confirmed canon, premise, ending direction, POV system, content boundaries, real-person treatment, or another author-owned decision would change.
+
+### Build researched long-form nonfiction
+
+```text
+$unsloop Build this biography from my interviews and the approved websites. Keep attributed accounts, verified facts, inference, and unresolved questions distinct.
+```
+
+- **Establishes:** the document family, purpose, audience, authority, acquisition mode, allowed corpus, evidence standard, collaboration cadence, validation target, and maintenance owner.
+- **Runs:** source and interview assessment, chronology and claim mapping, architecture, drafting, provenance synchronization, revision control, and form-appropriate validation.
+- **Returns:** the requested unit or artifact plus the actual corpus, claim and source limits, validation performed, unresolved gaps, approval state, and next action.
+- **Pauses when:** scoped research must broaden, permissions or attribution are unclear, sources materially conflict, or a claim, requirement, safety decision, or external commitment lacks authority.
+
+### Select and evolve a Style Direction
+
+```text
+$unsloop Suggest three distinct Style Directions for this epistolary novel, then apply the selected direction consistently while allowing an approved change after the time jump.
+```
+
+- **Establishes:** evidenced personal voice, historical or literary tradition, custom design, or genre default; then separates author, narrative, viewpoint, dialogue, and form channels.
+- **Runs:** a proportionate `StyleBrief`, authenticity/readability and evidence boundaries when relevant, functional style application, and Stable, Gradual, or Phase-based evolution.
+- **Returns:** the requested prose or review plus the active direction, applicable phase, evidence limitations, intentional deviations, and Proposed changes awaiting acceptance.
+- **Pauses when:** Confirmed style would drift or change, a historical-authenticity claim exceeds the corpus, or a named-author request would become signature imitation.
+
+### Prepare a timed, multi-format presentation
+
+```text
+$unsloop Turn this outline into a 15-minute presentation with two readings, one optional video, audience questions, and synchronized Markdown and DOCX versions.
+```
+
+- **Establishes:** setting, audience layers, intended final state, total and section limits, pace basis, readings, pauses, questions, media, interaction, accessibility, authoritative source, derivatives, and validation expectation.
+- **Runs:** complete audience-time reconciliation, evidence integration, question and media decisions, mixed-audience design, closing movement, drafting, and derivative-impact tracking.
+- **Returns:** the presentation first, then material timing assumptions, unresolved choices, safety buffer, authoritative format, derivative freshness, validation actually performed, and readiness.
+- **Pauses when:** totals conflict, optional media materially changes the artifact, a required derivative is stale, or rehearsal, rendering, playback, or accessibility evidence is still needed.
+
 ## Operating contract
 
 - The author retains control of goals, meaning, voice, creative canon, evidence decisions, and consequential changes.
