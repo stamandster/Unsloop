@@ -1,6 +1,6 @@
 # Review Output Contracts
 
-> **Specification role:** Normative output and readiness sub-specification for `PR-009`–`PR-010`, `PR-016`–`PR-049`, `FS-008`–`FS-009`, and `FS-014`–`FS-048` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md).
+> **Specification role:** Normative output and readiness sub-specification for `PR-009`–`PR-010`, `PR-016`–`PR-050`, `FS-008`–`FS-009`, and `FS-014`–`FS-050` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md).
 
 ## Default: Unsloop Review
 
@@ -90,6 +90,8 @@ Keep the inspected artifact unchanged. If revision is separately requested, name
 ## Unsloop Write
 
 For drafting, return the requested artifact first unless the user asks for process notes. Add a compact integrity note only when sources, uncertain claims, or attribution choices need attention.
+
+For persistent file writing, resolve the established `PersistentWritePolicy` or ask once before mutation. Under **Immutable versions**, report the baseline or response `WRT-*` batch, included files, and any history failure; under **Overwrite current**, do not imply that an automatic historical version exists. The storage policy never substitutes for revision authorization, acceptance, checkpointing, or Audit separation.
 
 For authorized revision, retain useful author-supplied observations, interpretations, unresolved questions, and tentative perspectives with genre-appropriate scope and evidence-status framing. Report the distinction only when it materially affects use. A perspective label does not verify an embedded general claim, which must be supported, qualified, or kept explicitly unresolved on its own basis.
 

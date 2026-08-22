@@ -73,6 +73,7 @@ Specializations extend those modes without creating separate products:
 | Prepare delivered writing | `$unsloop Turn this outline into a timed presentation with readings and media.` | Complete timing, audience design, evidence integration, media decisions, and format checks. |
 | Assess AI-related concerns | `$unsloop Audit this draft's patterns and supplied detector report.` | Component profile, transparent measurements, provenance, and no unsupported AI verdict. |
 | Compose with another skill | `$unsloop Apply integrity and voice controls while the document skill owns DOCX layout.` | Shared intake, explicit authority, unified handoff, and honest validation boundaries. |
+| Keep every response version | `$unsloop Write this report and preserve an immutable version after each response.` | A portable baseline and one append-only batch for every response that writes files, while current working files stay usable. |
 
 ## Example workflows
 
@@ -162,12 +163,43 @@ $unsloop Turn this outline into a 15-minute presentation with two readings, one 
 - Authorized revision preserves useful author-supplied observations, questions, and tentative perspectives through proportionate scoping and evidence-status framing; lack of external verification alone is not a deletion rule.
 - Audit is information-preserving: findings cannot silently rewrite the inspected artifact.
 - Project files are visible, portable, model-agnostic, and created only when persistent state is useful and approved.
+- Before the first persistent write when no policy is established, Unsloop asks whether to use **Immutable versions** or **Overwrite current**; that storage choice never expands revision authority.
 - Domain and artifact skills keep authority over specialized facts, file mechanics, rendering, formulas, and executable validation.
 - Readiness means only what the evidence and checks actually establish; polished output is not treated as verified, approved, rehearsed, synchronized, or publication-certified by appearance alone.
 
 The implementation is one extensible, repository-scoped [Agent Skill](https://agentskills.io/specification) at [`.agents/skills/unsloop/SKILL.md`](.agents/skills/unsloop/SKILL.md). Codex, Claude Code, Pi, other Agent Skills clients, and manually adapted text-capable harnesses can use the same authoritative core.
 
 For manuscripts with chapters, headings, subheadings, scene breaks, or procedural phases, Unsloop writes and reviews the close, visible boundary, and next opening as one logical transition. It preserves purposeful hard breaks and does not add a bridging sentence when hierarchy and sequence already orient the reader. See the [section-flow contract](.agents/skills/unsloop/references/section-flow.md).
+
+## Persistent write policy and response history
+
+Before Unsloop creates or changes files, it asks once when the task or project has no established policy:
+
+- **Immutable versions (Recommended):** keep the current files usable and preserve one append-only historical batch containing every artifact written in each assistant response;
+- **Overwrite current:** update the current artifacts without automatic response snapshots.
+
+The question is skipped for chat-only drafting, read-only Review, non-mutating Audit, and work whose instructions or project state already answer it. Neither choice permits an unrequested rewrite, silent retcon, change to locked material, or mutation during Audit.
+
+With immutable versions, the default portable history is:
+
+```text
+unsloop-history/
+  WRT-<unique-batch-id>/
+    manifest.json
+    files/
+      <original-relative-path>
+```
+
+The first in-place write preserves a baseline when no equivalent accepted baseline exists. Each later response that writes files creates one coherent response batch with relative paths and SHA-256 hashes. “Immutable” means append-only by Unsloop's operating contract; it is not a claim of operating-system, tamper-proof, legal-records, or WORM immutability.
+
+The optional dependency-free helper is dry-run by default:
+
+```text
+python .agents/skills/unsloop/scripts/write_history.py snapshot --root . --batch-id WRT-20260822-001 --kind response --reason "Drafted sections 2 and 3" --include manuscript/002.md --include writing/STATUS.md
+python .agents/skills/unsloop/scripts/write_history.py snapshot --root . --batch-id WRT-20260822-001 --kind response --reason "Drafted sections 2 and 3" --include manuscript/002.md --include writing/STATUS.md --apply
+```
+
+See the [persistent write-history contract](.agents/skills/unsloop/references/write-history.md).
 
 ## Writing-pattern and assistance audit
 

@@ -249,3 +249,9 @@ Do not treat every uncited first-person observation, interpretation, unresolved 
 **Status:** Accepted
 
 Expose **Style Direction** across the existing Review, Write, and Audit modes. Let authors choose evidenced personal voice, a historical or literary tradition, a custom design, or a restrained genre default; preserve the result in a `StyleBrief` only to the degree useful. Keep author, narrative/document, viewpoint, dialogue, translation, and delivery channels distinct. Historical work declares authenticity and readability stance plus evidence limits. Style may remain Stable, evolve Gradually, or change through author-approved Phases, but Confirmed state cannot drift silently. Named-author requests become non-exclusive trait descriptions rather than signature imitation.
+
+## D-041 — Make persistent write retention an explicit user choice
+
+**Status:** Accepted
+
+Before the first persistent write when no policy is established, ask the user to choose **Immutable versions** or **Overwrite current**. Immutable versions retain a baseline when needed and one append-only batch containing every artifact written in each assistant response while leaving current working paths usable. Overwrite current creates no automatic response history. Persist the policy for sustained projects, skip the question when no file mutation will occur or the answer is already known, refuse history collisions, and keep this storage choice independent from revision authorization, checkpoints, locked decisions, canon, and non-mutating Audit. “Immutable” describes Unsloop's logical append-only contract, not OS-enforced or legal-records immutability.

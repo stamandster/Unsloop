@@ -17,6 +17,7 @@
 - Style profile and phase: [`writing/STYLE.md` and applicable STP ID, task-local brief, or not applicable]
 - Hard constraints: [format, length, date, policy, or delivery]
 - Collaboration cadence: [Guided, Adaptive, or Autonomous if used]
+- Persistent write policy: [Immutable versions or Overwrite current]
 - Owner, effective date, and review cycle: [owner and maintenance expectations]
 
 ## Known

@@ -37,6 +37,8 @@ When an outline, rubric, policy, template, or multi-part brief governs the artif
 
 Return the requested writing first unless the user asks for process notes. Mention only material integrity choices, preserved voice features, substantial changes, and claims or citations that still require confirmation.
 
+When persistent files were written, report the selected write policy only as needed for review. Under Immutable versions, identify the response batch and history location, included files, and any incomplete snapshot or collision. Under Overwrite current, do not imply that response-level history exists. Keep this after the artifact and do not let version bookkeeping dominate the handoff.
+
 For authorized revision, preserve useful author-supplied observations, interpretations, unresolved questions, and tentative perspectives with genre-appropriate scope and evidence-status framing. If the distinction materially affects use, identify the retained personal perspective and any embedded factual claim that still requires verification. Do not imply that a perspective label verifies the factual portion.
 
 For a small fiction request, return the scene or story first and add only material assumptions or limitations. For a persistent fiction checkpoint, return the requested manuscript or plan first, followed by only material decisions or deviations, continuity or research concerns, Proposed details awaiting acceptance, the current checkpoint, and the next approved action. Do not bury the fiction under a project-management report.

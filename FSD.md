@@ -77,6 +77,8 @@ No database, background service, model endpoint, provider account, or persistent
 | FS-046 | Writing-pattern and assistance audit | AI-score or authorship request, inspected prose, optional authorized samples, process records, detector reports, genre and language context | Unchanged artifact, `WritingPatternAssessment`, component profile, method-bounded measurements, provenance findings, and calibrated conclusion | PR-047; NFR-003, NFR-019, NFR-021 |
 | FS-047 | Style Direction construction and application | Writing request, purpose, form, audience, author voice evidence, optional period or tradition corpus | `StyleBrief`, separated voice channels, authenticity and readability contract, bounded draft or findings | PR-048; NFR-003, NFR-004, NFR-022 |
 | FS-048 | Style evolution and continuity | Active `StyleBrief`, manuscript scope, proposed phase or observed drift, author disposition | Versioned `StylePhase` state, approved transition or drift finding, reconciled optional `STYLE.md` | PR-049; NFR-008, NFR-012, NFR-022 |
+| FS-049 | Persistent write-policy selection | Requested operation, persistence intent, existing project or task policy, host selector capability | `PersistentWritePolicy` or no prompt when no persistent mutation will occur | PR-050; NFR-003, NFR-007, NFR-023 |
+| FS-050 | Response-batch history preservation | Confirmed immutable policy, files written in the response, project root, prior batch, reason | Collision-resistant baseline or response `WriteHistoryBatch` with copied artifacts and hashes | PR-050; NFR-001, NFR-002, NFR-009, NFR-023 |
 
 ## Requirements traceability
 
@@ -131,6 +133,7 @@ No database, background service, model endpoint, provider account, or persistent
 | PR-047 | FS-001, FS-003, FS-005–FS-009, FS-027–FS-028, FS-043, FS-046 |
 | PR-048 | FS-003, FS-004, FS-006, FS-013, FS-027, FS-047 |
 | PR-049 | FS-006–FS-008, FS-015, FS-023, FS-025, FS-047–FS-048 |
+| PR-050 | FS-008, FS-013, FS-025, FS-043, FS-049–FS-050 |
 | NFR-001 | FS-011, FS-012 |
 | NFR-002 | FS-012 |
 | NFR-003 | FS-004–FS-008 |
@@ -153,6 +156,7 @@ No database, background service, model endpoint, provider account, or persistent
 | NFR-020 | FS-008, FS-035, FS-039, FS-042, FS-044, FS-045 |
 | NFR-021 | FS-005–FS-009, FS-027–FS-028, FS-043, FS-046 |
 | NFR-022 | FS-003, FS-006, FS-013, FS-015, FS-023, FS-047–FS-048 |
+| NFR-023 | FS-012, FS-013, FS-025, FS-049–FS-050 |
 
 ## Logical data model
 
@@ -420,6 +424,14 @@ Record source and target language or locale, audience, purpose, translation mode
 
 Record schema version, mode, depth, artifact identifier and inspected boundary, evidence boundary, stable findings, optional requirement or provenance records, optional `WritingPatternAssessment`, readiness, unresolved actions, and out-of-scope judgments. For Audit, include artifact-unchanged state, mutation authorization, and separately dispositioned proposed corrections. Missing evidence is null or omitted; it is never invented for schema completeness.
 
+### `PersistentWritePolicy`
+
+Record **Immutable versions** or **Overwrite current**, scope (task or project), confirmation basis, history location when applicable, and last confirmed time or decision reference. The policy governs storage behavior only; it does not authorize revision, acceptance, retcon, publication, or mutation during Audit.
+
+### `WriteHistoryBatch`
+
+Record unique `WRT-*` batch identifier, kind (**baseline** or **response**), creation time, reason, optional parent batch, project-relative history path, and every written artifact's original relative path, snapshot relative path, size, and SHA-256 hash. Once created, a batch is append-only by contract and a matching destination is a hard collision.
+
 ## Processing flow
 
 ```text
@@ -429,6 +441,7 @@ Request and materials
   -> FS-001 select mode and depth
   -> FS-002 resolve topic path when new writing lacks a topic
   -> FS-003 build the smallest sufficient WritingBrief
+  -> FS-049 before the first persistent mutation when policy is unknown, resolve Immutable versions or Overwrite current
   -> FS-047 when style is consequential, establish or load the StyleBrief and separate its voice and form channels
   -> FS-048 when style changes or drift matters, apply the confirmed evolution model and author-owned phase state
   -> FS-044 when delivery matters, establish and reconcile the DeliveryContract and presentation elements
@@ -468,6 +481,7 @@ Request and materials
   -> FS-041 process published-document review, correction, deprecation, withdrawal, and archival
   -> FS-042 distinguish simulated, automated, expert, and observed reader validation
   -> FS-045 when multiple formats are required, refresh or mark derivatives stale and record actual validation
+  -> FS-050 after each immutable response that wrote files, preserve the complete response batch and update its visible status pointer
 ```
 
 ### FS-001 — Select mode and depth
@@ -720,6 +734,21 @@ Define audience, prior knowledge, language, assistive context, task, artifact ve
 4. Preserve the prior phase as Superseded with its replacement link. Record intentional deviations separately from accidental drift.
 5. Persist `story/STYLE.md` or `writing/STYLE.md` only when multi-session continuity benefits and the layout is approved. Never persist source samples by implication.
 
+### FS-049 — Resolve persistent write policy
+
+1. Determine whether the requested operation will create or modify persistent artifacts. Do not ask for chat-only drafting, read-only Review, non-mutating Audit, or a task whose explicit instruction or established project state already resolves the policy.
+2. When policy is unknown, ask once: **Immutable versions (Recommended)** preserves one historical batch per assistant response, while **Overwrite current** updates the working artifacts without automatic response snapshots. Use a structured selector when available and the same concise choice in plain text otherwise.
+3. Record the choice task-locally for a one-off operation or in the approved `BRIEF.md` and `STATUS.md` for sustained work. Do not infer a durable preference from silence.
+4. Treat the choice solely as a storage contract. Continue to enforce revision authorization, accepted scope, protected information, project decisions, canon, checkpoints, and Audit non-mutation independently.
+
+### FS-050 — Preserve response-batch history
+
+1. Under immutable versions, preserve a baseline before the first in-place write when no equivalent accepted baseline is already available. After each assistant response that writes persistent artifacts, create exactly one response batch containing every artifact written during that response.
+2. Keep current working paths usable. Store history by default beneath `unsloop-history/<WRT-ID>/`, with `manifest.json` and `files/<original-relative-path>`. Exclude the history directory itself from snapshot input.
+3. Generate a unique batch ID, record the reason and optional parent, copy each artifact without transformation, calculate SHA-256 hashes, and refuse any existing batch destination. A partially staged batch must not appear as complete.
+4. Native Git or host document history may satisfy the contract only when it preserves every assistant-response boundary and the user accepts it. Otherwise use the portable layout or disclose that immutable history could not be completed before changing current files.
+5. Under overwrite current, create no automatic batch and make no historical-retention claim. Existing project checkpoints and collision safeguards remain in force.
+
 ## Failure and boundary handling
 
 | Condition | Required behavior |
@@ -788,6 +817,10 @@ Define audience, prior knowledge, language, assistive context, task, artifact ve
 | Historical style corpus is absent or incomplete | Use qualified tradition-level guidance, disclose the evidence limit, and do not claim period authenticity. |
 | Surface archaism conflicts with function or readability | Diagnose the specific mismatch; do not add more archaic markers as a substitute for coherent syntax, form, rhetoric, or dramatic purpose. |
 | Proposed style phase conflicts with Confirmed style | Keep it Proposed, show the diff and affected scope, and require author disposition before application. |
+| Persistent write requested with no established policy | Ask once for Immutable versions or Overwrite current before mutation; do not guess from silence. |
+| Immutable baseline or response batch cannot be completed | Leave current files unchanged when possible, report the exact failure, and do not claim that history exists. |
+| Write-history batch destination already exists | Refuse replacement and require a new unique batch ID. |
+| Overwrite current selected | Update only authorized current artifacts and create no automatic response-history claim. |
 
 ## Verification matrix
 
@@ -888,6 +921,11 @@ Define audience, prior knowledge, language, assistive context, task, artifact ve
 | Named living or historical author requested as style | PR-048 / FS-004, FS-047 | Request becomes high-level, non-exclusive traits and broader tradition guidance without signature imitation. |
 | Style evolves across manuscript phases | PR-049, NFR-008, NFR-022 / FS-025, FS-048 | Proposed and Confirmed phases have explicit scope and transitions; no unapproved drift or retroactive change occurs. |
 | Historical-style authenticity audit | PR-044, PR-048–PR-049 / FS-043, FS-047–FS-048 | Artifact remains unchanged; findings distinguish evidenced convention, modernization, intentional anachronism, uncertainty, and unsupported authenticity claims. |
+| Persistent file write with unknown policy | PR-050 / FS-049 | One structured or equivalent plain-text choice appears before mutation; no redundant topic, cadence, or revision question is added. |
+| Two immutable writing responses | PR-050, NFR-023 / FS-049–FS-050 | Baseline exists when required; two distinct response batches preserve all files written in their respective responses with relative paths and hashes. |
+| Immutable batch ID collision | PR-050, NFR-023 / FS-050 | Existing history remains byte-for-byte unchanged and the new snapshot fails visibly. |
+| Overwrite-current writing response | PR-050 / FS-049–FS-050 | Authorized working files change, no automatic response batch is created, and revision or Audit boundaries remain unchanged. |
+| Chat-only draft or read-only review | PR-050 / FS-049 | No persistent-write selector or file-history ceremony appears. |
 
 ## Change control
 

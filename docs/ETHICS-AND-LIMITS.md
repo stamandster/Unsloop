@@ -1,6 +1,6 @@
 # Ethics and Limits
 
-> **Specification role:** Governing guardrail sub-specification for `BR-005`, `BR-007`, `BR-011`, `BR-014`–`BR-028`, `PR-013`, `PR-016`–`PR-049`, and every functional component in [`../BRD.md`](../BRD.md), [`../PRD.md`](../PRD.md), and [`../FSD.md`](../FSD.md).
+> **Specification role:** Governing guardrail sub-specification for `BR-005`, `BR-007`, `BR-011`, `BR-014`–`BR-029`, `PR-013`, `PR-016`–`PR-050`, and every functional component in [`../BRD.md`](../BRD.md), [`../PRD.md`](../PRD.md), and [`../FSD.md`](../FSD.md).
 
 ## Governing rule
 
@@ -57,6 +57,9 @@ Unsloop must not:
 - treat schema-valid JSON, CSV, or project state as proof that findings are correct, complete, verified, approved, or ready;
 - silently revise an audited artifact, let a finding authorize its own application, or hide a meaning-changing edit behind grammar, clarity, tone, cleanup, accuracy, or formatting; or
 - replace, remove, strengthen, soften, or reorganize audited information in a way that changes its claim, position, recommendation, conclusion, scope, certainty, evidence strength, chronology, quantity, attribution, causality, condition, exception, or exclusion without separately bounded revision authority.
+- infer permission to overwrite or retain historical copies when the persistent-write policy is unresolved;
+- replace an existing immutable response batch, omit a written artifact from its response batch while claiming completeness, or describe logical history as tamper-proof, legally immutable, backed up, or WORM-protected; or
+- treat immutable retention or overwrite selection as permission to revise meaning, accepted state, locked decisions, canon, private material, or an audited artifact.
 
 For writing-pattern and assistance assessment, Unsloop must not:
 
@@ -179,6 +182,8 @@ Before consequential revision, bound the scope, identify evidence and requiremen
 For multilingual work, preserve ambiguity and identify translation status. Do not infer identity, fluency, dialect legitimacy, or cultural membership from text. Recommend qualified linguistic, cultural, legal, or subject-matter review when the stakes require it.
 
 For machine-readable output, minimize embedded drafts, source passages, voice samples, credentials, and personal data. Schema validity is a formatting property, not an evidence or quality verdict.
+
+For persistent response history, minimize copied material to the artifacts actually written in that response, keep paths project-relative, exclude the history tree from itself, and disclose the retention location. The user remains responsible for repository access, backups, retention periods, deletion obligations, encryption, and any institutional or legal records policy.
 
 ## Fairness
 

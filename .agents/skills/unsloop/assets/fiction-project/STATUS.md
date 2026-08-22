@@ -5,6 +5,8 @@
 - Last accepted unit: [none yet]
 - Last completed checkpoint: [initial state]
 - Maximum batch: [approved limit]
+- Persistent write policy: [Immutable versions or Overwrite current]
+- Latest immutable response batch: [WRT ID or not applicable]
 - Next approved action: [next action]
 - Active StyleBrief and phase: [`story/STYLE.md` plus STP ID, task-local brief, or not applicable]
 

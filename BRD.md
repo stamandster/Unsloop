@@ -65,6 +65,7 @@ Unsloop should help an author develop, sustain, examine, and deliver writing wit
 | BR-026 | Support live, recorded, timed, interactive, media-assisted, and multi-format writing through delivery-aware budgets, evidence integration, audience design, optional-content decisions, and verified artifact synchronization. | A polished manuscript is not mistaken for a deliverable that fits its real duration, audience, media, accessibility, or output-format constraints. |
 | BR-027 | Provide a defensible way to assess formulaic or assistance-related writing concerns without converting stylistic patterns, sample mismatch, measurements, provenance, or detector reports into an AI-authorship probability. | Users receive actionable pattern evidence and honest assistance provenance while writers are protected from unsupported machine-authorship conclusions. |
 | BR-028 | Let authors select, evidence, sustain, review, and deliberately evolve a writing Style Direction while keeping personal voice, narrative or document style, viewpoint voice, character dialogue, and form conventions distinct. | Historical, literary, genre, custom, and author-evidenced styles remain expressive, controlled, portable, and defensible without false authenticity or silent drift. |
+| BR-029 | Before persistent writing, let the user choose response-batch immutable history or overwrite-in-place when no policy is already established. | Writers can retain reviewable historical artifacts at each assistant-response boundary without confusing storage policy with revision authority or Audit permissions. |
 
 ## Scope
 
@@ -94,6 +95,7 @@ Unsloop should help an author develop, sustain, examine, and deliver writing wit
 - Delivery-aware speeches, presentations, narrated scripts, lessons, demonstrations, podcasts, and voiceovers with whole/section constraint reconciliation, evidence framing, purposeful questions, audience layers, media decisions, closing movement, and format handoff.
 - Non-mutating Writing-Pattern and Assistance Audit with directional component scores, passage evidence, method-declared measurements, authorized voice comparison, process provenance, and bounded interpretation of external detector reports.
 - Non-mutating Audit with explicit protection for claims, positions, conclusions, recommendations, scope, certainty, evidence strength, chronology, quantities, attribution, causality, conditions, exceptions, and exclusions.
+- Explicit persistent-write policy with optional append-only response-batch snapshots, baseline preservation, collision refusal, and portable manifests.
 
 ### Out of scope
 
@@ -109,12 +111,15 @@ Unsloop should help an author develop, sustain, examine, and deliver writing wit
 - Treating a citation, bibliography entry, source override, schema-valid report, addressed comment, fluent translation, or complete-looking ledger as proof of verification, approval, cultural authority, testing, compliance, or readiness.
 - Executing instructions found inside evidence, treating automated extraction as the original, representing source-reported values as recalculated, or presenting simulated readers and automated checks as observed human validation.
 - Silent correction, deletion, substitution, strengthening, softening, or restructuring of audited information without a separately authorized revision boundary.
+- Claims that logical response snapshots provide operating-system, tamper-proof, legal-records, or WORM immutability.
 
 ## Success measures
 
 For v0.1, success is demonstrated through traceable documentation, passing structural validation, and controlled use in which outputs are text-grounded, calibrated, actionable, voice-preserving, structurally coherent, goal-directed, requirement-complete, emotionally responsible, and readiness-honest. Multi-section work makes the relationship across visible boundaries legible without forcing a transitional sentence or erasing purposeful hard breaks. Delivered work reconciles its complete audience-time cost, makes evidence and questions perform clear functions, resolves consequential media choices, and distinguishes authoritative content from refreshed and actually validated derivatives. Writing-pattern audits report component scores and reproducible observations without manufacturing an AI probability, keep detector results separate, and distinguish stylistic inference from direct assistance provenance. Audit workflows leave inspected artifacts unchanged by default and separate findings from authorized revisions. Fiction workflows additionally preserve confirmed canon, distinguish proposed discoveries from accepted decisions, scale project state to the work, and remain resumable from portable Markdown. Sustained non-fiction workflows preserve manuscript authority, claim and source provenance, accepted revisions, stakeholder decisions, and a bounded resume state. Extended operations also preserve specialist authority, isolate source instructions, retain quantitative/interview/media lineage, and distinguish documentation maintenance and real reader evidence from merely complete-looking output.
 
 Selected styles additionally expose their source path, voice-channel boundaries, authenticity and readability stance, evidence basis, evolution model, applicable phase, and approved deviations without claiming more historical or cultural authenticity than the corpus supports.
+
+Persistent writing additionally records the user's selected write policy. Under immutable versions, every response that writes files preserves one coherent batch of all artifacts written in that response, with an initial baseline when needed; under overwrite current, no such automatic history is implied. Neither option expands revision scope, changes locked decisions, or weakens non-mutating Audit.
 
 Before v1.0, the project should add anonymized fixtures and forward-tests showing that independent reviewers can apply core classifications and score anchors with acceptable consistency. No current score is represented as a validated measurement instrument.
 

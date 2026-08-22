@@ -72,6 +72,7 @@ Capture these fields when they matter:
 10. **Voice target:** tone, formality, language style, emotional restraint, and any authorized writing samples.
 11. **Style direction:** when material, the selected historical, literary, rhetorical, house, custom, or genre-default profile; authenticity stance; evidence basis; and stable, gradual, or phase-based evolution.
 12. **Format and delivery constraints:** length or duration, structure, citation style, template, platform, deadline, live or recorded setting, pace when material, pauses, interaction, media, accessibility needs, authoritative source format, required derivatives, validation expectation, and any component allocations.
+13. **Persistent write policy:** when files will be created or changed, Immutable versions or Overwrite current; response-batch scope and accepted native equivalent when applicable. Resolve it before the first write rather than treating it as a stylistic preference.
 
 For fiction, map these general fields to the fiction-specific brief without duplicating them. In particular, keep real-world research references separate from story canon, and keep author voice evidence separate from narrative and character voice design.
 

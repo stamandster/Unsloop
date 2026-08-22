@@ -1,6 +1,6 @@
 # Portability
 
-> **Document role:** Deployment, harness, and transfer sub-specification for `PR-014`–`PR-049`, `NFR-001`–`NFR-002`, `NFR-007`–`NFR-022`, and `FS-011`–`FS-048` in [`PRD.md`](PRD.md) and [`FSD.md`](FSD.md).
+> **Document role:** Deployment, harness, and transfer sub-specification for `PR-014`–`PR-050`, `NFR-001`–`NFR-002`, `NFR-007`–`NFR-023`, and `FS-011`–`FS-050` in [`PRD.md`](PRD.md) and [`FSD.md`](FSD.md).
 
 ## Guarantee
 
@@ -13,6 +13,7 @@ The core is both harness-agnostic and model-agnostic:
 - no provider, model ID, proprietary tool name, hidden reasoning format, or UI control is required;
 - missing host capabilities have explicit fallbacks; and
 - evidence, voice, Style Direction and evolution, personal-perspective preservation, section-flow, delivery-readiness, artifact-synchronization, writing-pattern authorship boundaries, privacy, ethics, and non-mutating Audit rules do not change across hosts.
+- persistent-write selection and response-batch history retain the same semantics even when a host lacks structured questions, native versioning, or file tools.
 
 Compatibility means the same method can load and run. It does not promise identical reasoning quality, context capacity, tool access, latency, cost, or output across models.
 
@@ -68,6 +69,8 @@ The baseline portable skill runtime consists only of:
 
 Bundled project templates, the JSON schema, and standard-library project scripts are optional capabilities. A model can follow the same workflows manually when Python or file execution is unavailable.
 
+Persistent writing uses an explicit project or task policy: **Immutable versions** or **Overwrite current**. Under immutable versions, `unsloop-history/<WRT-ID>/manifest.json` and `files/<original-relative-path>` form a portable response batch with relative paths and SHA-256 hashes. The optional standard-library `scripts/write_history.py` helper previews by default, confines all paths to the chosen project, excludes history from snapshot input, and refuses existing batch destinations. Without Python, a capable host may create the same layout manually. Native Git or document history substitutes only when it preserves each assistant-response boundary and the user accepts it. The contract is logical append-only retention, not WORM storage or a legal records system.
+
 Quantitative, interview, media, content-map, maintenance, and usability ledgers are ordinary Markdown. Format-specific tools may calculate, transcribe, OCR, render, or inspect an artifact, but the portable records retain the original-to-derived boundary and do not depend on that tool afterward.
 
 It requires no package manager, build step, MCP server, memory service, API key, environment variable, absolute filesystem path, or user-level configuration. Durable project decisions live in checked-in Markdown, so using Unsloop does not depend on a memory service.
@@ -85,6 +88,8 @@ Unsloop bundles reusable fiction templates as optional assets and `scripts/ficti
 An approved `story/STYLE.md` or `writing/STYLE.md` is ordinary portable project state. The optional project utilities create it only with `--style`; the same StyleBrief and phase contracts remain available manually when Python is absent. Source writing samples are not copied into these records.
 
 Interactive presentation adapts to the host. A native structured-input control may present short choices; plain text preserves the same decision when no such control exists. In Write or separately authorized revision, a native file editor may apply changes; otherwise Unsloop returns a delimited revision. Audit alone never invokes in-place mutation. Voice samples remain task inputs and are not persisted unless the user explicitly authorizes storage through an available mechanism.
+
+If a host cannot write files, it returns the artifact and an explicit history handoff rather than claiming a snapshot exists. If immutable history was selected but the snapshot fails, current files should remain unchanged when possible and the failure must be reported before further mutation.
 
 ## Optional user-level links
 

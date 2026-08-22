@@ -5,6 +5,7 @@ Read this file for existing-manuscript onboarding, persistent project state, acc
 ## Contents
 
 - [Preserve authority and layout](#preserve-authority-and-layout)
+- [Choose persistent write policy](#choose-persistent-write-policy)
 - [Use the portable project contract](#use-the-portable-project-contract)
 - [Onboard an existing manuscript](#onboard-an-existing-manuscript)
 - [Apply state lifecycles](#apply-state-lifecycles)
@@ -29,6 +30,10 @@ Before changing a persistent project:
 6. obtain approval before creating, moving, renaming, or replacing project files.
 
 Never migrate a custom project merely to match Unsloop's default layout.
+
+## Choose persistent write policy
+
+Before creating or changing project files, resolve **Immutable versions** or **Overwrite current** through [write-history.md](write-history.md) unless the project already records the choice. Store the confirmed policy in `BRIEF.md` or `STATUS.md`. Under Immutable versions, archive one append-only response batch containing every manuscript and story record written in that response; keep `unsloop-history/` beside `story/` and `manuscript/` unless an accepted native system provides equivalent response-level history. Under Overwrite current, retain all retcon, canon, branch, and consequential-revision checkpoints.
 
 ## Use the portable project contract
 
@@ -231,7 +236,7 @@ After an accepted batch, update only affected records:
 
 - `BRIEF.md`: creative contract, authority, cadence, constraints, and locked decisions;
 - `STYLE.md`: StyleBrief, channel boundaries, authenticity stance, evolution model, confirmed phases, and approved deviations;
-- `STATUS.md`: phase, cadence, last accepted unit, immediate state, open decisions, Proposed details, risks, next action, batch limit, and required context;
+- `STATUS.md`: phase, cadence, last accepted unit, immediate state, open decisions, Proposed details, risks, next action, batch limit, required context, persistent write policy, and latest completed immutable response batch when applicable;
 - `SCENES.md`: stable ID, manuscript location, unit state, POV, time, place, purpose, pressure, turn, consequence, knowledge, setup/payoff, research, and continuity;
 - `CANON.md`: scoped fact, state, basis, and retcon reference;
 - `CHARACTERS.md`: goals, pressures, capabilities, limitations, relationships, knowledge, arc state, and speech tendencies;
@@ -253,3 +258,5 @@ When executable access and Python are available, the bundled `scripts/fiction_pr
 - Treat tool output as structural evidence, not a creative or continuity verdict.
 
 When the script is unavailable, follow the same contracts manually with the templates. The script is optional; the Markdown workflow remains authoritative.
+
+The separate `scripts/write_history.py` helper may preserve baseline and response batches for either fiction or non-fiction projects. It does not decide which prose is authoritative or accepted.

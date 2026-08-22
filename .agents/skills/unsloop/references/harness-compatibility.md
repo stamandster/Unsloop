@@ -19,6 +19,7 @@ At the start of a task, use the capabilities already exposed by the host. Map th
 | Verify an external source | Browser, search, retrieval, or connector | Mark the claim unverified and request the source or permission to continue elsewhere. |
 | Enforce a scoped research corpus | Domain/site filter or navigation restricted to approved locators | Request exact pages or visit only approved locators; do not substitute general web search. |
 | Edit an artifact | Native patch, file-edit, or document tool | In Write or authorized revision, return a clearly delimited revision for the user to apply; Audit alone returns findings and proposals without mutation. |
+| Preserve response history | Native version history with inspectable response boundaries, or filesystem snapshot capability | Under Immutable versions, create an append-only portable response batch manually; if neither is possible, return the writing without claiming persistent history and ask before switching to Overwrite current. |
 | Persist a voice profile | Authorized memory or storage mechanism | Keep the profile task-local; do not persist it. |
 | Maintain a writing project | Repository or document editing | Return the proposed or updated Markdown records for the user to save; keep all paths relative. |
 | Extract or inspect non-text evidence | Format, document, media, spreadsheet, OCR, or transcription tool | Request a native export or mark extraction incomplete; preserve the original-to-text transformation boundary. |

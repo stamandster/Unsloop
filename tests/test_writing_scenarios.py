@@ -13,12 +13,12 @@ class WritingScenarioFixtureTests(unittest.TestCase):
     def test_all_numbered_scenarios_are_present_and_ordered(self) -> None:
         text = FIXTURES.read_text(encoding="utf-8")
         numbers = [int(value) for value in re.findall(r"^## (\d+)\.", text, re.MULTILINE)]
-        self.assertEqual(numbers, list(range(1, 33)))
+        self.assertEqual(numbers, list(range(1, 36)))
 
     def test_each_scenario_defines_routing_required_and_prohibited_behavior(self) -> None:
         text = FIXTURES.read_text(encoding="utf-8")
         sections = re.split(r"^## \d+\. ", text, flags=re.MULTILINE)[1:]
-        self.assertEqual(len(sections), 32)
+        self.assertEqual(len(sections), 35)
         for section in sections:
             self.assertIn("- Expected routing:", section)
             self.assertIn("- Required:", section)
@@ -33,6 +33,8 @@ class WritingScenarioFixtureTests(unittest.TestCase):
             "collaborative writing",
             "multilingual writing",
             "structured output",
+            "persistent write policy",
+            "response-batch history",
         ):
             self.assertIn(specialization, text)
 
@@ -45,6 +47,17 @@ class WritingScenarioFixtureTests(unittest.TestCase):
             "Audit plus authorized substantive correction",
             "Clarity edit that changes meaning",
             "non-mutating",
+        ):
+            self.assertIn(token, text)
+
+    def test_persistent_write_policy_is_explicit(self) -> None:
+        text = FIXTURES.read_text(encoding="utf-8")
+        for token in (
+            "Unknown persistent write policy",
+            "Immutable response history",
+            "Overwrite current",
+            "ask once before mutation",
+            "every artifact written in that response",
         ):
             self.assertIn(token, text)
 

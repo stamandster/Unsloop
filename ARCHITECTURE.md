@@ -15,6 +15,7 @@ Unsloop
 ├── Shared delivery contract — timing, evidence flow, audience attention, media, and artifact-set readiness
 ├── Shared writing-pattern and assistance audit — component profile, measurements, provenance, and detector boundaries
 ├── Shared Style Direction specialization — author-evidenced, historical/literary, custom, or genre direction with controlled evolution
+├── Shared persistent-write contract — user-selected response history or current-file overwrite without expanded revision authority
 ├── Shared sustained-writing specialization — long-form operations across all three modes
 │   ├── Project state — onboarding, units, resume packets, assembly, recovery
 │   ├── Provenance and revision — claims, sources, quotations, changes, freshness
@@ -64,6 +65,7 @@ Unsloop/
             ├── SKILL.md
             ├── agents/openai.yaml
             ├── scripts/writing_pattern_metrics.py
+            ├── scripts/write_history.py
             ├── references/
                 ├── integrity-review.md
                 ├── harness-compatibility.md
@@ -75,6 +77,7 @@ Unsloop/
                 ├── output-contracts.md
                 ├── source-verification.md
                 ├── write-mode.md
+                ├── write-history.md
                 ├── section-flow.md
                 ├── delivery-and-presentation.md
                 ├── writing-pattern-assistance-audit.md
@@ -154,6 +157,8 @@ Build the progressive writing brief
         ↓
 Resolve governing directions, content roles, and constraints
         ↓
+Before persistent mutation: load or ask for Immutable versions versus Overwrite current
+        ↓
 For fiction: scale the lifecycle, cadence, and approved project state
         ↓
 For recurring speakers: load Confirmed character profiles or keep suggestions Proposed
@@ -173,6 +178,8 @@ Run integrity lens + human-voice lens
 Audit coverage, calibrate findings, test readiness, and serialize only when requested
         ↓
 Report diagnosis; preserve Audit; revise only through a separately authorized scope
+        ↓
+After an immutable writing response: preserve one complete response batch and visible history pointer
 ```
 
 ## Future implementation seams

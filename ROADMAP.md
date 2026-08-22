@@ -73,6 +73,7 @@
 - [x] Add structured-report fields, validator traceability, and six clean-context assistance-audit scenarios
 - [x] Preserve scoped author-supplied personal perspective during authorized revision while keeping embedded factual claims independently accountable
 - [x] Add governed Style Direction selection, historical/literary authenticity boundaries, voice-channel separation, stylistic evolution, portable templates, project checks, and clean-context behavioral scenarios
+- [x] Add an explicit persistent-write selector, portable response-batch history, baseline and collision safeguards, project-state fields, optional helper, and deterministic tests
 
 ## v0.2 — Examples and calibration
 

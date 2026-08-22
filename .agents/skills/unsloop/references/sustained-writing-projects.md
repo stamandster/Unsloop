@@ -6,6 +6,7 @@ Read this file for multi-session or multi-artifact non-fiction such as a book, t
 
 - [Scale the project](#scale-the-project)
 - [Choose collaboration cadence](#choose-collaboration-cadence)
+- [Choose persistent write policy](#choose-persistent-write-policy)
 - [Preserve authority and layout](#preserve-authority-and-layout)
 - [Use portable project state](#use-portable-project-state)
 - [Onboard existing work](#onboard-existing-work)
@@ -32,6 +33,10 @@ For persistent work, offer the same portable cadence choices without changing th
 - **Autonomous:** approve the project contract and batch limit, then work through that batch while maintaining Proposed, Not checked, and unaccepted state until the checkpoint.
 
 Even in Autonomous cadence, pause before changing the author's position, evidence conclusion, governing requirement, privacy boundary, external commitment, approved terminology, translation policy, stakeholder authority, or accepted manuscript state. Do not promote claims, decisions, changes, or approval from silence.
+
+## Choose persistent write policy
+
+Before creating or changing project files, resolve **Immutable versions** or **Overwrite current** through [write-history.md](write-history.md) unless the project already records the choice. Store the confirmed policy in `BRIEF.md` or `STATUS.md`. Under Immutable versions, use one append-only response batch for all writing files changed together and keep `unsloop-history/` beside `writing/` and `manuscript/` unless an existing coherent version system is accepted. Under Overwrite current, retain the ordinary checkpoint rules for consequential changes.
 
 ## Preserve authority and layout
 
@@ -98,6 +103,8 @@ Add `DATA.md` for material quantitative claims, `INTERVIEWS.md` for oral evidenc
 Use these project phases: **Discovery**, **Briefing**, **Research**, **Architecture**, **Drafting**, **Revision**, **Approval**, **Complete**, or **Archived**.
 
 `STATUS.md` is the resume packet. Record the phase, authoritative version, last accepted unit, checkpoint, evidence boundary, immediate context, open decisions, stale or disputed support, next approved action, and files needed to resume. It does not replace the manuscript or source records.
+
+Also record the confirmed persistent write policy and, when Immutable versions applies, the latest completed response batch. Do not infer authority from batch recency alone.
 
 ## Onboard existing work
 

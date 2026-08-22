@@ -3,6 +3,8 @@
 - Project phase: Discovery
 - Collaboration cadence: Adaptive
 - Approved batch limit: Confirm the brief and first unit only
+- Persistent write policy: [Immutable versions or Overwrite current]
+- Latest immutable response batch: [WRT ID or not applicable]
 - Authoritative manuscript version: `manuscript/001-opening.md`
 - Last accepted unit: None
 - Last completed checkpoint: None

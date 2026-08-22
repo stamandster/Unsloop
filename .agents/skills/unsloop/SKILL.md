@@ -23,6 +23,8 @@ For requests to assign an AI score, detect machine-generated prose, analyze AI-l
 
 For requests to select, design, preserve, evolve, review, or audit a historical, literary, rhetorical, house, or custom writing style, read [references/style-direction.md](references/style-direction.md). Keep author voice, style direction, narrative voice, viewpoint voice, dialogue, and form or delivery conventions distinct.
 
+For any request that will create or modify persistent writing artifacts, read [references/write-history.md](references/write-history.md). Before the first write, ask whether the user wants **Immutable versions** or **Overwrite current** unless the request or a coherent project record already answers. Do not ask for chat-only output, read-only Review, or non-mutating Audit.
+
 ## Choose the mode
 
 - Use **Unsloop Review** for constructive diagnosis of an existing draft. Default to this mode when the request is broad.
@@ -56,6 +58,8 @@ For sustained or specialized non-fiction, read only the direct reference that ap
 Apply brief, standard, or deep depth based on the request and available evidence. Do not turn a request for a quick review into a forensic audit.
 
 ## Run the workflow
+
+Before the numbered content workflow, determine whether the task will write persistent artifacts. If so and the write policy is unknown, ask at the beginning whether to preserve **Immutable versions**—one append-only snapshot for every response batch—or **Overwrite current** without automatic response snapshots. Use a structured selector when available and a concise conversational fallback otherwise. Resolve this storage policy before the first persistent write; it does not authorize content changes. Read [references/write-history.md](references/write-history.md).
 
 1. Determine topic status at the beginning. If the topic is already explicit in the request or supplied draft, use it without asking the user to repeat it. For new writing without a clear topic, ask whether the user has a topic, wants help refining a rough direction, or wants to brainstorm topics. When the host exposes a structured user-input tool, use it for this choice and other short, consequential decisions; otherwise use an equivalent concise conversational prompt. Do not change the host's collaboration or execution mode solely to obtain the tool. Read [references/writing-brief.md](references/writing-brief.md).
 2. Establish a progressive writing brief. Extract the topic, goal, audience, prior knowledge, likely concerns or resistance, context, governing directions, content roles, exclusions, reference material, voice target, style direction when material, and hard or working constraints already present. For delivered work, identify the setting, duration or length basis, pace when material, audience interaction, media, authoritative source format, required derivatives, and validation boundary. For fiction, treat the intended reader experience as part of the goal, scale the workflow to the requested form, select Write, Review, or Audit from the requested job, never assume a subject domain, and establish character voice profiles when multiple recurring speakers matter. For documentary or controlled documentation, identify the document family, authority, intended use, evidence-acquisition scope, validation standard, owner, and review cycle. For sustained non-fiction, determine whether portable project state, provenance, revision control, collaboration, multilingual adaptation, or evolving style state will materially improve continuity before proposing files.

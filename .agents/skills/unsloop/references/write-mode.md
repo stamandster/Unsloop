@@ -2,6 +2,8 @@
 
 Read this file when drafting new text or revising an existing draft.
 
+When the task will write persistent artifacts, resolve **Immutable versions** or **Overwrite current** before the first mutation and read [write-history.md](write-history.md). The policy governs response history, not semantic revision authority.
+
 The requested artifact is the output; the brief and checks are controls that make it defensible, not mandatory prose to place before it.
 
 For any fiction request—an isolated scene, flash fiction, short story, novella, novel, serial, or series—also read [fiction-workflow.md](fiction-workflow.md). Keep fiction inside Unsloop Write, scale the workflow to the request, and do not impose novel-scale files or questions on a small self-contained task.
@@ -79,5 +81,7 @@ Confirm that no useful personal perspective was deleted solely because it lacked
 For persistent fiction, update only the project records affected by the accepted work. Preserve confirmed canon and style phases, label unaccepted discoveries as Proposed, surface contradictions or style drift, and keep the resume state compact enough for another model or session to continue without relying on conversational memory.
 
 For persistent non-fiction, update only accepted manuscript units and affected project records. Recheck provenance after material claim changes, preserve rejected revisions and confirmed style state, reconcile requirements and decisions, and update the compact resume state without treating ledgers as proof of accuracy or approval.
+
+Under Immutable versions, archive one response batch containing every persistent writing artifact written in this response and report its batch ID. Under Overwrite current, do not manufacture response history, but retain all ordinary consequential-revision checkpoints.
 
 Do not add deliberate errors or awkwardness. Human voice comes from purpose, selection, judgment, and specificity—not degradation.

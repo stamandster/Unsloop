@@ -1,6 +1,6 @@
 # Review Model
 
-> **Specification role:** Normative method for `PR-003`–`PR-008`, `PR-016`–`PR-049`, `FS-003`–`FS-007`, and `FS-014`–`FS-048` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md). Ethical limits in [`ETHICS-AND-LIMITS.md`](ETHICS-AND-LIMITS.md) control whenever a method rule appears to conflict.
+> **Specification role:** Normative method for `PR-003`–`PR-008`, `PR-016`–`PR-050`, `FS-003`–`FS-007`, and `FS-014`–`FS-050` in [`../PRD.md`](../PRD.md) and [`../FSD.md`](../FSD.md). Ethical limits in [`ETHICS-AND-LIMITS.md`](ETHICS-AND-LIMITS.md) control whenever a method rule appears to conflict.
 
 ## Overview
 
@@ -37,6 +37,8 @@ For a short, low-stakes request, infer safe defaults and proceed. For substantia
 Route scenes, flash fiction, short stories, novellas, novels, serials, and series through the fiction specialization, selecting Write, Review, or Audit from the requested job. Treat a fiction topic as a premise, subject, image, conflict, character, setting, genre idea, or story question, and treat intended reader experience as part of the goal. Do not assume a religious or other domain, require a moral, or force a plotting framework.
 
 Scale ceremony to the project. A clear isolated unit needs only a minimal brief. Sustained fiction establishes a creative contract, selects Guided, Adaptive, or Autonomous collaboration, and may create a portable `story/` and `manuscript/` project after approval. Adaptive is the default. Existing coherent layouts take precedence over the default.
+
+Before any persistent writing, load the task or project write policy. If none exists, ask once whether to use **Immutable versions** or **Overwrite current**. This is a file-retention decision, not a revision or creative-authority decision. Immutable history groups all files written in one assistant response into one reviewable batch; overwrite current adds no automatic response history.
 
 Track story facts as Proposed, Confirmed, or Superseded. Preserve locked author decisions in every cadence, require an explicit retcon before changing Confirmed canon, and keep real-world research separate from invented story facts. When context is limited, resume from `story/STATUS.md` and only the relevant ledgers and manuscript range; bound continuity claims to what was inspected.
 

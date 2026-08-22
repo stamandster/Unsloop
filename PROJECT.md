@@ -92,7 +92,8 @@ Unsloop can:
 - reconcile multi-stakeholder directions and feedback through explicit authority, decision ownership, and version-specific approval;
 - translate, localize, or adapt writing across languages while preserving meaning, claim strength, attribution, terminology, uncertainty, and bounded voice evidence;
 - return optional machine-readable findings and project-state snapshots without weakening evidence, readiness, or privacy limits;
-- run from the same portable Agent Skills core across Codex, Claude, Pi, other compatible harnesses, and manually adapted text-capable models without changing its integrity or voice method.
+- run from the same portable Agent Skills core across Codex, Claude, Pi, other compatible harnesses, and manually adapted text-capable models without changing its integrity or voice method; and
+- ask once before persistent writing whether to preserve append-only response batches or overwrite current artifacts, then carry that policy through portable project state without expanding revision authority.
 
 Unsloop cannot:
 
@@ -110,8 +111,9 @@ Unsloop cannot:
 - claim that delivered writing was rehearsed, accurately timed, rendered, playable, accessible, synchronized, or platform-ready when the corresponding check was not performed;
 - silently carry verification across a materially changed claim or apply rejected revision content;
 - silently alter audited claims, positions, recommendations, conclusions, scope, certainty, evidence strength, chronology, quantities, attribution, causality, conditions, exceptions, or exclusions;
-- promise exact replication of a person, infer identity from style, or use voice samples as authority for new facts or personal experiences.
-- claim historical or cultural authenticity from surface conventions alone, flatten multiple periods into a preset, or silently change a Confirmed Style Direction.
+- promise exact replication of a person, infer identity from style, or use voice samples as authority for new facts or personal experiences;
+- claim historical or cultural authenticity from surface conventions alone, flatten multiple periods into a preset, or silently change a Confirmed Style Direction; or
+- claim that logical response-batch history is operating-system, tamper-proof, legal-records, or WORM immutability, or silently replace an existing history batch.
 
 ## Definition of success
 
@@ -147,6 +149,7 @@ A successful Unsloop result is:
 - **Evidence-reproducible:** numerical, interview, and multimodal support retains its inputs, permissions, transformations, coverage, and uncertainty.
 - **Operationally maintainable:** documentation dependencies, corrections, lifecycle state, and actual reader-validation method remain inspectable after publication.
 - **Audit-preserving:** the inspected artifact remains unchanged and every proposed correction exposes its semantic effect, authorization, and disposition.
+- **History-transparent:** persistent work identifies whether it preserves response batches or overwrites current artifacts; immutable batches expose their boundaries, paths, hashes, and lineage without changing revision permissions.
 
 ## Non-goals for v0.1
 
@@ -161,6 +164,7 @@ A successful Unsloop result is:
 - Mandatory project files for short non-fiction, mandatory Git, or a required cloud research database
 - Automatic approval, legal clearance, cultural representation, or schema-based quality certification
 - A replacement for qualified domain, statistical, interview-ethics, security, accessibility, legal, or artifact-format validation
+- A legal records-management, WORM-storage, backup, or disaster-recovery system
 
 ## Specification relationship
 

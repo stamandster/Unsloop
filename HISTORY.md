@@ -92,6 +92,12 @@ The system keeps author voice, narrative or document style, viewpoint voice, cha
 
 Style can remain Stable, evolve Gradually, or change through approved Phases. Proposed changes cannot silently alter Confirmed style, and named-author requests are translated into high-level, non-exclusive traits rather than signature imitation.
 
+## Response-level write history
+
+Persistent writing gained an explicit retention contract instead of assuming that every author wants either silent overwrites or permanent copies. When no policy is already established, the author chooses **Immutable versions** or **Overwrite current** before file mutation. Immutable versions preserve a baseline when needed and one coherent append-only batch for every assistant response that writes files; overwrite current keeps no automatic response history.
+
+The design deliberately separates file retention from editorial authority. Keeping versions does not authorize a rewrite, retcon, or locked-decision change, and choosing overwrite does not weaken checkpoints or Audit non-mutation. Portable manifests, relative paths, hashes, collision refusal, visible project-state fields, and an optional dependency-free helper make the history reviewable across harnesses without claiming tamper-proof or legal-records immutability.
+
 ## What remained constant
 
 Unsloop's scope expanded, but its governing commitments did not:

@@ -4,7 +4,7 @@
 
 ## Recommended repository description
 
-Portable, model-agnostic writing workflows for author-led drafting, Style Direction, revision, research, non-mutating audit, evidence provenance, long-form projects, and delivery.
+Portable, model-agnostic writing workflows for author-led drafting, Style Direction, revision, research, response history, non-mutating audit, long-form projects, and delivery.
 
 ## Tagline
 
@@ -15,6 +15,8 @@ Portable, model-agnostic writing workflows for author-led drafting, Style Direct
 Unsloop is a portable, model-agnostic writing lifecycle system for planning, drafting, revising, reviewing, auditing, researching, validating, maintaining, and packaging written work. It preserves author control, evidence provenance, human voice, selected historical, literary, custom, or genre Style Direction, continuity, and honest readiness across one-off drafts, fiction, sustained non-fiction, documentary and controlled documentation, research projects, documentation systems, presentations, and multi-format artifacts.
 
 Unsloop began as an integrity and human-voice response to generic, formulaic, over-polished, or source-dependent writing. It now governs the broader process from topic discovery through final handoff. Formulaic-writing and AI-assistance concerns remain one evidence-bound Audit specialization; Unsloop is not an AI detector, detector-evasion tool, generic “humanizer,” or automatic authorship judge.
+
+For persistent work, users explicitly choose append-only versions at each assistant-response boundary or current-file overwrite. This portable history option preserves reviewable artifacts without changing revision authority or claiming tamper-proof records storage.
 
 ## Suggested GitHub topics
 

@@ -34,6 +34,7 @@ REQUIRED_FILES = (
     ROOT / "tests" / "test_operational_scenarios.py",
     ROOT / "tests" / "fixtures" / "operational-scenarios.md",
     ROOT / "tests" / "test_writing_pattern_metrics.py",
+    ROOT / "tests" / "test_write_history.py",
     ROOT / "docs" / "GITHUB-ABOUT.md",
     ROOT / "docs" / "NAMING.md",
     ROOT / "docs" / "REVIEW-MODEL.md",
@@ -53,6 +54,7 @@ REQUIRED_FILES = (
     SKILL / "references" / "output-contracts.md",
     SKILL / "references" / "source-verification.md",
     SKILL / "references" / "write-mode.md",
+    SKILL / "references" / "write-history.md",
     SKILL / "references" / "section-flow.md",
     SKILL / "references" / "delivery-and-presentation.md",
     SKILL / "references" / "writing-pattern-assistance-audit.md",
@@ -79,6 +81,7 @@ REQUIRED_FILES = (
     SKILL / "scripts" / "fiction_project.py",
     SKILL / "scripts" / "writing_project.py",
     SKILL / "scripts" / "writing_pattern_metrics.py",
+    SKILL / "scripts" / "write_history.py",
     SKILL / "assets" / "fiction-project" / "BRIEF.md",
     SKILL / "assets" / "fiction-project" / "STATUS.md",
     SKILL / "assets" / "fiction-project" / "SCENES.md",
@@ -1316,31 +1319,98 @@ STYLE_DIRECTION_CONTRACT = {
     ROOT / "tests" / "test_writing_project.py": ("test_style_profile_requires_complete_author_approval_when_confirmed",),
 }
 
+WRITE_HISTORY_CONTRACT = {
+    SKILL / "SKILL.md": (
+        "references/write-history.md",
+        "Immutable versions",
+        "Overwrite current",
+        "Do not ask for chat-only output",
+        "does not authorize content changes",
+    ),
+    SKILL / "agents" / "openai.yaml": ("Before persistent writing", "Immutable versions", "Overwrite current"),
+    SKILL / "references" / "write-history.md": (
+        "## Decide before the first write",
+        "Immutable versions (Recommended)",
+        "## Define the response batch",
+        "unsloop-history/",
+        "baseline",
+        "logically immutable",
+        "## Overwrite current safely",
+        "scripts/write_history.py",
+        "stop further persistent writes",
+    ),
+    SKILL / "references" / "writing-brief.md": ("Persistent write policy",),
+    SKILL / "references" / "write-mode.md": ("archive one response batch", "do not manufacture response history"),
+    SKILL / "references" / "revision-control.md": ("supplements rather than replaces a pre-change checkpoint",),
+    SKILL / "references" / "harness-compatibility.md": ("Preserve response history",),
+    SKILL / "references" / "output-contracts.md": ("response batch and history location",),
+    SKILL / "references" / "fiction-project-operations.md": ("## Choose persistent write policy", "unsloop-history/"),
+    SKILL / "references" / "sustained-writing-projects.md": ("## Choose persistent write policy", "latest completed response batch"),
+    SKILL / "assets" / "fiction-project" / "BRIEF.md": ("Persistent write policy",),
+    SKILL / "assets" / "fiction-project" / "STATUS.md": ("Latest immutable response batch",),
+    SKILL / "assets" / "writing-project" / "BRIEF.md": ("Persistent write policy",),
+    SKILL / "assets" / "writing-project" / "STATUS.md": ("Latest immutable response batch",),
+    SKILL / "scripts" / "write_history.py": (
+        "append-only, response-batch snapshots",
+        "refusing to overwrite history batch",
+        "history cannot snapshot itself",
+        "sha256",
+        "--apply",
+    ),
+    ROOT / "BRD.md": ("BR-029", "response-batch immutable history"),
+    ROOT / "PRD.md": ("PR-050", "NFR-023 Write-history integrity", "### Persistent write policy and response history"),
+    ROOT / "FSD.md": ("FS-049", "FS-050", "`PersistentWritePolicy`", "`WriteHistoryBatch`"),
+    ROOT / "README.md": ("## Persistent write policy and response history", "write_history.py"),
+    ROOT / "PROJECT.md": ("**History-transparent:**", "WORM-storage"),
+    ROOT / "ARCHITECTURE.md": ("Shared persistent-write contract", "write-history.md"),
+    ROOT / "PORTABILITY.md": ("scripts/write_history.py", "assistant-response boundary"),
+    ROOT / "docs" / "GITHUB-ABOUT.md": ("response history",),
+    ROOT / "docs" / "REVIEW-MODEL.md": ("file-retention decision",),
+    ROOT / "docs" / "REVIEW-OUTPUT.md": ("`PersistentWritePolicy`",),
+    ROOT / "docs" / "ETHICS-AND-LIMITS.md": ("logical history as tamper-proof",),
+    ROOT / "DECISIONS.md": ("## D-041 — Make persistent write retention an explicit user choice",),
+    ROOT / "ROADMAP.md": ("explicit persistent-write selector",),
+    ROOT / "HISTORY.md": ("## Response-level write history",),
+    ROOT / "tests" / "fixtures" / "writing-scenarios.md": (
+        "## 33. Unknown persistent write policy",
+        "## 34. Immutable response history",
+        "## 35. Overwrite current",
+    ),
+    ROOT / "tests" / "test_writing_scenarios.py": ("list(range(1, 36))", "self.assertEqual(len(sections), 35)"),
+    ROOT / "tests" / "test_write_history.py": (
+        "test_dry_run_writes_nothing",
+        "test_apply_copies_all_files_and_writes_hash_manifest",
+        "test_existing_batch_refuses_overwrite",
+        "test_paths_cannot_escape_or_snapshot_history",
+    ),
+}
+
 SPECIFICATION_CONTRACT = {
     ROOT / "BRD.md": (
         "## Business requirements",
         "BR-001",
-        "BR-028",
+        "BR-029",
         "[`PRD.md`](PRD.md)",
         "[`FSD.md`](FSD.md)",
     ),
     ROOT / "PRD.md": (
         "## Functional requirements",
         "PR-001",
-        "PR-049",
+        "PR-050",
         "NFR-001 Portability",
         "NFR-008 Long-form resilience",
         "NFR-019 Semantic preservation",
         "NFR-020 Delivery readiness",
         "NFR-021 Authorship calibration",
         "NFR-022 Style traceability",
+        "NFR-023 Write-history integrity",
         "[`BRD.md`](BRD.md)",
         "[`FSD.md`](FSD.md)",
     ),
     ROOT / "FSD.md": (
         "## Functional components",
         "FS-001",
-        "FS-048",
+        "FS-050",
         "`WritingBrief`",
         "`EvidenceBoundary`",
         "`VoiceBrief`",
@@ -1362,6 +1432,8 @@ SPECIFICATION_CONTRACT = {
         "`AssistanceProvenance`",
         "`DetectorReport`",
         "`StructuredUnsloopReport`",
+        "`PersistentWritePolicy`",
+        "`WriteHistoryBatch`",
         "## Verification matrix",
     ),
     ROOT / "README.md": (
@@ -1394,6 +1466,7 @@ SPECIFICATION_CONTRACT = {
         "## D-021 — Bound fiction feedback and publication claims",
         "## D-033 — Make Audit information-preserving and non-mutating",
         "## D-040 — Treat style as a governed direction, not a preset catalog",
+        "## D-041 — Make persistent write retention an explicit user choice",
     ),
 }
 
@@ -1667,6 +1740,17 @@ def validate() -> list[str]:
             if requirement not in text:
                 errors.append(
                     f"style-direction safeguard missing from "
+                    f"{path.relative_to(ROOT)}: {requirement}"
+                )
+
+    for path, requirements in WRITE_HISTORY_CONTRACT.items():
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for requirement in requirements:
+            if requirement not in text:
+                errors.append(
+                    f"write-history safeguard missing from "
                     f"{path.relative_to(ROOT)}: {requirement}"
                 )
 

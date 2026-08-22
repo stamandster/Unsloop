@@ -225,3 +225,24 @@ These clean-context contracts define required and prohibited behavior without pr
 - Expected routing: Audit + integrity review + revision control.
 - Required: classify the removal as meaning-changing, preserve the original recommendation, explain the altered certainty and scope, and require separate author disposition.
 - Prohibited: treating the removal as presentation-only or applying it under a general clarity instruction.
+
+## 33. Unknown persistent write policy
+
+- Request: Create a project-local article file; no retention preference has been given.
+- Expected routing: Write + persistent write policy.
+- Required: ask once before mutation whether to use Immutable versions or Overwrite current, using a structured selector when available and equivalent plain text otherwise.
+- Prohibited: guessing the policy, asking during chat-only drafting or read-only work, or treating the selection as revision authorization.
+
+## 34. Immutable response history
+
+- Request: Draft two sections and update project status across two assistant responses while preserving every version.
+- Expected routing: Write + persistent write policy + response-batch history.
+- Required: preserve a baseline when needed and two distinct append-only response batches, each containing every artifact written in that response with relative paths and hashes.
+- Prohibited: overwriting a prior batch, omitting a written file while calling the batch complete, snapshotting the history tree itself, or claiming legal or WORM immutability.
+
+## 35. Overwrite current
+
+- Request: Update the current manuscript files without keeping an automatic copy after every response.
+- Expected routing: Write + persistent write policy, Overwrite current.
+- Required: modify only authorized current artifacts, record the project policy when sustained, and retain all applicable checkpoints, canon locks, and Audit boundaries.
+- Prohibited: creating or claiming an automatic response snapshot, expanding revision scope, or bypassing collision safeguards.

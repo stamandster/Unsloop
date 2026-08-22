@@ -32,6 +32,7 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 8. Preserve one model- and harness-agnostic method; isolate discovery, invocation, metadata, and tool mappings as optional adapters.
 9. Treat live delivery, audience attention, media, and required derivatives as part of the artifact when they affect actual use.
 10. Support the writing lifecycle from topic discovery through maintenance and handoff; do not reduce Unsloop to a checker, detector, or rewriting filter.
+11. Resolve how persistent writes should be retained before the first write when the project or request has not already established a policy.
 
 ## Primary use cases
 
@@ -64,6 +65,7 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | Prepare delivered writing | Speech, presentation, lesson, narrated script, podcast, voiceover, demonstration, or other delivered artifact plus audience and constraints | Delivery-aware writing whose full timing or attention budget, evidence flow, questions, media, audience layers, and closing movement fit the intended use. |
 | Maintain synchronized output formats | Authoritative source artifact, required derivatives, accepted change, and available artifact validators | Refreshed or explicitly stale derivatives with recorded comparison, rendering, playback, accessibility, and format-specific validation boundaries. |
 | Assess AI-related writing concerns responsibly | Draft, optional authorized writing samples, process records, and optional external detector report | Non-mutating writing-pattern profile, method-bounded measurements, assistance provenance, and a calibrated authorship boundary rather than an AI probability. |
+| Preserve or overwrite persistent drafts | A file-writing request with no established write policy | One explicit choice between append-only response-batch history and current-file overwrite, applied without changing revision authority. |
 
 ## Functional requirements
 
@@ -118,6 +120,7 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | PR-047 | When asked for an AI score, machine-authorship judgment, AI-like pattern analysis, writing-sample comparison, assistance assessment, or detector-report interpretation, run a non-mutating Writing-Pattern and Assistance Audit that separates component style scores, method-declared measurements, authorized voice comparison, direct process provenance, and external detector results; never combine them into an AI-authorship probability or automatic decision. | BR-002, BR-005, BR-007, BR-009, BR-011, BR-027 |
 | PR-048 | When a writing style materially affects the work, establish a `StyleBrief` from the author's evidenced voice, a historical or literary tradition, a custom design, or a restrained genre default; separate all voice and form channels; and define authenticity, readability, evidence, and imitation boundaries before consequential drafting or revision. | BR-002, BR-003, BR-004, BR-005, BR-007, BR-028 |
 | PR-049 | Support Stable, Gradual, or Phase-based stylistic evolution with Proposed, Confirmed, and Superseded state, author-approved transitions, scoped application, portable optional `STYLE.md` records, and drift-aware Review or non-mutating Audit. | BR-003, BR-008, BR-009, BR-012, BR-017, BR-028 |
+| PR-050 | Before the first persistent write when policy is unknown, ask the user to choose **Immutable versions** or **Overwrite current** through the available structured selector or an equivalent concise prompt. Immutable versions preserve a baseline when needed and one append-only batch containing every persistent artifact written in each assistant response; overwrite current creates no automatic response snapshots. Persist the choice for sustained projects, avoid redundant questions, refuse history collisions, and never treat either policy as authorization to revise meaning, locked state, or an audited artifact. | BR-003, BR-008, BR-009, BR-011, BR-012, BR-025, BR-029 |
 
 ## Nonfunctional requirements
 
@@ -145,6 +148,7 @@ Fiction is a specialization within Unsloop Write, not a fourth mode. It supports
 | NFR-020 Delivery readiness | A delivered or multi-format artifact cannot appear ready by prose polish alone. | Readiness identifies the duration or attention basis, unresolved media or interaction decisions, authoritative format, derivative freshness, and actual rehearsal, comparison, render, playback, accessibility, or format validation boundary when material. |
 | NFR-021 Authorship calibration | Textual pattern assessment cannot overstate what prose, samples, process evidence, or detector reports establish about AI involvement. | Draft-only output states “Not assessable from prose alone”; every score names its direction and evidence; every measurement states method and coverage; provenance and detector results remain separate; no composite AI score is produced. |
 | NFR-022 Style traceability | A consequential selected style and its evolution remain stable and inspectable across sections, sessions, models, languages, and collaborators without implying authenticity beyond the evidence. | The active `StyleBrief`, applicable phase, evidence basis, approved deviations, and channel boundaries can be identified; Confirmed style changes require an explicit disposition. |
+| NFR-023 Write-history integrity | Response history remains portable, inspectable, append-only by contract, and bounded to the artifacts actually written in a response. | Each immutable batch has a unique ID, kind, relative paths, hashes, reason, and optional parent; existing batches cannot be replaced, and another session can reconstruct what was written without relying on hidden host memory. |
 
 ## Interaction requirements
 
@@ -291,6 +295,10 @@ Given translation, localization, or cross-language voice work, Unsloop establish
 ### Structured output
 
 Given a machine-readable request, Unsloop uses the supplied schema or its portable schema, validates syntax when tooling permits, preserves stable locations, evidence, confidence, readiness, and out-of-scope limits, and does not invent values merely to make the artifact schema-valid.
+
+### Persistent write policy and response history
+
+Given a request that will create or modify persistent artifacts and no established policy, Unsloop asks once whether to use **Immutable versions** or **Overwrite current**. Chat-only drafting, read-only Review, and non-mutating Audit do not trigger the question. Under immutable versions, Unsloop preserves the pre-write baseline when necessary, keeps current working files usable, and stores one collision-resistant batch for all files written in each assistant response. Under overwrite current, it updates the current artifacts without manufacturing historical snapshots. Both paths continue to enforce revision scope, checkpoints, canon and decision locks, collision safeguards, and Audit non-mutation.
 
 ### Portability
 

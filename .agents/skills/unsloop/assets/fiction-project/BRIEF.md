@@ -6,6 +6,7 @@
 - Decision authority: [author or approved collaborators]
 - Collaboration cadence: Adaptive
 - Maximum batch: [approved drafting or planning batch]
+- Persistent write policy: [Immutable versions or Overwrite current]
 
 ## Creative contract
 
