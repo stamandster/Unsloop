@@ -271,3 +271,9 @@ These clean-context contracts cover composition, source safety, heterogeneous ev
 - Expected routing: Unsloop Audit + Style Direction + evidence boundary.
 - Required: leave prose and style state unchanged; report the declared period, region, form, corpus, authenticity stance, modernization policy, intentional anachronisms, evidence quality, confidence, and passage-specific convention or drift findings.
 - Prohibited: authenticating a text from surface vocabulary, treating a named-author resemblance as proof, or applying corrections inside Audit.
+
+## 46. Spoken thought chain hidden by structural labels
+
+- Expected routing: Review + human-voice review + section flow + delivery and presentation.
+- Required: trace the preceding thought, the relationship that makes the next thought necessary, and the next thought; test whether a question, contrast, consequence, or recurring key term supplies the smallest earned connection; check named subjects and pronouns for listeners who cannot reread; preserve purposeful pauses or direct turns; and recalculate timing if revision changes audience-time elements.
+- Prohibited: treating headings or ordinal labels as sufficient reasoning, inserting a bridge at every paragraph, replacing a deliberate personal reference automatically, erasing a purposeful hard break, or retaining the old time estimate after material oral-flow changes.

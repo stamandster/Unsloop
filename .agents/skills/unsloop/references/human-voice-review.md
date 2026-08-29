@@ -22,6 +22,8 @@ For a multi-section artifact, use [section-flow.md](section-flow.md). Inspect ea
 
 For spoken or presented work, use [delivery-and-presentation.md](delivery-and-presentation.md). Test whether questions, pauses, evidence introductions, media handling, audience address, and the closing perform a real function in delivery rather than imitating a presentation template.
 
+For spoken work, also inspect the chain of reasoning at paragraph scale. Ask whether the next thought is earned by a question, contrast, consequence, or recurring key term from the prior thought, rather than merely announced as the next topic. Check named subjects and pronouns for clarity; a concrete name can be warmer and easier to follow than an extended or ambiguous pronoun chain. Preserve a deliberate personal choice when it serves the speaker's relationship with the audience and the artifact's purpose.
+
 ## Flag patterns, not words
 
 - **Empty abstraction:** announce importance without stating the claim.
@@ -93,6 +95,8 @@ For each sentence, ask:
 - Is an ordinary word clearer than the polished one?
 - Does the transition express logic or only imitate formal prose?
 - Across a heading, can the reader tell why the prior section ended and why this section begins here?
+- In spoken work, does a question, contrast, consequence, or key term genuinely carry the listener into the next thought?
+- Are named subjects and pronouns clear enough for a listener who cannot reread the sentence?
 - Does the sentence sound like this writer's point or a generic template?
 
 Delete, specify, combine, simplify, or reconnect as needed. Preserve strong, natural passages.

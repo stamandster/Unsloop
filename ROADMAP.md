@@ -61,7 +61,7 @@
 - [x] Add quantitative, interview/oral-history, and multimodal evidence workflows and portable ledgers
 - [x] Add documentation-system architecture, dependency, maintenance, correction, deprecation, withdrawal, and archival controls
 - [x] Add reader, task, accessibility, plain-language, and localization validation evidence states
-- [x] Add 45 clean-context operational extension scenarios and deterministic ledger checks
+- [x] Add 46 clean-context operational extension scenarios and deterministic ledger checks
 - [x] Make Audit non-mutating with explicit semantic-field protection and separate revision authorization
 - [x] Add Audit information-preservation requirements, decision records, validator checks, and behavioral scenarios
 - [x] Add cross-section flow contracts for headings, subheadings, scene breaks, and procedural phases with purposeful-hard-break safeguards
@@ -74,6 +74,7 @@
 - [x] Preserve scoped author-supplied personal perspective during authorized revision while keeping embedded factual claims independently accountable
 - [x] Add governed Style Direction selection, historical/literary authenticity boundaries, voice-channel separation, stylistic evolution, portable templates, project checks, and clean-context behavioral scenarios
 - [x] Add an explicit persistent-write selector, portable response-batch history, baseline and collision safeguards, project-state fields, optional helper, and deterministic tests
+- [x] Add spoken thought-chain, named-subject and pronoun clarity, purposeful-break, and oral-flow retiming controls with clean-context regression coverage
 
 ## v0.2 — Examples and calibration
 

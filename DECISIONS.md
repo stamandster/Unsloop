@@ -255,3 +255,9 @@ Expose **Style Direction** across the existing Review, Write, and Audit modes. L
 **Status:** Accepted
 
 Before the first persistent write when no policy is established, ask the user to choose **Immutable versions** or **Overwrite current**. Immutable versions retain a baseline when needed and one append-only batch containing every artifact written in each assistant response while leaving current working paths usable. Overwrite current creates no automatic response history. Persist the policy for sustained projects, skip the question when no file mutation will occur or the answer is already known, refuse history collisions, and keep this storage choice independent from revision authorization, checkpoints, locked decisions, canon, and non-mutating Audit. “Immutable” describes Unsloop's logical append-only contract, not OS-enforced or legal-records immutability.
+
+## D-042 — Treat spoken continuity as audible reasoning
+
+**Status:** Accepted
+
+Review spoken continuity within major sections as well as across headings. Trace the preceding thought, the relationship that makes the next thought necessary, and the next thought itself. Questions, contrasts, consequences, or recurring key terms may provide an earned connection; headings and ordinal labels provide orientation only when useful and do not substitute for reasoning. Check named subjects and pronouns for listeners who cannot reread, preserve deliberate personal choices and purposeful pauses or hard breaks, and recalculate timing when oral-flow revisions change audience-time elements.

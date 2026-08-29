@@ -58,9 +58,9 @@ Unsloop can:
 - audit requirement coverage separately from claim and source verification;
 - keep Audit non-mutating, preserve the authoritative inspected artifact, and separate findings from any later authorized revision;
 - test examples for function and persuasive language for emotional integrity;
-- write and review logical progression across chapters, headings, subheadings, scene breaks, and procedural phases by evaluating the preceding close, visible boundary, and next opening together;
+- write and review logical progression across chapters, headings, subheadings, scene breaks, procedural phases, and spoken paragraph-scale thought chains by evaluating the preceding thought, necessary relationship, visible boundary when present, and next thought together;
 - preserve purposeful hard breaks and avoid canned or unnecessary transitional sentences when hierarchy and sequence already orient the reader;
-- plan and review spoken, timed, interactive, media-assisted, or recorded writing against the complete delivery and audience-attention cost rather than manuscript words alone;
+- plan and review spoken, timed, interactive, media-assisted, or recorded writing for audible reasoning, named-subject and pronoun clarity, and the complete delivery and audience-attention cost rather than manuscript words alone;
 - integrate quotations, data, readings, visuals, clips, and demonstrations through a clear audience need, orientation, accurate presentation, interpretation, and supported use without forcing a formula;
 - use purposeful questions, mixed-audience entry points, consequential optional-media decisions, and genre-appropriate closing movement;
 - identify authoritative content and keep required Markdown, DOCX, PDF, slide, web, audio, or other derivatives refreshed, validated, or explicitly stale;
@@ -125,8 +125,8 @@ A successful Unsloop result is:
 - **Actionable:** the writer knows what to keep, investigate, and change.
 - **Voice-preserving:** revision retains the writer's position and useful idiosyncrasies.
 - **Perspective-honest:** useful author-supplied observations, interpretations, unresolved questions, and tentative perspectives remain scoped to their actual basis instead of being deleted for lacking external verification or mislabeled as fact.
-- **Structurally coherent:** visible section boundaries express a legible relationship without forced smoothing or loss of intentional pacing.
-- **Delivery-honest:** timing, media, interaction, questions, audience fit, and closing movement reflect the actual planned experience, while estimates remain distinct from observed delivery.
+- **Structurally coherent:** visible section boundaries and spoken paragraph-scale thought chains express a legible relationship without forced smoothing or loss of intentional pacing.
+- **Delivery-honest:** audible reasoning, named-subject and pronoun clarity, timing, media, interaction, questions, audience fit, and closing movement reflect the actual planned experience, while estimates remain distinct from observed delivery.
 - **Format-consistent:** authoritative content and required derivatives expose freshness and actual validation rather than relying on filenames or export success.
 - **Voice-defensible:** any claimed alignment identifies its sample basis, observable target traits, confidence, and limits.
 - **Style-defensible:** selected conventions, authenticity stance, evidence basis, voice-channel boundaries, evolution state, and intentional deviations remain inspectable.

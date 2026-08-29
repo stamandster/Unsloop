@@ -28,6 +28,12 @@ Do not require a transitional sentence at every heading. Prefer the smallest dev
 
 Avoid empty structural narration, repeated summaries, decorative connectors, and stock phrases such as “Now we turn to” when they do not express the actual relationship. Do not smooth every boundary into the same cadence.
 
+## Map spoken continuity
+
+For a speech, lesson, presentation, or other spoken artifact, inspect continuity within major sections as well as across headings. Trace the preceding thought, the relationship that makes the next thought necessary, and the next thought itself. A question may lead to its evidence; a contrast may require its consequence; a key term may return in the explanation or application.
+
+Prefer an earned connection over an ordinal label or a stock handoff. A label such as “the next area” may still be useful when listeners need orientation, but it does not by itself explain the reasoning. Do not impose a bridge at every paragraph or erase a purposeful pause, direct turn, or hard break.
+
 ## Preserve purposeful hard breaks
 
 An abrupt boundary may be correct when it creates an intended scene cut, time jump, viewpoint change, juxtaposition, reveal, emotional interruption, warning, exception, or procedural gate. Preserve it when the break serves the artifact's goal and the reader can orient within the form's expected tolerance.

@@ -251,15 +251,20 @@ SECTION_FLOW_CONTRACT = {
         "references/section-flow.md",
         "closing passage, heading or break, and next opening",
         "do not add a bridge when the heading and sequence already",
+        "trace the active question, contrast, consequence, or repeated key term",
+        "named subjects and pronouns remain clear",
     ),
     SKILL / "references" / "section-flow.md": (
         "## Inspect each boundary",
         "## Choose the least artificial bridge",
+        "## Map spoken continuity",
         "## Preserve purposeful hard breaks",
         "## Apply the mode contract",
         "## Check the manuscript at two scales",
         "Do not require a transitional sentence at every heading",
         "Keep any proposed transition or reordered heading separate from the audited artifact",
+        "relationship that makes the next thought necessary",
+        "ordinal label or a stock handoff",
     ),
     SKILL / "references" / "write-mode.md": (
         "For any artifact with chapters, headings, subheadings",
@@ -268,6 +273,8 @@ SECTION_FLOW_CONTRACT = {
     SKILL / "references" / "human-voice-review.md": (
         "Inspect each material boundary as the preceding close, heading or break, and next opening",
         "preserve intentional scene cuts",
+        "chain of reasoning at paragraph scale",
+        "listener who cannot reread",
     ),
     SKILL / "references" / "fiction-review.md": (
         "For chapter, scene, and subheading boundaries",
@@ -280,53 +287,65 @@ SECTION_FLOW_CONTRACT = {
     ROOT / "PRD.md": (
         "### Cross-section flow",
         "does not equate coherence with an added transitional sentence",
+        "paragraph-scale continuity",
     ),
     ROOT / "BRD.md": (
         "logical progression across visible section boundaries",
         "Logical section-flow writing and review",
+        "spoken paragraph-scale thought chains",
     ),
     ROOT / "FSD.md": (
         "Human-voice and section-flow analysis",
         "treat each material boundary as the preceding close, heading or break, and next opening",
+        "named subjects and pronouns for listeners who cannot reread",
     ),
     ROOT / "PROJECT.md": (
         "write and review logical progression across chapters, headings, subheadings",
         "**Structurally coherent:**",
+        "spoken paragraph-scale thought chains",
+        "named-subject and pronoun clarity",
     ),
     ROOT / "README.md": (
         "For manuscripts with chapters, headings, subheadings",
         "references/section-flow.md",
+        "For spoken continuity",
     ),
     ROOT / "ARCHITECTURE.md": (
         "Shared section-flow contract",
         "section-flow.md",
+        "spoken thought chains",
     ),
     ROOT / "docs" / "REVIEW-MODEL.md": (
         "inspect the transition as a three-part boundary",
         "Do not require a transitional sentence at every boundary",
+        "Treat ordinal labels as optional orientation",
     ),
     ROOT / "docs" / "REVIEW-OUTPUT.md": (
         "For a material chapter, heading, subheading, scene-break",
         "keep any example bridge or reordering proposal separate from the unchanged artifact",
+        "spoken thought-chain or named-subject/pronoun findings",
     ),
     ROOT / "docs" / "ETHICS-AND-LIMITS.md": (
         "Do not use “flow” or “smoothness” as permission",
         "Preserve a purposeful hard break",
+        "mechanically replace a deliberate personal reference",
     ),
     ROOT / "DECISIONS.md": (
         "## D-034 — Treat visible section boundaries as logical transitions",
         "Do not require a transitional sentence",
+        "## D-042 — Treat spoken continuity as audible reasoning",
     ),
     ROOT / "ROADMAP.md": (
         "Add cross-section flow contracts",
         "Forward-test abrupt, already-coherent, and intentionally discontinuous section boundaries",
     ),
     ROOT / "PORTABILITY.md": (
-        "evidence, voice, Style Direction and evolution, personal-perspective preservation, section-flow, delivery-readiness, artifact-synchronization, writing-pattern authorship boundaries, privacy",
+        "evidence, voice, Style Direction and evolution, personal-perspective preservation, section-flow, spoken-continuity, delivery-readiness, artifact-synchronization, writing-pattern authorship boundaries, privacy",
     ),
     ROOT / "tests" / "fixtures" / "operational-scenarios.md": (
         "## 25. Abrupt subheading without a logical bridge",
         "## 26. Purposeful hard break between sections",
+        "## 46. Spoken thought chain hidden by structural labels",
     ),
 }
 
@@ -346,6 +365,8 @@ DELIVERY_PRESENTATION_CONTRACT = {
         "**Interpret:**",
         "**Use:**",
         "not a mandatory five-sentence formula",
+        "make the movement audible",
+        "Recheck timing after an oral-flow revision",
         "## Make questions perform work",
         "do not impose a quota",
         "## Design for a mixed audience",
@@ -377,13 +398,14 @@ DELIVERY_PRESENTATION_CONTRACT = {
         "Do not call a manuscript rehearsed, timed, playable, rendered, synchronized, or platform-ready",
     ),
     ROOT / "BRD.md": ("BR-026", "Delivery-aware speeches"),
-    ROOT / "PRD.md": ("PR-045", "PR-046", "NFR-020 Delivery readiness"),
+    ROOT / "PRD.md": ("PR-045", "PR-046", "NFR-020 Delivery readiness", "audible reasoning continuity"),
     ROOT / "FSD.md": (
         "FS-044",
         "FS-045",
         "`DeliveryContract`",
         "`PresentationElement`",
         "`ArtifactSet`",
+        "Recalculate the complete audience-time cost after oral-flow changes",
     ),
     ROOT / "README.md": (
         "## Delivery and presentation writing",
@@ -393,10 +415,12 @@ DELIVERY_PRESENTATION_CONTRACT = {
     ROOT / "docs" / "REVIEW-MODEL.md": (
         "establish a delivery contract before substantial drafting",
         "This is a functional test, not a required five-sentence sequence",
+        "listeners who cannot reread",
     ),
     ROOT / "docs" / "REVIEW-OUTPUT.md": (
         "For delivered or presented work",
         "Mark a derivative stale",
+        "revised estimate basis",
     ),
     ROOT / "docs" / "ETHICS-AND-LIMITS.md": (
         "For delivery and presentation work, Unsloop must not",
@@ -412,12 +436,13 @@ DELIVERY_PRESENTATION_CONTRACT = {
     ),
     ROOT / "ROADMAP.md": (
         "Add topic-neutral delivery and presentation contracts",
-        "Add 45 clean-context operational extension scenarios",
+        "Add 46 clean-context operational extension scenarios",
     ),
-    ROOT / "PORTABILITY.md": ("delivery-readiness", "artifact-synchronization"),
+    ROOT / "PORTABILITY.md": ("spoken-continuity", "delivery-readiness", "artifact-synchronization"),
     ROOT / "tests" / "fixtures" / "operational-scenarios.md": (
         "## 27. Timed presentation with readings, pauses, and media",
         "## 34. Export succeeds without render or playback inspection",
+        "## 46. Spoken thought chain hidden by structural labels",
     ),
 }
 
@@ -519,7 +544,7 @@ WRITING_PATTERN_ASSISTANCE_CONTRACT = {
     ROOT / "DECISIONS.md": ("## D-037 — Replace AI-score requests with an evidence-bound assistance audit",),
     ROOT / "ROADMAP.md": (
         "Add a non-mutating Writing-Pattern and Assistance Audit",
-        "Add 45 clean-context operational extension scenarios",
+        "Add 46 clean-context operational extension scenarios",
     ),
     ROOT / "PORTABILITY.md": (
         "writing-pattern authorship boundaries",
@@ -1243,15 +1268,15 @@ PERSONAL_PERSPECTIVE_CONTRACT = {
     ),
     ROOT / "ROADMAP.md": (
         "Preserve scoped author-supplied personal perspective during authorized revision",
-        "Add 45 clean-context operational extension scenarios",
+        "Add 46 clean-context operational extension scenarios",
     ),
     ROOT / "tests" / "fixtures" / "operational-scenarios.md": (
         "## 41. Authorized revision includes a personal observation and a general claim",
         "deleting the observation solely because it lacks external verification",
     ),
     ROOT / "tests" / "test_operational_scenarios.py": (
-        "list(range(1, 46))",
-        "self.assertEqual(len(sections), 45)",
+        "list(range(1, 47))",
+        "self.assertEqual(len(sections), 46)",
     ),
 }
 
@@ -1309,12 +1334,12 @@ STYLE_DIRECTION_CONTRACT = {
     ROOT / "docs" / "REVIEW-OUTPUT.md": ("When a `StyleBrief` applies",),
     ROOT / "docs" / "ETHICS-AND-LIMITS.md": ("## Style direction, influence, and authenticity",),
     ROOT / "DECISIONS.md": ("## D-040 — Treat style as a governed direction, not a preset catalog",),
-    ROOT / "ROADMAP.md": ("Add governed Style Direction selection", "45 clean-context operational extension scenarios"),
+    ROOT / "ROADMAP.md": ("Add governed Style Direction selection", "46 clean-context operational extension scenarios"),
     ROOT / "tests" / "fixtures" / "operational-scenarios.md": (
         "## 42. Explicit Early Modern dramatic-verse direction",
         "## 45. Historical-style authenticity audit",
     ),
-    ROOT / "tests" / "test_operational_scenarios.py": ("list(range(1, 46))", "self.assertEqual(len(sections), 45)"),
+    ROOT / "tests" / "test_operational_scenarios.py": ("list(range(1, 47))", "self.assertEqual(len(sections), 46)"),
     ROOT / "tests" / "test_fiction_project.py": ("test_style_profile_requires_complete_author_approval_when_confirmed",),
     ROOT / "tests" / "test_writing_project.py": ("test_style_profile_requires_complete_author_approval_when_confirmed",),
 }
@@ -1467,6 +1492,7 @@ SPECIFICATION_CONTRACT = {
         "## D-033 — Make Audit information-preserving and non-mutating",
         "## D-040 — Treat style as a governed direction, not a preset catalog",
         "## D-041 — Make persistent write retention an explicit user choice",
+        "## D-042 — Treat spoken continuity as audible reasoning",
     ),
 }
 

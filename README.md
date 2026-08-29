@@ -264,11 +264,14 @@ Invoke Unsloop with a manuscript, outline, duration, audience, media options, or
 $unsloop Turn this outline into a 12-minute narrated presentation and include time for the two quoted passages.
 $unsloop Review this training script for question function, evidence flow, mixed-audience clarity, and closing impact.
 $unsloop Audit whether the Markdown source and DOCX delivery copy are synchronized without changing either file.
+$unsloop Review this spoken manuscript for audible thought continuity and unclear pronoun chains without adding canned transitions.
 ```
 
 The delivery contract is topic-neutral and has no universal speaking-rate default. It uses a user-, assignment-, or specialist-supplied pace when available and otherwise asks or discloses a conservative estimate when appropriate. It does not solve overruns by assuming faster speech or omitting pauses, setup, playback, observation, questions, answers, or interaction.
 
 For material evidence, Unsloop checks the functional movement from audience need through orientation, accurate presentation, interpretation, and supported use without forcing a fixed sentence formula. Optional media receives a decision brief covering what the audience perceives, its function, placement, handling, accessibility, and time or space cost. A polished manuscript remains provisional if an unresolved choice materially affects delivery.
+
+For spoken continuity, Unsloop reviews the thought chain within major sections as well as the transition across headings. A question may lead naturally to its evidence, a contrast to its consequence, or a recurring key term to explanation and application. Headings and labels such as “first” or “next” can orient listeners, but they do not replace the reasoning that makes the next thought necessary. Unsloop also checks named subjects and pronouns for an audience that cannot reread, preserves purposeful pauses or direct turns, and recalculates timing when oral-flow revisions add or remove connective language, questions, examples, or pauses.
 
 For parallel Markdown, DOCX, PDF, slides, web, audio, or other formats, Unsloop keeps content authority separate from format mechanics. The applicable artifact skill owns generation and rendering; Unsloop tracks whether required derivatives match the accepted content and states the exact validation boundary. See [delivery and presentation writing](.agents/skills/unsloop/references/delivery-and-presentation.md).
 

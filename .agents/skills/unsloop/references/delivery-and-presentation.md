@@ -44,6 +44,8 @@ When a quotation, passage, statistic, chart, demonstration, clip, or other evide
 
 This is a reasoning check, not a mandatory five-sentence formula. Use direct presentation when context already supplies the need and orientation. Do not drop evidence into the artifact as an unexplained authority cue, and do not manufacture application beyond what it supports.
 
+For a conversational delivery, make the movement audible: let a question, contrast, consequence, or repeated key term carry the audience from the preceding sentence into the evidence and then into its interpretation and use. Do not treat “first,” “next,” or a heading as a substitute for that connection. Recheck timing after an oral-flow revision; added questions, pauses, examples, and connective language all consume delivery time.
+
 ## Make questions perform work
 
 Use a material rhetorical or reflective question only when it has a clear function, such as opening inquiry, exposing contrast, guiding reasoning, preparing evidence, prompting self-examination, transitioning, or establishing the closing decision.

@@ -11,8 +11,8 @@ The core is both harness-agnostic and model-agnostic:
 - `SKILL.md` uses standard `name` and `description` frontmatter;
 - every operational reference is relative to the skill directory;
 - no provider, model ID, proprietary tool name, hidden reasoning format, or UI control is required;
-- missing host capabilities have explicit fallbacks; and
-- evidence, voice, Style Direction and evolution, personal-perspective preservation, section-flow, delivery-readiness, artifact-synchronization, writing-pattern authorship boundaries, privacy, ethics, and non-mutating Audit rules do not change across hosts.
+- missing host capabilities have explicit fallbacks;
+- evidence, voice, Style Direction and evolution, personal-perspective preservation, section-flow, spoken-continuity, delivery-readiness, artifact-synchronization, writing-pattern authorship boundaries, privacy, ethics, and non-mutating Audit rules do not change across hosts; and
 - persistent-write selection and response-batch history retain the same semantics even when a host lacks structured questions, native versioning, or file tools.
 
 Compatibility means the same method can load and run. It does not promise identical reasoning quality, context capacity, tool access, latency, cost, or output across models.

@@ -78,7 +78,8 @@ For delivery and presentation work, Unsloop must not:
 - hide readings, quotations, pauses, questions, media, interactions, demonstrations, or transitions from the time model;
 - resolve conflicting section and total limits by silently omitting material or assuming an unsupported delivery speed;
 - choose consequential optional media or audience interaction without recording the user-owned decision;
-- make an audience application stronger, broader, or more certain than its evidence supports; or
+- make an audience application stronger, broader, or more certain than its evidence supports;
+- treat a heading or ordinal label as proof that spoken reasoning is coherent, mechanically replace a deliberate personal reference, or erase a purposeful pause or direct turn merely to regularize flow; or
 - describe a derivative as current after its authoritative source changed unless it was refreshed and its actual validation state was recorded.
 
 ## Audit information preservation

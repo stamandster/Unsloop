@@ -67,6 +67,8 @@ Delivery-aware writing then expanded the artifact boundary again. Speeches, pres
 
 For Markdown, DOCX, PDF, slides, web, audio, or other parallel formats, Unsloop distinguishes authoritative content from derivatives. A successful export is not treated as proof of synchronization, rendering, playback, accessibility, rehearsal, or platform readiness.
 
+Spoken-flow review later moved below the heading level. Unsloop now traces the preceding thought, the relationship that makes the next thought necessary, and the next thought itself. Questions, contrasts, consequences, and recurring key terms can carry genuine reasoning; structural labels cannot substitute for it. Named subjects and pronouns are checked for listeners who cannot reread, purposeful pauses and direct turns remain available, and timing is recalculated after oral-flow revisions change the delivery cost.
+
 ## Writing-pattern and assistance assessment
 
 When users requested an “AI score,” Unsloop did not become an authorship detector. It developed a non-mutating Writing-Pattern and Assistance Audit that separates:

@@ -11,8 +11,8 @@ Unsloop
 ├── Review — constructive diagnosis, including fiction craft review
 ├── Write  — author-led drafting, revision, assembly, and publication support
 ├── Audit  — non-mutating evidence-heavy source, continuity, canon, and research examination
-├── Shared section-flow contract — logical progression across headings without forced smoothing
-├── Shared delivery contract — timing, evidence flow, audience attention, media, and artifact-set readiness
+├── Shared section-flow contract — logical progression across headings and spoken thought chains without forced smoothing
+├── Shared delivery contract — audible reasoning, reference clarity, timing, evidence flow, audience attention, media, and artifact-set readiness
 ├── Shared writing-pattern and assistance audit — component profile, measurements, provenance, and detector boundaries
 ├── Shared Style Direction specialization — author-evidenced, historical/literary, custom, or genre direction with controlled evolution
 ├── Shared persistent-write contract — user-selected response history or current-file overwrite without expanded revision authority
