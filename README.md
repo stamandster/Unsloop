@@ -2,7 +2,7 @@
 
 **Author-led writing. Traceable evidence. Defensible voice.**
 
-Unsloop is a portable, model-agnostic writing lifecycle system for planning, drafting, revising, reviewing, auditing, researching, validating, maintaining, and packaging written work and content. It preserves author control, evidence provenance, human voice, continuity, and honest readiness from the first idea through long-form development and final handoff—including websites and connected digital content.
+Unsloop is a portable, model-agnostic writing lifecycle system delivered as an Agent Skill for author-led writing and website content audits. It supports planning, drafting, revision, review, research, validation, maintenance, and delivery across documents, fiction, documentation, and connected digital content. It preserves author control, evidence provenance, human voice, continuity, and honest readiness from the first idea through final handoff.
 
 Unsloop began with two narrower concerns:
 
@@ -632,4 +632,4 @@ Unsloop does not treat a sample's claims or experiences as evidence for the new 
 
 ## Status
 
-Version 0.1 is a documented, portable, specification-backed foundation with scalable fiction, sustained non-fiction, website and digital-content, research, documentation-system, and delivery operations across the existing modes. It is ready for controlled use and forward-testing; its scoring model remains interpretive, and behavioral matrices are structurally specified rather than empirically validated across models. See [`ROADMAP.md`](ROADMAP.md) for calibration and release work still required.
+Version 0.1 is a documented, portable, specification-backed foundation with scalable fiction, sustained non-fiction, website and digital-content, research, documentation-system, and delivery operations across the existing modes. The [v0.1.0 prerelease notes](docs/RELEASE-NOTES-v0.1.0.md) summarize the current scope and limitations. It is ready for controlled use and forward-testing; its scoring model remains interpretive, and behavioral matrices are structurally specified rather than empirically validated across models. See [`ROADMAP.md`](ROADMAP.md) for calibration and release work still required.

@@ -4,7 +4,7 @@
 
 ## Recommended repository description
 
-Portable, model-agnostic writing and website-content workflows for author-led drafting, revision, research, response history, non-mutating audit, long-form projects, and delivery.
+Portable, model-agnostic Agent Skill for author-led writing, website content audits, research, revision, documentation, fiction, and long-form projects.
 
 ## Tagline
 
@@ -16,7 +16,7 @@ Unsloop is a portable, model-agnostic writing lifecycle system for planning, dra
 
 Unsloop began as an integrity and human-voice response to generic, formulaic, over-polished, or source-dependent writing. It now governs the broader process from topic discovery through final handoff. Formulaic-writing and AI-assistance concerns remain one evidence-bound Audit specialization; Unsloop is not an AI detector, detector-evasion tool, generic “humanizer,” or automatic authorship judge.
 
-For persistent work, users explicitly choose append-only versions at each assistant-response boundary or current-file overwrite. This portable history option preserves reviewable artifacts without changing revision authority or claiming tamper-proof records storage.
+For persistent work, users explicitly choose append-only versions at each assistant-response boundary or current-file overwrite. This portable response history option preserves reviewable artifacts without changing revision authority or claiming tamper-proof records storage.
 
 ## Suggested GitHub topics
 
@@ -24,6 +24,7 @@ For persistent work, users explicitly choose append-only versions at each assist
 agent-skills
 writing
 writing-assistant
+writing-tools
 editorial-workflow
 long-form-writing
 fiction-writing
@@ -40,6 +41,8 @@ codex
 claude-code
 pi
 ```
+
+The live repository description and topics should match this profile. Leave the homepage field empty until a dedicated Unsloop page exists. Select a license through an explicit owner decision; public visibility alone does not grant reuse rights.
 
 ## Positioning boundaries
 

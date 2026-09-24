@@ -629,7 +629,7 @@ PROJECT_IDENTITY_CONTRACT = {
     ),
     ROOT / "docs" / "GITHUB-ABOUT.md": (
         "## Recommended repository description",
-        "Portable, model-agnostic writing and website-content workflows for author-led drafting",
+        "Portable, model-agnostic Agent Skill for author-led writing",
         "Author-led writing. Traceable evidence. Defensible voice.",
         "## Suggested GitHub topics",
         "Unsloop is not an AI detector",
@@ -1438,7 +1438,7 @@ WEB_CONTENT_CONTRACT = {
     ROOT / "README.md": ("## Website and digital-content work", "### Audit a website as content"),
     ROOT / "PROJECT.md": ("**Web-scope honest:**",),
     ROOT / "ARCHITECTURE.md": ("Shared website-content specialization", "web-content.md"),
-    ROOT / "docs" / "GITHUB-ABOUT.md": ("website-content workflows",),
+    ROOT / "docs" / "GITHUB-ABOUT.md": ("website content audits",),
     ROOT / "docs" / "NAMING.md": ("website-content artifact",),
     ROOT / "docs" / "REVIEW-MODEL.md": ("For websites and connected digital content",),
     ROOT / "docs" / "REVIEW-OUTPUT.md": ("For website and digital-content work",),
