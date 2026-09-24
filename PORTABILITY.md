@@ -146,6 +146,7 @@ The dependency-free validator checks:
 - sustained non-fiction, provenance, revision, collaboration, multilingual, structured-output, template, and tooling contracts;
 - documentary/documentation form, source-acquisition scope, source-override, chronology, and validation-state contracts;
 - skill-composition, untrusted-source isolation, quantitative, interview, multimodal, documentation-system, maintenance, and reader-validation contracts;
+- website-content artifact/source routing, page and journey scope, sampled-site limits, inaccessible-state reporting, and content/technical/behavioral evidence separation;
 - Audit information preservation, semantic-change classification, structured artifact state, and separate revision authorization;
 - the project-owned multi-harness link utility;
 - BRD, PRD, and FSD traceability;
@@ -168,8 +169,9 @@ After copying or cloning the project:
 8. For transferred research, confirm `SOURCE-POLICY.md` still reflects the intended corpus and that scoped domains, overrides, last-checked dates, and validation evidence remain current.
 9. Confirm that active specialist skills still own the same domain and artifact properties and that no transferred source content has been promoted to instructions.
 10. For transferred documentation systems, inspect `CONTENT-MAP.md`, `MAINTENANCE.md`, and relevant evidence ledgers before claiming currentness or usability.
-11. For a transferred Audit, retain the authoritative inspected artifact or identifier, confirm its unchanged state, and keep proposed corrections separate from any revised artifact and authorization record.
-12. For a transferred Writing-Pattern and Assistance Audit, preserve the inspected range, authorized sample boundary, measurement method, provenance records, detector-report metadata, and the rule that no host may convert them into a composite AI probability.
-13. When `STYLE.md` exists, confirm its active `StyleBrief`, applicable Confirmed phase, evidence boundary, and approved deviations before drafting or revision; do not treat copied samples or surface markers as proof of authenticity.
+11. For website-content work, preserve the exact URL or capture inventory, live or captured version, page or journey scope, inaccessible states, acquisition method, and content/technical/behavioral/hypothesis labels before continuing or comparing findings.
+12. For a transferred Audit, retain the authoritative inspected artifact or identifier, confirm its unchanged state, and keep proposed corrections separate from any revised artifact and authorization record.
+13. For a transferred Writing-Pattern and Assistance Audit, preserve the inspected range, authorized sample boundary, measurement method, provenance records, detector-report metadata, and the rule that no host may convert them into a composite AI probability.
+14. When `STYLE.md` exists, confirm its active `StyleBrief`, applicable Confirmed phase, evidence boundary, and approved deviations before drafting or revision; do not treat copied samples or surface markers as proof of authenticity.
 
 Do not maintain divergent independent copies under the same skill name. The root specifications and method documents need not load during every invocation, but they must travel with the authoritative repository so maintainers can reproduce the product's rationale, requirements, and validation contract.

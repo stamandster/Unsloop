@@ -32,7 +32,7 @@ Every material review or audit finding should answer four questions:
 
 - Writers planning, drafting, revising, reviewing, maintaining, or delivering academic, professional, technical, religious, personal, persuasive, documentary, or creative work
 - Editors and auditors who need repeatable, information-preserving diagnosis across integrity, voice, structure, continuity, and requirements
-- Researchers, educators, and documentation teams managing claims, sources, versions, long-form state, or reader-facing systems
+- Researchers, educators, content strategists, website owners, and documentation teams managing claims, sources, versions, long-form state, or reader-facing systems
 - Collaborators who want model-assisted writing to remain accountable, portable, resumable, and author-led
 
 ## Scope
@@ -87,6 +87,8 @@ Unsloop can:
 - isolate instructions and active content embedded in retrieved or supplied evidence;
 - preserve reproducible lineage for numerical claims, interview testimony, OCR, transcripts, images, audio/video, spreadsheets, and other transformed media;
 - architect and maintain documentation systems through canonical ownership, navigation, dependencies, reader validation, correction, deprecation, withdrawal, and archival;
+- write, review, or audit websites and connected digital content at a declared page, family, journey, section, sample, or enumerated-site boundary, including marketing, ecommerce, application microcopy, editorial, educational, public-information, documentation, help, policy, localization, migration, and authenticated content;
+- distinguish page-content, technical, behavioral, and hypothesis findings so a content audit does not overclaim SEO performance, conversion, accessibility conformance, legal compliance, security, or observed usability;
 - link claims, sources, quotations, conflicting evidence, verification freshness, and manuscript locations without confusing citation presence with support;
 - classify and disposition material changes while preserving accepted scope, strong prose, and prior recoverable state;
 - reconcile multi-stakeholder directions and feedback through explicit authority, decision ownership, and version-specific approval;
@@ -113,7 +115,8 @@ Unsloop cannot:
 - silently alter audited claims, positions, recommendations, conclusions, scope, certainty, evidence strength, chronology, quantities, attribution, causality, conditions, exceptions, or exclusions;
 - promise exact replication of a person, infer identity from style, or use voice samples as authority for new facts or personal experiences;
 - claim historical or cultural authenticity from surface conventions alone, flatten multiple periods into a preset, or silently change a Confirmed Style Direction; or
-- claim that logical response-batch history is operating-system, tamper-proof, legal-records, or WORM immutability, or silently replace an existing history batch.
+- claim that logical response-batch history is operating-system, tamper-proof, legal-records, or WORM immutability, or silently replace an existing history batch; or
+- claim whole-site coverage, search ranking, conversion impact, accessibility conformance, legal compliance, security, or observed reader behavior without the necessary inspected corpus, implementation evidence, data, participants, tools, and qualified authority.
 
 ## Definition of success
 
@@ -148,6 +151,7 @@ A successful Unsloop result is:
 - **Instruction-isolated:** retrieved evidence cannot redefine permissions, tools, scope, or project state.
 - **Evidence-reproducible:** numerical, interview, and multimodal support retains its inputs, permissions, transformations, coverage, and uncertainty.
 - **Operationally maintainable:** documentation dependencies, corrections, lifecycle state, and actual reader-validation method remain inspectable after publication.
+- **Web-scope honest:** site role, page and journey coverage, capture method, inaccessible states, sample limits, content dependencies, and actual technical or behavioral validation remain explicit.
 - **Audit-preserving:** the inspected artifact remains unchanged and every proposed correction exposes its semantic effect, authorization, and disposition.
 - **History-transparent:** persistent work identifies whether it preserves response batches or overwrites current artifacts; immutable batches expose their boundaries, paths, hashes, and lineage without changing revision permissions.
 

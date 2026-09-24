@@ -34,6 +34,7 @@ Generic or formulaic prose remains one important review concern, but “AI slop 
 - Use **simulated reader response**, not “beta reader,” unless real beta-reader feedback is actually being analyzed.
 - Treat sustained writing, provenance, revision control, collaboration, multilingual writing, and structured output as workflow specializations—not new Unsloop modes.
 - Treat character voice continuity, documentary/documentation writing, and source acquisition as workflow specializations—not **Unsloop Character**, **Unsloop Documentary**, or **Unsloop Research** modes.
+- Treat website and digital-content work as a specialization inside Review, Write, or Audit—not **Unsloop Web** or a fourth mode.
 - Use **writing project** for persistent non-fiction state and **story project** for fiction state.
 - Use **character voice profile** for a fictional speaker's author-approved personality and language contract; reserve **voice brief** or `VOICE.md` for the user's authorized author voice.
 - Use **documentary narrative** for an evidence-led account and **documentation** or the specific form name for procedures, policies, plans, instructions, and technical artifacts.
@@ -41,6 +42,7 @@ Generic or formulaic prose remains one important review concern, but “AI slop 
 - Use **skill composition** for shared authority across specialist skills; do not create a new public Unsloop mode for a domain or file format.
 - Use **source safety** for untrusted-content isolation, **quantitative evidence** for reproducible numerical lineage, **interview evidence** for consent-controlled testimony, and **multimodal evidence** for original-to-derived transformations.
 - Use **documentation system** for interconnected content with canonical ownership and dependencies; use **reader validation** only for the method actually performed, such as simulated hypothesis, automated check, expert review, or observed test.
+- Use **website-content artifact** when the site's content is the object of writing or inspection and **website source** when it supplies evidence. Use **sampled site** only with an explicit sample boundary and reserve **whole-site** or **enumerated site** for a declared corpus whose inspected and inaccessible units are recorded.
 
 ## Split criteria
 

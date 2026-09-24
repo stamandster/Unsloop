@@ -51,6 +51,8 @@ Evidence acquisition gained User-provided only, Scoped web, Broad web, and Hybri
 
 Documentation was treated as an operated system rather than a one-time deliverable. Content architecture, canonical ownership, dependencies, reader journeys, corrections, deprecation, withdrawal, archival, maintenance triggers, and actual reader-validation methods became part of honest readiness.
 
+Practical use on live websites exposed a remaining distinction: Unsloop could research a scoped site and maintain documentation portals, but it did not yet name the website itself as a first-class content artifact. The workflow expanded across single pages, page families, reader journeys, sections, sampled sites, and enumerated corpora. It now covers marketing, services, ecommerce, application microcopy, editorial, education, public information, help, policy, localization, and migration while separating inspected-content findings from technical checks, behavioral evidence, and unverified hypotheses.
+
 ## Audit became explicitly information-preserving
 
 Unsloop Audit was strengthened into a non-mutating invariant. An audit may change the assessment of information, but it does not silently change the inspected artifact. Findings identify evidence and the smallest responsible proposal; any revision occurs later under a separately authorized scope.

@@ -61,7 +61,7 @@
 - [x] Add quantitative, interview/oral-history, and multimodal evidence workflows and portable ledgers
 - [x] Add documentation-system architecture, dependency, maintenance, correction, deprecation, withdrawal, and archival controls
 - [x] Add reader, task, accessibility, plain-language, and localization validation evidence states
-- [x] Add 46 clean-context operational extension scenarios and deterministic ledger checks
+- [x] Add 50 clean-context operational extension scenarios and deterministic ledger checks
 - [x] Make Audit non-mutating with explicit semantic-field protection and separate revision authorization
 - [x] Add Audit information-preservation requirements, decision records, validator checks, and behavioral scenarios
 - [x] Add cross-section flow contracts for headings, subheadings, scene breaks, and procedural phases with purposeful-hard-break safeguards
@@ -75,6 +75,7 @@
 - [x] Add governed Style Direction selection, historical/literary authenticity boundaries, voice-channel separation, stylistic evolution, portable templates, project checks, and clean-context behavioral scenarios
 - [x] Add an explicit persistent-write selector, portable response-batch history, baseline and collision safeguards, project-state fields, optional helper, and deterministic tests
 - [x] Add spoken thought-chain, named-subject and pronoun clarity, purposeful-break, and oral-flow retiming controls with clean-context regression coverage
+- [x] Add first-class website and digital-content routing, page/journey/site scope controls, broad use-case guidance, claim and conversion safeguards, lifecycle review, and content-versus-technical-versus-behavioral evidence boundaries
 
 ## v0.2 — Examples and calibration
 
@@ -128,6 +129,8 @@
 - [ ] Forward-test Markdown/DOCX/PDF/slide/web/audio artifact-set synchronization and honest validation handoff with applicable artifact skills
 - [ ] Forward-test prose-only AI-score requests, direct assistance records, incomplete detector reports, and conflicting provenance without producing authorship probabilities
 - [ ] Calibrate pattern-score and measurement interpretation across genre, language, translation, templates, collaboration, disability-related patterns, and editing intensity
+- [ ] Forward-test single-page, page-family, journey, sampled-site, and enumerated-site workflows across marketing, ecommerce, application microcopy, editorial, documentation, multilingual, and migration contexts
+- [ ] Forward-test website-content findings against unavailable dynamic states, authenticated content, analytics, search data, accessibility tooling, and specialist handoffs without overclaiming coverage
 
 ## v0.3 — Assisted audit tooling
 

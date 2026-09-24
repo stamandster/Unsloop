@@ -72,6 +72,7 @@ REQUIRED_FILES = (
     SKILL / "references" / "interview-evidence.md",
     SKILL / "references" / "multimodal-evidence.md",
     SKILL / "references" / "documentation-systems.md",
+    SKILL / "references" / "web-content.md",
     SKILL / "references" / "usability-validation.md",
     SKILL / "references" / "research-provenance.md",
     SKILL / "references" / "revision-control.md",
@@ -436,7 +437,7 @@ DELIVERY_PRESENTATION_CONTRACT = {
     ),
     ROOT / "ROADMAP.md": (
         "Add topic-neutral delivery and presentation contracts",
-        "Add 46 clean-context operational extension scenarios",
+        "Add 50 clean-context operational extension scenarios",
     ),
     ROOT / "PORTABILITY.md": ("spoken-continuity", "delivery-readiness", "artifact-synchronization"),
     ROOT / "tests" / "fixtures" / "operational-scenarios.md": (
@@ -544,7 +545,7 @@ WRITING_PATTERN_ASSISTANCE_CONTRACT = {
     ROOT / "DECISIONS.md": ("## D-037 — Replace AI-score requests with an evidence-bound assistance audit",),
     ROOT / "ROADMAP.md": (
         "Add a non-mutating Writing-Pattern and Assistance Audit",
-        "Add 46 clean-context operational extension scenarios",
+        "Add 50 clean-context operational extension scenarios",
     ),
     ROOT / "PORTABILITY.md": (
         "writing-pattern authorship boundaries",
@@ -571,7 +572,7 @@ PROJECT_IDENTITY_CONTRACT = {
         "not the project's defining category",
     ),
     SKILL / "agents" / "openai.yaml": (
-        "Author-led writing, style, evidence, and audits",
+        "Author-led writing, web content, evidence, and audits",
         "plan, draft, revise, review, audit, research, validate, maintain, or package writing",
     ),
     ROOT / "README.md": (
@@ -628,7 +629,7 @@ PROJECT_IDENTITY_CONTRACT = {
     ),
     ROOT / "docs" / "GITHUB-ABOUT.md": (
         "## Recommended repository description",
-        "Portable, model-agnostic writing workflows for author-led drafting",
+        "Portable, model-agnostic writing and website-content workflows for author-led drafting",
         "Author-led writing. Traceable evidence. Defensible voice.",
         "## Suggested GitHub topics",
         "Unsloop is not an AI detector",
@@ -1268,15 +1269,15 @@ PERSONAL_PERSPECTIVE_CONTRACT = {
     ),
     ROOT / "ROADMAP.md": (
         "Preserve scoped author-supplied personal perspective during authorized revision",
-        "Add 46 clean-context operational extension scenarios",
+        "Add 50 clean-context operational extension scenarios",
     ),
     ROOT / "tests" / "fixtures" / "operational-scenarios.md": (
         "## 41. Authorized revision includes a personal observation and a general claim",
         "deleting the observation solely because it lacks external verification",
     ),
     ROOT / "tests" / "test_operational_scenarios.py": (
-        "list(range(1, 47))",
-        "self.assertEqual(len(sections), 46)",
+        "list(range(1, 51))",
+        "self.assertEqual(len(sections), 50)",
     ),
 }
 
@@ -1334,12 +1335,12 @@ STYLE_DIRECTION_CONTRACT = {
     ROOT / "docs" / "REVIEW-OUTPUT.md": ("When a `StyleBrief` applies",),
     ROOT / "docs" / "ETHICS-AND-LIMITS.md": ("## Style direction, influence, and authenticity",),
     ROOT / "DECISIONS.md": ("## D-040 — Treat style as a governed direction, not a preset catalog",),
-    ROOT / "ROADMAP.md": ("Add governed Style Direction selection", "46 clean-context operational extension scenarios"),
+    ROOT / "ROADMAP.md": ("Add governed Style Direction selection", "50 clean-context operational extension scenarios"),
     ROOT / "tests" / "fixtures" / "operational-scenarios.md": (
         "## 42. Explicit Early Modern dramatic-verse direction",
         "## 45. Historical-style authenticity audit",
     ),
-    ROOT / "tests" / "test_operational_scenarios.py": ("list(range(1, 47))", "self.assertEqual(len(sections), 46)"),
+    ROOT / "tests" / "test_operational_scenarios.py": ("list(range(1, 51))", "self.assertEqual(len(sections), 50)"),
     ROOT / "tests" / "test_fiction_project.py": ("test_style_profile_requires_complete_author_approval_when_confirmed",),
     ROOT / "tests" / "test_writing_project.py": ("test_style_profile_requires_complete_author_approval_when_confirmed",),
 }
@@ -1410,18 +1411,66 @@ WRITE_HISTORY_CONTRACT = {
     ),
 }
 
+WEB_CONTENT_CONTRACT = {
+    SKILL / "SKILL.md": (
+        "websites, page families, content journeys",
+        "references/web-content.md",
+        "distinguish whether the site is the artifact, an evidence source, or both",
+    ),
+    SKILL / "references" / "web-content.md": (
+        "## Select the content surface",
+        "## Cover the relevant use case",
+        "Single page",
+        "Sampled site",
+        "Enumerated site",
+        "Content finding",
+        "Technical finding",
+        "Behavioral finding",
+        "## Preserve measurement boundaries",
+        "confirm that the site was not changed",
+    ),
+    SKILL / "references" / "documentation-systems.md": ("web-content.md",),
+    SKILL / "references" / "output-contracts.md": ("For website and digital-content work",),
+    SKILL / "references" / "harness-compatibility.md": ("For website-content work",),
+    ROOT / "BRD.md": ("BR-030", "Website and digital-content work"),
+    ROOT / "PRD.md": ("PR-051", "PR-052", "NFR-024 Web-scope integrity", "### Website and digital content"),
+    ROOT / "FSD.md": ("FS-051", "FS-052", "`WebsiteContentBrief`", "`WebPageRecord`"),
+    ROOT / "README.md": ("## Website and digital-content work", "### Audit a website as content"),
+    ROOT / "PROJECT.md": ("**Web-scope honest:**",),
+    ROOT / "ARCHITECTURE.md": ("Shared website-content specialization", "web-content.md"),
+    ROOT / "docs" / "GITHUB-ABOUT.md": ("website-content workflows",),
+    ROOT / "docs" / "NAMING.md": ("website-content artifact",),
+    ROOT / "docs" / "REVIEW-MODEL.md": ("For websites and connected digital content",),
+    ROOT / "docs" / "REVIEW-OUTPUT.md": ("For website and digital-content work",),
+    ROOT / "docs" / "ETHICS-AND-LIMITS.md": ("For websites, persuasive or conversion goals",),
+    ROOT / "DECISIONS.md": ("## D-043 — Treat websites as content artifacts, not only research sources",),
+    ROOT / "ROADMAP.md": ("website and digital-content routing", "50 clean-context operational extension scenarios"),
+    ROOT / "HISTORY.md": ("first-class content artifact",),
+    ROOT / "tests" / "fixtures" / "operational-scenarios.md": (
+        "## 47. Public homepage content audit",
+        "## 48. Sampled multi-page service website review",
+        "## 49. Marketing landing page with unsupported performance promises",
+        "## 50. Help-center migration across versions and languages",
+    ),
+    ROOT / "tests" / "test_operational_scenarios.py": (
+        "list(range(1, 51))",
+        "self.assertEqual(len(sections), 50)",
+        "test_website_content_contract_is_explicit",
+    ),
+}
+
 SPECIFICATION_CONTRACT = {
     ROOT / "BRD.md": (
         "## Business requirements",
         "BR-001",
-        "BR-029",
+        "BR-030",
         "[`PRD.md`](PRD.md)",
         "[`FSD.md`](FSD.md)",
     ),
     ROOT / "PRD.md": (
         "## Functional requirements",
         "PR-001",
-        "PR-050",
+        "PR-052",
         "NFR-001 Portability",
         "NFR-008 Long-form resilience",
         "NFR-019 Semantic preservation",
@@ -1429,13 +1478,14 @@ SPECIFICATION_CONTRACT = {
         "NFR-021 Authorship calibration",
         "NFR-022 Style traceability",
         "NFR-023 Write-history integrity",
+        "NFR-024 Web-scope integrity",
         "[`BRD.md`](BRD.md)",
         "[`FSD.md`](FSD.md)",
     ),
     ROOT / "FSD.md": (
         "## Functional components",
         "FS-001",
-        "FS-050",
+        "FS-052",
         "`WritingBrief`",
         "`EvidenceBoundary`",
         "`VoiceBrief`",
@@ -1777,6 +1827,17 @@ def validate() -> list[str]:
             if requirement not in text:
                 errors.append(
                     f"write-history safeguard missing from "
+                    f"{path.relative_to(ROOT)}: {requirement}"
+                )
+
+    for path, requirements in WEB_CONTENT_CONTRACT.items():
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8")
+        for requirement in requirements:
+            if requirement not in text:
+                errors.append(
+                    f"website-content safeguard missing from "
                     f"{path.relative_to(ROOT)}: {requirement}"
                 )
 

@@ -178,6 +178,8 @@ When Unsloop operates beside another skill, do not overrule that skill's governi
 
 For documentation systems, maintain canonical ownership, dependencies, lifecycle state, corrections, deprecation, withdrawal, and archival. A sample of current pages does not establish system-wide currentness. Human usability and accessibility claims require the corresponding observed and qualified evidence.
 
+For websites, persuasive or conversion goals do not authorize invented urgency, scarcity, testimonials, credentials, results, popularity, pricing, availability, guarantees, or customer experience. A content review does not establish technical SEO, indexation, ranking, traffic, conversion, security, legal compliance, accessibility conformance, or observed usability. State the inspected URLs or artifacts, capture boundary, inaccessible states, sample logic, and actual technical or behavioral evidence before making those claims.
+
 Before consequential revision, bound the scope, identify evidence and requirement effects, preserve a recoverable checkpoint, and apply only accepted changes. Do not infer approval because comments were answered or work continued.
 
 For multilingual work, preserve ambiguity and identify translation status. Do not infer identity, fluency, dialect legitimacy, or cultural membership from text. Recommend qualified linguistic, cultural, legal, or subject-matter review when the stakes require it.

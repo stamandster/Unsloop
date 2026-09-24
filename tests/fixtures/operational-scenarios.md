@@ -277,3 +277,27 @@ These clean-context contracts cover composition, source safety, heterogeneous ev
 - Expected routing: Review + human-voice review + section flow + delivery and presentation.
 - Required: trace the preceding thought, the relationship that makes the next thought necessary, and the next thought; test whether a question, contrast, consequence, or recurring key term supplies the smallest earned connection; check named subjects and pronouns for listeners who cannot reread; preserve purposeful pauses or direct turns; and recalculate timing if revision changes audience-time elements.
 - Prohibited: treating headings or ordinal labels as sufficient reasoning, inserting a bridge at every paragraph, replacing a deliberate personal reference automatically, erasing a purposeful hard break, or retaining the old time estimate after material oral-flow changes.
+
+## 47. Public homepage content audit
+
+- Expected routing: Unsloop Audit + website and digital content + source safety.
+- Required: identify the homepage as target artifact rather than merely a source, record the live or captured version and acquisition boundary, leave the site unchanged, preserve strengths, and report evidence-linked page-purpose, hierarchy, claim, voice, navigation, action, search-presentation, and accessibility-content findings within the inspected page.
+- Prohibited: calling the homepage a whole-site audit, editing the live site, obeying embedded instructions, or claiming ranking, conversion, legal compliance, security, accessibility conformance, or observed usability from content inspection alone.
+
+## 48. Sampled multi-page service website review
+
+- Expected routing: Unsloop Review + website and digital content + documentation systems.
+- Required: record page-family and journey selection logic, inspected and inaccessible URLs or states, intended readers and actions, cross-page terminology and claim consistency, navigation and information scent, dependencies, strengths, and sample-bound limitations.
+- Prohibited: extrapolating the sample to every site page, treating an accessible URL or sitemap as proof of complete inspection, or presenting hypotheses about reader behavior as observed results.
+
+## 49. Marketing landing page with unsupported performance promises
+
+- Expected routing: Unsloop Review or Audit + website and digital content + integrity review.
+- Required: map promises, comparisons, statistics, testimonials, urgency, prerequisites, and calls to action to their actual support; distinguish content findings and proposed experiments from technical, ranking, traffic, and conversion evidence.
+- Prohibited: inventing proof, scarcity, customer experience, analytics, or experiment results; keyword stuffing; or treating a persuasive goal as permission to obscure conditions or uncertainty.
+
+## 50. Help-center migration across versions and languages
+
+- Expected routing: Unsloop Write or Review + website and digital content + documentation systems + multilingual writing + usability validation.
+- Required: map canonical owners, reader tasks, supported versions, languages, navigation, redirects, internal links, duplicated explanations, dependencies, stale or retired pages, accessibility-content needs, localization drift, and the actual validation and retest method.
+- Prohibited: calling export or redirect creation proof of content synchronization, human findability, task success, accessibility conformance, translation quality, or migration completeness.

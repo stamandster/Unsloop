@@ -4,7 +4,7 @@
 
 ## Recommended repository description
 
-Portable, model-agnostic writing workflows for author-led drafting, Style Direction, revision, research, response history, non-mutating audit, long-form projects, and delivery.
+Portable, model-agnostic writing and website-content workflows for author-led drafting, revision, research, response history, non-mutating audit, long-form projects, and delivery.
 
 ## Tagline
 
@@ -12,7 +12,7 @@ Portable, model-agnostic writing workflows for author-led drafting, Style Direct
 
 ## High-level description
 
-Unsloop is a portable, model-agnostic writing lifecycle system for planning, drafting, revising, reviewing, auditing, researching, validating, maintaining, and packaging written work. It preserves author control, evidence provenance, human voice, selected historical, literary, custom, or genre Style Direction, continuity, and honest readiness across one-off drafts, fiction, sustained non-fiction, documentary and controlled documentation, research projects, documentation systems, presentations, and multi-format artifacts.
+Unsloop is a portable, model-agnostic writing lifecycle system for planning, drafting, revising, reviewing, auditing, researching, validating, maintaining, and packaging written work and content. It preserves author control, evidence provenance, human voice, selected historical, literary, custom, or genre Style Direction, continuity, and honest readiness across one-off drafts, fiction, sustained non-fiction, documentary and controlled documentation, websites and digital-content systems, research projects, documentation systems, presentations, and multi-format artifacts.
 
 Unsloop began as an integrity and human-voice response to generic, formulaic, over-polished, or source-dependent writing. It now governs the broader process from topic discovery through final handoff. Formulaic-writing and AI-assistance concerns remain one evidence-bound Audit specialization; Unsloop is not an AI detector, detector-evasion tool, generic “humanizer,” or automatic authorship judge.
 
@@ -29,6 +29,9 @@ long-form-writing
 fiction-writing
 technical-writing
 documentation
+website-content
+content-audit
+content-strategy
 research-provenance
 human-voice
 model-agnostic
@@ -42,6 +45,6 @@ pi
 
 - Lead with the full writing lifecycle, author control, evidence provenance, and portability.
 - Present **Unsloop Review**, **Unsloop Write**, and **Unsloop Audit** as the three modes.
-- Describe fiction, Style Direction and evolution, documentation, research, delivery, and writing-pattern assessment as specializations inside those modes.
+- Describe fiction, Style Direction and evolution, documentation, website and digital content, research, delivery, and writing-pattern assessment as specializations inside those modes.
 - Describe formulaic-writing review as an important capability, not the project's category.
 - Do not market Unsloop as an AI detector, plagiarism verdict engine, detector bypass, exact voice clone, publication certification service, or replacement for qualified domain and artifact review.

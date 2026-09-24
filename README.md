@@ -2,7 +2,7 @@
 
 **Author-led writing. Traceable evidence. Defensible voice.**
 
-Unsloop is a portable, model-agnostic writing lifecycle system for planning, drafting, revising, reviewing, auditing, researching, validating, maintaining, and packaging written work. It preserves author control, evidence provenance, human voice, continuity, and honest readiness from the first idea through long-form development and final handoff.
+Unsloop is a portable, model-agnostic writing lifecycle system for planning, drafting, revising, reviewing, auditing, researching, validating, maintaining, and packaging written work and content. It preserves author control, evidence provenance, human voice, continuity, and honest readiness from the first idea through long-form development and final handoff—including websites and connected digital content.
 
 Unsloop began with two narrower concerns:
 
@@ -52,6 +52,7 @@ Specializations extend those modes without creating separate products:
 - style direction and stylistic evolution;
 - collaboration;
 - documentation systems;
+- website and digital content;
 - presentation delivery;
 - structured output; and
 - writing-pattern or assistance audit.
@@ -70,6 +71,8 @@ Specializations extend those modes without creating separate products:
 | Develop fiction | `$unsloop Develop this premise into a novel using Adaptive collaboration.` | Scene-to-series workflow, canon, chronology, character voices, revision, and handoff. |
 | Build factual documents | `$unsloop Create this policy, procedure, plan, or technical guide from approved evidence.` | Form-specific authority, branches, validation, maintenance, and version controls. |
 | Maintain documentation | `$unsloop Update this documentation set and trace affected pages and versions.` | Canonical ownership, dependency impact, lifecycle state, and reader validation. |
+| Audit a website | `$unsloop Audit this website's content without changing the live site.` | Explicit page or site coverage, content and evidence findings, cross-page consistency, reader journeys, and bounded technical or behavioral claims. |
+| Write website content | `$unsloop Rewrite these service pages and calls to action from our approved facts and voice samples.` | Purposeful page copy, coherent navigation and action paths, supported claims, voice consistency, and implementation-ready boundaries. |
 | Prepare delivered writing | `$unsloop Turn this outline into a timed presentation with readings and media.` | Complete timing, audience design, evidence integration, media decisions, and format checks. |
 | Assess AI-related concerns | `$unsloop Audit this draft's patterns and supplied detector report.` | Component profile, transparent measurements, provenance, and no unsupported AI verdict. |
 | Compose with another skill | `$unsloop Apply integrity and voice controls while the document skill owns DOCX layout.` | Shared intake, explicit authority, unified handoff, and honest validation boundaries. |
@@ -133,6 +136,17 @@ $unsloop Build this biography from my interviews and the approved websites. Keep
 - **Runs:** source and interview assessment, chronology and claim mapping, architecture, drafting, provenance synchronization, revision control, and form-appropriate validation.
 - **Returns:** the requested unit or artifact plus the actual corpus, claim and source limits, validation performed, unresolved gaps, approval state, and next action.
 - **Pauses when:** scoped research must broaden, permissions or attribution are unclear, sources materially conflict, or a claim, requirement, safety decision, or external commitment lacks authority.
+
+### Audit a website as content
+
+```text
+$unsloop Audit https://example.com as a website-content artifact. Review the homepage, service pages, about page, and primary contact journey; leave the live site unchanged and distinguish content findings from technical or behavioral hypotheses.
+```
+
+- **Establishes:** whether the site is the target artifact, a source, or both; the page, family, journey, sample, section, or enumerated-site boundary; intended readers and actions; live or captured version; inaccessible states; and validation actually available.
+- **Runs:** page-purpose, hierarchy, claims, voice, terminology, navigation, calls to action, search presentation, accessibility-content, cross-page consistency, dependency, and freshness review at the depth supported by the inspected corpus.
+- **Returns:** material strengths, prioritized evidence-linked findings, affected pages and journeys, proposed corrections, sample limitations, and separate content, technical, behavioral, or hypothesis labels.
+- **Pauses when:** a scoped audit would need to expand, authenticated or dynamic content is inaccessible, a live change needs separate authorization, or legal, security, analytics, accessibility-conformance, or implementation conclusions require a qualified specialist or unavailable evidence.
 
 ### Select and evolve a Style Direction
 
@@ -345,6 +359,27 @@ python .agents/skills/unsloop/scripts/writing_project.py export --root PATH --ou
 ```
 
 `init`, `checkpoint`, `assemble`, and `export` preview by default and require `--apply` to write. Paths are confined to the selected project, existing destinations are never overwritten, checkpoints and outputs use hashes, assembly includes Accepted units only, and an optional `VOICE.md` requires `--voice --voice-authorized`.
+
+## Website and digital-content work
+
+Unsloop can treat a website as the writing artifact itself, as a research source, or as both with separate evidence roles. It scales from one supplied page to a page family, reader journey, section or subdomain, sampled site, or enumerated corpus. It does not call a homepage review a whole-site audit or treat an accessible URL as proof that every dynamic, authenticated, localized, or personalized state was inspected.
+
+Common content surfaces include:
+
+- corporate, professional-service, nonprofit, community, religious, portfolio, and personal sites;
+- home, about, service, product, feature, pricing, comparison, case-study, testimonial, contact, and FAQ pages;
+- campaigns, landing pages, event pages, lead generation, newsletter, donation, and membership journeys;
+- ecommerce categories, product pages, buying guides, shipping, returns, warranties, and post-purchase support;
+- SaaS and web-application onboarding, empty states, errors, confirmations, settings, notifications, permissions, and interface microcopy;
+- blogs, newsrooms, editorial publications, resource libraries, author pages, and archives;
+- documentation portals, developer sites, help centers, knowledge bases, tutorials, reference, troubleshooting, releases, and migration guides;
+- educational, training, institutional, government, healthcare, financial, policy, safety, privacy, and public-information content;
+- multilingual, localized, regional, accessibility-adapted, internal, member-only, and authenticated content where access permits; and
+- redesign, rebrand, CMS migration, consolidation, pruning, redirect, post-launch correction, and maintenance work.
+
+Depending on the request, it can assess or develop page purpose, content hierarchy, claims and proof, voice, terminology, navigation and information scent, cross-page consistency, calls to action, form and interface language, search presentation, accessibility content, ownership, dependencies, freshness, and retirement. It keeps four conclusion types separate: content findings from inspected words and structure, technical findings from appropriate tools, behavioral findings from actual analytics or research, and unverified hypotheses.
+
+See the [website and digital-content workflow](.agents/skills/unsloop/references/web-content.md).
 
 ## Harness and model compatibility
 
@@ -597,4 +632,4 @@ Unsloop does not treat a sample's claims or experiences as evidence for the new 
 
 ## Status
 
-Version 0.1 is a documented, portable, specification-backed foundation with scalable fiction and sustained non-fiction operations across the existing modes. It is ready for controlled use and forward-testing; its scoring model remains interpretive, and behavioral matrices are structurally specified rather than empirically validated across models. See [`ROADMAP.md`](ROADMAP.md) for calibration and release work still required.
+Version 0.1 is a documented, portable, specification-backed foundation with scalable fiction, sustained non-fiction, website and digital-content, research, documentation-system, and delivery operations across the existing modes. It is ready for controlled use and forward-testing; its scoring model remains interpretive, and behavioral matrices are structurally specified rather than empirically validated across models. See [`ROADMAP.md`](ROADMAP.md) for calibration and release work still required.

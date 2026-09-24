@@ -36,6 +36,7 @@ Do not switch harnesses, models, execution modes, or accounts merely to obtain a
 - For sustained non-fiction, resume from `writing/STATUS.md` and only the relevant claims, sources, requirements, decisions, changes, and manuscript range. Do not carry verification or approval across uninspected revisions.
 - For recurring fictional speakers, load only applicable Confirmed `CVP-*` profiles and current relationship or knowledge state; keep model suggestions Proposed.
 - For documentary or controlled documentation, preserve the artifact family, authority, source policy, exact corpus, validation status, and maintenance state across model or harness transfers.
+- For website-content work, preserve the site's artifact/source role, exact URL or capture inventory, page or journey scope, inaccessible states, acquisition method, and separation of content, technical, behavioral, and hypothesis findings. Without retrieval or rendering, operate only on supplied content and narrow coverage claims.
 - For Audit, preserve the authoritative inspected version and keep findings, proposed corrections, and any later revised artifact distinguishable across model or harness transfers.
 - When another skill owns domain or artifact behavior, apply [skill-composition.md](skill-composition.md); do not duplicate its intake or overrule its specialized validation.
 - Do not weaken integrity, attribution, privacy, authorization, or uncertainty rules for a smaller or less capable model.

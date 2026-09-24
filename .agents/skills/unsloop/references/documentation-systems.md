@@ -2,6 +2,8 @@
 
 Read this file for interconnected documentation sets, portals, manuals, knowledge bases, versioned product documentation, or published controlled documents that must remain navigable and current.
 
+When the material is published as a website, help center, developer portal, or other digital content surface, also read [web-content.md](web-content.md) for page, journey, capture, search-presentation, interface-copy, and web-validation boundaries.
+
 ## Design the system
 
 Inventory documents, audiences, tasks, products, versions, jurisdictions, owners, and publication channels. Build a content map that identifies each unit's purpose, canonical owner, status, dependencies, inbound and outbound links, reused content, terminology authority, and supported versions.

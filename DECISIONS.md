@@ -261,3 +261,9 @@ Before the first persistent write when no policy is established, ask the user to
 **Status:** Accepted
 
 Review spoken continuity within major sections as well as across headings. Trace the preceding thought, the relationship that makes the next thought necessary, and the next thought itself. Questions, contrasts, consequences, or recurring key terms may provide an earned connection; headings and ordinal labels provide orientation only when useful and do not substitute for reasoning. Check named subjects and pronouns for listeners who cannot reread, preserve deliberate personal choices and purposeful pauses or hard breaks, and recalculate timing when oral-flow revisions change audience-time elements.
+
+## D-043 — Treat websites as content artifacts, not only research sources
+
+**Status:** Accepted
+
+A website may be the artifact under Review, Write, or Audit, a source of evidence, or both. Unsloop must name that role, bound coverage to a page, family, journey, section, sample, or enumerated corpus, and separate content findings from tool-supported technical findings, behavioral evidence, and hypotheses. This makes site-content work useful without implying whole-site coverage, implementation changes, ranking or conversion proof, accessibility conformance, legal compliance, or security validation.

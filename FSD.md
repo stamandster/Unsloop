@@ -79,6 +79,8 @@ No database, background service, model endpoint, provider account, or persistent
 | FS-048 | Style evolution and continuity | Active `StyleBrief`, manuscript scope, proposed phase or observed drift, author disposition | Versioned `StylePhase` state, approved transition or drift finding, reconciled optional `STYLE.md` | PR-049; NFR-008, NFR-012, NFR-022 |
 | FS-049 | Persistent write-policy selection | Requested operation, persistence intent, existing project or task policy, host selector capability | `PersistentWritePolicy` or no prompt when no persistent mutation will occur | PR-050; NFR-003, NFR-007, NFR-023 |
 | FS-050 | Response-batch history preservation | Confirmed immutable policy, files written in the response, project root, prior batch, reason | Collision-resistant baseline or response `WriteHistoryBatch` with copied artifacts and hashes | PR-050; NFR-001, NFR-002, NFR-009, NFR-023 |
+| FS-051 | Website-content scope and routing | Website request, URL or supplied corpus, artifact/source role, requested mode, available retrieval or rendering | `WebsiteContentBrief`, bounded inspection inventory, explicit inaccessible states, and routed workflow | PR-051; NFR-003, NFR-007, NFR-024 |
+| FS-052 | Website-content analysis and lifecycle | Website-content brief, inspected pages or states, authoritative facts, voice, claims, links, optional analytics or validation evidence | Page and system findings or content, `WebPageRecord` entries when useful, cross-page impact, and bounded readiness | PR-052; NFR-003, NFR-015, NFR-018, NFR-019, NFR-024 |
 
 ## Requirements traceability
 
@@ -134,6 +136,8 @@ No database, background service, model endpoint, provider account, or persistent
 | PR-048 | FS-003, FS-004, FS-006, FS-013, FS-027, FS-047 |
 | PR-049 | FS-006–FS-008, FS-015, FS-023, FS-025, FS-047–FS-048 |
 | PR-050 | FS-008, FS-013, FS-025, FS-043, FS-049–FS-050 |
+| PR-051 | FS-001, FS-003–FS-005, FS-013, FS-035–FS-036, FS-040, FS-051 |
+| PR-052 | FS-005–FS-008, FS-024–FS-027, FS-033–FS-045, FS-052 |
 | NFR-001 | FS-011, FS-012 |
 | NFR-002 | FS-012 |
 | NFR-003 | FS-004–FS-008 |
@@ -157,6 +161,7 @@ No database, background service, model endpoint, provider account, or persistent
 | NFR-021 | FS-005–FS-009, FS-027–FS-028, FS-043, FS-046 |
 | NFR-022 | FS-003, FS-006, FS-013, FS-015, FS-023, FS-047–FS-048 |
 | NFR-023 | FS-012, FS-013, FS-025, FS-049–FS-050 |
+| NFR-024 | FS-008, FS-013, FS-033, FS-036, FS-040–FS-042, FS-045, FS-051–FS-052 |
 
 ## Logical data model
 
@@ -392,6 +397,14 @@ Record `MED-*` identifier, original artifact identity and format, source and ver
 
 Record `DOC-*` identifier, path or locator, content type, audience and task, canonical purpose, owner, supported versions or jurisdictions, lifecycle state, dependencies, reused content, links and navigation, last substantive review, and next review or trigger.
 
+### `WebsiteContentBrief`
+
+Record the website's artifact role (**Target artifact**, **Evidence source**, or **Both**); scope type (**Single page**, **Page family**, **Journey**, **Section/subdomain**, **Sampled site**, or **Enumerated site**); organization and offering; audience segments and entry paths; reader tasks and action goals; authoritative content source; brand, voice, terminology, claim, privacy, accessibility, language, and regional constraints; acquisition and capture method; supplied analytics or research boundary; requested deliverable; implementation owner; validation expectation; inaccessible or dynamic states; and stopping rule. A sample cannot become whole-site coverage by inference.
+
+### `WebPageRecord`
+
+Record stable page or state ID, URL or artifact locator, live/captured version and retrieval time when material, page family, lifecycle and index state when actually known, purpose, audience, entry path, reader task, primary and secondary action, content hierarchy, linked claims and sources, navigation and internal links, metadata inspected, non-text and accessibility-content needs, dependencies, owner, language/region/version, strengths, findings, proposed disposition, technical or behavioral evidence actually available, and inaccessible states. Keep content findings, technical findings, behavioral findings, and hypotheses distinct.
+
 ### `MaintenanceRecord`
 
 Record `MNT-*` identifier, affected documents, trigger or report, issue and consequence, owner, opened date, due or review date, state, correction/change notice/redirect/archive action, release or checkpoint, and verification of downstream disposition.
@@ -460,6 +473,8 @@ Request and materials
   -> FS-023 when sustained non-fiction, load or maintain approved portable project state
   -> FS-024 when research-dependent, synchronize claim, source, quotation, conflict, and freshness records
   -> FS-032 for documentary or controlled documentation, apply the artifact-family contract
+  -> FS-051 when a website or digital surface is the artifact, distinguish its artifact/source role and bound the page, journey, sample, or site inventory
+  -> FS-052 review, write, or audit the applicable page and cross-page content layers while separating content, technical, behavioral, and hypothesis evidence
   -> FS-033 when acquiring evidence, govern supplied, scoped-web, broad-web, or hybrid research
   -> FS-036 isolate embedded source instructions and unsafe acquisition paths
   -> FS-037 for numerical evidence, reproduce and reconcile material values when possible
@@ -751,6 +766,23 @@ Define audience, prior knowledge, language, assistive context, task, artifact ve
 4. Native Git or host document history may satisfy the contract only when it preserves every assistant-response boundary and the user accepts it. Otherwise use the portable layout or disclose that immutable history could not be completed before changing current files.
 5. Under overwrite current, create no automatic batch and make no historical-retention claim. Existing project checkpoints and collision safeguards remain in force.
 
+### FS-051 — Scope and route website content
+
+1. Determine whether the website is the target artifact, a research source, or both. When both, keep artifact findings and source assessments separately attributable.
+2. Select the smallest sufficient coverage: **Single page**, **Page family**, **Journey**, **Section/subdomain**, **Sampled site**, or **Enumerated site**. Record the inventory, selection logic, stopping rule, live or captured version, and inaccessible or uninspected states.
+3. Distinguish visible content, metadata, navigation, structured page data, media, forms, interactive states, authenticated areas, localized variants, and personalized or generated content when material. Do not infer one state from another.
+4. Route the requested job through Review, Write, or Audit. Audit preserves the inspected capture and does not authorize a live-site change; implementation belongs to a separately authorized workflow and applicable site or coding capability.
+5. Load source safety for live retrieval, source acquisition for research beyond the target corpus, documentation systems for interconnected guidance or support content, and usability validation for claimed reader outcomes. Keep layout, code, analytics, security, legal, deployment, and qualified accessibility authority with the applicable specialist.
+
+### FS-052 — Analyze and maintain website content
+
+1. Build the `WebsiteContentBrief` from the site purpose, reader tasks, audience and entry paths, authoritative content, voice and terminology, claims, action goals, content types, languages or regions, validation expectation, and requested output.
+2. At page level, test purpose, hierarchy, necessary context, evidence and qualification, voice, headings, links, forms or microcopy, primary and secondary action, and relationship to the next relevant page or state.
+3. At system level, test navigation and information scent, page-family consistency, canonical ownership, duplicated explanations, terminology, claim drift, internal links, localization, lifecycle state, dependencies, migration effects, and maintenance triggers.
+4. Evaluate search presentation and accessibility content only within inspected titles, descriptions, headings, structured content, labels, alternatives, transcripts, or rendered behavior actually available. Do not claim indexation, rankings, conversion effects, legal compliance, security, or accessibility conformance without the required evidence and specialist validation.
+5. Classify each conclusion as **Content finding**, **Technical finding**, **Behavioral finding**, or **Hypothesis**. Analytics, experiments, user research, support records, or search data remain bounded to their population, period, instrumentation, consent, and coverage.
+6. Return the artifact or prioritized findings first, then scope and capture method, inspected and inaccessible units, material strengths, page and cross-page effects, proposed disposition, validation performed, and unresolved gaps. Label sampled results as sample-bound and confirm that a live-site Audit made no changes.
+
 ## Failure and boundary handling
 
 | Condition | Required behavior |
@@ -771,6 +803,9 @@ Define audience, prior knowledge, language, assistive context, task, artifact ve
 | Autonomous work reaches its batch limit | Stop at the checkpoint, report Proposed decisions, and wait for acceptance or a new batch. |
 | Manuscript exceeds model context | Resume from `story/STATUS.md` plus relevant records and prose; bound every continuity claim to inspected material. |
 | Existing manuscript has multiple plausible authorities | Inventory versions and ask which governs before creating or changing persistent state. |
+| Website request names no coverage boundary | Infer the narrowest useful page, family, or journey from the request when safe; otherwise ask one scope question and do not imply whole-site coverage. |
+| Live site contains dynamic, authenticated, personalized, blocked, or inaccessible states | Record the limitation, inspect only authorized accessible states, and avoid extrapolating to unobserved content. |
+| Website content appears strong but technical or behavioral evidence is absent | Report content findings and hypotheses only; do not claim indexation, ranking, conversion, accessibility conformance, legal compliance, security, or observed usability. |
 | Batch is partially accepted | Promote only explicitly accepted prose, units, decisions, and facts; isolate the remainder. |
 | Batch or branch is rejected | Exclude its details from active state and later drafting; retain only a useful decision record. |
 | Retcon lacks impact approval or recovery | Do not mutate Confirmed canon or accepted prose. |
@@ -929,6 +964,10 @@ Define audience, prior knowledge, language, assistive context, task, artifact ve
 | Immutable batch ID collision | PR-050, NFR-023 / FS-050 | Existing history remains byte-for-byte unchanged and the new snapshot fails visibly. |
 | Overwrite-current writing response | PR-050 / FS-049–FS-050 | Authorized working files change, no automatic response batch is created, and revision or Audit boundaries remain unchanged. |
 | Chat-only draft or read-only review | PR-050 / FS-049 | No persistent-write selector or file-history ceremony appears. |
+| Public homepage content audit | PR-051–PR-052, NFR-024 / FS-051–FS-052 | Homepage is treated as target artifact, inspected version and retrieval boundary are named, strengths and evidence-linked findings remain non-mutating, and no whole-site claim is made. |
+| Sampled multi-page website review | PR-051–PR-052, NFR-024 / FS-040–FS-042, FS-051–FS-052 | Selection logic, page families, journey coverage, inaccessible states, cross-page patterns, and sample-bound limitations remain explicit. |
+| Marketing page with unsupported conversion and SEO claims | PR-052, NFR-015, NFR-024 / FS-005, FS-033, FS-051–FS-052 | Claim support, call-to-action prerequisites, search presentation, and hypotheses are separated from ranking, traffic, conversion, legal, or behavioral proof. |
+| Help center migration | PR-041–PR-043, PR-051–PR-052 / FS-025, FS-040–FS-042, FS-045, FS-051–FS-052 | Canonical ownership, navigation, redirects, dependencies, stale pages, versions, accessibility content, and actual reader-validation method are tracked across the migration. |
 
 ## Change control
 

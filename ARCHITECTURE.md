@@ -16,6 +16,7 @@ Unsloop
 ├── Shared writing-pattern and assistance audit — component profile, measurements, provenance, and detector boundaries
 ├── Shared Style Direction specialization — author-evidenced, historical/literary, custom, or genre direction with controlled evolution
 ├── Shared persistent-write contract — user-selected response history or current-file overwrite without expanded revision authority
+├── Shared website-content specialization — page, journey, site-sample, and content-system work with bounded technical and behavioral claims
 ├── Shared sustained-writing specialization — long-form operations across all three modes
 │   ├── Project state — onboarding, units, resume packets, assembly, recovery
 │   ├── Provenance and revision — claims, sources, quotations, changes, freshness
@@ -95,6 +96,7 @@ Unsloop/
                 ├── interview-evidence.md
                 ├── multimodal-evidence.md
                 ├── documentation-systems.md
+                ├── web-content.md
                 ├── usability-validation.md
                 ├── research-provenance.md
                 ├── revision-control.md
@@ -168,6 +170,8 @@ When applicable: onboard, review, impact-map, recover, assemble, or package
 For sustained non-fiction: scale project state, provenance, revision, collaboration, and language adaptation
         ↓
 For documentary/documentation: select form contract, acquisition scope, and validation boundary
+        ↓
+For websites: distinguish target artifact from evidence source, bound page/journey/site coverage, and separate content, technical, behavioral, and hypothesis findings
         ↓
 When applicable: preserve data, interview, and multimodal lineage; map documentation dependencies and reader evidence
         ↓
